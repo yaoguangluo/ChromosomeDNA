@@ -1,6 +1,18 @@
 # ChromosomeDNA
-DNA计算元基花染色体组，华瑞集
-今天进行将华瑞集24组元基花 综合打包优化上传，发现eclipse进行git push connect 一直不成功，不知道什么原因，就不发了。
-完整的工程 见 bitbucket 和codingnet
-
-罗瑶光
+DNA计算元基花染色体组，华瑞集             
+今天进行将华瑞集24组元基花 综合打包优化上传，发现eclipse进行git push connect 一直不成功，不知道什么原因，就不发了。             
+完整的工程 见 bitbucket 和codingnet             
+             
+第四修订版将包含             
+             
+1 元基索引花             
+2 花语系统，tinshell 003版本             
+3 元基 DNN 早期计算2页，费洛蒙研究略。             
+4 十六元基进制与元基计数器。             
+5 TVM 元基催化虚拟机             
+6 DNA遗传元基花孢             
+。。。。等                          
+             
+             
+罗瑶光             
+             
