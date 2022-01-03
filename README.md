@@ -7,7 +7,8 @@ DNA计算元基花染色体组，华瑞集
              
 1 元基索引花，（准备在映射map加个传参的字符串，把 变量名也标注下 20211230）。             
 2 花语系统，tinshell 002版本，003版本             
-3 元基 DNN 早期计算2页，（费洛蒙更进研究略，元基声觉略，元基磁频略）。             
+3 元基 DNN 早期计算2页，（费洛蒙更进研究略，元基声觉略，元基磁频略）。              
+3.1 费洛蒙计算的两页历史文件见 微信和抖音视频备份，git见 bitbucket coding gitee等lyg文件。更进研究略                           https://github.com/yaoguangluo/DNA_Chromosome_backup20210705/blob/codingbackup18801/2021/12/02/InitonPDEModel.lyg           
 4 十六元基进制与元基计数器。              
 5 TVM 元基催化虚拟机                   
 6 DNA遗传元基花孢              
