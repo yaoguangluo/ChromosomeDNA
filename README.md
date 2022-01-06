@@ -21,26 +21,107 @@
 ##### 1.2 极速象契拼音笔画排序
 ##### 1.3 启动ETL
     //调通了下，不要使用老接口，建议写新的节点。参照已有的 image read节点即可。
-    GUISample gUISample= new GUISample();
-		App app= new App();
-		app.gUISample= gUISample;
+    	GUISample gUISample= new GUISample();
+	App app= new App();
+	app.gUISample= gUISample;
 
-		CogsBinaryForest_AE _A= new CogsBinaryForest_AE();
-		_A.IV_Mixed();
-		Map<String, String> pos= _A.getPosCnToCn();
+	CogsBinaryForest_AE _A= new CogsBinaryForest_AE();
+	_A.IV_Mixed();
+	Map<String, String> pos= _A.getPosCnToCn();
+	JTextPane text= new JTextPane();
+	app.jTabbedpane= new DetabbedPane(0, 0, null);
+	gUISample.IV_(new Object[10][10], text, app, _A, pos);
+	gUISample.start();	
+	gUISample.validate();
 
-		JTextPane text= new JTextPane();
-		app.jTabbedpane= new DetabbedPane(0, 0, null);
-
-		gUISample.IV_(new Object[10][10], text, app, _A, pos);
-		gUISample.start();	
-		gUISample.validate();
-
-		JFrame jFrame= new JFrame();
-		jFrame.add(gUISample);
-		jFrame.setSize(1490, 980);
-		jFrame.setVisible(true);	
+	JFrame jFrame= new JFrame();
+	jFrame.add(gUISample);
+	jFrame.setSize(1490, 980);
+	jFrame.setVisible(true);	
 ##### 1.4 VPCS 服务器
+###### 1.4.1 DNA 加密 TOKEN
+	//下面这个test demo 展示了 密码-> 肽文-> 肽锁+肽密码-> 密钥,pds和pde密码 -> pds转pde验证-> pde转pds验证
+	//全部封装成函数
+	//罗瑶光 20210830
+	public static void main(String[] argv) {
+		FullDNATokenPDI pDE_RNA_FullFormular= new FullDNATokenPDI();
+		pDE_RNA_FullFormular.text= "控制吸收";
+		pDE_RNA_FullFormular.pdw= PdeSwapFix.textToPdw(pDE_RNA_FullFormular, pDE_RNA_FullFormular.text);
+		pDE_RNA_FullFormular.code= PdeSwapFix.pdwToPdc(pDE_RNA_FullFormular);
+		System.out.println("肽语: "+ pDE_RNA_FullFormular.pdw);
+		System.out.println("肽锁: "+ pDE_RNA_FullFormular.lock);
+		System.out.println("散列肽语:"+ pDE_RNA_FullFormular.code);
+		////////////////////////////////////////////////////
+		pDE_RNA_FullFormular.doKeyPress(pDE_RNA_FullFormular.code, pDE_RNA_FullFormular, false);
+		System.out.println("静态肽展降元概率钥匙E: "+ pDE_RNA_FullFormular.pdedeKey);
+		System.out.println("静态肽展降元概率钥匙S: "+ pDE_RNA_FullFormular.pdedsKey);
+		System.out.println("静态肽展降元: "+ pDE_RNA_FullFormular.pds);
+		System.out.println("静态肽展增元概率钥匙E: "+ pDE_RNA_FullFormular.pdeieKey);
+		System.out.println("静态肽展增元概率钥匙S: "+ pDE_RNA_FullFormular.pdeisKey);
+		System.out.println("静态肽展增元: "+ pDE_RNA_FullFormular.pde);
+		//////////////////////////////////////////////////////
+		pDE_RNA_FullFormular.time= "" + System.currentTimeMillis();
+		pDE_RNA_FullFormular.cacheId= "ID" + Math.random() + ":" + Math.random();
+		System.out.println("时间:  " + pDE_RNA_FullFormular.time);
+		System.out.println("账号随机缓存字符串:  " + pDE_RNA_FullFormular.cacheId);
+		/////////////////////////////////////////////////////
+		pDE_RNA_FullFormular.session_key= pDE_RNA_FullFormular.pde;
+		System.out.println("Session: " + pDE_RNA_FullFormular.session_key);
+		System.out.println("=============================================================================");
+		System.out.println("开始前序验证：");
+		System.out.println("开始Session解析： " + pDE_RNA_FullFormular.session_key);
+		System.out.println("开始概率钥匙解析：" + pDE_RNA_FullFormular.pdedeKey+ pDE_RNA_FullFormular.pdedsKey
+				+ pDE_RNA_FullFormular.pdeieKey+ pDE_RNA_FullFormular.pdeisKey);
+		/////////////////////////////////////////////////
+		FullDNATokenPDI pDE_RNA_FullFormular1= new FullDNATokenPDI();
+		pDE_RNA_FullFormular1.pdedeKey= pDE_RNA_FullFormular.pdedeKey.toString();
+		pDE_RNA_FullFormular1.pdedsKey= pDE_RNA_FullFormular.pdedsKey.toString();
+		pDE_RNA_FullFormular1.pdeieKey= pDE_RNA_FullFormular.pdeieKey.toString();
+		pDE_RNA_FullFormular1.pdeisKey= pDE_RNA_FullFormular.pdeisKey.toString();
+		pDE_RNA_FullFormular.doKeyUnPress(pDE_RNA_FullFormular.code, pDE_RNA_FullFormular1, true);
+		System.out.println();
+		System.out.println("得到原降元元基DNA序列："+ pDE_RNA_FullFormular.pds);
+		System.out.println("得到新降元元基DNA序列："+ pDE_RNA_FullFormular1.pds);
+		System.out.println("得到原元基DNA序列："+ pDE_RNA_FullFormular.pde);
+		System.out.println("得到新元基DNA序列："+ pDE_RNA_FullFormular1.pde);
+		System.out.println("验证正确？");
+		System.out.println(pDE_RNA_FullFormular.pde.equals(pDE_RNA_FullFormular1.pde)? "正确": "失败");
+
+		/////////////////////////////////////////
+		System.out.println("=======================================================================");
+		System.out.println("开始pde降元验证：");
+		FullDNATokenPDI pDE_RNA_FullFormular2= new FullDNATokenPDI();
+		pDE_RNA_FullFormular2.pdeieKey= pDE_RNA_FullFormular.pdeieKey.toString();
+		pDE_RNA_FullFormular2.pdeisKey= pDE_RNA_FullFormular.pdeisKey.toString();
+		pDE_RNA_FullFormular2.pdedeKey= pDE_RNA_FullFormular.pdeieKey.toString();
+		pDE_RNA_FullFormular2.pdedsKey= pDE_RNA_FullFormular.pdeisKey.toString();
+		System.out.println("准备计算元基DNA序列："+ pDE_RNA_FullFormular1.pde);
+		String pds= PdeSwapFix.pdeToPds(pDE_RNA_FullFormular1.pde, "",  pDE_RNA_FullFormular2.pdedeKey
+				,  pDE_RNA_FullFormular2.pdedsKey
+				,  pDE_RNA_FullFormular2.pdeieKey
+				,  pDE_RNA_FullFormular2.pdeisKey);
+		System.out.println("pds");
+		System.out.println("pds");
+		System.out.println(pDE_RNA_FullFormular1.pds);
+		System.out.println(pds);
+		//////////////////////////////////////////////////////////////////
+		System.out.println("开始pds增元验证：");
+		FullDNATokenPDI pDE_RNA_FullFormular3= new FullDNATokenPDI();
+		pDE_RNA_FullFormular3.pdeieKey= pDE_RNA_FullFormular.pdeieKey.toString();
+		pDE_RNA_FullFormular3.pdeisKey= pDE_RNA_FullFormular.pdeisKey.toString();
+		pDE_RNA_FullFormular3.pdedeKey= pDE_RNA_FullFormular.pdeieKey.toString();
+		pDE_RNA_FullFormular3.pdedsKey= pDE_RNA_FullFormular.pdeisKey.toString();
+
+		String pde= PdeSwapFix.pdsToPde(pDE_RNA_FullFormular1.pds, "",  pDE_RNA_FullFormular3.pdedeKey
+				,  pDE_RNA_FullFormular3.pdedsKey
+				,  pDE_RNA_FullFormular3.pdeieKey
+				,  pDE_RNA_FullFormular3.pdeisKey);
+		System.out.println("pde");
+		System.out.println("pde");
+		System.out.println(pDE_RNA_FullFormular1.pde);
+		System.out.println(pde);
+	}
+
 ##### 1.5 普通数据计算 
 ##### 1.6 带精度打分搜索
 
