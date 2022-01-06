@@ -169,6 +169,24 @@
 	}
 
 ##### 1.5 普通数据计算 
+###### 1.5.1 DNN 读心术
+	//测试成功了，稍后优化。
+	@SuppressWarnings("unused")
+	public static void main(String[] argv) throws InstantiationException, IllegalAccessException, IOException {
+		String string= StableString.text1;
+		String[][] string1= new StaticFunctionMapP_VECS_E().aNNTest(string);	
+		String[][] string2= new StaticFunctionMapP_VECS_E().dNNTest(string);	
+		String[][] string3= new StaticFunctionMapP_VECS_E().rNNTest(string);	
+		String[][] string4= new StaticFunctionMapP_VECS_E().sensingTest(string);	
+
+		String[] strings= new String[3];
+		strings[0]= StableString.text1;
+		strings[1]= StableString.text2;
+		strings[2]= StableString.text3;
+		new StaticFunctionMapP_VECS_E().educationLevelTest(strings);	
+		new StaticFunctionMapP_VECS_E().literarinessLevelTest(strings);	
+		new StaticFunctionMapP_VECS_E().successICATest(strings);	
+	}
 ##### 1.6 带精度打分搜索
 	//已测试， 结果正确
 	public static void main(String[] argv) throws IOException {	
