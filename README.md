@@ -167,6 +167,25 @@
 		System.out.println(pDE_RNA_FullFormular1.pde);
 		System.out.println(pde);
 	}
+	
+###### 1.4.2 DNA 非对称加密 前中后序 PDS 验证示例。
+	@SuppressWarnings("unused")
+	public static void main(String[] argv) {
+		String string= "罗瑶光";
+		String pdw=  StaticFunctionMapA_IDUQ_C.getPDW(string);
+		String lock= StaticFunctionMapA_IDUQ_C.getLock();
+		String code= StaticFunctionMapA_IDUQ_C.getCode(pdw, lock);
+		FullDNATokenPDI_XCDX pDE_RNA_FullFormular= new FullDNATokenPDI_XCDX();
+		pDE_RNA_FullFormular.pdw= pdw.toString();
+		pDE_RNA_FullFormular.lock= lock.toString();
+		pDE_RNA_FullFormular.code= code.toString();
+		pDE_RNA_FullFormular= StaticFunctionMapA_IDUQ_C.doPDE(pDE_RNA_FullFormular);
+		FullDNATokenPDI_XCDX pDE_RNA_FullFormularNew= StaticFunctionMapA_IDUQ_C.doPrefixPDE(pDE_RNA_FullFormular);
+		FullDNATokenPDI_XCDX pDE_RNA_FullFormular2= StaticFunctionMapA_IDUQ_C.doPostfixPDE(pDE_RNA_FullFormular
+				, pDE_RNA_FullFormularNew);
+		FullDNATokenPDI_XCDX pDE_RNA_FullFormular3= StaticFunctionMapA_IDUQ_C.doSurffixPDE(pDE_RNA_FullFormular
+				, pDE_RNA_FullFormularNew);
+	}
 
 ##### 1.5 普通数据计算 
 ###### 1.5.1 DNN 读心术
