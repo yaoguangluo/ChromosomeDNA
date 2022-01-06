@@ -187,6 +187,18 @@
 		new StaticFunctionMapP_VECS_E().literarinessLevelTest(strings);	
 		new StaticFunctionMapP_VECS_E().successICATest(strings);	
 	}
+###### 1.5.1 非卷积图片识别
+	//需要设计采样图片数据生成。
+	public static void main(String[] argv) throws IOException {
+		String[] string= new String[5];
+		string[0]= "C:\\Users\\Lenovo\\Desktop\\deciphering\\F_DB6.txt";
+		string[1]= "C:\\Users\\Lenovo\\Desktop\\deciphering\\F_DB5.txt";
+		string[2]= "C:\\Users\\Lenovo\\Desktop\\deciphering\\F_DB6_jian_17.txt";
+		string[3]= "C:\\Users\\Lenovo\\Desktop\\deciphering\\F_DB6_suan_17.txt";
+		string[4]= "C:\\Users\\Lenovo\\Desktop\\deciphering\\线状苔藓-结节性硬化症叶状白斑_脏数据.jpg";
+		new StaticFunctionMapI_VECS_E().staticMain(string);
+	}
+	
 ##### 1.6 带精度打分搜索
 	//已测试， 结果正确
 	public static void main(String[] argv) throws IOException {	
