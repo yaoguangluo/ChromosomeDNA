@@ -19,6 +19,52 @@
 #### 1 直接调用模式
 ##### 1.1 极速象契催化分词
 ##### 1.2 极速象契拼音笔画排序
+	public static void main(String[] argv) throws IOException {
+		String[] strings1D= new String[16];
+		strings1D[0]= "dh罗31韵律";
+		strings1D[1]= "dh罗11瑶林";
+		strings1D[2]= "dh罗2瑶光";
+		strings1D[3]= "dh罗4韵律";
+		strings1D[2]= "dh罗2尧光";
+		strings1D[3]= "dh罗4运律";
+		strings1D[4]= "dh罗6瑶d林";
+		strings1D[5]= "dh罗瑶0.6光";
+		strings1D[6]= "dh罗瑶0.3f光";
+		strings1D[7]= "dh罗瑶0.61e7光";
+		strings1D[8]= "dh罗瑶0.3e61光";
+		strings1D[9]= "dh罗瑶0.3e6光";
+		strings1D[10]= "dh罗瑶0.6e2光";
+		strings1D[11]= "dh罗瑶0.3e1光";
+		strings1D[12]= "dh罗韵111.21律";
+		strings1D[13]= "dh罗韵15.21律";
+		strings1D[14]= "dh罗瑶g林";
+		strings1D[15]= "dhv罗1.09瑶光";
+		StaticFunctionMapU_VECS_C.笔画拼音排序稍后进行把传参设计下(strings1D);
+
+		/*输出结果
+		 * 
+		 *
+	dh罗瑶0.3e1光
+	dh罗瑶0.3e6光
+	dh罗瑶0.3e61光
+	dh罗瑶0.3f光
+	dh罗瑶0.6光
+	dh罗瑶0.61e7光
+	dh罗瑶0.6e2光
+	dh罗瑶g林
+	dh罗韵111.21律
+	dh罗韵15.21律
+	dh罗11瑶林
+	dh罗2尧光
+	dh罗31韵律
+	dh罗4运律
+	dh罗6瑶d林
+	dhv罗1.09瑶光
+
+		 * 
+		 * */
+	}
+
 ##### 1.3 启动ETL
     //调通了下，不要使用老接口，建议写新的节点。参照已有的 image read节点即可。
     	GUISample gUISample= new GUISample();
@@ -131,29 +177,29 @@
 ##### 2.3 启动ETL
 ##### 2.4 VPCS 服务器                      
 ##### 2.5 普通数据计算                      
-StaticRootMap.initMap();                      
-String[] strings= new String[4];                      
-strings[0]= "执行 U_VECS 下 main 接口, 参数是null";                      
-strings[1]= "执行 U_VECS 下 main 接口, 参数是null";                      
-Map<String, Object> output= new HashMap<>();                      
-String[] 传参因子= new String[2];                      
-Map<String, Object> inputValue= new HashMap<>();                       
-double[] doubles= new double[5];                      
-doubles[0]= 2.2222262;                      
-doubles[1]= 3.2226222;                      
-doubles[2]= 6.2622222;                      
-doubles[3]= 4.6226222;                      
-doubles[4]= 1.2222226;                      
-double dou= 2.22;                      
-传参因子[0]= "input";//像神一样的tin god                      
-传参因子[1]= "scale";                      
-inputValue.put(传参因子[0], doubles);                      
-inputValue.put(传参因子[1], dou);                      
-output.put("传参因子", 传参因子);                      
-output.put("inputValues", inputValue);                      
-strings[2]= "执行 U_AOPM 下 median1d 接口, 参数是 传参因子";                      
-strings[3]= "执行 U_AOPM 下 fengTong1D 接口, 参数是 过程因子";                      
-StaticRootMap.tinShellV003(strings, output);                      
+	StaticRootMap.initMap();                      
+	String[] strings= new String[4];                      
+	strings[0]= "执行 U_VECS 下 main 接口, 参数是null";                      
+	strings[1]= "执行 U_VECS 下 main 接口, 参数是null";                      
+	Map<String, Object> output= new HashMap<>();                      
+	String[] 传参因子= new String[2];                      
+	Map<String, Object> inputValue= new HashMap<>();                       
+	double[] doubles= new double[5];                      
+	doubles[0]= 2.2222262;                      
+	doubles[1]= 3.2226222;                      
+	doubles[2]= 6.2622222;                      
+	doubles[3]= 4.6226222;                      
+	doubles[4]= 1.2222226;                      
+	double dou= 2.22;                      
+	传参因子[0]= "input";//像神一样的tin god                      
+	传参因子[1]= "scale";                      
+	inputValue.put(传参因子[0], doubles);                      
+	inputValue.put(传参因子[1], dou);                      
+	output.put("传参因子", 传参因子);                      
+	output.put("inputValues", inputValue);                      
+	strings[2]= "执行 U_AOPM 下 median1d 接口, 参数是 传参因子";                      
+	strings[3]= "执行 U_AOPM 下 fengTong1D 接口, 参数是 过程因子";                      
+	StaticRootMap.tinShellV003(strings, output);                      
 
 ##### 2.6 带精度打分搜索                       
 
