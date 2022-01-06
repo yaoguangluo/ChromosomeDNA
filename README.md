@@ -15,13 +15,12 @@
 	9 一些细节略。 最近申请的元基花的索引序列编码方式，准备下ppt，稍后我会设计个自动识别新增函数自动注册索引。 
 ## Demo真实例子 基于 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220104.jar 使用举例。 
 #### 1 直接调用模式
-##### 1.1 极速微分催化排序
+##### 1.1 极速微分催化排序 top5代
 	//已经测试通过 联想Y7000 单机 排序每秒double 1150万峰值数组。
 	private int partition(double[] array, int leftPoint, int rightPoint) {
-		double x= array[leftPoint]<= array[rightPoint]? array[leftPoint]: array[rightPoint];//等于号不能省，见从大到小的老版本，> 的非为 <=，已经在养疗经中测试通过。罗瑶光
+		double x= array[leftPoint]<= array[rightPoint]? array[leftPoint]: array[rightPoint];
 		int leftPointReflection= leftPoint;
 		while(leftPointReflection< rightPoint){
-			//我设立个top2D , --细节竟然没有一个人关注这些细节...20210716
 			while(!(array[leftPointReflection]> x|| leftPointReflection++ >= rightPoint)) {}
 			while(array[rightPoint--]> x) {}
 			if(leftPointReflection< ++rightPoint){
