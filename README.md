@@ -5,8 +5,10 @@
 	第四修订版将包含 第三版所有内容 见： 国作登字-2021-L-00268255 (中华人民共和国 国家版权登记中心)    
 	1 元基索引花，（准备在映射map加个传参的字符串，把 变量名也标注下 20211230）。             
 	2 听语系统，tinshell 002版本  神经元计算  <DNA元基索引ETL中文脚本编译机V0.0.2><已提交 知委流水号2021R11L2844054> (中华人民共和国 国家版权登记中心)                       
-	2.1 花语系统， tinshell 003版本  染色体计算 <TinShell插件_元基花模拟染色体组计算索引系统 V20211227> <已提交 知委流水号2021R11L3629232> (中华人民共和国 国家版权登记中心)          	      3 元基 DNN 早期计算2页，（费洛蒙更进研究略，元基声觉略，元基磁频略）。              
-	3.1 费洛蒙计算的两页历史文件见 微信，小红书和2020年12月5日抖音 脉脉视频等媒体备份，git见 bitbucket coding gitee等lyg文件。更进研究略                           	                       https://github.com/yaoguangluo/DNA_Chromosome_backup20210705/blob/codingbackup18801/2021/12/02/InitonPDEModel.lyg           
+	2.1 花语系统， tinshell 003版本  染色体计算 <TinShell插件_元基花模拟染色体组计算索引系统 V20211227> <已提交 知委流水号2021R11L3629232> (中华人民共和国 国家版权登记中心)       
+	3 元基 DNN 早期计算2页，（费洛蒙更进研究略，元基声觉略，元基磁频略）。              
+	3.1 费洛蒙计算的两页历史文件见 微信，小红书和2020年12月5日抖音 脉脉视频等媒体备份，git见 bitbucket coding gitee等lyg文件。更进研究略                           	         
+		https://github.com/yaoguangluo/DNA_Chromosome_backup20210705/blob/codingbackup18801/2021/12/02/InitonPDEModel.lyg           
 	4 十六元基进制 DCPE-THOS-MAXF-VIUQ 与元基计数器。              
 	5 TVM 元基催化虚拟机                   
 	6 DNA遗传元基花孢              
