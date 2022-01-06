@@ -170,6 +170,52 @@
 
 ##### 1.5 普通数据计算 
 ##### 1.6 带精度打分搜索
+	//已测试， 结果正确
+	public static void main(String[] argv) throws IOException {	
+		ArrayList<String> 标题= new ArrayList<String>();
+		Map<String, String> 内容= new HashMap<>();
+		double lookrot= 0;
+		标题.add("罗瑶光");
+		标题.add("罗瑶林");
+		标题.add("罗韵律");
+		标题.add("罗振友");
+		标题.add("罗振兴");
+		
+		内容.put("罗瑶光","罗瑶光luoyaoguang");
+		内容.put("罗瑶林","罗瑶林luoyaolin");
+		内容.put("罗韵律","罗韵律luoyunlv");
+		内容.put("罗振友","罗振友luozhenyou");
+		内容.put("罗振兴","罗振兴luozhenxin");
+		
+		String searchkey= "罗瑶光";
+		List<Object[]> outputList = new StaticFunctionMapQ_VECS_E().searchFromTablewithScale(searchkey, 标题, 内容, lookrot);
+		Iterator<Object[]> iterator= outputList.iterator();
+		while(iterator.hasNext()) {
+			Object[] object= iterator.next();
+			for(int i= 0; i<object.length; i++) {
+				System.out.println(object[i].toString());
+			}
+		}
+		searchkey= "罗瑶";
+		outputList = new StaticFunctionMapQ_VECS_E().searchFromTablewithScale(searchkey, 标题, 内容, lookrot);
+		iterator= outputList.iterator();
+		while(iterator.hasNext()) {
+			Object[] object= iterator.next();
+			for(int i= 0; i<object.length; i++) {
+				System.out.println(object[i].toString());
+			}
+		}
+		
+		searchkey= "罗振";
+		outputList = new StaticFunctionMapQ_VECS_E().searchFromTablewithScale(searchkey, 标题, 内容, lookrot);
+		iterator= outputList.iterator();
+		while(iterator.hasNext()) {
+			Object[] object= iterator.next();
+			for(int i= 0; i<object.length; i++) {
+				System.out.println(object[i].toString());
+			}
+		}
+	}
 
 #### 2 元基花调用模式
 ##### 2.1 极速象契催化分词
