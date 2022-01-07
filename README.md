@@ -44,20 +44,31 @@
 	sets= _A.parserMixedString("你好，世界！");//分词
 	Iterator<String> iterator= sets.iterator(); //得到分词的Iterator数列
 	//... ...
+###### 1.1.1.1 极速中文催化分词	 繁体字混合的例子
+	public static void main(String[] argv) throws IOException {
+		CogsBinaryForest_AE _A= new CogsBinaryForest_AE();//获取分词引擎
+		_A.IV_All();//函数里面有注释，按着简体中文，繁体中文 的例子 加其他的语言扩展。切词方法要注意，源码是4字长度MAx
+		List<String> sets= new ArrayList<>();
+		sets= _A.parserMixedString("你好，世界！請在這輸入廣告詞優化");//带繁体字的混合分词
+		Iterator<String> iterator= sets.iterator(); //得到分词的Iterator数列
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+	}
 	
 ###### 1.1.2  词频 词性分析
 	//已经测试通过
 	public static void main(String[] argv) throws IOException {	
 		List<String> list= new StaticFunctionMapA_VECS_E().frequencyReader("君不见黄河之水天上来，奔流到海不复还");
 		Iterator<String> iteraor= list.iterator();
-		while(iteraor.hasNext()) {
-			System.out.println(iteraor.next());
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
 		}
 	
 		list= new StaticFunctionMapA_VECS_E().posReader("君不见黄河之水天上来，奔流到海不复还");
 		iteraor= list.iterator();
-		while(iteraor.hasNext()) {
-			System.out.println(iteraor.next());
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
 		}	
 	} 
 ##### 1.2 极速象契拼音笔画排序
