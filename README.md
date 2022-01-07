@@ -60,7 +60,7 @@
 	//已经测试通过
 	public static void main(String[] argv) throws IOException {	
 		List<String> list= new StaticFunctionMapA_VECS_E().frequencyReader("君不见黄河之水天上来，奔流到海不复还");
-		Iterator<String> iteraor= list.iterator();
+		Iterator<String> iterator= list.iterator();
 		while(iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}
