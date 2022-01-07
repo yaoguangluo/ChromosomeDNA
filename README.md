@@ -16,7 +16,7 @@
 	7 元基数字电路模拟， PNP NPN 触发器设计 (如全嘌呤F 与 变嘧啶U 的 数字锁存逻辑应用)   见第三版后序： 国作登字-2021-L-00268255 (中华人民共和国 国家版权登记中心)                     
 	8 十六进制的元基造字替换，（之前是十七进制）                    
 	9 一些细节略。 最近申请的元基花的索引序列编码方式，准备下ppt，稍后我会设计个自动识别新增函数自动注册索引。 
-## Demo真实例子 基于 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220104.jar 使用举例。 
+## Demo真实例子 基于 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar 使用举例。 
 #### 1 直接调用模式
 ##### 1.1 极速微分催化排序 top5代
 	//已经测试通过 联想Y7000 单机 排序每秒double 1150万峰值数组。
