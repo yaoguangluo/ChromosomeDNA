@@ -321,7 +321,45 @@
 		}
 	}
 
-#### 2 元基花调用模式
+#### 2 元基花调用模式 真实用例
+	public class App_XCDX {	
+		public App app;
+		public void IV_(App app) {
+			this.app= app;
+		}
+	
+	public JTextField nameFeelFilter() throws Exception {	
+	//传参因子[0]= "string";//准备传参索引调用模式来记忆编码。
+		//传参因子[1]= "x";
+		//传参因子[2]= "y";
+		//传参因子[3]= "c";
+		String callFunctionKey= "CfxTextField";
+		StaticRootMap.initMap();
+		String[] strings= new String[1];
+		Map<String, Object> output= new HashMap<>();
+		Map<String, Object> inputValue= new HashMap<>(); 
+	//稍后准备将staticClassMap 移到 StaticFunctionMapM_VECS_C 下， 24组相关配置全部改下。这样代码就少了，就快了。
+		String[] 传参因子= StaticFunctionMapM_VECS_C.annotationMap.get(callFunctionKey).split(":");
+		inputValue.put(传参因子[0], null);
+		inputValue.put(传参因子[1], 0);
+		inputValue.put(传参因子[2], 0);
+		inputValue.put(传参因子[3], null);
+		output.put("传参因子", 传参因子);
+		output.put("inputValues", inputValue);	
+		strings[0]= "执行 M_VECS 下 "+ callFunctionKey+ " 接口, 参数是 传参因子";
+		StaticRootMap.tinShellV003(strings, output);
+	//取花语计算数据	
+		@SuppressWarnings("unchecked")
+		Map<String, Object> map= (Map<String, Object>) output.get(callFunctionKey);
+		map.get("interfaceReturn");
+	//数据对接
+		app.nameFeelFilter= (CfxTextField) map.get("interfaceReturn");;  
+		app.nameFeelFilter.setBounds(180-50, 50, 380, 80);
+		app.nameFeelFilter.setBackground(Color.white);
+		app.nameFeelFilter.setText(StableTag.STRING_SPACE);
+		app.nameFeelFilter.addKeyListener(app);
+		return app.nameFeelFilter;
+	}
 ##### 2.1 极速象契催化分词
 ##### 2.2 极速象契拼音笔画排序
 ##### 2.3 启动ETL
