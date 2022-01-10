@@ -12,6 +12,9 @@
  2 因为算法的严谨性，不包含各种新兴缩写词汇和称谓姓名词汇等。 德塔分词不包含 缩写词 和 称谓词等 不稳定的词库类，请用户自行词库POSCC.LYG 文件（E_AOPM/ OEI.SVQ.MPC.fhmm.E;）添加或者 加标识如 括号，空格隔开等， 方法举例 (工信部)  "王小虎"  罗瑶光 
  
 
+ 见deta parser commit ：https://github.com/yaoguangluo/Deta_Parser/commits/master?after=69dc6243c8e5b21fa5ee27798cb18b133c9b72c7+664&branch=master
+ 第一次设计分析器时间 在 2018年10月1日
+ 
  
  
  罗瑶光
