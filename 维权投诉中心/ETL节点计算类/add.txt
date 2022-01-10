@@ -2,11 +2,15 @@
 稍后查阅下 mozilla pentaho 等etl 源码。
 不要以为我 只查国内的源码问题，2018年莫名剪绿卡，2013年莫名拒婚，这些事情已经惹恼了我，我先从mozilla etl查起，再查weka etl 和 甲骨文etl。
 
+、、
 而且不要以为我只对国内的就严格，查这些，我一样是仔细阅读其源码，逻辑，查阅其相关国家开源版权，著作权人登记号，相关专利号。
 和引用逻辑。 等会就开始。
+、、
+我的ETL unicorn的 引擎 最早在2014年前我就qq，google空间发布了（记得当时我发布的后几个月，谷歌莫名退出中国市场。我的google 就5个账号， luoyaoguang@christuniversity.in
+ 的 MCA的 邮箱账号， luoyaoguang88的 ，yaoguang.luo 的， lyg.tin的 和 yaoguang@clunet.edu的）我在思考1 国内网关屏蔽了google和facebook， 我都登陆不上，2 我的谷歌邮箱总是密码不稳定。
+ 我在国内只有15116110525的微信能关联脸书发布技术图片。，另外当时波音面试招聘会 我还给波音公司领导 展示了 unicorn的demo。  
 
-我的ETL unicorn的 引擎 最早在2014年前我就qq，google空间发布了（记得当时我发布的后几个月，谷歌莫名退出中国市场。），当时波音面试招聘会 我还给波音公司领导 展示了 unicorn的demo。  
-
+、、
 之后我也会画个 函数执行的逻辑图文字描述。
 
 
