@@ -13,7 +13,11 @@
  
 
  见deta parser commit ：https://github.com/yaoguangluo/Deta_Parser/commits/master?after=69dc6243c8e5b21fa5ee27798cb18b133c9b72c7+664&branch=master
- 第一次设计分析器时间 在 2018年10月1日
+ 第一次设计分析器时间 在 2018年10月1日。
+ 
+ 罗瑶光先生在此感谢git的风险数据管理机制，我删除的文件都能看到， 怎么删的，什么时候删的，删了什么。
+ 
+ 包括作者的dna编码也是， 2020年 8月写，10月开始申请， 2021年4月才下证，被commit 完整的记录了。
  
  
  
