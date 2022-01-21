@@ -19,4 +19,6 @@ Refer：见https://github.com/yaoguangluo/ChromosomeDNA 的 readme.md 篇尾
 14.罗瑶光. 《TinShell插件_元基花模拟染色体组计算索引系统 V20211227》. 中华人民共和国国家版权局，SD-2021R11L3629232. 2022. （已受理）
 
 
+第四版的源码 与第三版的源码 做了写些简单的 DNA元基编码 和去重，参照 BloomChromosome_V19001_20220108.jar 的函数。
+
 罗瑶光
