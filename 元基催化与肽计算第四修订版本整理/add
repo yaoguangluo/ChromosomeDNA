@@ -20,6 +20,7 @@ Refer：见https://github.com/yaoguangluo/ChromosomeDNA 的 readme.md 篇尾
 14.类人数据生命的DNA计算思想 Github [引用日期2020-03-05] https://github.com/yaoguangluo/Deta_Resource
 
 
-第四版的源码 对比 第三版的源码 作者仅做了些简单的 DNA元基索引 语义预料库 编码 和 去重，参照 BloomChromosome_V19001_20220108.jar 的函数。
+第四版的源码 对比 第三版的源码 作者仅做了些简单的 DNA元基索引 语义语料库 编码 和 去重，参照 BloomChromosome_V19001_20220108.jar 的函数。
+因为这次是基于word来备份，非常方便， 作者会对函数进行更多文字描述。
 
 罗瑶光
