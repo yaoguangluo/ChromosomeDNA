@@ -1,7 +1,8 @@
-# 《ChromosomeDNA》， 商业名称《华瑞集》， 工程名称 《元基花》，公司开源项目代号 《女娲计算》，作者喜欢称呼它为 《绽放的染色体》。
-
-	作者的研发动机：通过设计这个生命软件， 满足工业，农业，服务业的 大数据类 智慧计算 需求。
-	该项目涉及源码 罗瑶光先生 以 法定 完整著作权人名义 通过 《GPL2.0 标准协议》 开源。    
+# 《ChromosomeDNA》
+## 商业名称《华瑞集》， 工程名称 《元基花》，公司开源项目代号 《女娲计算》，作者喜欢称呼它为 《绽放的染色体》。
+	1 作者的研发动机：通过设计这个生命软件， 满足工业，农业，服务业的 大数据类 智慧计算 需求。
+	2 该项目涉及源码 罗瑶光先生 以 法定 完整著作权人名义 通过 《GPL2.0 标准协议》 开源。    
+	
 #### 核心贡献
 	1 Java api https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar
 	1.1 jar api 大小仅仅5兆， 其中class文件 含有完整 阅读source 对应，综合大小 仅仅14兆。 
@@ -47,7 +48,7 @@
 	3 工程与源码部署 开发文档 都清晰的归纳在 api 对应的 docx 文件中，见其目录。
 
 ## 使用方法
-## Demo真实例子 基于 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar 使用举例。 
+	Demo真实例子 基于 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar 使用举例。 
 #### 1 直接调用模式
 ##### 1.1 极速微分催化排序 top5代
 	//已经测试通过 联想Y7000 单机 排序每秒double 1150万峰值数组。
