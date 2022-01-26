@@ -16,7 +16,7 @@
 
 	1 Java api https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar
 	1.1 jar api 大小仅仅5兆， 其中class文件 含有完整 阅读source 对应，综合大小 仅仅14兆。 
-	2 论著书籍  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理 的 V00818 编号。
+	2 论著书籍  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理 的 V00818~00819 编号。
 	2.1 docx 论著 十七章， 35万余字， 1800页+。 上下册 总大小36兆- 。
 #### 核心价值
  	1 单机联想Y7000笔记本win10 实测每秒中文分词 1650万中文字， 词库65000+，函数准确率100%，缺失语法函数 0.3%-， 算法准确率 99.7%+， 100%完整开放源码，在api与书籍中。
