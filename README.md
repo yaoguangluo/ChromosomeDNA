@@ -1,5 +1,11 @@
 # 《ChromosomeDNA》
 ![](https://img.shields.io/badge/platform-windows-lightgrey.svg)
+![](https://img.shields.io/badge/platform-linux-lightgrey.svg)
+![](https://img.shields.io/badge/platform-ios-lightgrey.svg)
+![](https://img.shields.io/badge/platform-solaris-lightgrey.svg)
+![](https://img.shields.io/badge/platform-unix-lightgrey.svg)
+![](https://img.shields.io/badge/platform-android-lightgrey.svg)
+![](https://img.shields.io/badge/platform-arm-lightgrey.svg)
 ## 商业名称《华瑞集》， 工程名称 《元基花》，公司开源项目代号 《女娲计算》，作者喜欢称呼它为 《绽放的染色体》。
 	1 作者的研发动机：通过设计这个生命软件， 满足工业，农业，服务业的 大数据类 智慧计算 需求。
 	2 该项目涉及源码 罗瑶光先生 以 法定 完整著作权人名义 通过 《GPL2.0 标准协议》 开源。    
