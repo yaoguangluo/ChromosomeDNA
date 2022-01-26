@@ -1,6 +1,6 @@
 # 《ChromosomeDNA》
-![](https://img.shields.io/badge/platform-windows-blue.svg)
-![](https://img.shields.io/badge/platform-linux-red.svg)
+![](https://img.shields.io/github/platform-windows-blue.svg)
+![](https://img.shields.io/github/platform-linux-red.svg)
 ![](https://img.shields.io/badge/platform-ios-black.svg)
 ![](https://img.shields.io/badge/platform-solaris-green.svg)
 ![](https://img.shields.io/badge/platform-unix-lightgrey.svg)
