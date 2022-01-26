@@ -1,16 +1,19 @@
 # 《ChromosomeDNA》
-![](https://img.shields.io/github/platform-windows-blue.svg)
-![](https://img.shields.io/github/platform-linux-red.svg)
+![](https://img.shields.io/badge/platform-windows-blue.svg?style=flat)
+![](https://img.shields.io/badge/platform-linux-red.svg)
 ![](https://img.shields.io/badge/platform-ios-black.svg)
 ![](https://img.shields.io/badge/platform-solaris-green.svg)
 ![](https://img.shields.io/badge/platform-unix-lightgrey.svg)
 ![](https://img.shields.io/badge/platform-android-yellow.svg)
-![](https://img.shields.io/badge/platform-arm-pink.svg)
+![](https://img.shields.io/badge/platform-arm-pink.svg)                            
+![](https://img.shields.io/badge/language-java-pink.svg)
+
 ## 商业名称《华瑞集》， 工程名称 《元基花》，公司开源项目代号 《女娲计算》，作者喜欢称呼它为 《绽放的染色体》。
 	1 作者的研发动机：通过设计这个生命软件， 满足工业，农业，服务业的 大数据类 智慧计算 需求。
 	2 该项目涉及源码 罗瑶光先生 以 法定 完整著作权人名义 通过 《GPL2.0 标准协议》 开源。    
 	
 #### 核心贡献
+
 	1 Java api https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar
 	1.1 jar api 大小仅仅5兆， 其中class文件 含有完整 阅读source 对应，综合大小 仅仅14兆。 
 	2 论著书籍  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理 的 V00818 编号。
