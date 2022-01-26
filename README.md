@@ -4,11 +4,11 @@
 ![](https://img.shields.io/badge/Platform-ios-black.svg)
 ![](https://img.shields.io/badge/Platform-solaris-green.svg)
 ![](https://img.shields.io/badge/Platform-unix-lightgrey.svg)
-![](https://img.shields.io/badge/Platform-android-yellow.svg)               
+![](https://img.shields.io/badge/Platform-android-yellow.svg)
 ![](https://img.shields.io/badge/Platform-arm-pink.svg)                                                                                                      
 ![](https://img.shields.io/badge/Book-V00818-green.svg)
 ![](https://img.shields.io/badge/API-V19001-blue.svg)                                      
-![](https://img.shields.io/badge/Language-java-pink.svg)                                 
+![](https://img.shields.io/badge/Language-java-pink.svg)
 ![](https://img.shields.io/badge/License-GPL2.0-blue.svg)                      
 ![](https://img.shields.io/badge/Author-@YaoGuangLuo-pink.svg)                    
 
