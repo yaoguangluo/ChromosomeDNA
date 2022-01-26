@@ -4,13 +4,13 @@
 ![](https://img.shields.io/badge/Platform-ios-black.svg)
 ![](https://img.shields.io/badge/Platform-solaris-green.svg)
 ![](https://img.shields.io/badge/Platform-unix-lightgrey.svg)
-![](https://img.shields.io/badge/Platform-android-yellow.svg)
-![](https://img.shields.io/badge/Platform-arm-pink.svg)                                                       
-![](https://img.shields.io/badge/Language-java-pink.svg)                                                                                                                
-![](https://img.shields.io/badge/Book-V00818-green.svg)              
-![](https://img.shields.io/badge/API-V19001-blue.svg)                  
-![](https://img.shields.io/badge/License-GPL2.0-blue.svg)              
-![](https://img.shields.io/badge/Author-@YaoGuangLuo-pink.svg)  
+![](https://img.shields.io/badge/Platform-android-yellow.svg)               
+![](https://img.shields.io/badge/Platform-arm-pink.svg)                                                                                                      
+![](https://img.shields.io/badge/Book-V00818-green.svg)
+![](https://img.shields.io/badge/API-V19001-blue.svg)                                      
+![](https://img.shields.io/badge/Language-java-pink.svg)                                 
+![](https://img.shields.io/badge/License-GPL2.0-blue.svg)                      
+![](https://img.shields.io/badge/Author-@YaoGuangLuo-pink.svg)                    
 
 ## 商业名称《华瑞集》， 工程名称 《元基花》，公司开源项目代号 《女娲计算》，作者喜欢称呼它为 《绽放的染色体》。
 	1 作者的研发动机：通过设计这个生命软件， 满足工业，农业，服务业的 大数据类 智慧计算 需求。
