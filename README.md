@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/License-GPL2.0-pink.svg)                                  
 ![](https://img.shields.io/badge/Book-V00818-green.svg)
 ![](https://img.shields.io/badge/API-V19001-green.svg)
-![](https://img.shields.io/badge/Environment-JDK1.8及以上-green.svg)
+![](https://img.shields.io/badge/Environment-JDK1.8及以上-green.svg)                                           
 ![](https://img.shields.io/badge/Author-@罗瑶光-yellow.svg)
 ![](https://img.shields.io/badge/National-China-red.svg)          
 
