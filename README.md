@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/Platform-Windows|Linux|Ios|Solaris|Unix|Android|ARM-blue.svg)
 ![](https://img.shields.io/badge/Language-Java-pink.svg)
 ![](https://img.shields.io/badge/License-GPL2.0-pink.svg)                                  
-![](https://img.shields.io/badge/Book-V00819-green.svg)
+![](https://img.shields.io/badge/Book-V00919-green.svg)
 ![](https://img.shields.io/badge/API-V19001-green.svg)
 ![](https://img.shields.io/badge/Environment-JDK1.8及以上-green.svg)                                           
 ![](https://img.shields.io/badge/Author-@罗瑶光-yellow.svg)
@@ -16,7 +16,7 @@
 
 	1 Java api https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar
 	1.1 jar api 大小仅仅5兆， 其中class文件 含有完整 阅读source 对应，综合大小 仅仅14兆。 
-	2 论著书籍  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理 的 V00819 编号。
+	2 论著书籍  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理 的 V00919 编号。
 	2.1 docx 论著 十七章， 35万余字， 1800页+。 上下册 总大小36兆- 。
 #### 核心价值
  	1 单机联想Y7000笔记本win10 实测每秒中文分词 1650万中文字， 词库65000+，函数准确率100%，缺失语法函数 0.3%-， 算法准确率 99.7%+， 100%完整开放源码，在api与书籍中。
@@ -48,8 +48,8 @@
 	9.罗瑶光. 《DNA催化与肽展计算和AOPM-TXH-VECS-IDUQ元基解码013026中文版本》. 中华人民共和国国家版权局，国作登字-2021-A-00042586. 2021.
 	10.罗瑶光，罗荣武. 《DNA元基催化与肽计算第二卷养疗经应用研究20210305》. 中华人民共和国国家版权局，国作登字-2021-L-00103660. 2021.
 	11.罗瑶光，罗荣武. 《DNA 元基催化与肽计算 第三修订版V039010912》. 中华人民共和国国家版权局，国作登字-2021-L-00268255. 2021.        
-	12.罗瑶光. 《DNA元基索引ETL中文脚本编译机V0.0.2》. 中华人民共和国国家版权局，SD-2021R11L2844054. 2021. （登记号：2022SR0011067）软著登字第8965266号
-	13.罗瑶光. 《TinShell插件_元基花模拟染色体组计算索引系统 V20211227》. 中华人民共和国国家版权局，SD-2021R11L3629232. 2022. （已受理）
+	12.罗瑶光. 《DNA元基索引ETL中文脚本编译机V0.0.2》. 中华人民共和国国家版权局，SD-2021R11L2844054. 2021. （登记号:2022SR0011067）软著登字第8965266号
+	13.罗瑶光. 《TinShell插件_元基花模拟染色体组计算索引系统 V20211227》. 中华人民共和国国家版权局，SD-2021R11L3629232. 2022. （受理号:2022R11S0138561）
 	14.类人数据生命的DNA计算思想 Github [引用日期2020-03-05] https://github.com/yaoguangluo/Deta_Resource
 
 #### 注意
@@ -167,7 +167,7 @@
     	GUISample gUISample= new GUISample();
 	App app= new App();
 	app.gUISample= gUISample;
-
+	//
 	CogsBinaryForest_AE _A= new CogsBinaryForest_AE();
 	_A.IV_Mixed();
 	Map<String, String> pos= _A.getPosCnToCn();
@@ -176,7 +176,7 @@
 	gUISample.IV_(new Object[10][10], text, app, _A, pos);
 	gUISample.start();	
 	gUISample.validate();
-
+	//
 	JFrame jFrame= new JFrame();
 	jFrame.add(gUISample);
 	jFrame.setSize(1490, 980);
