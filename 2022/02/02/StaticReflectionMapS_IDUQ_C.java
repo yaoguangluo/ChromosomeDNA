@@ -8,26 +8,26 @@ import OSI.SIQ.tinMap.TinMap;
 import SEM.bloom.StaticFunctionMap;
 import SEM.bloom.StaticFunctionMapS_IDUQ_E;
 
-//Öø×÷È¨ÈË+ ×÷Õß= ÂŞÑş¹â
+//è‘—ä½œæƒäºº+ ä½œè€…= ç½—ç‘¶å…‰
 public class StaticReflectionMapS_IDUQ_C {
 	public static Map<String, String> annotationMap= new HashMap<>();
 	public static void callFunction(String callFunctionKey, StaticFunctionMapS_IDUQ_E staticFunctionMapS_IDUQ_C
 			, Map<String, Object> output) throws IOException, CloneNotSupportedException {
-		String[] ´«²ÎÒò×Ó= (String[]) output.get("´«²ÎÒò×Ó");
-		int Òò×Ó= 0;
+		String[] ä¼ å‚å› å­= (String[]) output.get("ä¼ å‚å› å­");
+		int å› å­= 0;
 		Object map = null;
 		if(callFunctionKey.equalsIgnoreCase("clone")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_IDUQ_C.clone((TinMap)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_IDUQ_C.clone((TinMap)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("splitRegex")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_IDUQ_C.splitRegex((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]),(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_IDUQ_C.splitRegex((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++]),(String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
