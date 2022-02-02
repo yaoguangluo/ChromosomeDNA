@@ -11,34 +11,34 @@ import ME.APM.VSQ.App;
 import SEM.bloom.StaticFunctionMap;
 import SEM.bloom.StaticFunctionMapQ_VECS_E;
 
-//Öø×÷È¨ÈË+ ×÷Õß= ÂŞÑş¹â
+//è‘—ä½œæƒäºº+ ä½œè€…= ç½—ç‘¶å…‰
 public class StaticReflectionMapQ_VECS_C {
 	public static Map<String, String> annotationMap= new HashMap<>();
 	@SuppressWarnings("unchecked")
 	public static void callFunction(String callFunctionKey, StaticFunctionMapQ_VECS_E staticFunctionMapQ_VECS_C
 			, Map<String, Object> output) throws IOException {
-		String[] ´«²ÎÒò×Ó= (String[]) output.get("´«²ÎÒò×Ó");
-		int Òò×Ó= 0;
+		String[] ä¼ å‚å› å­= (String[]) output.get("ä¼ å‚å› å­");
+		int å› å­= 0;
 		Object map = null;
 		if(callFunctionKey.equalsIgnoreCase("searchFromTable")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				staticFunctionMapQ_VECS_C.searchFromTable((String) inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (DefaultTableModel) inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (Object[][]) inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (ArrayList<String>) inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (Map<String, String>) inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (App) inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				staticFunctionMapQ_VECS_C.searchFromTable((String) inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (DefaultTableModel) inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (Object[][]) inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (ArrayList<String>) inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (Map<String, String>) inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (App) inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("searchFromTablewithScale")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapQ_VECS_C.searchFromTablewithScale((String) inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (ArrayList<String>) inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (Map<String, String>) inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (double) inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapQ_VECS_C.searchFromTablewithScale((String) inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (ArrayList<String>) inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (Map<String, String>) inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (double) inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
