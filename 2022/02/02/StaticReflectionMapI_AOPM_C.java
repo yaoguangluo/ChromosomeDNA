@@ -11,71 +11,71 @@ import OEI.ME.analysis.E.CogsBinaryForest_AE;
 import SEM.bloom.StaticFunctionMap;
 import SEM.bloom.StaticFunctionMapI_AOPM_E;
 
-//Öø×÷È¨ÈË+ ×÷Õß= ÂŞÑş¹â
+//è‘—ä½œæƒäºº+ ä½œè€…= ç½—ç‘¶å…‰
 public class StaticReflectionMapI_AOPM_C {
 	public static Map<String, String> annotationMap= new HashMap<>();
 	@SuppressWarnings("unchecked")
 	public static void callFunction(String callFunctionKey, StaticFunctionMapI_AOPM_E staticFunctionMapI_AOPM_C
 			, Map<String, Object> output) throws IOException, HeadlessException, InterruptedException {
-		String[] ´«²ÎÒò×Ó= (String[]) output.get("´«²ÎÒò×Ó");
-		int Òò×Ó= 0;
+		String[] ä¼ å‚å› å­= (String[]) output.get("ä¼ å‚å› å­");
+		int å› å­= 0;
 		Object map = null;
 		if(callFunctionKey.equalsIgnoreCase("getBigWord")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
 				map= staticFunctionMapI_AOPM_C.getBigWord();
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("getClassify")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
 				map= staticFunctionMapI_AOPM_C.getClassify();
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("getCoAuthor")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapI_AOPM_C.getCoAuthor((Map<String, Object>)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (CogsBinaryForest_AE)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (Map<String, String>)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapI_AOPM_C.getCoAuthor((Map<String, Object>)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (CogsBinaryForest_AE)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (Map<String, String>)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("getCoAuthorForWord")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapI_AOPM_C.getCoAuthorForWord((App)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (CogsBinaryForest_AE)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (Map<String, String>)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapI_AOPM_C.getCoAuthorForWord((App)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (CogsBinaryForest_AE)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (Map<String, String>)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("getCoDNAAuthorForWord")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapI_AOPM_C.getCoDNAAuthorForWord((App)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (A)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]), (Map<String, String>)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapI_AOPM_C.getCoDNAAuthorForWord((App)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (A)inputValues.get(ä¼ å‚å› å­[å› å­++]), (Map<String, String>)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("getHistogram")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
 				map= staticFunctionMapI_AOPM_C.getHistogram();
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("getLineMed")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
 				map= staticFunctionMapI_AOPM_C.getLineMed();
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("getJpv")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
 				map= staticFunctionMapI_AOPM_C.getJpv();
 			}
@@ -83,7 +83,7 @@ public class StaticReflectionMapI_AOPM_C {
 		};
 
 		if(callFunctionKey.equalsIgnoreCase("getRecoder")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
 				map= staticFunctionMapI_AOPM_C.getRecoder();
 			}
@@ -91,7 +91,7 @@ public class StaticReflectionMapI_AOPM_C {
 		};
 
 		if(callFunctionKey.equalsIgnoreCase("getVoicejPanel")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
 				map= staticFunctionMapI_AOPM_C.getVoicejPanel();
 			}
@@ -99,7 +99,7 @@ public class StaticReflectionMapI_AOPM_C {
 		};
 
 		if(callFunctionKey.equalsIgnoreCase("getLYGFileIO")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
 				map= staticFunctionMapI_AOPM_C.getLYGFileIO();
 			}
