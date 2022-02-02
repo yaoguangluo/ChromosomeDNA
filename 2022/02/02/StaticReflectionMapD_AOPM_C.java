@@ -5,7 +5,7 @@ import java.util.Map;
 
 import SEM.bloom.StaticFunctionMapD_AOPM_E;
 
-//Öø×÷È¨ÈË+ ×÷Õß= ÂŞÑş¹â
+//è‘—ä½œæƒäºº+ ä½œè€…= ç½—ç‘¶å…‰
 public class StaticReflectionMapD_AOPM_C {
 	public static Map<String, String> annotationMap= new HashMap<>();
 	public static void callFunction(String callFunctionKey, StaticFunctionMapD_AOPM_E staticFunctionMapD_AOPM_C,
