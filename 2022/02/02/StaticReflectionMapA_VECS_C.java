@@ -87,21 +87,4 @@ public class StaticReflectionMapA_VECS_C {
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 	}
-	
-	public static void load(StaticFunctionMapA_VECS_E staticFunctionMapA_VECS_E) {
-		//É¨Ãè²å¼þ
-		//É¨Ãè½Ó¿Ú
-		//É¨Ãè¼Ì³Ð
-		//ÉÔºó·â×°
-		StaticFunctionMapA_VECS_C.annotationMap.put("parserMixedString", "inputString");
-		StaticFunctionMapA_VECS_C.annotationMap.put("parserMixedStringToList", "inputString");
-		StaticFunctionMapA_VECS_C.annotationMap.put("posReader", "inputString");
-		StaticFunctionMapA_VECS_C.annotationMap.put("dnnReader", "inputString");
-		StaticFunctionMapA_VECS_C.annotationMap.put("mindReader", "inputString");
-		StaticFunctionMapA_VECS_C.annotationMap.put("emotionReader", "inputString");
-		StaticFunctionMapA_VECS_C.annotationMap.put("educationReader", "inputString");
-		StaticFunctionMapA_VECS_C.annotationMap.put("environmentReader", "inputString");
-		StaticFunctionMapA_VECS_C.annotationMap.put("lenovoReader", "inputString");
-		StaticFunctionMapA_VECS_C.annotationMap.put("frequencyReader", "inputString");
-	}
 }
