@@ -8,81 +8,81 @@ import SEM.bloom.StaticFunctionMap;
 import SEM.bloom.StaticFunctionMapA_VECS_C;
 import SEM.bloom.StaticFunctionMapA_VECS_E;
 
-//Öø×÷È¨ÈË+ ×÷Õß= ÂŞÑş¹â
+//è‘—ä½œæƒäºº+ ä½œè€…= ç½—ç‘¶å…‰
 public class StaticReflectionMapA_VECS_C {
 	public static Map<String, String> annotationMap= new HashMap<>();
 	public static void callFunction(String callFunctionKey
 			, StaticFunctionMapA_VECS_E staticFunctionMapA_VECS_C, Map<String, Object> output) throws IOException {
-		String[] ´«²ÎÒò×Ó= (String[]) output.get("´«²ÎÒò×Ó");
-		int Òò×Ó= 0;
+		String[] ä¼ å‚å› å­= (String[]) output.get("ä¼ å‚å› å­");
+		int å› å­= 0;
 		Object map = null;
 		if(callFunctionKey.equalsIgnoreCase("parserMixedString")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= StaticFunctionMapA_VECS_C.parserMixedString((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= StaticFunctionMapA_VECS_C.parserMixedString((String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("parserMixedStringToList")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapA_VECS_C.parserMixedStringToList((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapA_VECS_C.parserMixedStringToList((String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("posReader")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapA_VECS_C.posReader((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapA_VECS_C.posReader((String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("dnnReader")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapA_VECS_C.dnnReader((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapA_VECS_C.dnnReader((String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("mindReader")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapA_VECS_C.mindReader((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapA_VECS_C.mindReader((String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("emotionReader")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapA_VECS_C.emotionReader((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapA_VECS_C.emotionReader((String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("educationReader")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapA_VECS_C.educationReader((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapA_VECS_C.educationReader((String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("environmentReader")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapA_VECS_C.environmentReader((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapA_VECS_C.environmentReader((String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("lenovoReader")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapA_VECS_C.lenovoReader((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapA_VECS_C.lenovoReader((String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("frequencyReader")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapA_VECS_C.frequencyReader((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapA_VECS_C.frequencyReader((String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
