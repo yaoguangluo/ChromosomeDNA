@@ -3,17 +3,17 @@ package SEM.register;
 import SEM.bloom.StaticFunctionMapI_VECS_C;
 import SEM.bloom.StaticFunctionMapI_VECS_E;
 
-//Öø×÷È¨ÈË+ ×÷Õß= ÂŞÑş¹â
+//è‘—ä½œæƒäºº+ ä½œè€…= ç½—ç‘¶å…‰
 public class StaticRegisterI_VECS_C {
 	public static void load(StaticFunctionMapI_VECS_E staticFunctionMapI_VECS_E) {
 		// TODO Auto-generated method stub
-		//ÉÔºó·â×°
+		//ç¨åå°è£…
 		StaticFunctionMapI_VECS_C.annotationMap.put("main", "main");
 		StaticFunctionMapI_VECS_C.annotationMap.put("doTestWithImageAPP", "app");
-		StaticFunctionMapI_VECS_C.annotationMap.put("doFourJianPDErosion", "¸¯Ê´Å¨¶È:ÏñËØ·§Öµ:ÏñËØ±È¾«¶È:ÏñËØ²î¾«¶È:pcaScale:upcaScale:icaScale:ecaScale:bufferedImage");
-		StaticFunctionMapI_VECS_C.annotationMap.put("doFourSuanPDErosion", "¸¯Ê´Å¨¶È:ÏñËØ·§Öµ:ÏñËØ±È¾«¶È:ÏñËØ²î¾«¶È:pcaScale:upcaScale:icaScale:ecaScale:bufferedImage");
-		StaticFunctionMapI_VECS_C.annotationMap.put("doEightSuanPDErosion", "¸¯Ê´Å¨¶È:ÏñËØ·§Öµ:ÏñËØ±È¾«¶È:ÏñËØ²î¾«¶È:pcaScale:upcaScale:icaScale:ecaScale:bufferedImage");
-		StaticFunctionMapI_VECS_C.annotationMap.put("doEightJianPDErosion", "¸¯Ê´Å¨¶È:ÏñËØ·§Öµ:ÏñËØ±È¾«¶È:ÏñËØ²î¾«¶È:pcaScale:upcaScale:icaScale:ecaScale:bufferedImage");
+		StaticFunctionMapI_VECS_C.annotationMap.put("doFourJianPDErosion", "è…èš€æµ“åº¦:åƒç´ é˜€å€¼:åƒç´ æ¯”ç²¾åº¦:åƒç´ å·®ç²¾åº¦:pcaScale:upcaScale:icaScale:ecaScale:bufferedImage");
+		StaticFunctionMapI_VECS_C.annotationMap.put("doFourSuanPDErosion", "è…èš€æµ“åº¦:åƒç´ é˜€å€¼:åƒç´ æ¯”ç²¾åº¦:åƒç´ å·®ç²¾åº¦:pcaScale:upcaScale:icaScale:ecaScale:bufferedImage");
+		StaticFunctionMapI_VECS_C.annotationMap.put("doEightSuanPDErosion", "è…èš€æµ“åº¦:åƒç´ é˜€å€¼:åƒç´ æ¯”ç²¾åº¦:åƒç´ å·®ç²¾åº¦:pcaScale:upcaScale:icaScale:ecaScale:bufferedImage");
+		StaticFunctionMapI_VECS_C.annotationMap.put("doEightJianPDErosion", "è…èš€æµ“åº¦:åƒç´ é˜€å€¼:åƒç´ æ¯”ç²¾åº¦:åƒç´ å·®ç²¾åº¦:pcaScale:upcaScale:icaScale:ecaScale:bufferedImage");
 		StaticFunctionMapI_VECS_C.annotationMap.put("doFirstPDErosionWithTop", "fourJian:fourSuan:eightJian:eightSuan:scoreMatrix:top:bufferedImage");
 		StaticFunctionMapI_VECS_C.annotationMap.put("doSecondPDErosionWithTop", "fourJian:fourSuan:eightJian:eightSuan:scoreMatrix:top:times:bufferedImage");
 		StaticFunctionMapI_VECS_C.annotationMap.put("doThirdPDErosionWithTop", "fourJian:fourSuan:eightJian:eightSuan:scoreMatrix:top:times:output:bufferedImage");
@@ -22,6 +22,6 @@ public class StaticRegisterI_VECS_C {
 		StaticFunctionMapI_VECS_C.annotationMap.put("doTestWithImage", "testImagePath");
 		StaticFunctionMapI_VECS_C.annotationMap.put("doTestWithBufferedImage", "testImagePath");
 		StaticFunctionMapI_VECS_C.annotationMap.put("staticMain", "string");
-		StaticFunctionMapI_VECS_C.annotationMap.put("doPDERangePDI16", "input:Ëá¼îscale");
+		StaticFunctionMapI_VECS_C.annotationMap.put("doPDERangePDI16", "input:é…¸ç¢±scale");
 	}
 }
