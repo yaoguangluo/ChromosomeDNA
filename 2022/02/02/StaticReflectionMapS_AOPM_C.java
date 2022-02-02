@@ -6,120 +6,120 @@ import java.util.Map;
 import SEM.bloom.StaticFunctionMap;
 import SEM.bloom.StaticFunctionMapS_AOPM_E;
 
-//Öø×÷È¨ÈË+ ×÷Õß= ÂŞÑş¹â
+//è‘—ä½œæƒäºº+ ä½œè€…= ç½—ç‘¶å…‰
 public class StaticReflectionMapS_AOPM_C {
 	public static Map<String, String> annotationMap= new HashMap<>();
 	@SuppressWarnings("unchecked")
 	public static void callFunction(String callFunctionKey, StaticFunctionMapS_AOPM_E staticFunctionMapS_AOPM_C
 			, Map<String, Object> output) throws Exception {
-		String[] ´«²ÎÒò×Ó= (String[]) output.get("´«²ÎÒò×Ó");
-		int Òò×Ó= 0;
+		String[] ä¼ å‚å› å­= (String[]) output.get("ä¼ å‚å› å­");
+		int å› å­= 0;
 		Object map = null;
 		if(callFunctionKey.equalsIgnoreCase("DropCellPLSQL")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_AOPM_C.DropCellPLSQL((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_AOPM_C.DropCellPLSQL((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("DropCellORM")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_AOPM_C.DropCellORM((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_AOPM_C.DropCellORM((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("DeleteCellORM")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_AOPM_C.DeleteCellORM((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (Map<String, String>)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (boolean)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_AOPM_C.DeleteCellORM((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (Map<String, String>)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (boolean)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("DeleteCellPLSQL")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_AOPM_C.DeleteCellPLSQL((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (Map<String, String>)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (boolean)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_AOPM_C.DeleteCellPLSQL((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (Map<String, String>)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (boolean)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("InsertCellORM")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_AOPM_C.InsertCellORM((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (Map<String, String>)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (boolean)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_AOPM_C.InsertCellORM((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (Map<String, String>)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (boolean)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("InsertCellPLSQL")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_AOPM_C.InsertCellPLSQL((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (Map<String, String>)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (boolean)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_AOPM_C.InsertCellPLSQL((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (Map<String, String>)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (boolean)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("UpdateCellORM")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_AOPM_C.UpdateCellORM((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]),(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_AOPM_C.UpdateCellORM((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++]),(String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("UpdateCellORMByRowId")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_AOPM_C.UpdateCellORMByRowId((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(boolean)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]),(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]),(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_AOPM_C.UpdateCellORMByRowId((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(boolean)inputValues.get(ä¼ å‚å› å­[å› å­++]),(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++]),(String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("UpdateCellORMByEquals")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_AOPM_C.UpdateCellORMByEquals((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(boolean)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]),(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]),(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						,(String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_AOPM_C.UpdateCellORMByEquals((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(boolean)inputValues.get(ä¼ å‚å› å­[å› å­++]),(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++]),(String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						,(String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("UpdateCellPLSQL")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
-				map= staticFunctionMapS_AOPM_C.UpdateCellPLSQL((String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++])
-						, (String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]), (String)inputValues.get(´«²ÎÒò×Ó[Òò×Ó++]));
+				map= staticFunctionMapS_AOPM_C.UpdateCellPLSQL((String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (String)inputValues.get(ä¼ å‚å› å­[å› å­++])
+						, (String)inputValues.get(ä¼ å‚å› å­[å› å­++]), (String)inputValues.get(ä¼ å‚å› å­[å› å­++]));
 			}
 			StaticFunctionMap.postValues(output, (boolean) inputValues.get("find"), map, callFunctionKey);
 		};
 		if(callFunctionKey.equalsIgnoreCase("creatMap")){ 
-			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ´«²ÎÒò×Ó);
+			Map<String, Object> inputValues= StaticFunctionMap.preValues(output, ä¼ å‚å› å­);
 			if((boolean) inputValues.get("find")) {
 				staticFunctionMapS_AOPM_C.creatMap();
 			}
