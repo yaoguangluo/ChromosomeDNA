@@ -5,7 +5,7 @@
 ![](https://img.shields.io/badge/Book-V00919-green.svg)
 ![](https://img.shields.io/badge/API-V19001-green.svg)
 ![](https://img.shields.io/badge/Environment-JDK1.8及以上-green.svg)                                           
-![](https://img.shields.io/badge/Author-@罗瑶光-yellow.svg)
+![](https://img.shields.io/badge/Author-罗瑶光-yellow.svg)
 ![](https://img.shields.io/badge/National-China-red.svg)          
 
 #### 商业名称《华瑞集》， 工程名称 《元基花》，公司开源项目代号 《女娲计算》，作者喜欢称呼它为 《绽放的染色体》。
