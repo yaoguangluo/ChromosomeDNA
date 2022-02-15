@@ -16,10 +16,10 @@ refer page 97,116，
 
 排序，
 1 德塔分词排序思想原型采用 Sir Charles Antony Richard Hoare 的 快速排序思想。
-refer page 版权原因无文字收录 已经refer
+refer page 版权原因无文字收录 已经refer https://baike.baidu.com/item/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/369842?fr=aladdin
 
 2 德塔分词排序源码原型采用 Introduction to Algorithms 的 快速排序4代源码。
-refer page 版权原因无源码收录 已经refer
+refer page 版权原因无源码收录 已经refer https://github.com/yaoguangluo/Data_Processor/blob/master/DP/sortProcessor/Quick_4D_Sort.java
 
 3 基于1 和 2原型，德塔分词排序 采用 Theory on YAOGUANG's Array Split Peak Defect 的微分催化算子优化思想 2013年开始优化。
 refer page 247,248,250,529,620，
