@@ -1,61 +1,124 @@
+开始组织核心ppt文字描述，图片和源码 在书籍中已经很丰富了。
+
 分词，
 1 德塔的分词是一种前序隐马可夫逐字遍历文字索引，通过索引中的词汇匹配 按长度进行提取，然后将提取的词汇串 进行词性切分的过程。
+refer page 12 ~
+
 2 德塔的分词文字索引采用关联分类生成小文件map集（词性map，词长map，词类map）， 进行整体加速，作为一个催化细化过程。
+refer page 44，54, 92，
+
 3 德塔的词汇匹配目前有多个国家语言字符集，可统一，可拆分，目前最大划分处理长度为4，划分切词采用动态CNN卷积 StringBuilder核做POS识别。
+refer page 45，119,120，
+
 4 德塔的词性切分按照4字词 3字词 2字词 单字 进行逐级按词汇的 POS搭配语法模式进行归纳，按文本的POS出现频率进行流水阀门方式优化。
+refer page 97,116，
+
 
 排序，
 1 德塔分词排序思想原型采用 Sir Charles Antony Richard Hoare 的 快速排序思想。
+refer page 版权原因无文字收录 已经refer
+
 2 德塔分词排序源码原型采用 Introduction to Algorithms 的 快速排序4代源码。
+refer page 版权原因无源码收录 已经refer
+
 3 基于1 和 2原型，德塔分词排序 采用 Theory on YAOGUANG's Array Split Peak Defect 的微分催化算子优化思想 2013年开始优化。
+refer page 247,248,250,529,620，
+
 4 优化过程为 小高峰左右比对法， 波动算子过滤思想，离散条件微分思想，目前为TopSort5D。
+refer page 658，下册134，
+
 5 德塔分词的函数优化方式和算法优化方式均采用 微分催化系统。 
+refer page 661，
+
 
 神经网络索引，
 1 德塔分词的词汇字典用map进行索引，因为jdk8+的map支持2分搜索，搜索速度到了峰值。
+refer page,129,131
+
 2 德塔分词的索引不断的将大map进行细化分类，如词长map，词类map，词性map，让搜索再次加速。
+refer page 55，
+
 3 德塔分词的索引map支持 2次组合计算，支持分布式服务器进行索引cache。
+refer page 92，
+
 4 德塔分词map的key用string的 char对应ASCII进行find，方便二分搜索存储和 StringBuilder，底层核统一。
+refer page 92
+
 
 分词在线性文本搜索中应用，
 1 德塔分词的搜索建立在map类的权重，不同的权重叠加产生的打分进行排序输出。
+refer page 下册64
+
 2 权重的计算方法按词性的主谓宾如代 名动形 和 POS如 动名形谓介分类。
-3 权重与词长进行耦合bit叠加计算，生成最终输出结果。 
+refer page 下册66
+
+3 权重与词长，词频进行耦合bit叠加计算，生成最终输出结果。 
+refer page 下册68
+
 4 权重与词长的 比值可以精度调节，确定搜索的精确性。
+refer page 下册68
+
 
 动态CNN内核匹配，
 1 动态的核分为前序核和后序核两种。根据词汇分析的位置进行实时变动更新。
+refer page 97
+
 2 前序核主要缓存存储词汇的位置和词性，用于POS词性搭配的匹配卷积计算。
+refer page 97
+
 3 后序核主要缓存词汇的切词链 后面准备 跟进的词语。用于POS语法的修正计算，如连词匹配。
+refer page 97
+
 4 内核采用StringBuilder做核载体进行计算加速。
+refer page 97
+
 
 POS, 
 1 德塔分词的核心类，包含了词性的搭配切分所有函数。
+refer page 97,116
 
 NLP, 
 1 德塔分词的核心类，包含了词性的词长切分所有函数。
+refer page 119，120
 
 ANN, 
-1 词性卷积计算
-2 用于确定文本的中心
+1词性卷积计算
+refer page 182
+
+2用于确定文本的中心
+refer page 
 
 RNN, 
-1 词位卷积计算
-2 用于确定文本的重心
+1词位卷积计算
+refer page 178
+
+2用于确定文本的重心
+refer page 
 
 DNN, 
-1 词汇深度计算
-2 用于确定文本的核心
+1词汇深度计算
+refer page 183
+
+2用于确定文本的核心
+refer page 
+
 
 图灵机，
 1 文学分析
+refer page 168
+
 2 作品评估
+refer page 167
+
 3 动机分析
+refer page 169
+
 4 情感分析
-。。
+refer page 159
+
+
 
 应用
-
 
 
 涉及著作权文件：
