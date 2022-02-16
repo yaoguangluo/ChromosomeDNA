@@ -86,21 +86,31 @@ ANN,
 refer page 182
 
 2用于确定文本的中心
-refer page 
+2.1 算子组成 
+2.1.1 S SENSING 意识比率
+2.1.2 E ENVIRONMENT 环境比率
+2.1.3 M MOTIVATION 动机比率
+2.1.4 E EMOTION 情绪比率
+refer page 18
 
 RNN, 
 1词位卷积计算
 refer page 178
 
 2用于确定文本的重心
-refer page 
+2.1 算子组成
+2.1.1 P POS 词性比率
+2.1.2 C CORRELATION 词距比率
+2.1.3 E E-DISTANCE 欧基里德熵
+refer page 18
 
 DNN, 
 1词汇深度计算
 refer page 183
 
 2用于确定文本的核心
-refer page 
+2.1 深度计算 (ANN sum核 -> RNN PCE)
+refer page 18
 
 
 图灵机，
