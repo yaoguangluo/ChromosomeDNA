@@ -42,7 +42,7 @@ refer page 见智能声诊
 refer page 见智能相诊
 
 3 德塔的数据分析包 包含3维 数据循环阶计算实例
-refer page 见噪音识别
+refer page 见噪音识别，三阶傅里叶应用，animation等
 
 场景，
 1 图片的操作。
@@ -81,7 +81,7 @@ refer page 258, 211,
 refer page 202, 204, 205, 206
 
 排序，
-1 德塔的排序作者早期2009年设计《算法导论》 黑皮书 的 快速排序4代，进行了10年优化，
+1 德塔的排序作者早期2009年设计《算法导论》 黑皮书 ，北邮出版社有其 数据结构 影印教材 的 快速排序4代，进行了10年优化，
 refer page https://github.com/yaoguangluo/Data_Processor/blob/master/DP/sortProcessor/Quick_4D_Sort.java
 
 2 优化过程归纳，逐渐的形成了一个微分催化排序体系。
@@ -101,7 +101,7 @@ refer page 226
 refer page
 
 3 编码开始于作者2009年  完成 Rohini教授布置的作业。
-refer page
+refer page 我 qq 313699483 有完整作业备份日记。
 
 4 对作者研究Hash空间 有发散思维的用途，如作者数据预测包设计的辅助。
 refer page
