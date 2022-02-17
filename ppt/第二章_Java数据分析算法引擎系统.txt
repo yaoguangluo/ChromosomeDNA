@@ -109,7 +109,7 @@ refer page
 
 应用
 1 TopSort5D 包含深度算子，包含广度算子，包含滤波算子。
-refer page 134
+refer page 下册134
 
 2 索贝尔向量差 区别三维的立体面特征趋势。
 refer page
