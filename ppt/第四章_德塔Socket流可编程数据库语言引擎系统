@@ -1,32 +1,124 @@
 第四章 德塔 Socket 流可编程数据库语言引擎系统
 
+
 Socket rest TCP握手协议，
-1234
+1 德塔数据库的 admin界面采用 web页进行配置操作。
+refer page 376
+
+2 web页配置操作采用TCP握手访问模式，基于socket的http请求握手。
+refer page 464~
+
+3 德塔数据库将socket握手进行线程封装，然后多线程组织页面。
+refer page 392，
+
+4 封装和组织页面设计过程逐步进行优化形成VPCS后端管理体系。
+refer page 383,476
+
 
 文件数据库，
-1234
+1 德塔数据库的数据存储是一种文件存储模式。
+refer page 408,409,469,473
+
+2 文件的读写进行子集，行，表，映射，表头，按1范式分类。
+refer page 375,434,
+
+3 数据库的数据读写支持加密。
+refer page 见元基加密
+
+4 每一个文件不但有物理空间，还有相应的内存空间。
+refer page 375
 
 VPCS服务器，
-1234
+1 VPCS服务器支持每秒400万QPS的web请求。
+refer page 389,
+
+2 VPCS服务器采用TCP rest request模式，标准化http response。
+refer page 388,395
+
+3 VPCS服务器可自由设计前端和后端集成。
+refer page 见德塔官网 和 养料经admin 两个实例
+
+4 VPCS服务器完全支持post 个 get 2种请求模式，可扩展。
+refer page 481,488
+
 
 VPCS调度架构，
-1234
+1 VPCS服务器包含 视觉模块，处理模块，控制模块，资源模块。
+refer page 396,394,392,383
+
+2 每一种模块有各自的名称标识 和 内存标识，方便精确查找。
+refer page 492,493,
+
+3 VPCS服务器包含执行者-生产者-造梦者-sleeper，管理者-分配者-登记者-HallKeeper，运维者-服务员-清洁员-skiivy 3个模式
+refer page 392,394,
+
+4 支持控制与执行分离，线程与资源分离。
+refer page 385~389,486,490,492
 
 PLSQL语言，
-1234
+1 德塔PLSQL语言是一种从上到下的脚本执行语言。
+refer page 377,
+
+2 德塔PLSQL语言包含常用增删改查命令。
+refer page 471,1035
+
+3 德塔PLSQL语言支持join和 aggregation 高级操作。
+refer page 419,431,435,438,447
+
+4 德塔PLSQL语言行 可批处理，可拆分。
+refer page 1035~1041 将例子写入main，class编译，然后 bash boot class 即可。 还可以bash 定时批处理。
+
 
 PLSQL编译机，
-1234
+1 德塔PLSQL编译机 用于理解和执行 德塔PLSQL语言
+refer page 413,414
+
+2 德塔PLSQL编译机 包含常见脚本命令计算算子如 条件算子，比较算子，包含算子，离散算子
+refer page 419
+
+3 德塔PLSQL编译机 采用map进行的内部中间数据缓存
+refer page 431,432~
+
 
 PLORM语言，
-1234
+1 德塔PLORM语言 用于 德塔PLSQL语言进行函数封装。
+refer page 1003~
+
+2 德塔PLORM语言 有先后顺序，需要遵循 德塔PLSQL语言语法。
+refer page 1019~
+
+3 德塔PLORM语言 对比 德塔PLSQL语言 用于一些不需要配置的nosql的场景，类似 hibernate 对比 ibatis。
+refer page 1019~
+
+4 VS hibernate 对比 ibatis的不同，德塔PLORM语言 另外也是 德塔PLSQL的上层语言。
+refer page 1019~
+
 
 灾后重建，
-1234
+1 德塔数据库包含logbin 系统。
+refer page 398,
+
+2 德塔数据库包含logbin 系统基于单个写操作进行log保存 并行加密成文件。
+refer page 399
+
+3 单个写操作用时间戳作和写增量序列进行对应标识，避免混乱。
+refer page 399
+
+4 德塔数据库包含logbin 系统 并支持热备和错误写 实时rollback 检测。 
+refer page 398
+
 
 应用
 
 
+章节的著作权文件列表：
+
+1.罗瑶光. 《德塔 Socket流可编程数据库语言引擎系统 V1.0.0》. 中华人民共和国国家版权局，软著登字第4317518号. 2019.
+2.罗瑶光，罗荣武. 《类人DNA与 神经元基于催化算子映射编码方式 V_1.2.2》. 中华人民共和国国家版权局，国作登字-2021-A-00097017. 2021.
+3.罗瑶光，罗荣武. 《DNA元基催化与肽计算第二卷养疗经应用研究20210305》. 中华人民共和国国家版权局，国作登字-2021-L-00103660. 2021.
+4.罗瑶光，罗荣武. 《DNA 元基催化与肽计算 第三修订版V039010912》. 中华人民共和国国家版权局，国作登字-2021-L-00268255. 2021.        
+5.类人数据生命的DNA计算思想 Github [引用日期2020-03-05] https://github.com/yaoguangluo/Deta_Resource
+6.罗瑶光，罗荣武. 《DNA元基催化与肽计算 第四修订版 V00919》. 中华人民共和国国家版权局，SD-2022Z11L0025809. 2022.
 
 
 罗瑶光
