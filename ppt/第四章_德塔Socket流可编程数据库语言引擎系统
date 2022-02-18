@@ -60,7 +60,7 @@ PLSQL语言，
 refer page 377,
 
 2 德塔PLSQL语言包含常用增删改查命令。
-refer page 471,1035
+refer page 406~409,471,1035
 
 3 德塔PLSQL语言支持join和 aggregation 高级操作。
 refer page 419,431,435,438,447
