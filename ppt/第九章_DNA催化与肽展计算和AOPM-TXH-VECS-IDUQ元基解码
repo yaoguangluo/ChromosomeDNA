@@ -1,2 +1,84 @@
 第九章_DNA催化与肽展计算和AOPM-TXH-VECS-IDUQ元基解码
+语义逐级表达的方式，十五元基解码。
+
+
+
+1. 推导与定义:甲基胞嘧啶在 DNA 编码和肽计算中具体定义为 IDUQ-U 变嘧啶
+refer page 695
+
+2.推导与定义:2 氨基腺嘌呤在 DNA 编码和肽计算中具体定义为 VECS-V 变感腺嘌呤
+refer page 698
+
+2.1 PDN extension 腐蚀
+refer page 699
+
+3.推导与定义:次黄嘌呤在 DNA 编码和肽计算中具体定义为 VECS-E 尿变嘌呤
+refer page 699
+
+4.推导与定义:AOPM-A 变胸腺苷, AOPM-O 尿胞变腺苷, AOPM-P 尿胞变鸟苷, AOPM-M鸟腺苷的S形螺旋纹血氧峰触发器分子式催化计算严谨完整过程
+refer page 700
+
+5. 推导与定义:VECS-VECS 嘌呤对, VECS 嘌呤弧, VECS-IDUQ 碱基对, IDUQ-IDUQ嘧啶对的催化模型
+refer page 701
+
+5.1 上下 旋弧 rotation
+refer page 701
+
+5.2 S link dna pair
+refer page 704
+
+6.推导与定义:次黄嘌呤, 尿变嘌呤 VECS-E=IDUQ-U 变嘧啶, 甲基胞嘧啶 E=U 全新DNA计算碱基对
+refer page 705
+
+
+7.推导与定义:2 氨基腺嘌呤, 变感腺嘌呤 
+refer page 705
+
+7.1 VECS-IDUQ pair
+refer page 705
+
+7.2 VECS-IDUQ pair rotation
+refer page 706
+
+8.推导与定义:碱基对 Rotation 观测与黄嘌呤在 DNA 编码和肽计算中具体定义为VECS-EC尿变鸟嘌呤
+refer page 706
+
+8.1 VECS-VECS pair rotation
+refer page 707
+
+9.推导与定义:尿变鸟嘌呤, 黄嘌呤肽展计算 AOPM-OP-T 变感腺尿变苷与 AOPM-OP-X 变感腺鸟苷
+refer page 708
+
+9.1 DNA and PDE catalytic relations
+refer page 708
+
+10.归纳与定义:DNA 与 TX-H-U 元基解码
+refer page 709
+
+11. 推导与定义:DNA 元基催化计算与 ETL 肽展神经网络计算流
+refer page 710
+
+11.1 rotation S link encoding & decoding
+refer page 710
+
+
+
+
+
+章节的著作权文件列表：
+
+1.罗瑶光. 《德塔自然语言图灵系统 V10.6.1》. 中华人民共和国国家版权局，软著登字第3951366号. 2019.
+2.罗瑶光. 《Java数据分析算法引擎系统 V1.0.0》. 中华人民共和国国家版权局，软著登字第4584594号. 2014.
+3.罗瑶光. 《德塔ETL人工智能可视化数据流分析引擎系统 V1.0.2》. 中华人民共和国国家版权局， 软著登字第4240558号. 2019.
+4.罗瑶光. 《德塔 Socket流可编程数据库语言引擎系统 V1.0.0》. 中华人民共和国国家版权局，软著登字第4317518号. 2019.
+5.罗瑶光. 《德塔数据结构变量快速转换 V1.0》. 中华人民共和国国家版权局，软著登字第4607950号. 2019. 
+6.罗瑶光. 《数据预测引擎系统 V1.0.0》. 中华人民共和国国家版权局，软著登字第5447819号. 2020.
+7.罗瑶光，罗荣武. 《类人DNA与 神经元基于催化算子映射编码方式 V_1.2.2》. 中华人民共和国国家版权局，国作登字-2021-A-00097017. 2021.
+8.罗瑶光. 《肽展公式推导与元基编码进化计算以及它的应用发现》. 中华人民共和国国家版权局，国作登字-2021-A-00042587. 2021.
+9.罗瑶光. 《DNA催化与肽展计算和AOPM-TXH-VECS-IDUQ元基解码013026中文版本》. 中华人民共和国国家版权局，国作登字-2021-A-00042586. 2021.
+
+
+
+罗瑶光
+
 
