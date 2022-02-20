@@ -1,17 +1,24 @@
 第十章_DNA非卷积视觉技术
 
+DNA非卷积视觉技术原理
+
+1 DNA非卷积视觉技术将图片像素0~255的区间捕获后，进行元基进制变换，产生了离散色阶，
+2 这个色阶，与之前像素亮度色阶完全不对称，利用这一点不对称，可以将邻近像素差不大的像素团进行颜色差 的拉伸
+3 颜色差 的拉伸方式 为 有系统的 10进制色 变换为 元基色 进行固定的 酸碱 更换。实践后发现价值巨大。
+
+
 肽腐蚀，
 1 DNA非卷积视觉 用元基的酸碱变化规律定义为肽腐蚀。
-refer page
+refer page 723
 
 2 DNA非卷积视觉的肽腐蚀 需要将10进制数字变换成生化进制数值。
-refer page
+refer page 724
 
 3 DNA非卷积视觉的肽腐蚀观测体征体现在颜色区间上。
-refer page
+refer page 735 ，742
 
 4 DNA非卷积视觉的肽腐蚀浓度用概率百分比来标识。
-refer page
+refer page 756 monitor.fac x y.. 
 
 
 
@@ -34,47 +41,54 @@ refer page
 
 元基的视觉叠加与表达方式，
 1 视觉流计算
-refer page
+refer page 756
 
 2 animation动画
-refer page
+refer page 744
 
 3 颜色的腐蚀精度调节
-refer page
+refer page 757
 
 4 肽展公式的应用
-refer page
+refer page 723
+
+
 时序视觉模拟机，
-1 线性卷积计算 
-refer page
+1 线性神经网络卷积计算 
+refer page 772
 
 2 卷积计算的方式
-refer page
+refer page 773
 
 3 非卷积视觉的应用
-refer page
+refer page 756
+
+
 费洛蒙的计算方式，
 1 CNN卷积元基PDC扩展
-refer page
+refer page 774
 
-2 邻近元基PDC代谢
-refer page
+2 邻近元基PDC代谢 共同基
+refer page 774
 
 3 PDC链结构rotation
-refer page
+refer page 774
 
 4 丝化散开与腐蚀
-refer page
+refer page 775
 
 应用
 1 舌诊观测应用
-refer page
+refer page 736
 
 2 骨CT观测应用
-refer page
+refer page 735
 
 3 皮肤病观测应用
-refer page
+refer page 下册156，下册157
+
+
+
 
 章节的著作权文件列表：
 
@@ -87,7 +101,6 @@ refer page
 7.罗瑶光，罗荣武. 《DNA 元基催化与肽计算 第三修订版V039010912》. 中华人民共和国国家版权局，国作登字-2021-L-00268255. 2021.        
 8.类人数据生命的DNA计算思想 Github [引用日期2020-03-05] https://github.com/yaoguangluo/Deta_Resource
 9.罗瑶光，罗荣武. 《DNA元基催化与肽计算 第四修订版 V00919》. 中华人民共和国国家版权局，SD-2022Z11L0025809. 2022.
-
 
 
 
