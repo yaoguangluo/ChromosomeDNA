@@ -4,93 +4,113 @@
 
 元基索引花，
 1 元基索引花映射计算
-refer page 
+refer page 下册278,下册292,下册296
 
 2 元基索引花调度模式
-refer page 
+refer page 下册299~
 
 3 元基索引花语言模式
-refer page 
+refer page 下册630
+
+/*
+元基花，
+1 元基花染色体模拟
+refer page 下册278~
+2 元基花瓣 映射接口 模拟
+refer page 下册296~630
+3 元基花萼 接口调用 模拟
+refer page 下册292
+4 元基花蕊 遗传序列 模拟
+refer page 本章
+
+ 元基枝，
+1 元基枝叶模拟 华瑞集工程文件
+refer page 前六章的实体工程架构 12,186,267,368,492,560
+
+2 元基枝干模拟 养疗经启动文件
+refer page 养疗经的boot app启动主引擎用于连接元基花计算。
+*/
+
+
 
 
 元基花的优化方式，
 1 元基花的索引优化
-refer page 
+refer page 下册299~ (传参因子[因子++])设计模式
 
 
 2 元基花的映射优化
-refer page 
+refer page reflection 优化 见UML，不断裁剪分出去即可，
+https://github.com/yaoguangluo/ChromosomeDNA/tree/main/2022/02/02
 
 
 3 元基花的文件细化
-refer page 
+refer page 与sonar的规范一致，国际统一，文件大化小，循环多化少，内容重化简，不多介绍了，
 
 
 4 元基花的新陈代谢
-refer page 
+refer page 下册149， 更多见uml归纳。
 
 
 元基花的绽放方式，
 1 元基花的展示
-refer page 
+refer page 下册278~
 
 
 2 元基花接口调用方式 
-refer page 
+refer page 下册631
 
 
 3 元基花接口调用的格式化序列记录
-refer page 
+refer page 下册631
 
 
 元基花的遗传方式，
 1 元基花的遗传属性
-refer page 
+refer page 下册663
 
 
 2 元基花的遗传序列函数统计方式
-refer page 
+refer page 下册696
 
 
 3 元基花的遗传序列
-refer page 
+refer page 下册631,下册696
 
 
 
 元基花的配对方式，
 1 元基花的序列实现
-refer page 
-
+refer page 下册278,下册292,下册296
 
 
 2 元基花的序列编码
-refer page 
+refer page 下册630
 
 
 3 元基花的配对的成分
-refer page 
-
+refer page 元基索引花，元基索引花对应的工程函数映射，
+下册480 StaticFunctionMap的 annotationMap 注册函数。
 
 
 元基花的进化方式。
 1 元基花的新陈代谢
-refer page 
+refer page 见下册149 与 uml归纳
+https://github.com/yaoguangluo/ChromosomeDNA/tree/main/UML
 
 
 2 元基花的自主添加接口方式
-refer page 
+refer page 未涉及。常见如OSGI扩展, 继承，classloader扫描 三种写法。
 
 
 3 元基花的任务统计方式
-refer page 
+refer page 下册696
 
 
 
 应用
 1 元基花调用实例
-refer page 
-
-
+refer page 下册630
 
 
 
