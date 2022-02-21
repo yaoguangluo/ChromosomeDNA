@@ -64,7 +64,7 @@
 
 #### 使用方法
 	Demo真实例子 基于 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar 使用举例。 
-	Demo真实调用模式 见Demo https://github.com/yaoguangluo/ChromosomeDNA/tree/main/Demo
+	Demo真实源码调用实例 见 https://github.com/yaoguangluo/ChromosomeDNA/tree/main/Demo
 
 #### 研发状态
 	当前版本919版见  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理 的 V00919 编号。
