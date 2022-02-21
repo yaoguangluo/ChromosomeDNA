@@ -1,60 +1,116 @@
 第十三章_DNA_数术推导与RNA_X_THF_DD元基芯片与肽逻辑
 
 
-
 元基罗盘分类， 
 1 DNA元基语义罗盘，
+refer page 6
+
+
 2 DNA元基活性罗盘，
+refer page 6
+
+
 3 DNA元基腐蚀罗盘
+refer page 7
+
+
 4 DNA 双元罗盘，
+refer page 8
+
+
 5 DNA 生化钥匙罗盘，
+refer page 9
+
+
 6 DNA 语义钥匙罗盘，
+refer page 10
+
+
 
 /* 并入进来。
 
 肽钥匙，
 1 DNA非卷积视觉的肽钥匙采用化学的 酸酚酮酯 醇酶酰醚 来做钥匙
-2 DNA非卷积视觉的肽钥匙按CNO比例和活性来罗盘归纳
-3 DNA非卷积视觉的肽钥匙通过罗盘的方位和活性确定其语义属性
-4 DNA非卷积视觉的肽钥匙具备双元 生化语义无理级价值。
+refer page 10
 
-肽活性表达，
+2 DNA非卷积视觉的肽钥匙按CNO比例和活性来罗盘归纳
+refer page 9，10
+
+3 DNA非卷积视觉的肽钥匙通过罗盘的方位和活性确定其语义属性
+refer page 10
+
+4 DNA非卷积视觉的肽钥匙具备双元 生化语义无理级价值。
+refer page,10
+
+
+肽活性表达，略
 1 DNA非卷积视觉的肽元基有化学活性归纳
 2 DNA非卷积视觉的肽元基有方位语义归纳
 3 DNA非卷积视觉的肽元基有活性归纳
+
 */
 
 
 元基进制推导，
 1 欧拉计算
+refer page 56
+
 2 商旅分析
+refer page 56
+
 3 十七进制
+refer page 15
+
 4 十六进制
+refer page 16
+
 
 
 十六进制变换方式， 
 1 十六进制定义
+refer page 48
+
 2 十进制互换
+refer page 11
 
 
 元基数字逻辑，
 1 锁存器
+refer page 60
+
 2 触发器
+refer page 61,62
+
 3 寄存器
+refer page 63
+
 4 锁相环
+refer page 63
 
 
 锁存器与触发器的模拟猜想，
 1 锁相环存储
+refer page 63
+
 2 锁相环计算
+refer page 略
+
 3 锁相环滤波
+refer page 62
+
 4 计时器
+refer page 略
 
 
 周期频率语义肽减法公式。
 1 元基频率推导
+refer page 55
+
 2 元基频率PN极性推导
-3 元基频率减法推导
+refer page 61
+
+3 元基频率补码减法推导
+refer page 54
 
 
 
