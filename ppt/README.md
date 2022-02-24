@@ -70,5 +70,17 @@ ppt依照 《DNA元基催化与肽计算 第四修订版 V00919》+ UML 进行�
 
 
 
+##### 文件资源
+        1 jar： https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar
+        2 book 《DNA元基催化与肽计算 第四修订版 V00919》上下册
+        https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理
+
+        3 函数在git的存储地址：demos
+        Github：https://github.com/yaoguangluo/ChromosomeDNA/
+        Coding：https://yaoguangluo.coding.net/public/YangLiaoJingHuaRuiJi/YangliaojingHuaruiji/
+        Bitbucket：https://bitbucket.org/luoyaoguang/yangliaojing/
+        Gitee：https://gitee.com/DetaChina/
+
+
 
 罗瑶光
