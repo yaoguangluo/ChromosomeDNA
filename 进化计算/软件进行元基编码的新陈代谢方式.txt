@@ -1,4 +1,6 @@
-软件进行元基编码的新陈代谢方式V0. 0. 8
+在进化计算中，软件进行元基编码的新陈代谢方式 V0. 0. 8
+
+罗瑶光
 
 关键词:进化计算, 数据软件, 元基索引, 新陈代谢
 
@@ -81,4 +83,4 @@ CSDN https://blog.csdn.net/weixin_38249398/category_11647953.html
 CSDN https://blog.csdn.net/weixin_38249398/category_11647527.html
 
 
-罗瑶光
+
