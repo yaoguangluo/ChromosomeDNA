@@ -1,4 +1,4 @@
-软件进行元基编码的新陈代谢方式V0. 0. 7
+软件进行元基编码的新陈代谢方式V0. 0. 8
 
 关键词:进化计算, 数据软件, 元基索引, 新陈代谢
 
@@ -42,7 +42,7 @@ AOPM-VPCS的语义元基编码帮我解决了很多问题. 最后这个DNA语义
 2020年11月29日  9.罗瑶光. 《DNA催化与肽展计算和AOPM-TXH-VECS-IDUQ元基解码013026中文版本》. 中华人民共和国国家版权局，国作登字-2021-A-00042586. 2021.  
 2021年03月05日  10.罗瑶光, 罗荣武. 《DNA元基催化与肽计算第二卷养疗经应用研究20210305》. 中华人民共和国国家版权局，国作登字-2021-L-00103660. 2021. 
 2021年09月13日  11.罗瑶光, 罗荣武. 《DNA 元基催化与肽计算 第三修订版V039010912》. 中华人民共和国国家版权局，国作登字-2021-L-00268255. 2021.  
-
+2021年10月16日  12.罗瑶光. 《DNA元基索引ETL中文脚本编译机V0.0.2》. 中华人民共和国国家版权局，SD-2021R11L2844054. 2021. (登记号:2022SR0011067) 软著登字第8965266号.  
 
   当我的软件开始了DNA元基编码优化方式, 我一直在思考怎么让我的软件自主进行进化计算分析. 我的思维还是很
 简单设计这个编码的新陈代谢方式, 为软件赋予原始的生命特征活性. 于是我开始研究, 发现元基编码在函数分类索
@@ -57,7 +57,6 @@ AOPM-VPCS的语义元基编码帮我解决了很多问题. 最后这个DNA语义
   这个过程中, 我得到了很多有意思的价值发现, 
 如DNA元基索引的染色体分类方式, DNA元基索引的新陈代谢方式, DNA元基索引的函数序列遗传方式. 
 
-2021年10月16日  12.罗瑶光. 《DNA元基索引ETL中文脚本编译机V0.0.2》. 中华人民共和国国家版权局，SD-2021R11L2844054. 2021. (登记号:2022SR0011067) 软著登字第8965266号.  
 2021年12月26日  13.罗瑶光. 《TinShell插件_元基花模拟染色体组计算索引系统 V20211227》. 中华人民共和国国家版权局，SD-2021R11L3629232. 2022. (受理号:2022R11S0138561).
 2022年01月27日  14.罗瑶光, 罗荣武. 《DNA元基催化与肽计算 第四修订版 V00919》. 中华人民共和国国家版权局，SD-2022Z11L0025809. 2022. (受理号:2022Z11S1032939).
 
@@ -66,16 +65,17 @@ AOPM-VPCS的语义元基编码帮我解决了很多问题. 最后这个DNA语义
 文件资源
 1 Jar： https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar
 2 UML： https://blog.csdn.net/weixin_38249398/category_11647527.html
-3 Book 《DNA元基催化与肽计算 第四修订版 V00919》上下册
+3 PPT:  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/ppt
+4 Book:《DNA元基催化与肽计算 第四修订版 V00919》上下册
 https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理
 
-4 函数在Git的存储地址：Demos
+5 函数在Git的存储地址：Demos
 Github：https://github.com/yaoguangluo/ChromosomeDNA/
 Coding：https://yaoguangluo.coding.net/public/YangLiaoJingHuaRuiJi/YangliaojingHuaruiji/
 Bitbucket：https://bitbucket.org/luoyaoguang/yangliaojing/
 Gitee：https://gitee.com/DetaChina/
 
-5 其它资源链接:
+6 其它资源链接:
 ZHIHU https://www.zhihu.com/column/c_1479682307107381248
 CSDN https://blog.csdn.net/weixin_38249398/category_11647953.html
 CSDN https://blog.csdn.net/weixin_38249398/category_11647527.html
