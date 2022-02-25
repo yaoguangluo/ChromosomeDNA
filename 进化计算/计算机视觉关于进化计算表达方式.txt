@@ -1,4 +1,4 @@
-计算机视觉关于进化计算表达方式0.0.1
+计算机视觉关于进化计算表达方式0.0.2
 
 罗瑶光
 
@@ -10,13 +10,37 @@
 
 见解
 当然也是Renhart曾静说过：如果能将卷积计算变成序列化流计算就好了，这样中间过程就可以修改观测，应用会更广泛。我带着这个疑问，
-实现了UNICORN APPLET ETL的像素节点流数据分析设计工具。新的问题也伴随而来。第一个问题便是，卷积的计算优化加速。
+实现了UNICORN APPLET ETL的像素节点流数据分析设计工具。新的问题也伴随而来。第一个问题便是，卷积的计算优化加速。很多人的
+曾经说我的思考方式和常人不一样。正如2020年设计计算机腐蚀视觉算法例子，我的思维总是很简单，就是觉得卷积计算太耗费时间，如果能
+设计一种非卷积计算算法来处理计算机的视觉应用问题，那么将是质的飞跃。
 
 论证
+带着这个问题，我沿着非卷积计算视觉的研发路线开始跌跌撞撞的探索着。我在思考我有什么，勇气是不够的，需要有严谨的理论和基础知识作为后盾。
+此时我已经研发出来了 元基进制编码，最早从4bit的元基色进行图片快速腐蚀，然后8bit元基腐蚀，当我的十七进制研发得到了十六进制的成果，
+于是迅速将十六进制的肽展腐蚀应用在图片观测上，我发现，元基腐蚀后的图片的色阶与256bit的十进制色阶完全不对称，利用这个不对称，能得到
+更多的颜色隐藏特征。
 
 结果
+
 
 展示
 
 资源
+
+1 Jar： https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar
+2 UML： https://blog.csdn.net/weixin_38249398/category_11647527.html
+3 PPT:  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/ppt
+4 Book:《DNA元基催化与肽计算 第四修订版 V00919》上下册
+https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理
+
+5 函数在Git的存储地址：Demos
+Github：https://github.com/yaoguangluo/ChromosomeDNA/
+Coding：https://yaoguangluo.coding.net/public/YangLiaoJingHuaRuiJi/YangliaojingHuaruiji/
+Bitbucket：https://bitbucket.org/luoyaoguang/yangliaojing/
+Gitee：https://gitee.com/DetaChina/
+
+6 其它资源链接:
+ZHIHU https://www.zhihu.com/column/c_1479682307107381248
+CSDN https://blog.csdn.net/weixin_38249398/category_11647953.html
+CSDN https://blog.csdn.net/weixin_38249398/category_11647527.html
 
