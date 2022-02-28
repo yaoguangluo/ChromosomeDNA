@@ -80,7 +80,9 @@ ppt依照 《DNA元基催化与肽计算 第四修订版 V00919》+ UML 进行�
         Coding：https://yaoguangluo.coding.net/public/YangLiaoJingHuaRuiJi/YangliaojingHuaruiji/
         Bitbucket：https://bitbucket.org/luoyaoguang/yangliaojing/
         Gitee：https://gitee.com/DetaChina/
-
-
+        
+        鉴于 Git的时间戳文件是不带图片显示的，本人的带图组合 ppt阅读地址如下：
+        知乎 https://www.zhihu.com/column/c_1479682307107381248
+        CSDN https://blog.csdn.net/weixin_38249398/category_11647527.html
 
 罗瑶光
