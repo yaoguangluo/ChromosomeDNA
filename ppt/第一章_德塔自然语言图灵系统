@@ -39,10 +39,10 @@ refer page 版权原因无源码收录 已经refer https://github.com/yaoguanglu
 3 基于1 和 2原型，德塔分词排序 采用 Theory on YAOGUANG's Array Split Peak Defect 的微分催化算子优化思想 2013年开始优化。
 refer page 247,248,250,529,620，
 
-4 优化过程为 小高峰左右比对法， 波动算子过滤思想，离散条件微分思想，目前为TopSort5D。
+4 优化过程为 小高峰左右比对法， 波动算子过滤思想，离散条件归纳微分思想(如狄摩根计算，流水阀门计算等)，目前为TopSort5D。
 refer page 658，下册134，
 
-5 德塔分词的函数优化方式和算法优化方式均采用 微分催化系统。 
+5 德塔分词的函数优化方式和算法优化方式，包括分词引擎，读心术，NLP分析等核心组件均采用 微分催化系统。 
 refer page 661，
 
 
