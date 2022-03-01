@@ -47,16 +47,16 @@ refer page 661，
 
 
 神经网络索引，
-1 德塔分词的词汇字典用map进行索引，因为jdk8+的map支持2分搜索，搜索速度到了峰值。
+1 德塔分词的词汇字典用map进行索引，因为jdk8+的map对象的key支持2分搜索，搜索速度到了峰值。
 refer page,129,131
 
 2 德塔分词的索引不断的将大map进行细化分类，如词长map，词类map，词性map，让搜索再次加速。
 refer page 55，
 
-3 德塔分词的索引map支持 2次组合计算，支持分布式服务器进行索引cache。
+3 德塔分词的索引map支持 2次组合计算，支持分布式服务器进行索引cache。关于2次组合计算作者不建议单机使用。
 refer page 92，
 
-4 德塔分词map的key用string的 char对应ASCII进行find，方便二分搜索存储和 StringBuilder，底层核统一。
+4 德塔分词map的key用string的 char对应ASCII int进行标识来执行find key，方便二分搜索存储和 StringBuilder高速计算，实现底层核统一。
 refer page 92
 
 
