@@ -1,9 +1,10 @@
-第七章 类人DNA与神经元基于催化算子映射编码方式 原文 的英文部分 
+第七章 类人DNA与神经元基于催化算子映射编码方式 原文 的英文部分
    
                                The Initons Catalytic Reflection Between Humanoid DNA and Nero Cell
                                                   Yaoguang Luo, Rongwu Luo
- Keywords: VPCS, AOPM, IDUC, Nero, Artificial, Decoder, Medical, Paralling, Computing,
- Humanoid, ETL, Parser, Data Mining
+                                                  
+Keywords: VPCS, AOPM, IDUC, Nero, Artificial, Decoder, Medical, Paralling, Computing,
+Humanoid, ETL, Parser, Data Mining
 
 Outlook: VPCS architecture is not the end. Absolutely, At least at this paper, I will make an implementation in fivesection: 
 DETA humanoid cognition, DETA Medical Business backend logic, DETA Catalytic computing, DETA Findinginitions, DETA DNA decoding.
@@ -37,7 +38,7 @@ and transform the environment. The best arguments to improve the cognitive abili
 of basic science and technology and systematic induction, Marconi's wireless telegraph, Zu Chongzhi's pi, Darwin's origin of species, code
 of Hammurabi, and countless outstanding scientists, thinkers, inventors and philosophers in history. These people seem to be shining stars
 in the night sky. Gradually, Intelligent creatures begin to have enough ability to look up into space and explore the mysteries of the universe,
-and this enough ability is the basic ability to improve the cognition of things, which is very important. The Huaruiji system of DETA Company
+and this enough ability is the basic ability to improve the cognition of things, which is very important. The HuaRuiJi system of DETA Company
 draws lessons from the systematic induction method of human instinct and dialectically treats medical diseases with medical textbooks as the 
 cognitive basis, which is in line with the embodiment of scientific development.
   
@@ -182,7 +183,7 @@ Controller, Sets) theory, fun yet? Not only this paper will gazer a big point ho
 of idyllic landscapes of the coding sections. While you got lots of the illness codes at the so messy fungus projects, I guess at this paper out where 
 you are finding anxiously. Let’s catch more opportunity about how does the VPCS working, executing and scheduling in our software project and make the
 software fast, fast and safe! lets go, So the key words as below:
-  
+
 Quantum Sets, Concurrent Consumer, Vision, Scheduler, Threads, Surf.
   
 Introductions
@@ -358,13 +359,13 @@ logic where to instead the old complex functions. Those ways include the conditi
 mathematics of double differential, deep definition, acquisition or polynomial to get the solutions.
    
 5 True Instances
-Let me show the algorithms here,From this code: in a common quicksort way, the recursion based on the average deep split, suppose the initial 
+Let me show the algorithms here,From this code: in a common quick sort way, the recursion based on the average deep split, suppose the initial 
 array length is N{1,2,3…n} is an Odd, so the separate two arrays will cause an asymmetry defect, those timer asymmetry compute peak collection 
 will cause more and more probability problems such like jam, lock, time waste and heap increment. The odd peak binary split as below：
   
 How to avoid those timer distinction peaks? I go more absolutely research where focus on these problems, first, differential flows. This flash is 
 not suitable for here, May good for the DETA parser, I will show you later. Second, compute acceleration. Yep, this is a good way, for example
- find the big X as the code blew, it will cause the while loop ability accelerations. 
+find the big X as the code blew, it will cause the while loop ability accelerations. 
  
 int x= a[lp]< a[rp]? a[lp]: a[rp];
 （int x= a[lp]< =a[rp]? a[lp]: a[rp];）suitable for string swap top sort 5D
@@ -380,14 +381,14 @@ Goal Two: DETA parser
 Last year I help my father to develop the study software about getting the medicine data collection for quick search. I’ m going to try to
 build a search engine system, input format is a string, how to get a Chinese string array split?
   
-convolution length indicate by marching Nero index tree as below: 2|1|2|3 
-convolution POS indicate as below: n |c |n |adv |adj 
-convolution split 
+Convolution: length indicate by marching Nero index tree as below: 2|1|2|3 
+Convolution: POS indicate as below: n |c |n |adv |adj 
+Convolution: split 
 
 7 Thinks:
 While I use this way on my DETA project Chinese separations, I met so many problems, the more and more important problem is the POS frequency
 peak waste, my POS flow functions will spend a lot of time to do the low prior convolution split condition check first… it cost me a lot of
- time… after I did a collection of my projects, the results are clear.
+time… after I did a collection of my projects, the results are clear.
   
 8 Problems:
 First, convolution kernel gets asymmetry problems. Second, unnecessary conditions check loops. Third, unimportant heap register values. End,
@@ -461,8 +462,8 @@ These arguments were a year ago. At present, many works have been in a good foll
 the project of YangLiaoJing. Over the years, I have been thinking, what is the final expression of DETA acquisitive logic? I have never 
 stopped exploring, and I have always been absolutely focused.
   
-4 DETA Finding initions
-I have been thinking, what is the final expression of DETA acquisitive logic? I have never stopped exploring, and I have always been absolutely
+4 DETA Finding Initions
+I have been thinking, what is the final expression of DETA Acquisitive Logic? I have never stopped exploring, and I have always been absolutely
 focused. I must find the final expression of these logic. From 2018 to 2019, I thought that the final expression of logic refinement must not be 
 as simple as AOPM and VPCS. VPCS is just a refinement layer of AOPM, so how can VPCS be refined? So I began to sort out my existing things, my 
 works and soft thoughts. God, I can only make persistent and absolute focus on what I have. I have to make a bet.
@@ -479,7 +480,7 @@ an exciting argument. My word segmentation function was continuously split ratio
 of addition, deletion and modification were displayed by IOAON. For the most powerful argument, when I was processing nouns in word segmentation,
 the final function was formed. Memory takes out 4 words, compares 4 words proverbs, does not? then compare 3 words, does not? then compare 2 words,
 and does not? then split into single words. This process is summarized in one sentence as a combined decision-making process of adding, deleting, 
-modifying and checking memory data according to John von Neumann's time flow form.
+modifying and checking memory data according to John Von Neumann's time flow form.
    
 When I think about this, my eyes shine. IDUC is not only the operation mode of database, but also the operation mode of memory data, and it 
 is absolutely focused continuously! ! ! Assuming that IDUC is effective for all data operation modes, assuming it is successful, if it is coded, 
@@ -498,8 +499,8 @@ It is the only way that I can do at present to construct the system of YangLiaoJ
 idea and technology. It is still the absolute focus of that sentence.
   
 5.1DETADNAdecodinghistory, 
-At present, what we know is that DNA peptide group has billions of long, double chains and 24 pairs of chromosomes. there are five primitives of ACGTu.
-if acgt can encode human higher intelligence logic, then humanoid data DNA with IDUC unit can also write hundreds of thousands of business transaction
+At present, what we know is that DNA pep-tide group has billions of long, double chains and 24 pairs of chromosomes. there are five primitives of ACGTu.
+if ACGT can encode human higher intelligence logic, then human-OID data DNA with IDUC unit can also write hundreds of thousands of business transaction
 processing logic of AOPM VPCS. these two logics do not conflict.
 
 5.2DETADNAdecodingdevelopment, 
@@ -513,7 +514,7 @@ multidimensional, database and memory data. These fragments can be coded effecti
 In order to overthrow my argument, I began to look for arguments everywhere to attack this argument. First, I found the topic of eternal life. 
 According to AOPM -VPCS- IDUC, IDMC is true. Since it can be perfectly explained, I found the topic of infection in COVID-19, that is, DUOP is true,
 which is an exciting conclusion! I have been searching for answers to all the problems for decades from AOPM -VPCS- IDUC, so I started mapping and
-coding as follows:I got a clear DNA theorem:The essence of DNA is a combination indexing linklist of four meta-operations of adding, deleting 
+coding as follows:I got a clear DNA theorem:The essence of DNA is a combination indexing link list of four meta-operations of adding, deleting 
 modifying and Querying data. 10-04-2020 DC
   
 6 IDUC DNA and Its Applications,
@@ -537,10 +538,10 @@ differences in actual programming analysis. I used JAVA-based language, and I fo
 with evolutionary thought, but its methodology in this initial evolutionary standard test was far superior to C/C++. I didn't bring any troubles to 
 my actual programming when I wrote JAVA program in C style, but JAVA still needs to be improved. For example, you abstract a parent class, and the 
 variable function of your subclass still needs to be written in the way of "OBJECT parent class = (subclass) parent class" to make subclass operation. 
-If grandchildren inherit subclasses, how can OBJECT get grandchildren? (I use the OBJECT subclass to inherit the parent class, and then the OBJECT 
-subclass = (grandson) subclass. In this way, the grandchildren get the operation), but this is a big problem of dynamic memory structure allocation! 
+If grand children inherit subclasses, how can OBJECT get grand children? (I use the OBJECT subclass to inherit the parent class, and then the OBJECT 
+subclass = (grandson) subclass. In this way, the grand children get the operation), but this is a big problem of dynamic memory structure allocation! 
 The design is rather cumbersome. JAVA still stays at the level of primary language evolution, and does not have advanced evolutionary ideas. Secondly,
-if a subclass has more than one grandchild, only the subclass can operate, and the parent class cannot operate accordingly. This is also a criticism. 
+if a subclass has more than one grand child, only the subclass can operate, and the parent class cannot operate accordingly. This is also a criticism. 
 Is it realized by adding OBJECT subclass = (grandson) subclass and OBJECT parent class = (subclass) parent class? This is even more complicated.
 
 Through the above description, I have my own views, but I still chose JAVA, even though it is cumbersome, but there is no mistake, because it will be
@@ -566,40 +567,39 @@ can be modified in subclasses, thus ensuring parameter variation. In this way, t
 process. Finally, I have a deep experience through the expression of language evolution thought and program evolution thought mentioned above. 
 Every language needs its needs if it is to be deeply rooted,and its functions should be selectively evolved in the needs. Otherwise, this is the 
 biggest reason why languages have been eliminated. I don't like to see various languages emerge one after another in today's world. This is the
- biggest criticism that many languages have not evolved and can't reflect their needs. Secondly, languages need to be extended, and the appearance
+biggest criticism that many languages have not evolved and can't reflect their needs. Secondly, languages need to be extended, and the appearance
 of API class libraries and some architecture systems of high-level languages is a good proof of extension. Finally, variation is similar to scripting
 language, which is flexible and convenient.What about software? The same is true for software. It is particularly important to choose a language that 
-suits your own needs. Secondly, the architecture of the software should have loose coupling, which is similar to OSGI and Felix. The OSGI idea of KNIME 
+suits your own needs. Secondly, the architecture of the software should have loose coupling, which is similar to OSGI and FELIX. The OSGI idea of KNIME 
 is consistent with that of LIFERAY. Although the API design style is different, the effect is very thick. Biology needs Darwin's thought, and 
 artificial intelligence also exists, which is the basis of demand persistence. This is also the basic condition for my research and development of 
 UNICORN AI platform.Now I have enough confidence to continue to focus on the argument of making ETL mapped by my DNA code with evolutionary system  
 reuse the perfect guarantee requirement persistence. On how to use ETL to map the code, I will go back to the previous year again and analyze the 
 design idea of this picture at that time as follows Yes, I have an idea already! ! Exciting, ETL node three-dimensional classification. this vocabulary 
 7 IDUC VPCS AOPM 3D Nero Cell and Its Applications, These are the following words. ETL begins to expand in the direction of 3D. First of all, I want 
-to design the 3 D functional area of neurons based on the DNA mapping of DETA IDUC. This is the real humanoid independent thinking way that I can 
+to design the 3 D functional area of neurons based on the DNA mapping of DETA IDUC. This is the real human-OID independent thinking way that I can 
 understand.This is the first index application idea of DNA coding manual in human history.
    
 I will Change Org.lyg.node.medcine.addchufangattributeH.jar into Org.node.a.v.c.u.medcine.addchufangattributeH.jar
    
 This a.v.c.u will form a dna mapping system code for analyzing visual control changes, which is convenient for future evolutionary optimization tests. 
 After that, I will systematically encode these ETL index mapping sets into DNA index chains for YangLiaoJing. The ideas given to me in this paper are
-all creative ideas. Thank you for everything. I can first design AOPM VPCS IDUC initons 64-bit single chain for the integrity of coding, such as 
-This index mode, even though it is not the final index of organic DNA of human beings, has become the first mapping execution mode of humanoid artificial
-design representing evolutionarily encoded DNA.
+all creative ideas. Thank you for everything. I can first design AOPM VPCS IDUC INITONS 64-bit single chain for the integrity of coding, such as 
+This index mode, even though it is not the final index of organic DNA of human beings, has become the first mapping execution mode of human-OID artificial
+design representing evolutionary encoded DNA.
 
-Not The End结论:
-In this paper, I spent 20 years of basic study, 7 years of work practice, 2 years of open source implementation, 18 corresponding data subprojects, 
+Not The End:
+In this paper, I spent 20 years of basic study, 7 years of work practice, 2 years of open source implementation, 18 corresponding data sub-projects, 
 6 data fields, 2 big data works, 7 artificial intelligence papers, and gradually demonstrated some essence, such as The essence of DNA is a combination
-indexing linklist of four meta-operations of adding, deleting, modifying and Querying data.Execution mode of neuron calculation: a neuron time series
-calculation chain of specifical function calculation by mapping of 
-DNA coding index reflection 
+indexing link list of four meta-operations of adding, deleting, modifying and Querying data.Execution mode of neuron calculation: a neuron time series
+calculation chain of specifical function calculation by mapping of DNA coding index reflection 
 
 The essence of adapting to the environment is that DNA coding indexes map related neurons compiler link to achieve better addition, deletion,
 modification and query the environment data.
 
-The essence of humanoid evolution offspring: the offspring produced by optimizing the hybridization of the same coding logic part in the DNA encoding 
+The essence of human-OID evolution offspring: the offspring produced by optimizing the hybridization of the same coding logic part in the DNA encoding 
 index chain mapped and retained by the neuron calculation method of data efficient processing It seems that the topic will never end, so I might as well
-boldly put forward new arguments, continuously and tenaciously focus and demonstrate,and I still enjoy it.
+boldly put forward new arguments, continuously and tenaciously focus and demonstrate, and I still enjoy it.
 
 8 Refer (原文文章太长，refer部分稍后改英文。)
 德塔分词, https://github.com/yaoguangluo/DETA_Parser
