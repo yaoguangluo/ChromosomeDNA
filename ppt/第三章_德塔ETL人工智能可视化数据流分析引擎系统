@@ -30,6 +30,9 @@ refer page 见jtextPanel
 1 德塔ETL 皮肤采用bitmap实现，可以自由替换。
 refer page 333,334
 
+（之后我会进行代码的优化优化， 将 bitmap的表达形式 array[][]  swap成 array[]+array[]，这样50*50的界面 含有200个点，
+2500次遍历 就变成了200次， 界面刷新时间缩减到原来的十分之一甚至更短。罗瑶光）
+
 2 德塔ETL 皮肤包含指标，箭头，连线，节点外形，控间外形设计。
 refer page 332,319~
 
