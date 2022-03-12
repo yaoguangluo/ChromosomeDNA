@@ -99,6 +99,8 @@ refer page 1019~
 4 VS hibernate 对比 ibatis的不同，德塔PLORM语言 另外也是 德塔PLSQL的上层语言。
 refer page 1019~
 
+德塔的PLORM 和 PLSQL 的引擎出现，作者开始有信心将其优化成 节点执行的命令行脚本模式，于是之后的TinShell
+和 PLTinShell， PLETL Shell 诞生了。这个PLETL体系弥补了 当前世界按语言理解方式来模拟神经组织计算的映射空白。
 
 灾后重建，
 1 德塔数据库包含logbin 系统。
