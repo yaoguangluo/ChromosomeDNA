@@ -87,7 +87,7 @@ EI 论文编号(Pending ID)：A2050-ICITEE2020
 
 抖音 Mr.TinRoyal
 
-快手 巨快乐少年
+快手 巨快乐少年 Mr_Haha6_6
 
 章节的著作权文件列表：
 
