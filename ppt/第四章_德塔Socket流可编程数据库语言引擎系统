@@ -18,7 +18,13 @@
 			//System.out.println(sleeperHall.getThreadsCount());
 		}
 *************************************************************************
+public void callSkivvy() {
+		sleepersMap= new ConcurrentHashMap<>();
+		//sleepersMap.clear();
+		System.gc();
+	}
 
+*************************************************************************
 Socket rest TCP握手协议，
 1 德塔数据库的 admin界面采用 web页进行配置操作。
 refer page 376
