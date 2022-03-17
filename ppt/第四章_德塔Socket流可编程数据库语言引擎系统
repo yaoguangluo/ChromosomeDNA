@@ -5,14 +5,14 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	int loseCount= 0;
 		while(true){
-			if(sleeperHall.getThreadsCount()< 100){
+			if(sleeperHall.getThreadsCount()< 200){
 				Sleeper sleeper= new Sleeper();
 				sleeper.hugPillow(sleeperHall, server.accept(), sleeper.hashCode());
 				sleeper.start();
 				loseCount= 0; 
 			}
 			loseCount+= 1; 
-			if(loseCount> 100) {
+			if(loseCount> 70) {
 				haoHiYooFaker(sleeperHall);
 			}
 			//System.out.println(sleeperHall.getThreadsCount());
