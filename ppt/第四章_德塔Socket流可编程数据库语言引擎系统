@@ -139,6 +139,9 @@ refer page 399
 4 德塔数据库包含logbin 系统 并支持热备和错误写 实时rollback 检测。 
 refer page 398
 
+德塔的logbin系统，一开始是设计在try catch 中，因为德塔数据库融合了cache 和 DMA两种存储系统，于是，
+作者将logbin 的 rollback进行先内存模拟执行写操作，成功后再执行物理写操作，并记录操作日志。如物理写操作还失败，
+就rollback 到上次写请求。这种 3步logbin机制，作者认为 高安全性。
 
 应用
 
