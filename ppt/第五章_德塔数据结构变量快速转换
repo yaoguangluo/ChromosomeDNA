@@ -8,6 +8,14 @@ refer page 508,528
 2 基于String的格式统一，然后逐步进行文本数据在计算过程中的状态进行分类扩展归纳。
 refer page 532,535
 
+string的展开应用归纳过程：（走四方的xml变换 和  亚米的list<string[]> 还没有迫使作者产生研发swap的动机。）
+早期作者在设计股市抓取，发现 雪球，新浪，东方，财富的网页股市数据，字符串的编码不统一。于是准备写个自适应的编码变换解析，根据rest get return的字节码
+标识来自动变换。作者的股市string数据在计算过程中要进行加速计算，于是开始将string[] 变换成list<string>, 这样才有 iterator<string>的buffer加速计算模式，
+作者后来在写deta parser的时候，将string进行 string builder 来做buffer加速计算，于是 基于 string[]，list<string>， iterator<string>，string builder
+的最早4个data swap 快速变换包引擎开始设计了。于是就把所有的数据结构变量都扩展归纳了。 
+关于股市分析软件，2018年当时作者的电脑是360杀毒+安全卫士+eclipse+windows7+intel 下设计的，钟意来我家要我装暴雪，玩星际争霸新版， 当天我的股市软件就被eclipse删没了，
+我用360的桌面还原工具怎么也还原不了，但我的数据处理格式包因为没有放在同一个文件下，所以没有删干净，我就赶紧github开源了。
+
 3 于是产生array，StringBuilder， iterator，map， 4种 高频内存结构的快速互换。
 refer page 499,536,515,520
 
