@@ -22,6 +22,9 @@
 	3 论著PPT https://github.com/yaoguangluo/ChromosomeDNA/tree/main/ppt
 	4 论著UML https://github.com/yaoguangluo/ChromosomeDNA/tree/main/UML
 	5 测试实例Demo https://github.com/yaoguangluo/ChromosomeDNA/tree/main/Demo
+        6 无源码第五版 
+	https://github.com/yaoguangluo/ChromosomeDNA/blob/main/第五修订版本/归纳/DNA元基催化与肽计算_第5修订版本V00006.pdf
+        https://gitee.com/DetaChina/ChromosomeDNA/blob/main/第五修订版本/归纳/DNA元基催化与肽计算_第5修订版本V00006.pdf
 	
 #### 核心价值
  	1 单机联想Y7000笔记本win10 实测峰值每秒 中文分词1630~1650万+中文字， 词库65000+，函数准确率100%，缺失语法函数 0.3%-， 算法准确率 99.7%+， 100%完整开放源码，在api与书籍中。
