@@ -53,6 +53,25 @@ refer page 见元基加密
 refer page 375
 
 VPCS服务器，
+
+关于vpcs应用逻辑介绍文字描述
+1 作者使用Json api进行数据的载体封装。2 线程池和线程用hallkeeper和sleeper标识。
+3 分发的VPC forward 处理用静态map，目的是索引web的http IP endpoint地址映射。
+4函数操作可静态，可new，使用者可多种源码风格自由扩展。5 注销和运维机制的线程可以
+通过hallkeeper来分配 skivvy来管理。6 处理http的response反馈含有buffer，zip，
+stream等多种格式封装，支持W3C 定义的格式文件反馈，如就jpg，html，js，wav，
+这些文件打开一次便缓存记录，方便计算加速。
+
+VPCS的执行流程为 1启动VPCS服务器，2然后开启socket线程池，线程的形式为socket accept
+进行等待http访问请求握手，一旦握手成功便进行forward分发VPC 执行功能函数处理，如 
+登陆认证函数，数据操作函数，缓存接口函数，业务后端逻辑函数等等。 执行结果进行Json封装
+然后基于http协议 feedback 和response反馈。最后使用完的socket 线程进行注销，释放计算
+内存资源。因为socket是一个线程，所以这整个过程和socket accept 是异步消息模式，互不干扰
+，于是socket accpet一直在循环等待http的握手请求。
+
+描述人 罗瑶光
+
+
 1 VPCS服务器支持每秒400万QPS的web请求。
 refer page 389,
 
