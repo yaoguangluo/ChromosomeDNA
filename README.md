@@ -23,10 +23,10 @@
 	4 论著UML https://github.com/yaoguangluo/ChromosomeDNA/tree/main/UML
 	5 测试实例Demo https://github.com/yaoguangluo/ChromosomeDNA/tree/main/Demo
 	6 基于第4版本ppt设计的无源码第五版 
-	https://github.com/yaoguangluo/ChromosomeDNA/blob/main/第五修订版本/归纳/DNA元基催化与肽计算_第5修订版本V0002903.pdf
-	https://gitee.com/DetaChina/ChromosomeDNA/blob/main/第五修订版本/归纳/DNA元基催化与肽计算_第5修订版本V0002903.pdf
-	https://bitbucket.org/luoyaoguang/tin_god/src/master/DNA元基催化与肽计算_第5修订版本V000290301.pdf
-	https://yaoguangluo.coding.net/public/YangLiaoJingHuaRuiJi/YangliaojingHuaruiji/git/files/19000_Chromosome_YLJHRJ/doc/ppt/基于PPT的第5修订版/DNA元基催化与肽计算_第5修订版本V0002903.pdf
+	https://github.com/yaoguangluo/ChromosomeDNA/blob/main/第五修订版本/归纳/DNA元基催化与肽计算_第5修订版本V0003001.pdf
+	https://gitee.com/DetaChina/ChromosomeDNA/blob/main/第五修订版本/归纳/DNA元基催化与肽计算_第5修订版本V0003001.pdf
+	https://bitbucket.org/luoyaoguang/tin_god/src/master/DNA元基催化与肽计算_第5修订版本V0003001.pdf
+	https://yaoguangluo.coding.net/public/YangLiaoJingHuaRuiJi/YangliaojingHuaruiji/git/files/19000_Chromosome_YLJHRJ/doc/ppt/基于PPT的第5修订版/DNA元基催化与肽计算_第5修订版本V0003001.pdf
 
 
 	
