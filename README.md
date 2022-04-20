@@ -81,13 +81,47 @@
 
 
 #### Outlook
-	This monograph contains a more detailed description of the computer software source code about the research development and implementation process, from a simple mechanical coding according to the engineering logic function, then performs gradually to serialized genetic memory index coding and finally can carry out metabolic optimization of the evolution.
-	Thus first six chapters are the Author's engineering application practice in the field of big data computing, immorally based on the medical big data search and analysis works by integrating YangLiaoJing(YLJ) software development, such as word separations, object array sorting, ETL node workflows and pipeline calculations, VPCS server scheduling algorithms, programmable database and PLSQL database language. Therefore, the Author conducted a good induction and follow-up research and development, gradually updated and optimized, those fantastic job tasks eventually promoted the works of mind-reading, word segmentation, searching and indexing, linear convolution computation, ETL engine, PLORM database language works on VPCS scheduling. Fast structural transformation and combination of data variables works, as well as nonlinear data coordinate trajectory prediction work.
-	The current six API software works are constantly optimized, upgraded and improved in the flowing middle three chapters, Author starts to think about how to effectively organize and summarize the hundreds of thousands of source code lines were contained in these works, in order to facilitate and optimize the author's own mode of behavior and labor. Thus, an effective and concise function classification method is born here. The semantic meta-initions encoding specification, which the author used in the argument on the biochemical encoding, truly matched and deduced the complete semantic meta-base INITON (Init Aton). The peptide extending formula PDE(PDN Extension) and the Decoding between Initons and DNA, begin to index all the functions of the YLJ through the basic coding, and everything goes naturally. Open the world's first gate about the software logic base on catalytic semantic DNA index coding.
-	In the continuing seven chapters, due to the discovery of meta-base(Init Aton) coding, formula and decoding, the author has sufficient conditions about integrating his own six software API for continuous and tenacious application computational optimization, and has gained a lot of experience, such as the optimization of rapid word segmentation to the present peptide(PDN) index word segmentation and the progress of metabolism; Such as speed sort to the present peptide exhibition index metabolically optimized image and mixed string sort works; For example, from convolution computation to the current works of non-convolution peptide corrosion in domain of extremely speed visual computation and image recognition, such as ETL Unicorn to the current works of PLETL Chinese Tinshell neuron language simulation compiler; Such as VPCS PLSQL database to the present peptide exhibition data meta base encryption, meta base compass word, VPCS Web Session Token probability encryption application; For example, from data transformation to the present Tinshell, TinMap and the stack analysis and design of instruction record structure in the meta-base(Initons) flower component; Such as data prediction to the current meta base hexadecimal coding specification, etc. Open the gateway of scientific expansion with computing across database RNA physical hardware and biochemical pheromone.
-	These functions and technologies are perfectly reflected in the works of YLJ and have been further tested and optimized. The author proves out:
+	This monograph contains a more detailed description of the computer software source code about the research 
+	development and implementation process, from a simple mechanical coding according to the engineering logic 
+	function, then performs gradually to serialized genetic memory index coding and finally can carry out metabolic 
+	optimization of the evolution.
 	
-	In the evolutionary domain of software computation, the DNA catalytic and the PDN metabolic is an effective evolutionary method where based on indexing optimization by humanoid INITONS (16 Init-Atons, AOPM VECS IDUQ TXHF).
+	Thus first six chapters are the Author's engineering application practice in the field of big data computing,
+	immorally based on the medical big data search and analysis works by integrating YangLiaoJing(YLJ) software 
+	development, such as word separations, object array sorting, ETL node workflows and pipeline calculations, VPCS
+	server scheduling algorithms, programmable database and PLSQL database language. Therefore, the Author conducted
+	a good induction and follow-up research and development, gradually updated and optimized, those fantastic job 
+	tasks eventually promoted the works of mind-reading, word segmentation, searching and indexing, linear convolution
+	computation, ETL engine, PLORM database language works on VPCS scheduling. Fast structural transformation and 
+	combination of data variables works, as well as nonlinear data coordinate trajectory prediction work.
+	
+	The current six API software works are constantly optimized, upgraded and improved in the flowing middle three 
+	chapters, Author starts to think about how to effectively organize and summarize the hundreds of thousands of source 
+	code lines were contained in these works, in order to facilitate and optimize the author's own mode of behavior and 
+	labor. Thus, an effective and concise function classification method is born here. The semantic meta-initions 
+	encoding specification, which the author used in the argument on the biochemical encoding, truly matched and deduced 
+	the complete semantic meta-base INITON (Init Aton). The peptide extending formula PDE(PDN Extension) and the Decoding 
+	between Initons and DNA, begin to index all the functions of the YLJ through the basic coding, and everything goes 
+	naturally. Open the world's first gate about the software logic base on catalytic semantic DNA index coding.
+	
+	In the continuing seven chapters, due to the discovery of meta-base(Init Aton) coding, formula and decoding, the
+	author has sufficient conditions about integrating his own six software API for continuous and tenacious application 
+	computational optimization, and has gained a lot of experience, such as the optimization of rapid word segmentation 
+	to the present peptide(PDN) index word segmentation and the progress of metabolism; Such as speed sort to the 
+	present peptide exhibition index metabolically optimized image and mixed string sort works; For example, from
+	convolution computation to the current works of non-convolution peptide corrosion in domain of extremely speed visual
+	computation and image recognition, such as ETL Unicorn to the current works of PLETL Chinese Tinshell neuron language
+	simulation compiler; Such as VPCS PLSQL database to the present peptide exhibition data meta base encryption, meta base
+	compass word, VPCS Web Session Token probability encryption application; For example, from data transformation to the 
+	present Tinshell, TinMap and the stack analysis and design of instruction record structure in the meta-base(Initons) 
+	flower component; Such as data prediction to the current meta base hexadecimal coding specification, etc. Open the
+	gateway of scientific expansion with computing across database RNA physical hardware and biochemical pheromone.
+	
+	These functions and technologies are perfectly reflected in the works of YLJ and have been further tested and optimized. 
+	The author proves out:
+	
+	In the evolutionary domain of software computation, the DNA catalytic and the PDN metabolic is an effective evolutionary
+	method where based on indexing optimization by humanoid INITONS (16 Init-Atons, AOPM VECS IDUQ TXHF).
 
 
 
