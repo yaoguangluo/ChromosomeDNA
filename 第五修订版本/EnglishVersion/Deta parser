@@ -70,4 +70,22 @@ cache searching systems. The author does not suggest this technology be used on 
 
 4 For the computing logic, Finally Deta Parser functions use string builder to accelerate the searching engine.
 
-Yaoguang.Luo
+
+
+The accomplishment of the neural network index is mainly reflected in two sections, 1, the relevance index of word 
+segmentation and 2, the lexical index map. The associated relevance index value of word segmentation is mainly reflected 
+in the chained extraction of words. This chained calculation method effectively correlates the relatively independent of
+a large number of words in the thesaurus, according to the Thimble Theory in human language and Literature (Nero). T
+he value of the big data document process splits the word chain links list into a small chars token(max 4) sections, 
+and It is similar to squeezing toothpaste, and brushing the teeth (POS) when squeezed out by the DetaParser marching engine.
+
+The index value of the lexical map is mainly reflected in the reasonable chain segmentation of lexical characters. This
+chain of word segmentation method combines and matches the classified maps in the thesaurus according to different attributes.
+And then separates them according to the rigorous definition of lexical POS and SVO collocation in human literature languages.
+The adaptive industrial system design and diversified expansion of this classification, would increase the accuracy and 
+flexibility of word segmentation and adapt to different segment scenes. Similar to the way of toothbrushes, the extruded 
+toothpaste is matched to adapt to different oral cavity environments according to different toothbrushes and brushing methods
+(Nero + POS).
+
+
+Author: Luo Yaoguang
