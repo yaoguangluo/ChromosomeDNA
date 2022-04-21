@@ -88,4 +88,19 @@ toothpaste is matched to adapt to different oral cavity environments according t
 (Nero + POS).
 
 
+The Deta Parser word segmentation and its applications in the linear text document environments.
+1 There has a lot of rights weight by each indexed map, based on those right weights, Deta Parser did a marching score 
+system to do the computation and calculation for the Chinese word segmentation logic.
+
+2 the search weight of the computing logic, such as Subject Predicate Object(SVO), and part of speech(POS), for instance, 
+noun, verb, adjective etc. 
+
+3 to make a computing acceleration, the author injected a combination factor in the marching logics, such as bit calculation, 
+frequency statics and word length observations. similars with the theory of Count Down Latch and Cyclic Barrier logic (makes 
+definitions first then proves, or proves first then did a conclusion) ways etc 
+
+4  Above all things and logic once became JAVA transportations, the author set all global and local valuable scales to build
+the Foolishman- Self-Controller components to make the algorithms easy and simple.
+
+
 Author: Luo Yaoguang
