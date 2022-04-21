@@ -23,7 +23,6 @@ call calculation, and the more organized the balanced operation.
 5 The refinement and optimization of literary lexical functions are accelerated. The literary lexical problem 
 is more targeted.
 
-Yaoguang。Luo
 
 
 Deta parser, a sentence and word segmentation marching tool(NERO-NLP-POS), was based on an in-order sequence 
@@ -44,7 +43,7 @@ The word segmentation and Its POS cut ways by following 4 Chinese chars words, 3
 check the POS lexical dictionary map storages. Kernel computations work for finding a marching verbals word, then 
 return the response to the NLP engine.
 
-Yaoguang.Luo
+
 
 The ordinary model of the Deta catalytic sorting function was based on the quicksort 4D theory- Sir Charles Antony
 Richard Hoare, the author refers a book <Introduction to Algorithms> here.  Since YaoguangLuo had monitored the 
@@ -54,5 +53,21 @@ includes defect peak avoiding, tunning the constant values, balancing the comput
 differentiations(Demorgan, Frequency flows etc). and now those things widely were used in Deta’s catalytic family
 technology community (parser, word segments, mindreading, NLP computing etc).
 
-Yaoguang.Luo
 
+
+Nero Network Index Forest
+
+1 Deta Parser did a word segment indexed map by using humanoid speech verbal dictionary, for the reason why using
+JDK8+ tool to do the map search logic, is that it had already integrated the binary search tree, balanced map tree
+arrangement and other technologies.  
+
+2 Deta Parser’s balanced binary search tree method makes an observer mode of averaged classification with all types
+of the reflection java concurrent maps, those maps include the char word length, verbal types and Part of speech 
+corpus, etc. The author did it to accelerate the NERO marching speed for searching the words. 
+
+3 Deta Parser supports the secondary indexing computing combinations, this way could be suitable for the distributed 
+cache searching systems. The author does not suggest this technology be used on a single desktop.  
+
+4 For the computing logic, Finally Deta Parser functions use string builder to accelerate the searching engine.
+
+Yaoguang.Luo
