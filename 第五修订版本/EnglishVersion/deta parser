@@ -1,0 +1,26 @@
+Definition: Deta parser word segmentation is a word cutting engine where based on the index forest dictionary 
+of the neural network map, which carries out the word association cutting, and then circulating the traversal 
+function of the part of speech(POS) combination matching, and defines the collocation according to the Chinese
+literary grammar.
+
+1 The index dictionary can accelerate the refinement and splitting. The refinement differentiation can effectively
+reduce the memory operation volume and the occupation of resources, so as to improve the current stack search
+and operation speed.
+
+2 The function can accelerate the optimization of the usage frequency statistical arrangement. Once the function 
+has the high-frequency advance operation, it has queue priority consciousness and can be metabolized, for example, 
+the higher frequency logic sections could be arranged at the top by using Sequences of Von-Neumann(from top to
+bottom, from left to right).
+
+3 The total number of dynamic convolution kernels is directly related to the computational complexity. The more 
+complex the computation is, the higher the cost will be. Of course the higher the time cost will be, the adaptive 
+accuracy will also be improved accordingly.
+
+4 Functional prototypes and function file names are metabolized, and the secondary metabolism is optimized to 
+accelerate index encoding. The more detailed the function, the more concise the logic, the more uniform the unit 
+call calculation, and the more organized the balanced operation.
+
+5 The refinement and optimization of literary lexical functions are accelerated. The literary lexical problem 
+is more targeted.
+
+Yaoguang。Luo
