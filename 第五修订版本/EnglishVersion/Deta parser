@@ -104,10 +104,10 @@ the Foolishman- Self-Controller components to make the algorithms easy and simpl
 
 
 Dynamic River Flows Gate Function Marching and Circustantly Loop the POS Kernel Computing.
-1 Dynamic kernel contains infix and postfix two types can read the word token one by one. It does dynamic computing also
+1 Dynamic kernel contains prefix and postfix two types can read the word token one by one. It does dynamic computing also
 at the same time.
 
-2 Infix kernel stores a POS cache buffer by each current word piece of information such as positions, frequency etc, to 
+2 prefix kernel stores a POS cache buffer by each current word piece of information such as positions, frequency etc, to 
 accelerate the word marching.
 
 3 Postfix relevant to the optimization of word marching and segmentation.  For example, checking the conjunction relationship 
