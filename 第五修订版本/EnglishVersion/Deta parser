@@ -125,7 +125,7 @@ verbals such as‘是非常’, then continued do the two chars marched for the 
 the Chinese chars literacy grammar marching system, for the chars segment section, ‘是非常’did a separation into two types such 
 as ‘是非-常’ and ‘是-非常’, then analyzed contrast and distinguishment by these two segments. after analysis of each word and its
 prefix and postfix, POS combined relationships, （the prefix token of‘是非’was‘如果’, the prefix token of‘非常’was‘是’, the prefix 
-tokens of‘常’were‘是非' and‘非’, and the prefix tokens of '理想’were‘常’and‘非常’）. This POS word segmentations theory was fixable 
+tokens of‘常’were‘是非' and‘非’, and the prefix tokens of '理想’were‘常’and‘非常’）. This POS word segmentations theory was fixedly 
 and immutably, which means it should not contain any probability events here. if at this time the DetaPaser does not find any 
 associated chars relationships, then promoted to the next steps as reading cutting sequence list chars single one by one. Above all,
 the result of the sample graph did a good show that DetaParser did a ‘如果-是-非常’response because the priority of Conjunction- Adj,v- Adj,v 
