@@ -1,21 +1,26 @@
 Definition: Non-Convolutional PDE Vision. 
-It determined a lower complex computing of photo pixel vision without a 
-convolutional kernel. by each pix in the original photo, will perform a PDE calculation only one time, the purpose of the goal 
-which makes a color distinction of adjuncency pixes. it could be used in observation and recognization of processing the 
-sili-photos. 
+
+It determined a lower complex computing of photo pixel vision without a convolutional kernel. by each pix in the original 
+photo, will perform a PDE calculation only one time, the purpose of the goal which makes a color distinction of adjuncency 
+pixes. it could be used in observation and recognization of processing the sili-photos. 
+
+
 
 
 Definition: Asymmetrical and Probablitical PDE Encryption. 
-It determined the original text could be encrypted by using 
-Asymmetrical and Probablitical PDE(PDN extension), and this PDE process can make loop encriptions. Because of the 
-probablitical way of topological calculation, the extended Initon list will make an irreversible swap. for example, A=V+S is ok 
-for the PDE-PDS swap, but the E= DU or E= IU then will cause irreversible computing of probablitical problem. thus, 
-probablitical PDE Encryption could do a prefix workflow, but not a postfix workflow, it means Asymmetrical PDE Encryption. 
-Asymmetrical and Probablitical PDE Encryption does better used in the Web Session transactions. And it also could make an 
-encrypted combination of physic and sematic, to promote a safe level.
+
+It determined the original text could be encrypted by using Asymmetrical and Probablitical PDE(PDN extension), and this 
+PDE process can make loop encriptions. Because of the probablitical way of topological calculation, the extended Initon 
+list will make an irreversible swap. for example, A=V+S is ok for the PDE-PDS swap, but the E= DU or E= IU then will cause 
+irreversible computing of probablitical problem. thus, probablitical PDE Encryption could do a prefix workflow, but not a 
+postfix workflow, it means Asymmetrical PDE Encryption. Asymmetrical and Probablitical PDE Encryption does better used in 
+the Web Session transactions. And it also could make an encrypted combination of physic and sematic, to promote a safe level.
+
+
 
 
 Definition: Speed Sorting the Hieroglyphics and Cuneiform characters by using a sequence of phonetics and strokes. 
+
 Firstly, The author had already touched on a good foundation of quicksort and data structure by using C in Christ University since 
 2008. Then try to sort the mixed string of Hieroglyphics and Cuneiform characters in a way of phonetics and spelling strokes. 
 and those Hieroglyphics, Cuneiform characters, phonetics and spelling strokes, were arranged and built as object keymaps. 
