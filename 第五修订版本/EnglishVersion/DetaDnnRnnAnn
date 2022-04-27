@@ -1,0 +1,22 @@
+
+ANN
+DetaParser ANN computing. It mainly contains a mind set, environment set, motivation set, 
+emotion set and etc. those sets were computed as a advanced decision, which emphasising 
+weights as a comprehensive of trending, continuing, predicting, guessing and minding etc. 
+With associating in text mining and analysis domain. either this decision will value a 
+truly estimation, or will caculate a summing centre for the next steps.
+
+RNN
+DetaParser RNN computing. It mainly contains a distance set and entropia set etc. those 
+sets were computed as observer weights of Part of Speed POS, Covex of position and Euclid 
+KNN. With associating in text mining and analysis domain. It could clearly find out an 
+information by each of lexical, such as the frequency count, ruly distribution and trace 
+weight. Above sets could make a good implementation of summing centre for the next steps.
+
+DNN
+DetaParser DNN computing. It mainly contains DetaParser ANN and DetaParser RNN, for the
+prefix Cartesian calculations. Due to the inputs were two types of ANN summing and RNN 
+position weights, thus, DetaParser DNN could dig a central Theory of the text document, 
+especially suitable for the text mining system.
+
+Author YaoguangLuo 稍后优化语法
