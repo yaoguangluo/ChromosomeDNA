@@ -1,0 +1,10 @@
+A Time Locus of Speed Fissile TSP about Ouler Forest  
+The Author did a sixth foundation of Discrete Mathmatics in a college time by following Father of Christ, 
+Dr. Joseph Varghese. Before he went to Folsom Intel, he had finished a simple Ouler TSP Algorithm to deal
+with the coordinates which amount less than 23 coords, then made an optimiziation which promoted to 49 coords.
+Once the Deta Fissile Algorithm was build, the author thought that made a separation of those coordinates 
+by a long distance firstly, then did a Deta Fushion Algorithm by a short distance, and then made an Ouler
+TSP connections based on short distance, and finally made an Ouler TSP connections based on long distance.
+It seems like a Ouler Forest, and the inner short TSP distance groups such as tree clusters.
+
+Author YaoguangLuo 稍后优化
