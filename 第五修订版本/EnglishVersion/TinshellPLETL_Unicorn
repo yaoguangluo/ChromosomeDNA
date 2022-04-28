@@ -1,0 +1,12 @@
+Implements of ETL Unicorn and PLETL nodes.
+At the beginning, the author made an ETL node which almost similar with the Knime node, because the 
+Knime node is a standard ETL node(with orange, WEKA, oracle, kettle and etc are almost the same) 
+which contains an operating UI. Based on this self UI, the user could do more interactions between 
+ETL nodes and assignments. for example, Knime user uses the SWT techneology to build all kinds of 
+the procedure UI by using the Knime of eclipse plugin SDK. Once the Tinshell script was build, the 
+author thought it could be intergrated in the ETL work flows such as PLETL, thus, each Tinshell 
+ETL could only have had one type of procedure UI, which means Tinshell UI-- A top Text input for 
+scripting Tinshell commands, and a bottom Text output for responding results of Tinshell executions. 
+The author once said: all of ETL node UI could be the same type as Tinshell node in the future AI.
+
+The author: YaoguangLuo 稍后优化
