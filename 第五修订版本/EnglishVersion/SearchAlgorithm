@@ -1,0 +1,15 @@
+About speed Chinese search algorithm.
+
+It mainly be intergrated in YangLiaoJing(YLJ) engine system. As an important componient, 
+the algorithm contains two parts of searching, where are content and subject. First, 
+talks about searching of content, it includes the way of word segmentation and statistics, 
+for instance key word, frequency word, word length, parts of speech and etc. finally builds 
+a responding map for feeding a functional call back. Then talks about searching of subject, 
+it could be a Text file, strings document, DNN minds stream, then does a marching score before 
+a searching of content. The way of marching could be POS(Part of Speech), NLP(Nature Language
+Process), PCA(Primary Componient Analysis) and etc. then outputs a final result after sorting
+and arrangement conclusions. The engine seems could add more scales for the self-controll in
+the industrial environment.
+
+
+The author YaoguangLuo. 稍后优化语法
