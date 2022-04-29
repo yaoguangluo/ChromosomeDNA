@@ -1,6 +1,6 @@
 About speed Chinese search algorithm.
 
-It mainly be intergrated in YangLiaoJing(YLJ) engine system. As an important componient, 
+It mainly is intergrated in YangLiaoJing(YLJ) engine system. As an important componient, 
 the algorithm contains two parts of searching, where are content and subject. First, 
 talks about searching of content, it includes the way of word segmentation and statistics, 
 for instance key word, frequency word, word length, parts of speech and etc. finally builds 
