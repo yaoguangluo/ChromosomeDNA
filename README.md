@@ -31,7 +31,7 @@
 
 	
 #### 核心价值
-	世界首发并论证： 在进化计算中, 软件函数进行元基索引编码的新陈代谢优化方式, 是一种有效的进化方式.  
+	世界首发并论证： 在进化计算中, 软件函数文件进行 DNA 语义元基索引编码的 PDE 新陈代谢优化方式, 是一种有效的进化方式.  
 	In the evolutionary domain of software computation, the DNA catalytic and the PDN metabolic is an effective evolutionary method where based on indexing optimization by humanoid INITONS (16 Init-Atons, AOPM VECS IDUQ TXHF). 
  	1 单机联想Y7000笔记本win10 实测峰值每秒 中文分词1630~1650万+中文字， 词库65000+，函数准确率100%，缺失语法函数 0.3%-， 算法准确率 99.7%+， 100%完整开放源码，在api与书籍中。
 	2 单机联想Y7000笔记本win10 实测峰值每秒 double高精度数组 每秒可排序1150万，准确率100% 见top sort 5代 100%完整开放源码，在api与书籍中。
