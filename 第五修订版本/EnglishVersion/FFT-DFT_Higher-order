@@ -1,0 +1,9 @@
+Deta three times FFT/DFT of higher-order, 
+means a wavelet which makes a transformation from the timer sequence waves to frequency wave, a then makes a 
+noise frequency filter first. At this time, does again a wavelet which makes a transformation where from 
+frequency wave to timer sequence wave. An observation of sequence wave is more harmoniously and uniformly. 
+Also, could do more valuable filters here, therefore, finally does the third wavelet which makes a transformation
+where from the timer sequence wave to frequency wave again, the output could be a raw data collection of 
+voice recognization and Bio-target.
+
+Author YaoguangLuo 稍后优化语法
