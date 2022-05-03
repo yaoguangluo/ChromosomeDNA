@@ -1,0 +1,19 @@
+An implementation of VPCS application. 
+The author uses JSON API to return a result. Then uses 'Hallkeeper' to target a Thread pool and 'Sleeper' to
+target each processing threads. Then creates a VPC bundle to process the static maps, those maps could store
+the indexed reflections of WEB http IP endpoint address. The function and value could be a static or new, it
+seems more flexibly at this environment. Once finished the task and catched an exception by each Sleeper thread,
+the Skivvy will do an arrangement of garbage cycling by Hallkeeper. The returning Http response contains many
+types of feedback processes, for example W3C of buffer, zip, stream etc. For the visit acceleration, VPCS will
+cache the buffering documents of jpg, html, js, wav etc.
+
+An execution of VPCS application.
+Boots a VPCS server. Starts a socket accept pool, then waits for the  interactions of http hands shaking all 
+the time. Once getting a successful request or rest call from the HTTP web, then forwarding a VPC task to 
+process the business logic. For example token sessions,  data manipulations, cache interfaces and backend 
+operations etc. The executed result could be build as map, then responding in JSON String for feedback. The 
+skivvy will free memory garbages and do the cancellation of each finished socket. Those whose way loops of 
+socket accept is an asynchronized message mode, so it seems VPCS did a well-distribution and waiting for the
+net requests.
+
+Author YaoguangLuo 稍后优化语法。 具体见第7章 VPCS论文
