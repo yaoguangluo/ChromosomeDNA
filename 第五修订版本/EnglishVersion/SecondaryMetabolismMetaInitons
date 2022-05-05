@@ -1,0 +1,22 @@
+An implementation of Secondary Metabolism about Meta Initons.
+
+At first, assume I have five ordinary java files, for samples are IncreaseData.java; DeleteData.java; CheckData.java; VisonaryIncreaseData.java; 
+VisonaryDeleteData.java; I should make a translation of whom from humanoid lexical to DNA meta Initons. Base of the PDN Encoding 
+grammar: （I，D，U，Q- Increment，Decrement，Upgrate，Query； V，E，C，S- Vision, Execute，Control，Static）, the ordinary files will 
+change into（IS.java; DS.java; QS.java;）,（VDS.java; VIS.java）。
+
+Then I could do the next step of definiton. Assume VIS.java file contains four function prototypes as （IncreateVinsionaryTrigger ()；
+IncreateVinsionaryXplore ()；IncreateVinsionaryController ()；IncreateVinsionaryAnalysis ()；I could make a translation of whom from 
+humanoid lexical to DNA meta Initons as （IVT()；IVX()；IVC()；IVA();） .
+
+Base of the PDN Encoding grammar: （T，X，H，F- Trigger, Xplore, Hall, Full）. The metabolism starts. I could prove VIS.java+ IVT()；= 
+SVI.java +XCDX+IVT(), at here , VIS= VI + S = S + VI 。
+
+It seems like an embossing Dandelion flower. At this time, assume a new condition has happened here, the T() contains logic of Analysis-
+Trigger, T()--AT sections. And X() contains logics of Analysis-Execute-Xplore, X()--AEX sections. Then the indexed DNA name could make a 
+continuing PDE metabolism as below.（VIS.java+ IVT()；= SVI.java +XCDX+IVT() = SVI.java +XCDX+IVT() + XCDX+ AT())
+
+The final Assumption, if the X() also contains logic of Controller-Execute, then I make a CE separation of metabolism as below: VIS.java+ 
+IVX()；= SVI.java +XCDX+IVX() = SVI.java +XCDX+IVX() + XCDX+ AEX() +｛E，C｝, then prove out SVI+IV+ AX() +E， SVI+IV+ AX() +C
+
+The Author YaoguangLuo 稍后优化语法结构。
