@@ -74,6 +74,32 @@ refer page 略
  
  
  元基二次新陈代谢，
+
+二次元基新陈代谢方式的图片描述
+
+首先处理一个函数，用java文件举例，我们有5个原文件，分别是，增加一个数据.java;删除一个数据.java;
+查看一个数据.java;感知并删除一个数据.java;感知并增加一个数据.java. 这5个函数，首先我们进行第一步，
+肽化它。于是变成：IS.java;DS.java;QS.java;VDS.java;VIS.java.   肽化的语法依据
+是（I，D，U，Q- 增加，删除，改变，查看； V，E，C，S- 感知，执行，控制，静态）。
+于是开始进行相似相同元基片段归纳，分为2组（IS.java;DS.java;QS.java;），（VDS.java;VIS.java）。
+
+于是开始细化文件中的函数分析。假设 VIS.java文件中有4个函数， （增加一个感知的触发()；增加一个感知的探索()；
+增加一个感知的控制()；增加一个感知的分析();）于是开始肽化函数为（IVT()；IVX()；IVC()；IVA();） 
+肽化的语法依据是（T，X，H，F- 触发，探索，总，全）。新陈代谢便开始了。首先先拆分。VIS.java+ IVT()；= SVI.java +XCDX+IVT(), 以此类推。
+
+当然，没有完，如果此时出现了新的条件，如 在T() 的函数中含有分析触发逻辑 T()--AT sections, 
+在 X()的函数中含有分析执行探索逻辑X()--AEX sections, 那么 文件名索引肽化又可以延展
+为（VIS.java+ IVT()；= SVI.java +XCDX+IVT() =  SVI.java +XCDX+IVT() + XCDX+ AT())依次类推 不断的细化肽化索引。
+上面VIS 和 SVI 可逆， 依据是   VIS= VI+S = S+VI 。
+
+最后，如果此时的函数中含有执行逻辑，如X()函数则可以CE分离，如下
+VIS.java+ IVX()；= SVI.java +XCDX+IVX() = SVI.java +XCDX+IVX() + XCDX+ AEX() +｛E，C｝
+然后再缩进过滤。
+分别为：SVI+IV+ AX() +E， SVI+IV+ AX() +C
+
+作者 罗瑶光 稍后优化逻辑
+
+
 1 文件与函数名的新陈代谢。
 refer page 下册176~192, 下册214~232, 下册242~274
 
