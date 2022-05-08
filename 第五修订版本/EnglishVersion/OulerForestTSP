@@ -7,4 +7,15 @@ by a long distance firstly, then did a Deta Fusion Algorithm by a short distance
 TSP connections based on short distance, and finally made an Ouler TSP connections based on long distance. 
 It seems like a Ouler Forest, and the inner short TSP distance groups such as tree clusters.
 
+
+Radar Mechine
+The Data Prediction of Side End Radar which is used for the recognition of edging coordinates. The computing of generalisation 
+is circularly to find a ratio collection of vectors between the central weight point and each outer coordinates. Compare to 
+the outer coordinates, because the distance from inner coordinates which is shorter than distance of scale input, hence will
+be removed by this scale filter. Then makes an arrangement of this vector list more sequence, means sorting them from the ratio
+of zero to the ratio of 360 (2* Pi). Finally makes the line connections of each two outer adjacent coordinate in this vectorial
+list. It may get a side end of input coordinates. Then find a density is simply,   because the author considered：
+{Density =  Area of Side End /  Amout of Coordinates }
+
+
 Author YaoguangLuo 稍后优化
