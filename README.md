@@ -121,7 +121,7 @@
 	These functions and technologies are perfectly reflected in the works of YLJ and have been further tested and optimized.
 	The author proves out:
 
-	In the evolutionary domain of software computation, the DNA catalytic and the PDN metabolic is an effective evolutionary
+	In the evolutionary domain of software computation, the DNA catalyst and the PDN metabolism is an effective evolutionary
 	method where based on indexing optimization by humanoid INITONS (16 Init-Atons, AOPM VECS IDUQ TXHF).
 
 
