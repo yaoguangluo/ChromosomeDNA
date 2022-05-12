@@ -1,0 +1,24 @@
+An Implements Ratio of POS. 
+
+Mr. YaoguangLuo considered the ratio of POS which means the proportion of lexicon. 
+For example their paper has 80 adjectives in 100 words, so the proportion of lexicon means that the essay
+contains a lot of strokes, it more like a prose. Of course, assumes their paper has 80 verbs in 100 words, 
+so the proportion of lexicon means that the essay contains a lot of actions, seems their essay more like a
+narrate. Therefore, the author considered that ratio of POS could make a good descriptive activity, which 
+to make a prediction of a personal written grammar. Examples as below.
+
+1. Implements a ratio of motivation. Assumes their paper appears five words: Kitchen Knife, Chopping Board, 
+Wok, Streaky-Meat and Spicy-Condiment. Result a higher motivation of lexicon is cooking. It means the humanoid
+computer could read and find a potencial information from this paper, will easy to know this paper is about 
+to make a narrate of how to cook the food.
+
+2. Implements a ratio of environment. Although their paper appears five words: Kitchen Knife, Chopping Board,
+Wok, Streaky-Meat and Spicy-Condiment. Result a higher environment of lexicon is kitchen.  It means the humanoid
+computer will easy to know this paper is about to cook a food in where the address is a Hotel, Canting, Caffeteria,
+Pizzeria, Rosticerria or Restaurant.
+
+3. Implements a ratio of literature. Even their paper still appears above five words. But result a higher ratio
+of POS is Noun. It means the humanoid computer will easy to know this paper is about a difinite essay of Cooking 
+Science and Technology. 
+
+Author: YaoguangLuo 稍后翻译语法
