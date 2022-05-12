@@ -1,5 +1,4 @@
 An Implements of Ratio of POS. 
-
 An Implements Ratio of POS. Mr. YaoguangLuo considered the ratio of POS which means the proportion of lexicons. 
 For example their paper has 80 adjectives in 100 words, so the proportion of lexicon means that the essay contains
 a lot of strokes, it more likes a prose. Of course, assumes their paper has 80 verbs in 100 words, so the
@@ -20,6 +19,28 @@ Pizzeria, Rosticerria or Restaurant.
 3. Implements a ratio of literature. Even their paper still appears above five words. But result a higher ratio 
 of POS is Noun. It means the humanoid computer will easy to know this paper is about a definite essay of Cooking
 Science and Technology. 
+
+
+An Implements of Distance of POS.
+Mr. YaoguangLuo considered the distance of POS which means the weight of lexicons. Those factors about the 
+reflection of different attributes and the position of different classes, which could make a calculation of Mind.
+then continuing examples as below.
+Assume their paper appears five words: Kitchen Knife, Chopping Board, Wok, Streaky-Meat and Spicy-Condiment. 
+Result a higher frequency of lexical appearance, is Streaky-Meat. It means the humanoid computer could read and 
+find a potencial information from this paper, will easy to know this paper is about a definite essay on Cooking 
+Science and Technology, which mainly makes a presentation of meat. Similarly Result the higher frequency of lexical
+appearance, is Spicy-Condiment. which mainly makes a presentation of Spicy-Formula. Lets continuing examples 
+as below.
+
+Assume their Spicy-Condiment contains a mature vinegar, which is a higher frequent lexicon. 'Vinegar' appears at 
+paragraph of 1, 2, 4 and 5, especially at 4. the accomplishment of distance of the same lexicon, could scale the 
+weight of 'Vinegar'. Then humanoid computer will easy to know this paper is about an essay of Cooking Science and 
+Technology. which mainly an introduction of 'Vinegar' in presentation of Spicy-Formula. Especially at paragraph 4.
+
+Euclidean KNN could trace an observation of frequent loxical distance. For example Deta RNN computings, Assumes it
+sequently input 1'Vinegar', 2'Dumpling', 3'Vinegar' and 4'Streaky-Meat'，will result the Deta rank of DNN is higher
+than Deta rank of RNN by 'Dumpling'. And also we could find that the Deta ratio of DNN of 'Streaky-Meat' is highly.
+
 
 Author: YaoguangLuo 稍后翻译语法
 
