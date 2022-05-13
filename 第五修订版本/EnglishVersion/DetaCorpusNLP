@@ -38,7 +38,7 @@ The author expanded a deep analyst after he had already concluded the ratios, we
 purpose of development quickly to make a recognition of personal and featural habit, written style, 
 emotional status and educational level. The corpus, speeches and definitions were contains POS, Distance, 
 SVO, word length and weight. The calculation of NLP could easy to make an assessment of educational 
-level. For example at above picture, the input string contains a few adjectives, so the ratio-result of narrate 
+level. For example at above picture, the input string contains a few adjectives, so the ratio-result of prose 
 seems more lower is 0. 1578. The score absolutely trends to an argumentation and statement, is 0.47368 
 and 0.40983. Recently Deta NLP algorithms could make a sustainable optimization by increasing more 
 components from filters, determinations, definitions, PCA and artical types.  
