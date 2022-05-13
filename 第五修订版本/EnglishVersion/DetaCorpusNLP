@@ -1,5 +1,4 @@
 An implements of suggest loxicons about Enviroment, Motivatial Lenovo, Trending-Explore, Decisional Trigger.
-
 Deta literatural analyst which was based on Orthos map and loxical dictionary. Before the word segmential process
 of essay, the Deta parser engine will init an indexed base where could store the reflectional chars set of an 
 observation. Then input strings to do the word segmentation. The Deta engine could sequently parser the word correctly,
@@ -11,4 +10,15 @@ such as nouns, verbs and adjectives, not only the reflections, but also the auth
 verbs and adjectives where could make reflections of enviroment, features and emotions. Those specific partner of 
 grammartic reflections could explain well in essay minding.
 
+
+Implements an essay of tutoral ability.
+The author expanded a deep analyst after he had already concluded the ratios, weights and reflections. The purpose
+of development quickly to make a recognization about personal and featural habit, written style, emotional status 
+and educational level. The corpus, speechs and definitions were contains POS, Distance, SVO, word length and weight.
+The calculation of NLP could easy to make an assessment of educational level. For example at above picture, the 
+input string contains a few adjectives, so the ratio-result of narrate seems more lower is 0. 1578. The score absolutely
+trends to an argumentation and statement, is 0.47368 and 0.40983. Recently Deta NLP algorithms could make a sustainable 
+optimization by increasing more componients of filters, determinations, definitions, PCA and artical types.
+
 The Author YaoguangLuo 稍后优化语法.
+
