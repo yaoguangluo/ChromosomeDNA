@@ -7,7 +7,7 @@ Therefore, the author considered that ratios of POS could make a good descriptiv
 prediction of a personal written grammar. Examples as below.
 
 1. Implements a ratio of motivation. Assume their paper appears five words: Kitchen Knife, Chopping Board,
-Wok, Streaky-Meat and Spicy-Condiment. Result a higher motivation of lexicons is cooking. It means the humanoid
+Wok, Streaky-Meat and Spicy-Condiment. Result a higher motivation of lexicon is cooking. It means the humanoid
 computer could read and find a potential information from this paper, will easy to know this paper is about to
 make a narrate of how to cook the food.
 
