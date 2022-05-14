@@ -1,0 +1,28 @@
+Deta POS
+Deta parser of the word segmentation, was based on its corpus of POS or classes. The formative 
+base was like a 'Verbal/POS'. For example ''Banana/Noun', the parser-engine might read the corpus
+base sequently, then to store the verbal 'Balana' as a key, and the POS was a key store. Also,
+the key store of POS could be a complex types of the annotational string. For example 'Banana/Noun'
+might be a 'Banana/FruitNoun', and one more example of 'LiuYang/CitynameGeographyNoun'. Meant 
+the computer could easy to understand a complex grammar-environment in how to parser the word 
+correctly. Especially in a stable grammar-environment, such as Subject+ Predecate, Noun+ Conjunction+
+Noun, Adjective+Conjunction+Adjective, Verb+Subject or Adverb. Because of the strict and stable
+definition. Therefore Deta parser did not contain a probabilistic statistics about word segmentation.
+
+
+Deta NLP
+Deta parser of the Nature Language Process, was based on its map-forest of indexed length of
+lexicons. Because the formative word was combined from connected Chinese alphabetics. Meant 
+totally different with european lexicons, a 'Flechs or Flesh' parser the ratio about amount of
+word-vowels per the word-length. Seem the length of Chinese word commonly could parser as four
+types of 'one char of achaism or singleton', 'two chars of simple word', 'three chars of special
+word or slang', 'four chars of idiom and slang' and more. The 'more' meant an example of
+'巧媳妇难逃无米之炊' here, although it was a nine-chars of slang, but it could be separated out
+a tokens-list of '巧'+ '媳妇'+ '难'+ '逃'+ '无米之炊'. So the deta parser could easy to make a 
+recognition of this tokens-list by using 'Dynamic River Flows Gate Function Marching and Circustantly
+Loop the POS Kernel Computing'. Above tokens-list contained more 'one or two char words' of '巧'+
+'媳妇'+ '难'+ '逃', so the priorty to processing a class of 'one char-word' is more higher than the
+class of idiom and slang. The author considered it was an evolutional theory about priorty to high
+frequency.
+
+Author Yaoguangluo 稍后优化语法.
