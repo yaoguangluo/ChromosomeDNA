@@ -19,4 +19,24 @@ prefix Cartesian calculations. Due to the inputs were two types of ANN summing a
 position weights, thus, DetaParser DNN could dig a central Theory of the text document, 
 especially suitable for the text mining system.
 
+
+Expanding an associational DNN applications 
+The author listed a demonstrational sample of DNN ranks to classify as where their listed four 
+colors of Red, Purple, Green and Yellow. Then also made four levels ranged from these colors
+where such as comparative degree of dark, little, median and deep. The max levels scale was 
+255 on each pix. Assumed the input was '香蕉 和 苹果 都 是 水果', then scored the DNN value 
+of '香蕉' was 30,  '苹果' was 40, and '水果' was 50. Firstly their values all were Noun of POS,
+meant only mark as Red color which was enough. Secondly the DNN value of '水果' was the highest
+of all, so was rendered a deep-red. The DNN value of '苹果' was higher than '香蕉', therefore 
+the '苹果' was rendered a median-red, and the '香蕉' was rendered a little-red, made a distinction 
+of other Nouns where rendered a dark-red. Similarly to other speeches classify. Purple for 
+adjectives, and yellow for vebs etc.
+
+Deta DNN(ANN summing kernel -> RNN PCE)
+Above picture is a topic of foundation, a pre-sequence marching of incremental differentiations, 
+where based on the ANN-summing and RNN-convolutional kernel computing. The kernel of ANN-summing
+and RNN-computing, is belong to the domain of CNN convolutional kernel. The definition of Deta
+ANN and RNN please see the original pages. The author refers 'Yann.Lecun' here about an inventory of CNN. 
+
+
 Author YaoguangLuo 稍后优化语法
