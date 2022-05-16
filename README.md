@@ -26,7 +26,7 @@
 	https://github.com/yaoguangluo/ChromosomeDNA/blob/main/第五修订版本/归纳/DNA元基催化与肽计算_第5修订版本V0005806.pdf
 	https://gitee.com/DetaChina/ChromosomeDNA/blob/main/第五修订版本/归纳/DNA元基催化与肽计算_第5修订版本V0005806.pdf
 	https://bitbucket.org/luoyaoguang/tin_god/src/master/DNA元基催化与肽计算_第5修订版本V0005806.pdf
-	https://yaoguangluo.coding.net/public/YangLiaoJingHuaRuiJi/YangliaojingHuaruiji/git/files/19000_Chromosome_YLJHRJ/doc/ppt/基于PPT的第5修订版/DNA元基催化与肽计算_第5修订版本V0005806.pdf
+	https://yaoguangluo.coding.net/public/YangLiaoJingHuaRuiJi/YangliaojingHuaruiji/git/files/19000_Chromosome_YLJHRJ/doc/ppt/基于PPT的第5修订版/DNA元基催化与肽计算_第5修订版本V0005801.pdf
 	7 英文地址 github.com/yaoguangluo/ChromosomeDNA/tree/main/第五修订版本/EnglishVersion
 
 	
