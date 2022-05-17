@@ -1,0 +1,25 @@
+Deta Java convolutional sobel algorithms and its applications.
+
+The author mainly implemented four sobel attributes of concave, convex, gradient and vectors.
+since he had been learned a sobel of 3-Dimentional distinction by calcualtion of Mag and Dir 
+(magnitude and direction). The author developed RF infrared monitor by using Java CV at 2018,
+to get the sensor catching. According to this experience, the author considered the ability
+of Sobel algorithms, which belonged to a mechanics domain. Meant Sobel algorithm could explain
+a randomness of chaos, a mere coincidence at here, computer vision of edge detection could 
+obviously do a well observation. Obsolutely the Mag and Dir of Sobel algorithm only just did 
+a simple procelure of 1 edge-detection and 2 vectorial portrait-sculpture here.
+
+The author considered the magnitude of sobel, meant a squeeze pressure or tension in a mechanics
+domain. And a direction could explain well of its regulation and pattern. these two factors 
+could calculate the arrangement of ray, distinction of winding-tension, and contrast of concave-convex. 
+To determinate the vector of 3D mechanics.
+
+Promoted on a higher layer of mechanic-computation. In case of mechanical separations about
+magnitude of sobel, which into a differential level, could explain well of stable status, fluidity 
+and inner phase. A question about asked by some one else: what and how does the connection
+between mechanics and pixes? The author considered a pixes-picture in fact was a reflection of 
+energy pixes, the energies could transport to a mechanics. A higher ranged scales of sobel pixes
+is, a higher entropy and energy-increment could be expressed. A merely show a simple way of pictures
+is a well edge detection on pictures.
+
+The Author YaoguangLuo. 稍后优化语法.
