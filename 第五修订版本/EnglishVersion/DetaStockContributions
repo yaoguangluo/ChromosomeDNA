@@ -1,0 +1,21 @@
+Implements of stock manipulations. The author did a matrix observation by each
+tupe line of stock data, meant row by row observations. These data onto the '雪球',
+'新浪' and '财富' etc, and these feedbacks on post encoding and decoding were
+different with each other. For example GBK, GB2312 and UTF8 etc. The author needed 
+a DataSwap of unifying. Because of the double values of a deversity-demostributions,
+so the author did a mean-ratio finds, statistics, bayesian and other simple procedures
+to fulfill the requirements of fund frequently inflows about trading volumes.
+Then the author used FFT to make a frequency domain of transformations. According
+to to trace a ten banker and informations about big deal of traders. 
+
+Contributions to the world.
+The author found a defect of feature, he made a fifteen and thirty days calculations
+about inflows and outflows, which as ratio units by each stock, then distinct 
+the pre-day ratio, this ratio, and post-day ratio, to find theirs 3 ratios assessment
+of funds increment and decrement. The author found these ratios did a defect show 
+of the day before a day was commonly, but the day was surges, and the day after
+tomorrow was slipping. And its 3 ratios assessment mark, was likes '-+-' (decrement,
+increment, decrement). Then the author used Wechat of sweet00048 bind of '15116110525'
+to publicly issue this problem of 2018~2019.
+
+The author YaoguangLuo, 稍后优化语法。
