@@ -17,29 +17,43 @@ reducing the prototypes. Inheritation logic.
 
 
 
+Implements of speed differential catalytic sort about its trace of 'deep'.
+In a colleage ages, the author did a well learned of <<Data Structure>>, especially in its
+domain of deeps and weights graphs of tree-rotation and manipulations, India. The author
+considered a technology of balanced tree which could be used for a reference to the domain
+of Deta catalytic sort. For example deep value. Before the optimization of quicksort4D,  
+<<Introduction to Algorithms>>, which had already contained a ranged value, to avoid the 
+'out of memory stacks'. The author considered that ranged value had had only just suitable
+for a special environment. Such as a balanced recursions. Meant that the ranged value won't 
+enough for the author's defect, unbalanced and messy status of computings. Therefore, a deep
+value could scale the recursion and its hierarchical stacks, which look likes an 
+'one-size-fits-all approach' of 'uniform limit'. Seem the deep+ range could do well limitations
+to scale the sort problem of 'Stacks Out of Memory'. 
+
+
 Implements of Deta catalytic sort.
-The raw marterial of Deta catalytic sort was Quicksort4D, 2009 from <<Introduction to Algorithms>>,
+The raw material of Deta catalytic sort was Quicksort4D, 2009 from <<Introduction to Algorithms>>, 
 and its refer page: https://github.com/yaoguangluo/Data_Processor/blob/master/DP/sortProcessor/Quick_4D_Sort.java.
 
-Its optimizations gradually became a catalytic sorting system. Such as left and right marching, 
+Its optimizations gradually became a catalytic sorting system. Such as left and right marching,
 inner and small peak filtering, defect peak induction, and discrete logic optimization etc. 
 
-Left and right marching, a mainly in an asymmetric and unregular array, in order to find a symmetric
-observation. The author separated main-array out of inner-array sections and where found a max value
-between a Left prefix and right post-tail. Then did conditional performs to avoid the high peak of
-computing. It seems much more important about reliabilities. 
+Left and right marching, a mainly in an asymmetric and unregular array, in order to find a 
+symmetric observation. The author separated main-array out of inner-array sections and where
+found a max value between a Left prefix and right post-tail. Then did conditional performs 
+to avoid the high peak of computing. It seems much more important about reliabilities. 
 
-Inner and small peak filtering, a mainly collections of high-effect algorithms, which in order to 
-avoid problems such as the CPU lazy, net gate laggy, DMA crash and Memory out of stack.
+Inner and small peak filtering, a mainly collections of high-effect algorithms, which in
+order to avoid problems such as the CPU lazy, net gate laggy, DMA crash and Memory out of stack.
 
-Defect peak induction, a mainly problems induction, in an asymmetric and unregular statement. Meant
-a butterfly effect of Defect computing problems about middle sets, values, functions and asserts.
+Defect peak induction, a mainly problems induction, in an asymmetric and irregular statement.
+Meant a butterfly effect of Defect computing problems of middle sets, values, functions and asserts.
 
-Catalytic sets optimization, a mainly a collection of optimizations to reslove this defect computing
-problems of above middle sets, values, functions and asserts.
+Catalytic sets optimization, a mainly a collection of optimizations to resolve this defect 
+computing problem of above middle sets, values, functions and asserts.
 
 Discrete logic optimization, a mainly a collection of algorithms to provide a catalytic optimization
-about above middle sets, values, functions and asserts. These algorithms included Discrete Mathematics,
-Demorgan Algebra, Objectives and Nature-Definitions.
+about above middle sets, values, functions and asserts. These algorithms included Discrete 
+Mathematics, Demorgan Algebra, Objectives and Nature-Definitions.
 
 The author Yaoguang.Luo 稍后优化翻译
