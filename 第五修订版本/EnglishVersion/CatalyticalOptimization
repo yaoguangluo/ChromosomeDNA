@@ -16,4 +16,30 @@ reducing the function calls, Recuisive logics. Priority calls the high frequency
 reducing the prototypes. Inheritation logic.
 
 
+
+Implements of Deta catalytic sort.
+The raw marterial of Deta catalytic sort was Quicksort4D, 2009 from <<Introduction to Algorithms>>,
+and its refer page: https://github.com/yaoguangluo/Data_Processor/blob/master/DP/sortProcessor/Quick_4D_Sort.java.
+
+Its optimizations gradually became a catalytic sorting system. Such as left and right marching, 
+inner and small peak filtering, defect peak induction, and discrete logic optimization etc. 
+
+Left and right marching, a mainly in an asymmetric and unregular array, in order to find a symmetric
+observation. The author separated main-array out of inner-array sections and where found a max value
+between a Left prefix and right post-tail. Then did conditional performs to avoid the high peak of
+computing. It seems much more important about reliabilities. 
+
+Inner and small peak filtering, a mainly collections of high-effect algorithms, which in order to 
+avoid problems such as the CPU lazy, net gate laggy, DMA crash and Memory out of stack.
+
+Defect peak induction, a mainly problems induction, in an asymmetric and unregular statement. Meant
+a butterfly effect of Defect computing problems about middle sets, values, functions and asserts.
+
+Catalytic sets optimization, a mainly a collection of optimizations to reslove this defect computing
+problems of above middle sets, values, functions and asserts.
+
+Discrete logic optimization, a mainly a collection of algorithms to provide a catalytic optimization
+about above middle sets, values, functions and asserts. These algorithms included Discrete Mathematics,
+Demorgan Algebra, Objectives and Nature-Definitions.
+
 The author Yaoguang.Luo 稍后优化翻译
