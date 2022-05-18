@@ -5,7 +5,7 @@ considered not only the prefix convolutional computings, the Arabic postfix RWA 
 left, or from tailto the head) also could be well in the wavelet.
 
 2019-06-23 Author's notes on Gitee. 2006, Nanjing, the author first touched the Fourier's formula
-set AcosB+BsinA where in his bachelor's class of High Frequency Circut, HFC wavelet. At 2009, the
+set AcosB+BsinA where in his bachelor's class of High Frequency Circut, HFC wavelet. At 2007, the
 author learned a derivation of AcosB and AsinB collections where in REVA institute. Bangalore University.
 And got LRC formula of
 Ui(t)= L*di(t)/dt+ 1/C*df i(t)*dt + R*i(t) with L*C*d*d*U0*(t)/dt*dt + R*C*d*U0(t)/dt + U0(t), 
