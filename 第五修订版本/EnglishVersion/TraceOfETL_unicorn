@@ -1,87 +1,98 @@
 Implements of mouse manipulations of ETL unicorn. 
-The author adopted a succinct way of effect mouse manipulations of ETL unicorn. To keep
-it way to simple, firstly built a tree manipulations where to make a classify of ETL 
-nodes. Once did an expanded window to add the node into a canvas board by mouse clicks.
-The mainly canvas will present this related node branch and its manipulations by mouse-click.
-The left-mouse-click could well choose the ETL node, to make a moving and dragging of
-the related node. The right-mouse-click could well drag the ETL node arrow, to make a 
-line-link, which connected to the object node. The details of line connection, meant it
-kept an endpoint of arrow which aimed to the hook-area of each node. For example the
-node in picture, which contained three hook-areas of up, middle and bottom on left side.
-Also the right-mouse-click with non-moving condition, could well click out a jumped 
-JFrame conponent. This conponent contained four operations of configuration, execute, 
+The author adopted a succinct way of effect mouse manipulations of ETL unicorn.
+To keep it way of simple, firstly built a tree manipulations where to make a
+classify of ETL nodes. Once did an expanded window to add the node into a canvas 
+board by mouse clicks. The mainly canvas will present this related node branch
+and its manipulations by mouse-click. The left-mouse-click could well choose the 
+ETL node, to make a moving and dragging of the related node. The right-mouse-click 
+could well drag the ETL node arrow, to make a line-link, which connected to 
+the object node. The details of line connection, meant it kept an endpoint of arrow
+which aimed to the hook-area of each node. For example the node in picture, which
+contained three hook-areas of up, middle and bottom on left side. Also the 
+right-mouse-click with non-moving condition, could well click out a jumped JFrame
+component. This component contained four operations of configuration, execute, 
 view and delete, to the continued manipulations.
 
 implements of the trace of ETL unicorn 
-The author started a development of ETL unicorn after he had a three year of good 
-experience of Knime SDK, at 2009. The most two reasons of only table I/O format, and 
-non-support of object values, The author needed a ImageIO object to finish his dream 
-of convolutional pipes after <<Computer Vision>> class by Dr.ReinHart. The author had 
-to build a new ETL to support all kinds of input objects. Seem the ETL unicorn did 
-a well demostribution, and now became an engine of Tinshell nero-pipes. 
+The author started a development of ETL unicorn after he had a three year of good
+experience of Knime SDK, at 2009. The most two reasons for only table I/O format,
+and non-support of object values, The author needed a ImageIO object to finish his
+dream of convolutional pipes after <<Computer Vision>> class by Dr.ReinHart. The 
+author had to build a new ETL to support all kinds of input objects. Seem the ETL
+unicorn did a well demostribution, and now became an engine of Tinshell nero-pipes. 
 
 Implements of nero-cell-skin of ETL unicorn nodes.
-The original nero-cell picture here and the author refered Dr.Newton Howard. At 2015,
-the author followed Mr.Newton to do a dyslexia analyzing project, and partner with
-Paris I's student. Finally got 2 development results list below.
-1 The density of nero computings between women and wen, and its mean of ratios about
-Alpha-brain wavelet. 
-2 The PCA of dyslexia and ICA of each patient, especially in a dyslexia-peak domain 
-of messy mind, lowpass catching and frequent reading. And these theories for almost 
-been changed of the author's thinking when at that times. 
+The original nero-cell picture here and the author referred Dr.Newton Howard.
+At 2015, the author followed Mr.Newton to do a dyslexia analyzing project, and
+partner with Paris I's student. Finally got 2 development results lists of.
+1 The density of nero computings between women and wen, and its mean of ratios 
+about Alpha-brain wavelet. 
+2 The PCA of dyslexia and ICA of each patient, especially in a dyslexia-peak
+domain of messy mind, lowpass catching and frequent reading. And these theories
+of almost are changed from the author's thinking when at that times. 
 
-Their has a new method about computing way of bitmap matrix. For example array[weight][height]
-was a matrix, made it into an array[n]+ array[n]. So the 200 points of 50 heights* 50
-weights of array[50][50], meant the ordinary performs were 50* 50= 2500 times, and now
-was 200 times of arrayofx[200]+ arrayofy[200]. The optimizational effect ratio was 
-2500/200= 12.5.  Made a well example of input array[10][10], which equals true, so swapped 
-for arrayofx[0]= 10 and  arrayofy[0]= 10, then the next input array[13][9], which 
-could swap for arrayofx[1]= 13 and  arrayofy[1]= 9, it seems fast and cool.
+Their has a new method of computing way of bitmap matrix. For example 
+array[weight][height] was a matrix, made it into an array[n]+ array[n]. So the 200
+points of 50 heights* 50 weights of array[50][50], meant the ordinary perform were
+50* 50= 2500 times, and now was 200 times of arrayofx[200]+ arrayofy[200]. The
+optimizational effect ratio was 2500/200= 12.5.  Made a well example of input 
+array[10][10], which equals true, so swapped for arrayofx[0]= 10 and  arrayofy[0]= 10, 
+then the next input array[13][9], which could swap for arrayofx[1]= 13 and  
+arrayofy[1]= 9, it seems fast and cool.
 
 Implements of OSGI Notes on Gitee 2019-06-26
-The author's inspirition of OSGI could trace the liferay-theme applications and presentations
-at class of <Adv Computer Network>, 2012. Then the development of ETL unicorn. The 
-author thought that canvas, which needed its own theme-skins such likes liferay. Then 
-try to build unicorn-theme-UI by using original JDKs. And now became an UI parts of
-YangLiaoJing software. 
+The author's inspirition behind OSGI could trace the liferay-theme applications 
+and presentations at class of <Adv Computer Network>, 2012. Then the development 
+of ETL unicorn. The author thought that canvas, which needed its own theme-skins 
+such likes Liferay. Then try to build unicorn-theme-UI by using original JDKs. 
+And now became an UI parts of YangLiaoJing software. 
 
-The author appreciated the spring and its systematically. Since 2012, the author simulated 
-CGI webs by using C at Callutherans, it emphasizing of HTTP, Web, CGI, Socket, TCP,
-SSH and Router. He considered an object oriented of web protocols of 000~888, which 
-could be used in an optimizational inheritation of socket registations. And now became
-a procedure parts of VPCS schedulations.
+The author appreciated the spring and its systematically. Since 2012, the author
+simulated CGI webs by using C at Callutherans, it emphasizes on HTTP, Web, CGI,
+Socket, TCP, SSH and Router. He considered an object oriented of web protocols of
+000~888, which could be used in an optimizational inheritance of socket registrations. 
+And now became a procedure parts of VPCS schedules.
 
 Implements of the trace of unicorn's plugins.
-The author first time to touch the OSGI, does since he the first time to develop the
-Knime SDK, 2009. Then touched the Camel and mini OSGI rpc applications at 2012, He had
-been working as backend developer by using Spring+ Mysql during 2014~2017. The inheritation
-of ETL node classes were simple like the template-modes of overrides and overloaders 
-during 2013~2014. After the 2 month-duration and exceed 30 times of Infosys interviews
-and frequently be asked of how about the classloader, Object Scan and JNI native parts
-by new JDKs, The author thought the ETL needed a change of its node extensions by
-YangLiaoJing integrated.  And now these classloader-plugin file-names became a 3 metas
-PDC(deta sixteen meta base, Initons char-code) word branches of DNA indexing and encoding. 
+The author first times to touch the OSGI, does since he the first time to develop
+the Knime SDK, 2009. Then touched the Camel and mini OSGI rpc applications of 2012,
+He had been working as backend developer by using Spring+ Mysql during 2014~2017.
+The inheritance of ETL node classes were simple like the template-modes of overrides 
+and overloaders during 2013~2014. After the 2 month-duration and exceed 30 times 
+of Infosys interviews and frequently be asked of how about the classloader, Object
+Scan and JNI native parts by new JDKs, The author thought the ETL needed a change 
+of its node extensions by YangLiaoJing integrated.  And now these classloader-plugin
+file-names became a 3 metas PDC(deta sixteen meta base, Initons char-code) word 
+branches of DNA indexing and encoding. 
 
 Implements of the theory of 'Universe Inheritation/万物皆为插件', Notes on Gitee 2020-04-27.
 Initially, the author built an ETL unicorn for where be used in embedded system. 
-In order to make the ETL to small and smart, therefore he didn't use the OSGI plugin 
-theory to make a widly extension and only an ETL kernel instead. And now became an OSGI
-extension parts of YangLiaoJing software. Seem the OSGI extensions could fit a big
-system of YangLiaoJing. The author considers an OSGI extension does more better than 
-object oriented inheritation.
+In order to make the ETL to small and smart, therefore he didn't use the OSGI plugin
+theory to make a widely extension and only an ETL kernel instead. And now became an
+OSGI extension parts of YangLiaoJing software. Seem the OSGI extensions could fit a 
+big system of YangLiaoJing. The author considers an OSGI extension does more better 
+than object oriented inheritance in this situation.
 
-At the first time, the author try to build a batch script to do the time schedules such
-as Knime. But is seems did  lower effectives and much more messy computings by using 
-multi-languages( mixed of Java, C, Shell, or others like Python and Ruby etc) . Once the
-TinShell done, seem could be unfied and conducted. Because it all based on Java. Now
-became an evolutionary-language script of DNA Initons-dandelion.
+Implements of tupe.
+Tupe one per one for the Deta Ouler TSP, and its ordinary editions, were based on 
+this descreted and tuped combinations. More examples of one per many tuped combinations,
+were Deta DNA encrypted system, and PDE probabilistic key. The author considered the
+tupe was a foundament of nero-network. For examples of ETL unicorn pipe UI, Deta unlined 
+Ouler TSP, and trace the central weights of each fissile group. Now became a powerful
+proof in Ouler TSP and adjacent way of Deta hexadecimal meta base Initons. 
+
+At the first time, the author try to build a batch script to do the time schedules
+such as Knime. But is seeming did lower effectives and much more messy computings by
+using multi-languages( mixed of Java, C, Shell, or others like Python and Ruby etc) . 
+Once the TinShell done, seem could be unified and conducted. Because it all based on
+Java. Now became an evolutionary-language script of DNA Initons-dandelion.
 
 Notes on Gitee 2019-06-18
-Once done the 'one-button' of ducument-execution. The author considered the pipe execution
-of each document where could be a single nero-cell's organization-flow. And these documents
-or flows, could be arranged by VPCS schedures of skivvy management of memories, hallkeeper
-registations of processes, sleeper performs of schedures, and dream sets of garbages 
-collection. Meant a higher effeciency of the environmental protection about energetical 
-computing-optimizations. 
+Once done the 'one-button' of ducument-execution. The author considered the pipe
+execution of each document where could be a single nero-cell's organization-flow. 
+And these documents or flows, could be arranged by VPCS schedures of skivvy management
+of memories, hallkeeper registations of processes, sleeper performs of schedures, and
+dream sets of garbages collection. Meant a higher effeciency of the environmental
+protection about energetical computing-optimizations. 
 
 The author YaoguangLuo 稍后优化语法.
