@@ -13,7 +13,7 @@ JFrame conponent. This conponent contained four operations of configuration, exe
 view and delete, to the continued manipulations.
 
 implements of the trace of ETL unicorn 
-The author started a developement of ETL unicorn after he had a three year of good 
+The author started a development of ETL unicorn after he had a three year of good 
 experience of Knime SDK, at 2009. The most two reasons of only table I/O format, and 
 non-support of object values, The author needed a ImageIO object to finish his dream 
 of convolutional pipes after <<Computer Vision>> class by Dr.ReinHart. The author had 
