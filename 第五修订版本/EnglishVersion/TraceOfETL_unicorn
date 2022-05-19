@@ -70,4 +70,18 @@ extension parts of YangLiaoJing software. Seem the OSGI extensions could fit a b
 system of YangLiaoJing. The author considers an OSGI extension does more better than 
 object oriented inheritation.
 
+At the first time, the author try to build a batch script to do the time schedules such
+as Knime. But is seems did  lower effectives and much more messy computings by using 
+multi-languages( mixed of Java, C, Shell, or others like Python and Ruby etc) . Once the
+TinShell done, seem could be unfied and conducted. Because it all based on Java. Now
+became an evolutionary-language script of DNA Initons-dandelion.
+
+Notes on Gitee 2019-06-18
+Once done the 'one-button' of ducument-execution. The author considered the pipe execution
+of each document where could be a single nero-cell's organization-flow. And these documents
+or flows, could be arranged by VPCS schedures of skivvy management of memories, hallkeeper
+registations of processes, sleeper performs of schedures, and dream sets of garbages 
+collection. Meant a higher effeciency of the environmental protection about energetical 
+computing-optimizations. 
+
 The author YaoguangLuo 稍后优化语法.
