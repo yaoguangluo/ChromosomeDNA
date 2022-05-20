@@ -1,35 +1,39 @@
 Implements of VPCS server notes on Gitee.
+
 In an early time of author's projects, MVC backend was a popular solution for
 web development. And the first MVP project of IOS game:
 https://github.com/yaoguangluo/dark-wizard-game/tree/master/DOW2
-, the author appreciated its object oriented schedures and its refreshment. Due to the
-MVC was too heavy, so the author did a definition of game controllers. And finally separated 
-the macros and prototypes as a type of MVPC. Since the author did a Java test job at 
-Folsom Intel, after he used Java mockito MVC API, mixed with Junit4 to make a springboot
-and hibernate test. He found that all functions could be tested as a single process, and
-this process contained a classify of schedures. These schedures included sinletons, sonar
-spells, spring web boots and spring injects. And these schedures were tested one by one
-like a time sequenced line-waterflows. So the test process before deployment which was a 
-synchronization, but the true of its inner schedures were an asynchronization. The author
-took more questions about sonar qube registrations because those contained lots unforeseeably
-encrypt dlls. The author try to explain well between asynchronization and synchronization 
-by reading the professional book of Operating System, TCP/IP, Software Engineering and How
-to programming. After he did a simulation by using CGI, Moonguse C, Rust and Golang etc. 
-Then he got a result of TCP hands shaking and time sequenced Rest-calling. He became to know
-the asynchronization distincts to synchronization. Then annouced a first 'VPC' at 
+, the author appreciated its object oriented schedure and its refreshment. 
+Due to the MVC was too heavy, so the author did a definition of game controllers.
+And finally separated the macros and prototypes as a type of MVPC. Since the 
+author did a Java test job at Folsom Intel, after he used Java mockito MVC API, 
+mixed with Junit4 to make a springboot and hibernate test. He found that all
+functions could be tested as a single process, and this process contained a 
+classify of schedure. These schedure included sinletons, sonar spells, spring
+web boots and spring injects. And these schedures were tested one by one like a 
+time sequence line-waterflows. So the test process before deployment which was a
+synchronization, but the true of its inner schedures were an asynchronization.
+The author took more questions about sonar qube registrations because those contained
+lots unforeseeably encrypt dlls. The author try to explain well between asynchronization
+and synchronization by reading the professional book of Operating System, TCP/IP,
+Software Engineering and How to programming. After he did a simulation by using 
+CGI, Moonguse C, Rust and Golang etc. Then he got a result of TCP hands shaking
+and a time sequenced Rest-calling. He became to know the asynchronization distincts
+to a synchronization. Then annouced a first 'VPC' at 
 https://github.com/yaoguangluo/VPC5.0/commit/dc06dbc3750879155871d45ce9cdb8be29825a60, 
-2017年10月19日 GMT+8 12:15. Because of his VPC project, was built by springboot and mybatis,
-which was unforeseeably. The author couldn't test and catch the question well, then try to 
-code a new bottom OSI layer of rest call allocations about his theory of VPC. He began to 
-think about camel rpc, golang grpc, TCP rxtx hands shaking, RS485, powerlink flips and modbus
-hands shaking. Finally, the author used SSH Sockets to simulate the hands shaking CGI. After
-he had simulated an iluwatar handler-schedures, he got so many effeciency problems of memory
-garbage, unused performs and dead locks. Then he try to make separations of data and logics, 
-schedures and resource, business and controllers. And now the VPC became a VPCS, VECS of AOPM
-VECS IDUQ TXHF, a part of Deta DNA hexadecimal meta base initons. For the listed bee coords 
-classify of 'Swarm Computing' at chapter 6 and DNA AOPM-VPCS catalytic computing-array at 
-chapter 7. The author used socket flows of hands shaking, to instead springboot and mybatis,
-the author did an affordable Deta PLSQL, to instead MYSQL. and now he prepared to make a new 
-separation of ethics and computings.   
+2017年10月19日 GMT+8 12:15. Because of his VPC project, was built by springboot
+and mybatis, which was unforeseeabe. The author couldn't test and catch the question 
+well, then try to code a new bottom OSI layer of rest call allocations about his
+theory of VPC. He began to think about camel rpc, golang grpc, TCP rxtx hands 
+shaking, RS485, powerlink flips and modbus hands shaking. Finally, the author used 
+SSH Sockets to simulate the hands shaking CGI. After he had simulated an iluwatar
+handler-schedure, he got so many efficiency problems of memory garbage, unused
+performs and dead locks. Then he try to make separations of data and logics, schedures
+and resource, business and controllers. And now the VPC became a VPCS, VECS of AOPM 
+VECS IDUQ TXHF, a part of Deta DNA hexadecimal meta base initons. For the listed bee
+cords classify of 'Swarm Computing' at chapter 6 and DNA AOPM-VPCS catalytic
+computing-array at chapter 7. The author used socket flows of hands shaking, to 
+instead springboot and mybatis, the author did an affordable Deta PLSQL, to
+instead MYSQL. and now he prepared to make a new separation of ethics and computings.   
 
 Author YaoguangLuo, 稍后优化语法.     
