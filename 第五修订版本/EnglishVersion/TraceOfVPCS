@@ -1,5 +1,4 @@
-Implements of VPCS server notes on Gitee.
-
+Implements of VPCS server notes on Gitee, 2019-06-20.
 In an early time of author's projects, MVC backend was a popular solution for
 web development. And the first MVP project of IOS game:
 https://github.com/yaoguangluo/dark-wizard-game/tree/master/DOW2
@@ -35,5 +34,31 @@ cords classify of 'Swarm Computing' at chapter 6 and DNA AOPM-VPCS catalytic
 computing-array at chapter 7. The author used socket flows of hands shaking, to 
 instead springboot and mybatis, the author did an affordable Deta PLSQL, to
 instead MYSQL. and now he prepared to make a new separation of ethics and computings.   
+
+
+Implements of VPCS server notes on Gitee. 2019-06-25
+The author did a contrasted analyst of VPCS, RPC, MVC, MVP, and compared each to Microsoft's
+Handler and Event. He did a conclusion of VPCS, from MVC（Model-View-Contoller）to MVP(Model-View-Process), 
+then again from an MVPC(Model-View-Process-Controller) to VPCS(View-Process-Controller
+Interface- Static Map). At VPC5.0 edition, the author had removed the Model, and separated
+Model and Process into sleeper and sets, announced it as VPCS. 
+Then The author did an evolution of VPCS, to separate the View into Vison and Pillow, 
+gradually into a different type of VPCS (Vision- Pillow-Controller-Sleeper ). Seem not done,
+the author continued to integrate the Set into Pillow, and built a skivvy to arrage the 
+Pillow set. As a VSPCS( Vision-Sleepers-Pillow-Controller-Skivvy), and now became an HVPCS(
+Hallkeeper-Vision-Pillow-Controller-Skivvy) by instead Skivvy of a Hall. For the VPCS HTTP
+server and schedure. ( not for DNA Initons Encoding, which was a simple of Vision, Execution,
+Controller and Static).
+
+Compare to the Microsoft handler events, VSPCS schedure and its RR(Round Robin or Early Birds)
+could be more simpler then other factory modes. Compare to the RPC, VSPCS simulated the concurrented,
+asyntronized, inner time sequenced threads-schedure( see HTTP request and responce Java sources),
+instead of illuwatars incremented, asyntronized handler and event. Golang RPC refers (
+https://blog. csdn. net/lk2684753/article/details/84436190). VSPCS did an example of Hotel-Daily-Arrangement.
+Because of 3 messy environments as Hotel-Daily-Arrangement, Hospital-Daily-Arrangement,
+and Bus-Stations-Daily-Arrangement. The author considered it could do well in a business of catalytic 
+computings. In order to satisfy a reduced computings and wastes, and raised a seamlessly monitoring. 
+The author thanked Operating System, Apache Camel and Its Mini OSGI, Java.net, Java How to Program 6th,
+Liferay and Its theme system here the Cheers.
 
 Author YaoguangLuo, 稍后优化语法.     
