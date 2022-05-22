@@ -10,7 +10,7 @@
 然后 gitee当时总隐藏我的源文件，只给我看，成了本地镜像一样。而我那时候申请著作权案要用，于是我分离开，将github的pull过来开始。
 于是只有coding和 bitbucket 2家 push
 
-再后来我的bitbucket 直接提示我的 git admin 禁止再使用，拼命推荐他们自家 的 treeUI， 于是我就用他们的 treeUI了只有了coding 1家
+再后来我的bitbucket 直接提示我的 git admin 禁止再使用，拼命推荐他们自家 的 treeUI， 于是我就用他们的 source tree的 UI了只有了coding 1家
 
 现在coding突然来个15兆也是大文件，卡我一下，我懒得checkout了，直接。git commit hitory全部备份， 以后coding我也浏览器上传。
 
