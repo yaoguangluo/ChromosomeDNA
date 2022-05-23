@@ -5,11 +5,11 @@ VisonaryDeleteData.java; I should make a translation of whom from humanoid lexic
 grammar: （I，D，U，Q- Increment，Decrement，Upgrate，Query； V，E，C，S- Vision, Execute，Control，Static）, the ordinary files will 
 change into（IS.java; DS.java; QS.java;）,（VDS.java; VIS.java）。
 
-Then I could do the next step of definiton. Assume VIS.java file contains four function prototypes as （IncreateVinsionaryTrigger ()；
-IncreateVinsionaryXplore ()；IncreateVinsionaryController ()；IncreateVinsionaryAnalysis ()；I could make a translation of whom from 
+Then I can do the next step of definiton. Assume VIS.java file contains four function prototypes as （IncreateVinsionaryTrigger ()；
+IncreateVinsionaryXplore ()；IncreateVinsionaryController ()；IncreateVinsionaryAnalysis ()；I can make a translation of whom from 
 humanoid lexical to DNA meta Initons as （IVT()；IVX()；IVC()；IVA();） .
 
-Base of the PDN Encoding grammar: （T，X，H，F- Trigger, Xplore, Hall, Full）. The metabolism starts. I could prove VIS.java+ IVT()；= 
+Base of the PDN Encoding grammar: （T，X，H，F- Trigger, Xplore, Hall, Full）. The metabolism starts. I can prove VIS.java+ IVT()；= 
 SVI.java +XCDX+IVT(), at here , VIS= VI + S = S + VI 。
 
 It seems like a blooming Dandelion flower. At this time, assume a new condition has happened here, the T() contains logic of Analysis-
