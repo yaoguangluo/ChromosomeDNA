@@ -1,6 +1,6 @@
 Derivation of Full Initon, F-TXHF.
 
-Before the author had a dcerivation of RNA logics and PDN digits. He had concluded
+Before the author had a derivation of RNA logics and PDN digits. He had concluded
 the PDE formulas as below:
 
 S= I, S= Q, C= D, I= !D, D= !I, U= !Q, Q= !U, I= ++D, U= ++I, Q= ++U, DD= ++Q, V= U+ Q,
