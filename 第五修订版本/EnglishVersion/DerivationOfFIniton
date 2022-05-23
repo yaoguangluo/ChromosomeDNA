@@ -1,0 +1,56 @@
+Derivation of Full Initon, F-TXHF.
+
+Before the author had a dcerivation of RNA logics and PDN digits. He had concluded
+the PDE formulas as below:
+
+S= I, S= Q, C= D, I= !D, D= !I, U= !Q, Q= !U, I= ++D, U= ++I, Q= ++U, DD= ++Q, V= U+ Q,
+E= I+ U, C= I+ D, S= I+ Q, A= V+ S, O= E+ S, P= E+ C, M= C+ S, E= D+ U,D= DD, U= E, I= U, 
+E= I+ E, P= P+ D, C= U+ D+ D, and sixteen Initons of 'AOPM TXH VECS IDUQ DD'.
+
+According to the aboves, the author did an analysis of pyrimidine class, purine class,
+and steroid class, then he considered a steroid-arc structures of AOPMTX and its features.
+For example AOPM-X Initon, he named four position features of NH2 as position 1; O as
+position 2; N2H which symmertred of NH2, N2H as postion 3; and NH2 which symmertred of O,
+NH2 as postion 4. then proved a below list of steroid class.
+
+NN, NO, OO, NNN, NN N, NNO, NN-O, NON, NO-N, NOO, NO-O, OON, OO-N, OOO, OO-O, NNNN, NNNO,
+NNON, NNOO, NONN, NONO, NOON, NOOO, ONNN, ONNO, ONON, ONOO, OONN, OONO, OOON, OOOO.
+
+After a symmertrically filterd.
+NN, NO, OO, NNN, NON, NO-N, OON, OO-N, NNNN, NONN, OONN.
+
+Then did an arrangement.
+I, O-O; D, N-O; U, N-O; Q, O-O; V, N-N; E, O; C, O-N; S, N; H, O-O; P, OON; A, NNN; O, 
+NO; ？, OO ;？, NN; M, NO-N; T, NON; ？, OONN; X, ONNN; ？, NNNN;.
+
+The author absolutely found a complementary structure of DD was NnOo, and its associated 
+Initons of H, O-O. And its alkalic procedures could be V, N-N -> A, NNN -> ?, NNNN. Finally
+he proved four structures of OONN, NNNN, OO and NN, which for RNA IC to use.
+
+After a structure of DD was NnOo, he continued a development with a valuable informations,
+DD And its alkalic procedures could be DD-> VVS -> A, because the unstable of H, O-O, he
+definitely concluded five structures as blew.
+
+1 D-D pyrimidine pairs
+2 Amine Xanthine-Amine Xanthine Pairs.
+3 Amine Xanthine-D Pairs.
+4 Amine Xanthine-D Molecule, Pyrimidine[1,2-a]PyrimidineMidazole
+5 Amine Xanthine-Amine Xanthine Molecule, Steroid, PyrimidineMidazolo[1,2-a]PyrimidineMidazole
+
+He found that 4 and 5 were unstable middle ware of RNA Initons, and explored its complement 
+and 2's complement by a digital logic way of distincted to bio-chemical way. The author distincted
+that weak alkalic class of HCO3-, O-, CH3- and NH2-, to a weak acid class of Na+, K+, H+ and 
+NO2+, he could prove that a few metal elements, could join an acid effect. Absolutely the ion-pairs
+could join RNA procedures. but was not a complementary structure here. Then he begain to attension 
+for Amine Xanthine-Amine Xanthine Molecule, Steroid, PyrimidineMidazolo[1,2-a]PyrimidineMidazole, 
+and did a graph of its structure. He tried to make a name for it. Firstly, he named it as AX Initon,
+Amine-Xanthine pairs Molecule. Compared to H Initon, HE and HC, AX and its PDN Extension could be
+V and S, so the author named it as Touch Initon. But was duplicated to T trigger Initon, and the 
+'Touch' Initon also had a ketonic-group where similar to H Initon. It seems more widely than other
+purine Initons, finally he announced it as F- Full initon. because it could join both procedures of 
+DNA and RNA. According to the page of 639, we could find F might instead E, to do the complmentary
+computings. So it seems the signal lock state formula was {F, DU} = FD, FU. Base-par. The author did
+a search by Baidu, found a name of Amine Xanthine, a F Initon-Full, also named as 2-hydroxyadenine,
+keto-adenine, 6-amino-xanthine.
+
+The author YaoguangLuo 稍后优化语法.
