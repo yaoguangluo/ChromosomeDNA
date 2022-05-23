@@ -7,7 +7,7 @@ S= I, S= Q, C= D, I= !D, D= !I, U= !Q, Q= !U, I= ++D, U= ++I, Q= ++U, DD= ++Q, V
 E= I+ U, C= I+ D, S= I+ Q, A= V+ S, O= E+ S, P= E+ C, M= C+ S, E= D+ U,D= DD, U= E, I= U, 
 E= I+ E, P= P+ D, C= U+ D+ D, and sixteen Initons of 'AOPM TXH VECS IDUQ DD'.
 
-According to the aboves, the author did an analysis of pyrimidine class, purine class,
+According to the above, the author did an analysis of pyrimidine class, purine class,
 and steroid class, then he considered a steroid-arc structures of AOPMTX and its features.
 For example AOPM-X Initon, he named four position features of NH2 as position 1; O as
 position 2; N2H which symmertred of NH2, N2H as postion 3; and NH2 which symmertred of O,
