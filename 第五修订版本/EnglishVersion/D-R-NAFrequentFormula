@@ -1,0 +1,56 @@
+Implements of magnetic frequent-shaking.
+According to the mechanical frequent-shaking of vowels with A, O, E, I and U,
+the author considered a magnetic frequent-shaking will similar to the mechanics. 
+Meant magnetics and mechanics were combined to a physical action. He used prime
+numbers to make a collection with below list of desiphines.
+period Pi* K* {1+ 1/ 2+ 1/ 3+ 1/ 5+ 1/ 7+ 1/ 11+ 1/ 13+ 1/ 17+ 1/ 19+ 1/ 23+
+1/ 29+ 1/ 31+ 1/ 37+ 1/ 41+ 1/ 43+ 1/ 47 . . .  };  Pi = 3.1415926.
+
+After a collected procedure, then he considered an RNA computing, was an incremental
+frequent overlaps by Initon's periods and frequencies. For example of AOPM VECS 
+IDUQ TXHF DD, could have a frequent relatives.
+
+{fA, fO, fP, fM, fV, fE, fC, fS, fI, fD, fU, fQ, fT, fX, fH, fF, fDD}, and could 
+have a periodic relatives.
+{TA, TO, TP, TM, TV, TE, TC, TS, TI, TD, TU, TQ, TT, TX, TH, TF, TDD},
+
+After an observation with a PDE formula relatives.
+TA= T{V+ S}; TO= T{E+ S}; TP= T{E+ C}; TM= T{C+ S}; TV= T{U+ Q}; TE= T{I+ U}; 
+TC= T{I+ D}; TS= T{I+ Q}; TI= T{E- U}; TD= T{C- I} ; TU= T{E- I}; TQ= T{S- I};
+TDD= T{D+ D}= T{FF} ; TT= T{V + E} ; TX= T{V+ C}; TH= T{(HE+ HC)/ 4}= T{(E+ C)/ 2};
+THE= T{H+ E}; THC= T{H+ C}; TII= T{I+ I}= T{HH} ;. . . 
+
+He began to fall in thinking for RNA computational environment. Then did a periodic
+DNA's PDE formulas below.
+T{I}= T(=O+ =O); T{D}= T(=O+ -NH2); T{U}= T(=O+ -NH2+ -CH3); T{Q}= T(=O+ =O+ -CH3);
+T{V}= T{Q + U}; T{E}= T{I+ U}= T{D+ U}; T{C}= T{I+ D}; T{S}= T{I+ Q}; T{A}= T{V+ S}; 
+T{O}= T{E+ S}; T{P}= T{E+ C}; T{M}= T{C+ S}; T{T}= T{V+ E}; T{X}= T{V+ C}; T{H}= T{(E+ C)/ 2};
+T{HE}= T{H+ E}; T{HC}= T{H+ C};
+
+At here the '羟基' meant a Ketonic base {=O}, not a standard {-OH} for hydrolysis.
+Here the '氨基' meant an Amino {-NH2}, not a {NH3} for molecule. 
+
+Then proved an RNA derivation.
+T{F}= T{D+ D}; T{FF}= T{CC}; T{HH}= T{E+ C}= T{P}; {}meant an Initon-relation; 
+()meant a compound-relation; . . .  . . . => T (-NH2)= T (2* =O);  . . .  . . . 
+=> T(-CH3)= T(?); f frequency= 1/ T period; For T(-NH2)= T(2* =O), a derivation below; 
+T{HH}= T{E+ C}; => T(=O,=O, =O,=O)= T(=O, =O,-NH2); so=>T(=O =O,)= T(-NH2); 
+
+At here the E Initon only had one '=O', and Initon H had two '=O's. Initon C both
+had one '=O' and one '-NH2'. Initon E for Hypoxanthine. Initon H for Xanthine. Initon C for Guanine.
+refer
+'2020年10月31日  8.罗瑶光. 《肽展公式推导与元基编码进化计算以及它的应用发现》.
+中华人民共和国国家版权局，国作登字-2021-A-00042587. 2021. ' 
+'2020年11月29日  9.罗瑶光. 《DNA催化与肽展计算和AOPM-TXH-VECS-IDUQ元基解码013026中文版本》.
+中华人民共和国国家版权局，国作登字-2021-A-00042586. 2021. ' 
+
+Above derivations didn't contain a periodic proof of CH3, so the author did three
+arguments with Masks, Complements and Carry sign. Absolutely seems the Carry-use, was
+fitted in an observation of digital logics. Such as 'DD= ++Q' at page 147.
+For Masks proof, the mask of I was D, but here was Q, so the false.
+For Complements, the Complements of I was U, but here was Q, so the false.
+Only the Carry of I, was a D and had a shift increment. Became D+ Dcarry= ++Q, so the true.
+
+Finally the author got 2 proofs of 'T(=O =O,)= T(-NH2);' and T (-CH3)= f (Carry).
+
+The author YaoguangLuo,稍后优化语法。
