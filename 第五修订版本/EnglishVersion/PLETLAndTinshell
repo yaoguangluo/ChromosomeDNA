@@ -1,0 +1,54 @@
+PLETL and Tinshell
+
+DNA ETL
+
+1 DNA ETL inherited a Deta PLSQL compiler. 2 And its programmable alpha-betic encodings
+could be built by Chinese. 3 and 4 These Chinese programming could save the program section
+into an ETL node as a row-line-store or full-section-store with a TinShell node.
+
+PLETL
+
+1 PLETL inherited a theroy of Deta PLSQL commands. 2 And now included more Tinshell
+extensions such as PL-TCP and PL-REGEX or 3 more multi-languages support. 4 The author
+will use it to simulate topological nero-computings with ETL pipe flows.
+
+Tinshell
+
+1 Tinshell could be built by under a foundamental conponent with PLETL. 2 The foundament
+meant a compiler and excution with Tinshell Script. 3 The author did an updating of Deta 
+PLSQL with Tinshell. 4 In order to use it to simulate an I/O input and output. The Tinshell
+commands as below
+
+'操作' operation; '条件为' condition; '获取表名' get spects; '获取表列名' get columns;
+'进行分词' segementations; '词性标注' POS annotations; '词性显色' POS colors; DNN; '颜色标记'
+为 color targets; '红色' red; '蓝色' blue; '黄色' yellow; '绿色' green; '进行字符排序' 
+sort by chars; '进行数字排序' sort by numbers; '从小到大' increment; '从大到小' decrement;
+'行至' lined to; '包含' contains; '改名为' name change; '过滤掉' filter; '不包含' does not 
+contains; '进行选择' choice; '精度搜索' scale-search;
+
+
+PLETL; '中节点' nodes input; '进行表格相交' table adjacency or adjunction; '进行表格合并'
+table merges or conjunction; '进行表格剔除' table delete; '主码为' primary key; ID; '模式为' 
+mode of; '相交部分剔除' parts delete of adjacency or adjunction; '新增列' new columns; 
+'叠加列' column overlaps; '有交集叠加列' adjacent or joint columns overlap; '有交集新增列'
+adjacent or joint column creation; '无交集新增列' non-adjacent or disjoint columns creation;
+Others see the Deta PLSQL document.
+
+PLTCP;'进行 WEB 请求' web request; '接口为' interface port; '端口为' port endpoint; '操作为'
+procedure as;
+
+'语法为' its grammar as -symbol of ';', '一个 shell 句型分隔' - parser a shell sentence-isolation
+from each section. Symbol of ':', '一个 shell 函数分隔' - parser a shell function-isolation 
+from each sentence. Symbol of '|', '一个 shell 对象分隔' - parser a shell object-isolation
+from each function.
+
+Implements of PLETL and Tinshell's logical compiler-graph.
+
+Above picture for PLETL, the author according to a Deta PLSQL compiler of where did a 
+secondary development. Did a Tinshell script input and grammar parserment, then did a key 
+word recognition with ':'-symbolic calculations. Function call a SVO grammar step with VPCS
+theroy and 'and-or' conditions. After functions call then responsed the result, according 
+to a memory map.
+
+
+The author YaoguangLuo 稍后优化语法.
