@@ -1,8 +1,8 @@
 A Detail of CE Separation in First Metabolism.
 
-At first I input a functional file name as 'AOP.MVE.CSI.DUQ.java', the meta-based initons were from 'AOPM-VECS-IDUQ, 
+At first I input a functional file name as 'AOP.MVE.CSI.DUQ.java', the meta-based initon was from 'AOPM-VECS-IDUQ, 
 DNA Initon Encoding'. Assumed above java file which had had three function prototypes of AOP(), AOP.MVE() and CSI(). 
-then starts a metabolic optimization by their inherited interfaces. If we had learned C programming, will easy to make 
+then started a metabolic optimization by their inherited interfaces. If we had learned C programming, will easy to make 
 a separation between interfaces and prototypes. In an observation of metabolism, interface could be a macro type, 
 and prototype could be a functional type. So by following C programming theory, we built Controller- C as macro type 
 and Execute- E as functional type, it seems like a well condition of cuting the part of function name into file name 
