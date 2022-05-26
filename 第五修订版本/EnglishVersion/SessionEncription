@@ -38,7 +38,7 @@ C->B-------------------------------------------------MPOASCEV--TI--
 B->C----------------------------VECSAOPM--TI-----------------------
 C=A->B-----MPOASCEV---TI-------------------------------------------
 
-According to the researching and testing, he considered filtering-operations were trigged
+According to the researching and testing, he considered filtering-operations were triggered
 and caused by during of where A to B, he thought that 'B to C' and 'C to B' could roll back 
 cyclically. Then the author continued a proof about using above arguments. 
 
