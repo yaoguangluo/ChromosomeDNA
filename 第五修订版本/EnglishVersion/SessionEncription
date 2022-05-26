@@ -1,0 +1,60 @@
+Session Encription
+A meant a Pre-Encription for a decrement, B meant a PDE class for an increment and a
+decrement, and C meant a PDS class for an increment. After PDN extensional computings,
+we could find that results and originals were not equals.
+
+DNA----AOPM--------VECS--------IDUQ-------
+A->B---true--------true--------true-------
+B->C---true--------true--------true-------
+A!=C---false-------false-------false------
+C->B---true--------true--------true-------
+
+Then did a conclution of PDE tokens with XOR.
+
+XOR--------A----------B----------C------
+A->B---AOPMVECS-------------------------
+B->C--------------VECSAOPM--------------
+A!=C------------------------------------
+C->B--------------------------MPOASCEV--
+
+The author used discrete logic to make prove out of what he discoverd, the C and B
+might be the same with PDE of MPOASCEV, but is seeming here A still not equals to C.
+
+XNOR--------A-----------B----------C-------
+A->B---MPOASCEV----------------------------
+B->C----------------VECSAOPM---------------
+A!=C---------------------------------------
+C->B----------------------------MPOASCEV---
+
+Neither with PDE of VECSAOPM and nor with PDE of MPOASCEV, where A still not equals to
+C. Then the author did a proof about using probability. 
+
+PDE-KEY---------A-------------------B-------------------C----------
+A->B-------AOPMVECS--FD--------------------------------------------
+B->C----------------------------VECSAOPM--FI-----------------------
+A->B-------AOPMVECS--TD--------------------------------------------
+B->C----------------------------VECSAOPM--TI-----------------------
+C->B-------------------------------------------------MPOASCEV--TI--
+B->C----------------------------VECSAOPM--TI-----------------------
+C=A->B-----MPOASCEV---TI-------------------------------------------
+
+According to the researching and testing, he considered filtering-operations were trigged
+and caused by during of where A to B, he thought that 'B to C' and 'C to B' could roll back 
+looply. Then the author continued a proof about using above arguments. 
+
+DNA-KEY------------DNA-------------PDE-B----------------PDE-C----------
+DNA-------------AOPMVECS--TDD---VECSAOPM--TII--------------------------
+FULLDNA-----------------------------------------------MPOASCEV--TDI----
+FULLBACKDNA---------------------MPOASCEV--TDI---------VECSAOPM--TII----
+FULLUPDNA-----------------------VECSAOPM--TII---------MPOASCEV--TDI----
+
+Above tab, for example DI, the author did 3 tokens to target a way of key use. First char of
+T and F, meant T with key and F without a key. Without a key meant no key, and needed to 
+create a new PDE key in the precedure. Second char of I and D, meant I for Initon class do a
+PDE increment and D for Initon class do a PDE decrement. And third char of I and D meant I 
+for PDE increment key and D for PDE decrement key. For example TDD at second line, above tab,
+where meant first T for PDE procedure with key, second D for PDE Decrement procedure 'from PDC
+to PDE' or 'from PDE to PDS', and third D for this PDE procedure with a Decrement key.
+Seem cool the cheers.
+
+The author YaoguangLuo 稍后优化语法.
