@@ -17,7 +17,7 @@ B->C--------------VECSAOPM--------------
 A!=C------------------------------------
 C->B--------------------------MPOASCEV--
 
-The author used discrete logic to make prove out of what he discoverd, the C and B
+The author used discrete logic to make prove out of what he discovered, the C and B
 might be the same with PDE of MPOASCEV, but is seeming here A still not equals to C.
 
 XNOR--------A-----------B----------C-------
@@ -40,7 +40,7 @@ C=A->B-----MPOASCEV---TI-------------------------------------------
 
 According to the researching and testing, he considered filtering-operations were trigged
 and caused by during of where A to B, he thought that 'B to C' and 'C to B' could roll back 
-looply. Then the author continued a proof about using above arguments. 
+cyclically. Then the author continued a proof about using above arguments. 
 
 DNA-KEY------------DNA-------------PDE-B----------------PDE-C----------
 DNA-------------AOPMVECS--TDD---VECSAOPM--TII--------------------------
@@ -50,7 +50,7 @@ FULLUPDNA-----------------------VECSAOPM--TII---------MPOASCEV--TDI----
 
 Above tab, for example DI, the author did 3 tokens to target a way of key use. First char of
 T and F, meant T with key and F without a key. Without a key meant no key, and needed to 
-create a new PDE key in the precedure. Second char of I and D, meant I for Initon class do a
+create a new PDE key in the procedure. Second char of I and D, meant I for Initon class do a
 PDE increment and D for Initon class do a PDE decrement. And third char of I and D meant I 
 for PDE increment key and D for PDE decrement key. For example TDD at second line, above tab,
 where meant first T for PDE procedure with key, second D for PDE Decrement procedure 'from PDC
