@@ -9,7 +9,7 @@ B->C---true--------true--------true-------
 A!=C---false-------false-------false------
 C->B---true--------true--------true-------
 
-Then did a conclution of PDE tokens with XOR.
+Then did a conclusion of PDE tokens with XOR.
 
 XOR--------A----------B----------C------
 A->B---AOPMVECS-------------------------
