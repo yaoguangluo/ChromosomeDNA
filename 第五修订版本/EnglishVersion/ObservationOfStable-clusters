@@ -1,0 +1,33 @@
+Notes on Gitee 20200305, cords-clusters separation according to the fissile-scale where
+based on adjacent-distance of each two cords, then found each trend-distance between its 
+cluster-centre and cluster-weight. In order to make an observation of stable-clusters.
+
+In an early time, the author tried to find an argorithm of vision, to speedly and quickly 
+trace the movement with this argorithm. His purpose was that trended an action and traced
+a prediciton by using software code.
+
+Due to the limited development, he maily used two observable keys with centres and weights.
+
+He considered a stable-cluster could be defined as a coincided position of its centre and 
+weight. Then did a project about cords movement and computation with computer. Then considered
+a way of observation could be defined as a potential energy. Here the once be explained 
+as a vector, also could mean as a trending movement. He continued to find a computing way
+of how to make an exploration with these aboves.
+
+The author added a Stability, Vector and Pressure, he considered a central point of each
+cluster could be defined as a Stable-section. And a weight point of each cluster could be 
+defined as a Stress-section. Then did vectorial connections where from each Stable-section 
+to Stress-section, The author considered these vectors could be defined as PCA densities.
+
+The length of each vectorial link could be defined as an 1 energy-status, 2 trending directions,
+3 and ranged densities. Here the ranged of 2 and 3, could also deteminate the statement of 1.
+ 
+The author continued to consider that agained a differential fissile-cluster, then could
+create a condition with statistics, meant to do a more scaled analyzing of actions, densities,
+molecules and mechanics.     
+
+Finally he thought this argorithm now only contains amount of cords, weights and centres, 
+he considered it could add one more set about area. For example side end of cords. It might
+be used widely arround the real world. 
+
+The author: YaoguangLuo 稍后优化语法.    
