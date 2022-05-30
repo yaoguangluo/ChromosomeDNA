@@ -219,6 +219,16 @@ Bones etc logical observations.
 做了一层像素处理和管道队列排序, 10 万张图片从计算搜索到排序显示出来 整个
 过程速度在 0. 3 秒内. 满足之后的高并发 REST 并行计算横向服务器扩展. 
 
+Above picture, Its search contents, were not a part of YangLiaoJing software, 
+meant a training data from a China medical Textbook. Author's father suggested
+a requirment, to let YangLiaoJing do the picture search as easy and simple as 
+an foollish way. Then he tried to build a big main theme for picture shows in
+software left part, and at right part of main theme, were a quadrant themes 
+for list rotations, and in bottom part of software, was vectorial themes for
+categories rotations. Finally it became very simple with a few buttons to do
+a lot of manipulations, and searched 300 thousands of pictures in second. the
+author considered it could be integrated in REST servers. 
+
 这个页面, 我用来做中药的药方在推荐出来后进行文字打印前的编辑, 和计算逻辑
 观测, 左边是文本编辑框, 用来编辑文字. 右边是观测文本框, 可以进行翻译, 数据挖
 掘, 高亮搜索, 语法显色区分等实际功能. 之后我会添加更多的功能, 满足需求计算
