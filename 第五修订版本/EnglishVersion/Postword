@@ -198,6 +198,20 @@ page number, and translations.
 观测. 现在这个相诊的功能主要应用于舌头, 皮肤, 五官, 骨骼观测, 和特殊图片逻辑
 观测区分. 
 
+This picture was an application with Java convolutional computings, refer 
+'2014年10月19日  2.罗瑶光. 《Java数据分析算法引擎系统 V1.0.0》. 
+中华人民共和国国家版权局，软著登字第4584594号. 2014. '. The author developed 
+a lot of software codes by using his 《Computer Vision》 theory where from
+his MSCS education at California Lutheran University, CLU, USA. For example 
+of Sobel, Guassian, Laplas, DCT and Emboss. In an early time, he just want
+to build a ray monitors, to abstract out the red color, and finally he added
+all of his visionary code where developed with Computer Vision's theory at 
+CLU, to make a research for skin detrections. And now became a mixed non-convolutional
+visionary detection which integrated with PDE formula, scaled observational
+computing, and visionary data extensions. To do the research of ULASE. And
+now this conponient could be applicated in visions of Tongue, Skin, Face and
+Bones etc logical observations.
+
 上述图片中的搜索内容不是养疗经软件的组成部分, 仅仅是图片搜索功能的展示（
 图片来自超声学医学教材）. 父亲提议养疗经需要增加一个图片搜索的页面, 于是
 设计了一种傻瓜格式, 下面一排是图片分类, 右边是图片搜索排序, 左边是可操作界
