@@ -181,6 +181,15 @@ lined-algorithm from humanoid AI.
 很大的优化空间. 方便我更好的理解数据和傻瓜化应用（这里是一个拓扑点, 先标
 注下）. 设计这个文本搜索页, 动机是方便父亲搜索数据的同时进行快速的阅读和
 观测. 于是添加了 DNN 算法, 读心术, 搜索高亮和中文语音发音等满足高效应用. 
+
+Above pictures showed a 2 Dimensional table, after clicked the area theme of
+cell from each row tupe by a mouse operations. It will trigger a cell related 
+texted segmential reflections and DNN analysis. For example the left part was
+a PCA theme list, and right part was a procedures text with hight lights. In
+order to make a foolished showing for users. For example user's readings and 
+manipulations. The author added more tab-controllers of DNN, pronunciations,
+page number, and translations.
+
 这个页面是 德塔 JAVA 卷积数据分析的作品在这里的应用. （索贝尔, 高斯, 拉普
 拉斯, 傅里叶, emboss 是先贤引用） 关于这个版面, 我一开始是想做个红外监控, 
 于是进行了红光过滤, 后来就干脆把计算机视觉的先贤的卷积算法都添加进去, 用
