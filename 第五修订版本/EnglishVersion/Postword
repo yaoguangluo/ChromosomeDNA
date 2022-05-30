@@ -49,7 +49,15 @@ the medical big datas. As a Bio-chemical computings for evolutions.
 家若需要, 我会以华瑞集的形式开源. 在哲学上的思考, 软件是一种生命, 不过目前
 是单细胞藻类这个级别, 如果一旦赋予了智慧活性, 其进化速度1小时就能颠覆人类
 智慧的5000 年之久. 所以一开始就要掂量好, 于是我仅仅在医学数据领域上先设计
-一个缺陷大脑, 满足其安全级别
+一个缺陷大脑, 满足其安全级别。
+
+This page mainly used for well boot the <YangLiaoJing> software. Correctly
+In order to config the observational attributes. and now the YangLiaoJing 
+had already integrated a Tinshell, PLORM and PDE, the author considered a
+catalytic software was a life. But now is seeming just like an alga cell.
+He did not make any bio-activity and mebolisms to it. Because he just afraid
+the metabolic speed, will easily cause alot of problem and situation of
+'an out of control'.   
 
 这个页面用于中药的搜索多维展示. 上面是一个表格, 囊括了 2400 余味中医学药
 物和药食同源元组成份, 涉及他们的名称, 经络, 性味, 功效, 风险, 等属性列, 点击这
