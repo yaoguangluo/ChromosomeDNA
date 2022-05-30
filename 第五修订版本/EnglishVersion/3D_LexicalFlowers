@@ -1,0 +1,17 @@
+Implements of 3-Dimensional DNN lexical flowers.
+The 3-Dimensional and observational lexical flowers, where showed POS arrangement, PCA of 
+text mining, and word segmentation. First input a text do the word segments, then did a
+word statistics, and the Deta parser mind-read procedures, to find its DNN tokens, and 
+rended the PCA lexicons by each DNN token's score. Finally built a mapped result to respond
+to the lexical flower's engine, YangLiaoJing, and prepare to show its 3-Dimensional 
+demo-reflections by using JOGL 3D API. Not only the mapped result could be filtered by
+scale vernier, also the rended lexicons flower could be. The scale vernier could explain
+more factors here the schedure controlled the amounts of lexicons, nodes of lexicons,
+and classes of lexicons. Amounts of lexicons meant petal clusters under the same functional
+lexicons, such like an umbrena, for example '轻身', '止渴', '明目'  under '苦参' etc. 
+Nodes of lexicons meant a classification of the determinated attributes where expanded as 
+a blooming flowers, for example '苦参'，'酒' etc. Classes of lexicons meant a whole layers
+of this lexicon flower, for example '乌燕病名'. The scale vernier could make more procedures
+of scheduring, filtering, abstracting and expanding etc.
+
+The author YaoguangLuo 稍后优化语法
