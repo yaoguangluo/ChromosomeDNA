@@ -237,6 +237,11 @@ author considered it could be integrated in REST servers.
 养疗经源码总量了, 于是还是自己根据需求来设计了. 我要抓住这个页面的需求: 为
 文字打印前修改编辑的预览和文本NLP 计算观测. 其他的功能先不考虑. 
 
+This picture, was mainly for page prints after a words-edition. The words here
+could be a searched result of medicines, or an essay and other texted lexicons.
+To the left parts was an observational theme. Where could show the multi-lexicons
+translations without grammar, high lights, and word segements etc. 
+
 养疗经智慧声诊分析与调制解调页面，这个页面全部基于傅里叶算法对音频的 频
 率调制与解调, 就不多做描述了, 用于声诊, 噪音检测和碎石. 因为低频调制对 生物
 器官有很多作用, 危险级别高, 于是我分离成了肽插件, 没有集成在养疗经主引擎里. 
