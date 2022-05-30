@@ -250,6 +250,14 @@ translations without grammar, high lights, and word segements etc.
 类似相诊中的按钮, 来配置右上角的调制解调按钮, 来模拟器官共振声频, 用来临床
 医疗. 
 
+YangLiaoJing and its sound manipulations were based on DFT, FFT and DCT. It
+could be used widely at noise detections, ultrasonic lithotripsy and 'Four
+Diagnostic Methods of TCM'. Because its lower and higher frequent wave risks
+for organes and bones, so the author stoped his personal continuing development.
+He separated it out to an OSGI and PDE file part. For a medical research, the
+author will fully follow his father's opinions, becasue the medicine was a 
+rigorous science. 
+
 这个页面是 德塔 UNICORN ETL 分析的作品在这里的应用. 目前可以介绍下, 这个 
 ETL 的组件和扩展组件已经完成第一代肽化, 这个 etl 的界面应用研发走向不会和 
 KNIME, WEKA, kette, orange 等有太多区别, 所以不做过多表述, 我的需求走向
