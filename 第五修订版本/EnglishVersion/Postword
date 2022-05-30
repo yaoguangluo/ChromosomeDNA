@@ -267,7 +267,20 @@ KNIME, WEKA, kette, orange 等有太多区别, 所以不做过多表述, 我的�
 暇顾及, 基础研发才是我的强项, 因为我已经专注了 3 年在生化计算领域. 目前收获
 颇丰, 我下一步要做的工作已经设计好了. 
 
+At this picture, Deta ETL Unicorn had finished a version 1 of PDE metabolisms.
+Therefore, the trends of Deta ETL will similar to Knime, Weka, Kettle and Orange.
+(But once the Tinshell node done, the author considered that his conceptions
+could be totally changed. Meant all of ETL node might be the same with Tinshell
+node by using human script languages for input and ouput). The author will spend 
+more times on a foundational simulation of nero-net and bio-convolutional 
+computing with  human languages and brain minds. Such as a tree with a lot of 
+nodes and foliages, and now he kept an eye on its roots. He mentioned a nero ETL 
+could have two parts, one of semantic link for storage, and another convolutional
+link for computings. 
+
 这个功能是西医检测的应用功能, 我没有花精力完善, 优先级降低. 因为不是基础科
 学, 之后养疗经开始社会应用, 我会逐步完善这个功能. 关键词索引字典见书尾。
+
+This conponient implemented a western medical detection. 
 
 Author YaoguangLuo 稍后优化语法
