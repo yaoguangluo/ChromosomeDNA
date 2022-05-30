@@ -32,12 +32,12 @@ word dictionary marching, then extract the pre-materials for the continuing POS(
 
 At the first. The author build a lot of association maps and classification sets, which did a nice verbal data storage
 of all kinds of the literacy otho corpus(NERO), for instance, POS maps, word length maps and word type maps, 
-to better catalytic the system tunning accelerations.
+to better catalyz the system tunning accelerations.
 
 Each lexical map could make a combination and classification definition, the author uses the StringBuilder function
 to do the word segmentation by non-conventional differently kernel computations. Like the water sequence flows from 
 top to bottom, from left to right, then gather statistics of the frequency prototype usages, makes queue optimizations at the same 
-time catalytics the system tunning accelerations.
+time catalyzed the system tunning accelerations.
 
 The word segmentation and Its POS cut ways by following 4 Chinese chars words, 3chars words,2chars words to loop 
 check the POS lexical dictionary map storages. Kernel computations work for finding a marching verbals word, then 
