@@ -54,19 +54,19 @@ defect peak avoiding, tunning the constant values, balancing the computing sets 
 
 
 Nero Network Index Forest
+1 Deta Parser did a word segmental indexed map by using humanoid sematic verbal dictionary, for the reason why using 
+JDK8+ tool to do the map search logic, is that it had already integrated the binary search tree, balanced map tree 
+arrangement and other technologies. 
 
-1 Deta Parser did a word segment indexed map by using humanoid speech verbal dictionary, for the reason why using
-JDK8+ tool to do the map search logic, is that it had already integrated the binary search tree, balanced map tree
-arrangement and other technologies.  
+2 Deta Parser’s balanced binary search tree method made an observer mode of averaged classification with all types of
+the reflection java concurrent maps, those maps included the char word length, verbal types and part of speech corpus,
+etc. The author did it to accelerate the Nero-marching speedly for searching the words. 
 
-2 Deta Parser’s balanced binary search tree method makes an observer mode of averaged classification with all types
-of the reflection java concurrent maps, those maps include the char word length, verbal types and Part of speech 
-corpus, etc. The author did it to accelerate the NERO marching speed for searching the words. 
+3 Deta Parser supported the secondary indexing computing combinations, this way could be suitable for the distributed 
+cache searching systems. The author did not suggest this technology which be used on a single desktop. 
 
-3 Deta Parser supports the secondary indexing computing combinations, this way could be suitable for the distributed 
-cache searching systems. The author does not suggest this technology be used on a single desktop.  
+4 For the computing logic, Finally Deta Parser functions used string builder to accelerate the searching engine.
 
-4 For the computing logic, Finally Deta Parser functions use string builder to accelerate the searching engine.
 
 
 The accomplishment of the neural network index is mainly reflected in two sections, 1, the relevance index of word 
