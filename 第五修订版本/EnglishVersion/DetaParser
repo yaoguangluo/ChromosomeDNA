@@ -68,23 +68,21 @@ cache searching systems. The author did not suggest this technology which be use
 4 For the computing logic, Finally Deta Parser functions used string builder to accelerate the searching engine.
 
 
-The accomplishment of the neural network-index is mainly reflected in two sections, 1 for the relevanced index of word
-segmentation, and 2 for the lexical index map. The associated relevanced index-value of word segmentation is mainly
-reflected in the chained extraction of words. This chained calculation method effectively correlates, the relatively 
-independent of a large number of words in the thesaurus, according to the Thimble Theory in human language and Literature 
-(Nero). The value of the big data document process splits the word chain links list into a small chars token (max 4)
-sections, and It is similar to squeezing toothpaste, and brushing the teeth (POS) when squeezed out by the DetaParser
+The accomplishment of the neural network-index is mainly reflected in two sections, 1 for the relevanced index of word 
+segmentation, and 2 for the lexical index map. The associated and relevanced index-value of word segmentation, is mainly 
+reflected in the chained extraction of words. This chained calculation method effectively correlates the relatively 
+independent of a large number of words in the thesaurus, according to the Thimble Theory in human language and Literature
+(Nero). The value of the big data documental process, splits the word chain links list into a small chars token (max 4)
+sections, and It is similar to squeezing toothpaste, and brushing the teeth (POS) when squeezed out with the DetaParser
 marching engine.
 
 The index value of the lexical map is mainly reflected in the reasonable chain-segmentation of lexical characters. This
-chain of word segmental method, combines and matches the classified maps in the thesaurus according to different 
-attributes. And then separates them according to the rigorous definition of lexical POS and SVO’s collocation in human 
-literature languages. The adaptive industrial system designed and diversified expansion of this classification, would 
-increase the accuracy and flexibility of word segmentation and adapt to different segmental scenes. Similar to the way 
-of toothbrushes, the extruded toothpaste is matched to adapt to different oral cavity-environments according to different
-toothbrushes and brushing methods (Nero + POS).
-
-Author: Yaoguang.Luo 稍后持续优化语法.
+chain of word segmental method, combines and matches the classified maps in the thesaurus, according to different attributes.
+And then separates them according to the rigorous definition of lexical POS and SVO’s collocation in human literature 
+languages. The adaptive industrial system designed and diversified expansion of this classification, would increase the 
+accuracy and flexibility of word segmentation and adapt to different segmental scenes. Similar to the way of toothbrushes, 
+the extruded toothpaste is matched to adapt to different oral cavity-environments, according to different toothbrushes 
+and brushing methods (Nero + POS).
 
 
 The Deta Parser word segmentation and its applications in the linear text document environments.
