@@ -47,7 +47,7 @@ return the response to the NLP engine.
 The ordinary mode of the Deta catalytic sorting function was based on the quicksort 4D theory with Sir Charles Antony
 Richard Hoare, the author refered a book <Introduction to Algorithms> here. Since YaoguangLuo had simulated the java 
 ‘Quick_4D_Sort’ source code and executed it successfully in computer IDE, then has been optimizing its sort logic since
-2013. The recent version of the source code was TopSort5D. and the optimization way of the arrangement sort included
+2013. The recent version of the source code was TopSort5D. And the optimization way of the arrangement sort included
 defect peak avoiding, tunning the constant values, balancing the computing sets and the discrete conditions differentiations
 (Demorgan, Frequency flows etc). And now those things widely were used in Deta’s catalytic family technical community
 (Parser, Word segments, Mindreading, NLP computing etc).
