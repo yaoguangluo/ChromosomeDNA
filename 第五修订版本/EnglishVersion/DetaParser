@@ -89,14 +89,14 @@ The Deta Parser word segmentation and its applications in the linear text docume
 1 There has a lot of rights weight by each indexed map, based on those right weights, Deta Parser did a marching score 
 system to do the computation and calculation for the Chinese word segmentation logic.
 
-2 the search weight of the computing logic, such as Subject Predicate Object(SVO), and part of speech(POS), for instance, 
+2 The search weight of the computing logic, such as Subject Predicate Object(SVO), and part of speech(POS), for instance, 
 noun, verb, adjective etc. 
 
-3 to make a computing acceleration, the author injected a combination factor in the marching logics, such as bit calculation, 
-frequency statics and word length observations. similars with the theory of Count Down Latch and Cyclic Barrier logic (makes 
+3 To make a computing acceleration, the author injected a combination factor in the marching logics, such as bit calculation, 
+frequency statics and word length observations. Similars with the theory of Count Down Latch and Cyclic Barrier logic (makes 
 definitions first then proves, or proves first then did a conclusion) ways etc 
 
-4  Above all things and logic once became JAVA transportations, the author set all global and local valuable scales to build
+4 Above all things and logic once became JAVA transportations, the author set all global and local valuable scales to build
 the Foolishman- Self-Controller components to make the algorithms easy and simple.
 
 
@@ -107,7 +107,7 @@ at the same time.
 2 prefix kernel stores a POS cache buffer by each current word piece of information such as positions, frequency etc, to 
 accelerate the word marching.
 
-3 Postfix relevant to the optimization of word marching and segmentation.  For example, checking the conjunction relationship 
+3 Postfix relevant to the optimization of word marching and segmentation. For example, checking the conjunction relationship 
 and continuing the word token link list.
 
 4 The algorithms kernel uses StringBuilder to do higher computing affections according to computer language grammar.
@@ -115,14 +115,14 @@ and continuing the word token link list.
 
 POS function gate river flows and their relationships. For example, the author did the word segmentation by using '如果是非常理想'
 in this sentence. At the first through the indexed forest map dictionary, Deta Parser could cut '如果是非常理想' into ‘如果’, 
-‘是非常’, ‘理想’those three associated chars word sets token list. And in this result list, ‘如果’and‘理想’ these two lexical words
-seems to be immutably boned. ‘是非常’was a three chars word token then did an inner marching computing by using POS function gate
+‘是非常’, ‘理想’those three associated chars word sets token list. And in this result list, ‘如果’ and ‘理想’ these two lexical words
+seems to be immutably boned. ‘是非常’ was a three chars word token then did an inner marching computing by using POS function gate
 river flows theory. and at this time, the orthos corpus map base of the author's Deta Parser system which could not find any 
-verbals such as‘是非常’, then continued do the two chars marched for the next step. About more powerful of these algorithms, was
-the Chinese chars literacy grammar marching system, for the chars segment section, ‘是非常’did a separation into two types such 
-as ‘是非-常’ and ‘是-非常’, then analyzed contrast and distinguishment by these two segments. after analysis of each word and its
-prefix and postfix, POS combined relationships, （the prefix token of‘是非’was‘如果’, the prefix token of‘非常’was‘是’, the prefix 
-tokens of‘常’were‘是非' and‘非’, and the prefix tokens of '理想’were‘常’and‘非常’）. This POS word segmentations theory was fixedly 
+verbals such as ‘是非常’, then continued do the two chars marched for the next step. About more powerful of these algorithms, was
+the Chinese chars literacy grammar marching system, for the chars segment section, ‘是非常’ did a separation into two types such 
+as ‘是非-常’ and ‘是-非常’, then analyzed contrast and distinguishment by these two segments. After analysis of each word and its
+prefix and postfix, POS combined relationships, (the prefix token of ‘是非’ was ‘如果’, the prefix token of ‘非常’ was ‘是’, the prefix 
+tokens of ‘常’ were ‘是非' and ‘非’, and the prefix tokens of '理想’ were ‘常’ and ‘非常’). This POS word segmentations theory was fixedly 
 and immutably, which means it should not contain any probability events here. if at this time the DetaPaser does not find any 
 associated chars relationships, then promoted to the next steps as reading cutting sequence list chars single one by one. Above all,
 the result of the sample graph did a good show that DetaParser did a ‘如果-是-非常’response because the priority of Conjunction- Adj,v- Adj,v 
