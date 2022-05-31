@@ -1,10 +1,10 @@
 
 ANN
-DetaParser ANN computing. It mainly contains a mind set, environment set, motivation set, 
-emotion set and etc. those sets were computed as an advanced decision, which emphasizing 
-weights as a comprehensive of trending, continuing, predicting, guessing and minding etc. 
-With associating in text mining and analysis domain. Either this decision will value a 
-truly estimation, or will calculate a summing centre for the next steps.
+ANN, DetaParser ANN computing. It mainly contained a mind set, environment set, motivation
+set and emotion set etc. Those sets were computed as an advanced decision, which emphasizing
+weights as a comprehensive of trending, continuing, predicting, guessing and minding etc.
+With associating in text mining and analysis domain. This decision either will value a true
+estimation, or will calculate a summing centre for the next steps.
 
 RNN
 DetaParser RNN computing. It mainly contains a distance set and entropy set etc. those 
