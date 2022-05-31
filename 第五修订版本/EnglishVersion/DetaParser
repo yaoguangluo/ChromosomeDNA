@@ -114,21 +114,22 @@ and continuing the word token link list.
 4 The algorithms kernel uses StringBuilder to do higher computing affections according to computer language grammar.
 
 
-
-POS function gate river flows and their relationships. For example, the author did the word segmentation by using '如果是非常理想'
-in this sentence. At the first through the indexed forest map dictionary, Deta Parser could cut '如果是非常理想' into ‘如果’, 
-‘是非常’, ‘理想’those three associated chars word sets token list. And in this result list, ‘如果’ and ‘理想’ these two lexical words
-seems to be immutably boned. ‘是非常’ was a three chars word token then did an inner marching computing by using POS function gate
-river flows theory. and at this time, the orthos corpus map base of the author's Deta Parser system which could not find any 
-verbals such as ‘是非常’, then continued do the two chars marched for the next step. About more powerful of these algorithms, was
-the Chinese chars literacy grammar marching system, for the chars segment section, ‘是非常’ did a separation into two types such 
-as ‘是非-常’ and ‘是-非常’, then analyzed contrast and distinguishment by these two segments. After analysis of each word and its
-prefix and postfix, POS combined relationships, (the prefix token of ‘是非’ was ‘如果’, the prefix token of ‘非常’ was ‘是’, the prefix 
-tokens of ‘常’ were ‘是非' and ‘非’, and the prefix tokens of '理想’ were ‘常’ and ‘非常’). This POS word segmentations theory was fixedly 
-and immutably, which means it should not contain any probability events here. if at this time the DetaPaser does not find any 
-associated chars relationships, then promoted to the next steps as reading cutting sequence list chars single one by one. Above all,
-the result of the sample graph did a good show that DetaParser did a ‘如果-是-非常’response because the priority of Conjunction- Adj,v- Adj,v 
-is higher than conjunction- noun- adj,v.
+POS functional gate river flows and their relationships. For example, the author did the word segmentation by using
+'如果是非常理想' in this sentence. At the first through the indexed forest mapped dictionary, Deta Parser could cut 
+'如果是非常理想' into ‘如果’, ‘是非常’, ‘理想’ those three associated chars word sets token list. And in this result 
+list, ‘如果’ and ‘理想’ these two lexical words seems to be immutably boned. ‘是非常’ was a three chars word token, 
+then did an inner marching computing by using POS functional gate river flows theory. And at this time, the orthos 
+corpus mapped base of the author's Deta Parser system which could not find any verbals such as‘是非常’, then continued 
+do the two chars marched for the next step. About more powerful of these algorithms, was the Chinese chars literacy
+grammar marching system, for the chars segmental section, ‘是非常’ did a separation into two types such as ‘是非-常’
+and ‘是-非常’, then analyzed contrast and distinguishment by these two segments. After analysis of each word and its
+prefix and postfix, POS combined with relationships,  (The prefix token of ‘是非’ was ‘如果’, the prefix token of 
+‘非常’ was ‘是’, the prefix tokens of ‘常’ were ‘是非' and ‘非’, and the prefix tokens of  '理想’ were ‘常’ and ‘非常’).
+This POS word segmentational theory was fixedly and immutably, which meant it should not contain any probability events
+here. If at this time, the DetaPaser did not find any associated chars relationships, then promoted to the next steps
+as reading and cutting sequence-list chars as single one by one. Above all, the result of the sample graph did a good
+show that DetaParser did a ‘如果-是-非常’ response because the priority of (Conjunction- Adj, v- Adj, v) was higher
+than (conjunction- noun- adj, v).
 
 
 Author: Yaoguang。Luo 稍后优化语法
