@@ -7,15 +7,15 @@ With associating in text mining and analysis domain. This decision either will v
 estimation, or will calculate a summing centre for the next steps.
 
 RNN
-DetaParser RNN computing. It mainly contains a distance set and entropy set etc. those 
-sets were computed as observer weights of Part of Speed POS, Covex of position and Euclid 
-KNN. With associating in text mining and analysis domain. It could clearly find out an 
-information by each of lexical, such as the frequency count, ruly distribution and trace 
-weight. Above sets could make a good implementation of summing centre for the next steps.
+RNN, DetaParser RNN computing. It mainly contained a distance set and entropy set etc. Those
+sets were computed as the observer weights of Part of Speed POS, Covex of position and Euclid KNN.
+With associating in text mining and analysis domain. It could clearly find out an information
+by each lexicon, such as the frequency count, ruly distribution and trace weight. Above sets
+could make a good implementation of summing centre for the next steps.
 
 DNN
-DetaParser DNN computing. It mainly contains DetaParser ANN and DetaParser RNN, for the
-prefix Cartesian calculations. Due to the inputs were two types of ANN summing and RNN 
+DetaParser DNN computing. It mainly contained DetaParser ANN and DetaParser RNN, for the
+prefix Cartesian-calculations. Due to the inputs were two types of ANN summing and RNN 
 position weights, thus, DetaParser DNN could dig a central Theory of the text document, 
 especially suitable for the text mining system.
 
