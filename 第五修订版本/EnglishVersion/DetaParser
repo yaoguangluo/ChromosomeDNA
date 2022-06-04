@@ -23,23 +23,23 @@ unit-called calculation, and the more organized the balanced operation.
 targeted.
 
 
-Deta parser, a sentence and word segmentation marching tool(NERO-NLP-POS), was based on an in-order sequence 
+Deta parser, a sentence and word segmentational marching tool(NERO-NLP-POS), was based on an in-order sequence 
 verbals computation, the computer monitors the humanoid specification, to read articles, sentences by each word
-one by one as the river flows, then cuts the word link list by using stop method such as the index length recognizing,
-word dictionary marching, then extract the pre-materials for the continuing POS(part of speech) process.
+one by one as the river flows, then cut the word link list by using stop method such as the index length recognizing,
+word dictionary marching, then extracts the pre-materials for the continuing POS(part of speech) process.
 
-At the first. The author build a lot of association maps and classification sets, which did a nice verbal data storage
-of all kinds of the literacy otho corpus(NERO), for instance, POS maps, word length maps and word type maps, 
-to better catalyz the system tunning accelerations.
+At the first. The author built a lot of association maps and classification sets, which did a nice verbal data storage
+of all kinds of the literary otho corpus(NERO), for instance, POS maps, word length maps and word type maps, 
+to better catalyz the system-tunning of accelerations.
 
-Each lexical map could make a combination and classification definition, the author uses the StringBuilder function
-to do the word segmentation by non-conventional differently kernel computations. Like the water sequence flows from 
-top to bottom, from left to right, then gather statistics of the frequency prototype usages, makes queue optimizations at the same 
-time catalyzed the system tunning accelerations.
+Each lexical map could make a combination and classificational definition, the author used the StringBuilder function
+to do the word segmentation by non-conventional different kernel computations. Like the water sequence flowed from 
+top to bottom, from left to right, then gathered statistics of the frequency prototype usages, made the queued optimizations 
+at the same time and catalyzed the system-tunning of accelerations.
 
 The word segmentation and Its POS cut ways by following 4 Chinese chars words, 3 chars words, 2 chars words to loop 
-check the POS lexical dictionary map storages. Kernel computations work for finding a marching verbals word, then 
-return the response to the NLP engine.
+check the POS lexical dictionary-map storages. Kernel computations work for finding a marching verbals word, then 
+returned the response to the NLP engine.
 
 
 The ordinary mode of the Deta catalytic sorting function was based on the quicksort 4D theory with Sir Charles Antony
