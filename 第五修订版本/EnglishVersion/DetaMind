@@ -1,46 +1,50 @@
-An Implements of Ratio of POS. 
-An Implements Ratio of POS. Mr. YaoguangLuo considered the ratio of POS which means the proportion of lexicons. 
-For example their paper has 80 adjectives in 100 words, so the proportion of lexicon means that the essay contains
-a lot of strokes, it more likes a prose. Of course, assumes their paper has 80 verbs in 100 words, so the
-proportion of lexicon means that the essay contains a lot of actions, seems their essay more like a narrate.
-Therefore, the author considered that ratios of POS could make a good descriptive activity, which to make a
-prediction of a personal written grammar. Examples as below.
+Implements a Ratio of POS. 
+Mr. YaoguangLuo considered the ratio of POS which meant the proportion of lexicons. For example their paper 
+had 80 adjectives in 100 words, so the proportion of lexicon meant that the essay contained a lot of strokes, 
+It more liked a prose. Of course, assumed their paper had 80 verbs in 100 words, so the proportion of lexicon 
+meant that the essay contained a lot of actions, seemed their essay more likes a narrate story. Therefore,
+the author considered that ratios of POS could make a good descriptive activity, which to make a prediction 
+of a personal written grammar. Examples as below.
 
-1. Implements a ratio of motivation. Assume their paper appears five words: Kitchen Knife, Chopping Board,
-Wok, Streaky-Meat and Spicy-Condiment. Result a higher motivation of lexicon is cooking. It means the humanoid
-computer could read and find a potential information from this paper, will easy to know this paper is about to
-make a narrate of how to cook the food.
+1. Implements a ratio of motivation. 
+Assumed their paper appeared five words: Kitchen Knife, Chopping Board, Wok, Streaky-Meat and Spicy-Condiment. 
+Resulted a higher motivation of lexicon was cooking. It meand the humanoid computer could read and find a
+potential information from this paper, would easily to know this paper was about to make a narrate of how 
+to cook the food.
 
-2. Implements a ratio of environment. Although their paper appears five words: Kitchen Knife, Chopping Board,
-Wok, Streaky-Meat and Spicy-Condiment. Result a higher environment of lexicon is kitchen.  It means the humanoid
-computer will easy to know this paper is about to cook a food in where the address is a Hotel, Canting, Caffeteria,
-Pizzeria, Rosticerria or Restaurant.
+2. Implements a ratio of environment. 
+Although their paper appeared five words: Kitchen Knife, Chopping Board, Wok, Streaky-Meat and Spicy-Condiment. 
+Resulted a higher environment of lexicon was kitchen. It meaned the humanoid computer would easily to know this 
+paper was about to cook a food in where the address was a Hotel, Canting, Caffeteria, Pizzeria, Rosticerria 
+or Restaurant.
 
-3. Implements a ratio of literature. Even their paper still appears above five words. But result a higher ratio 
-of POS is Noun. It means the humanoid computer will easy to know this paper is about a definite essay of Cooking
-Science and Technology. 
+3. Implements a ratio of literature. 
+Even their paper still appeared above five words. But resulted a higher ratio of POS was Noun. It meand the 
+humanoid computer would easily to know this paper was about a definite essay of Cooking Science and Technology. 
 
 
-An Implements of Distance of POS.
-Mr. YaoguangLuo considered the distance of POS which means the weight of lexicons. Those factors about the 
-reflection of different attributes and the position of different classes, which could make a calculation of Mind.
-then continuing examples as below.
-Assume their paper appears five words: Kitchen Knife, Chopping Board, Wok, Streaky-Meat and Spicy-Condiment. 
-Result a higher frequency of lexical appearance, is Streaky-Meat. It means the humanoid computer could read and 
-find a potencial information from this paper, will easy to know this paper is about a definite essay on Cooking 
-Science and Technology, which mainly makes a presentation of meat. Similarly Result the higher frequency of lexical
-appearance, is Spicy-Condiment. which mainly makes a presentation of Spicy-Formula. Lets continuing examples 
-as below.
 
-Assume their Spicy-Condiment contains a mature vinegar, which is a higher frequent lexicon. 'Vinegar' appears at 
-paragraph of 1, 2, 4 and 5, especially at 4. the accomplishment of distance of the same lexicon, could scale the 
-weight of 'Vinegar'. Then humanoid computer will easy to know this paper is about an essay of Cooking Science and 
-Technology. which mainly an introduction of 'Vinegar' in presentation of Spicy-Formula. Especially at paragraph 4.
+An Implement of Distance of POS.
+Mr. Yaoguang Luo considered the distance of POS which meant the weight of lexicons. Those factors about the
+reflection of different attributes and the position of different classes, which could make a calculation of
+Mind. Then continuing examples as below.
 
-Euclidean KNN could trace an observation of frequent loxical distance. For example Deta RNN computings, Assumes it
-sequently input 1'Vinegar', 2'Dumpling', 3'Vinegar' and 4'Streaky-Meat'，will result the Deta rank of DNN is higher
-than Deta rank of RNN by 'Dumpling'. And also we could find that the Deta ratio of DNN of 'Streaky-Meat' is highly.
+Assumed their paper appeared five words: Kitchen Knife, Chopping Board, Wok, Streaky-Meat and Spicy-Condiment.
+Resulted a higher frequency of lexical appearance, was Streaky-Meat. It meaned the humanoid computer could 
+read and find a potencial information from this paper, would easily to know this paper was about a definite 
+essay on Cooking Science and Technology, which mainly made a presentation of meat. Similarly Resulted the higher 
+frequency of lexical appearance, was Spicy-Condiment. which mainly made a presentation of Spicy-Formula. Lets 
+continued examples as below.
 
+Assumed their Spicy-Condiment contained a mature vinegar, which was a higher frequent lexicon. 'Vinegar' 
+appeared at paragraph of 1, 2, 4 and 5, especially at 4. The accomplishment of distance of the same lexicon,
+could scale the weight of 'Vinegar'. Then humanoid computer would easily to know this paper was about an essay
+of Cooking Science and Technology. Which mainly an introduction of 'Vinegar' in presentation of Spicy-Formula.
+Especially at paragraph 4.
+
+Euclidean KNN could trace an observation of frequent loxical distance. For example Deta RNN computings, Assumed
+It sequently input 1'Vinegar', 2'Dumpling', 3'Vinegar' and 4'Streaky-Meat', will result the Deta rank of DNN
+was higher than Deta rank of RNN by 'Dumpling'. And also we could find that the Deta ratio of DNN of 'Streaky-Meat'
+was highly.
 
 Author: YaoguangLuo 稍后翻译语法
-
