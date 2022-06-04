@@ -1,17 +1,15 @@
-An implements of suggest lexicons about Enviroment, Motivatial Lenovo, Trending-Explore, Decisional 
-Trigger.
-Deta literature analyst which was based on Orthos map and lexical dictionary. Before the word segmental 
-process of essay, the Deta parser engine will init an indexed base where could store the reflective chars 
-set of an observation. Then input strings to do the word segmentation. The Deta engine could sequently 
-parser the word correctly, which was based on this corpus by finding key values of map. Then did an 
-exhibition of resultant statistics. For example, typed a word 'Addicted' or 'Craving for Tobacco', the 
-reflective result of marching an environmental corpus, will list a word 'chemistry'. Its application could be 
-used well in similar domains of motivation, trending and decision. The author considered these reflections 
-were an universal value of conclusion, meant an ordinary of such as nouns, verbs and adjectives, not only 
-the reflections, but also the author considered lexicons of nouns, verbs and adjectives where could make 
-reflections of environment, features and emotions. Those specific partner of grammartical reflections could 
-explain well in essay minding.
-     
+An implement of suggest lexicons about Enviroment, Motivatial Lenovo, Trending-Explore, Decisional Trigger.
+Deta literary analyst which was based on Orthos map and lexical dictionary. Before the word segmentational 
+process of essay, the Deta parser engine would init an indexed base where could store the reflective chars
+set of an observation. Then input strings to do the word segmentation. The Deta engine could sequently parser
+the word correctly, which was based on this corpus by finding key values of map. Then did an exhibition of 
+resultant statistics. For example, typed a word 'Addicted' or 'Craving for Tobacco', the reflective result
+of marching an environmental corpus, would list a word 'chemistry'. Its application could be used well in
+similar domains of motivation, trending and decision. The author considered these reflections were an universal
+value of conclusion, meant an ordinary of such as nouns, verbs and adjectives, not only the reflections,
+but also the author considered lexicons of nouns, verbs and adjectives where could make reflections of environment,
+features and emotions. Those specific partner of grammartical reflections could explain well in essay minding.
+   
 
 Portrait-assessment
 Deta portrait-assessment could absorb as an assessment of educational level. Such as grammars, lexical 
@@ -33,14 +31,15 @@ these above assessments to result a final summing-collection, to emphasis a fulf
 
 
 
-Implements an essay of tutoral ability.  
-The author expanded a deep analyst after he had already concluded the ratios, weights and reflections. The 
-purpose of development quickly to make a recognition of personal and featural habit, written style, 
-emotional status and educational level. The corpus, speeches and definitions were contains POS, Distance, 
-SVO, word length and weight. The calculation of NLP could easy to make an assessment of educational 
-level. For example at above picture, the input string contains a few adjectives, so the ratio-result of prose 
-seems more lower is 0. 1578. The score absolutely trends to an argumentation and statement, is 0.47368 
-and 0.40983. Recently Deta NLP algorithms could make a sustainable optimization by increasing more 
-components from filters, determinations, definitions, PCA and artical types.  
+Implements an essay of tutoral ability.
+The author expanded a deep analyst after he had already concluded the ratios, weights and reflections. 
+The purpose of development quickly to make a recognition of personal and featural habit, written style,
+emotional status and educational level. The corpus, speeches and definitions were contains POS, Distance,
+SVO, word length and weight. The calculation of NLP could easily make an assessment of educational level.
+For example at above picture, the input string contains a few adjectives, so the ratio-result of prose 
+seemed more lower was 0.1578. The score absolutely trends to an argumentation and statement, was 0.47368
+and 0.40983. Recently Deta NLP algorithms could make a sustainable optimization by increasing more components
+from filters, determinations, definitions, PCA and artical types.
+
 
 The Author YaoguangLuo 稍后优化语法.
