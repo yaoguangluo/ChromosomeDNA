@@ -21,7 +21,7 @@ word or slang', 'four chars of idiom and slang' and more. The 'more' meant an ex
 a tokens-list of '巧'+ '媳妇'+ '难'+ '逃'+ '无米之炊'. So the deta parser could easy to make a 
 recognition of this tokens-list by using 'Dynamic River Flows Gate Function Marching and Circustantly
 Loop the POS Kernel Computing'. Above tokens-list contained more 'one or two char words' of '巧'+
-'媳妇'+ '难'+ '逃', so the priorty to processing a class of 'one char-word' is more higher than the
+'媳妇'+ '难'+ '逃', so the priorty to process a class of 'one char-word' is more higher than the
 class of idiom and slang. The author considered it was an evolutional theory about priorty to high
 frequency.
 
