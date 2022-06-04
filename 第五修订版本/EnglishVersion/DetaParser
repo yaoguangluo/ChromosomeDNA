@@ -26,7 +26,7 @@ targeted.
 Deta parser, a sentence and word segmentational marching tool(NERO-NLP-POS), was based on an in-order sequence 
 verbals computation, the computer monitors the humanoid specification, to read articles, sentences by each word
 one by one as the river flows, then cut the word link list by using stop method such as the index length recognizing,
-word dictionary marching, then extracts the pre-materials for the continuing POS(part of speech) process.
+word dictionary marching, then extracted the pre-materials for the continuing POS(part of speech) process.
 
 At the first. The author built a lot of association maps and classification sets, which did a nice verbal data storage
 of all kinds of the literary otho corpus(NERO), for instance, POS maps, word length maps and word type maps, 
