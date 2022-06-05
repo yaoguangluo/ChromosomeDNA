@@ -1,0 +1,13 @@
+Implements a visual ETL pipes.
+At the first, we might input a picture with authors portrait, to do the visual ETL pipes. Due 
+to the catchment with a lower scaled camera, so that the picture was not clear, meant a little 
+bit dark and fussy on it. Then the author started a stretching procedure to make it more distinct,
+for example stretched the pix, which ranged from '0~255' to '20~230', then he got a distinct 
+picture, and continued to do a guassian procedure to make it frequently and smoothly. Finally 
+did a Sobel mask procedure with Mag and Dir. The gradiant output of gray and white, where could 
+be a 3 dimentional feature as an input array-value of Emboss procedure. This visual ETL pipes
+could prove that It widely was used in the real word and around the industries. The author
+appreciated his well education at CLU, and enjoyed his computer vision class from his teacher
+Dr.Reinhart. 
+
+The author YaoguangLuo 稍后优化语法.
