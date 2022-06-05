@@ -1,5 +1,5 @@
 Definition: Deta parser word segmentation was a word cutting engine where based on the index forest dictionary of the
-neural network map, which carried out the word associational cutting, and then circulating the traversal function of
+neural network map, which carried out the word associational cutting, and then circulated the traversal function of
 the part of speech(POS) and combinational matching, and defined the collocation according to the Chinese literary grammar. 
 
 1 The index dictionary could accelerate the refinement and splitting. The refinement differentiation could effectively
