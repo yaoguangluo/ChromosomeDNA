@@ -1,6 +1,6 @@
 Implements a visual ETL pipes.
 At the first, we might input a picture with authors portrait, to do the visual ETL pipes. Due 
-to the catching with a lower scaled camera, so that the picture was not clear, meant a little 
+to the catching with a lower scaled camera, so that the picture was not clearly, meant a little 
 bit dark and fussy on it. Then the author started a stretching procedure to make it more distinct,
 for example stretched the pix, which ranged from '0~255' to '20~230', then he got a distinct 
 picture, and continued to do a guassian procedure to make it frequently and smoothly. Finally 
