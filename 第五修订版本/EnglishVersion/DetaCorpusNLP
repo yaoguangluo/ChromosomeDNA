@@ -37,7 +37,7 @@ The purpose of development quickly to make a recognition of personal and featura
 emotional status and educational level. The corpus, speeches and definitions were contains POS, Distance,
 SVO, word length and weight. The calculation of NLP could easily make an assessment of educational level.
 For example at above picture, the input string contained a few adjectives, so the ratio-result of prose 
-seemed more lower was 0.1578. The score absolutely trends to an argumentation and statement, was 0.47368
+seemed more lower was 0.1578. The score absolutely trended to an argumentation and statement, was 0.47368
 and 0.40983. Recently Deta NLP algorithms could make a sustainable optimization by increasing more components
 from filters, determinations, definitions, PCA and artical types.
 
