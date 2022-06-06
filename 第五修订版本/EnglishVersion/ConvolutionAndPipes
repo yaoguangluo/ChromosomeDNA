@@ -5,14 +5,14 @@ considered not only the prefix convolutional computings, the Arabic postfix RWA 
 left, or from tailto the head) also could be well in the wavelet.
 
 2019-06-23 Author's notes on Gitee. 2006, Nanjing, the author first touched the Fourier's formula
-set AcosB+BsinA where in his bachelor's class of High Frequency Circut, HFC wavelet. At 2007, the
-author learned a derivation of AcosB and AsinB collections where in REVA institute. Bangalore University.
+set AcosB+ BsinA where in his bachelor's class of High Frequency Circut, HFC wavelet. At 2007, the
+author learned a derivation of AcosB and A* sinB collections where in REVA institute. Bangalore University.
 And got LRC formula of
 Ui(t)= L*di(t)/dt+ 1/C*df i(t)*dt + R*i(t) with L*C*d*d*U0*(t)/dt*dt + R*C*d*U0(t)/dt + U0(t), 
 at Christ University, 2009. Then made a presentation of Fourier's transformation wavlet at KaiTong Ltd,
 Shanghai. After got a few experiences of frequent wavelet, the author continued a fulfillment of
 convolutional computer-vision at USA, and tested FFT and DCT sound communications at Liuyang, 2014~2015.
-Finally try to make an analyst of dyslexia-brains and partner with Sir. Newton Howard at Oxford University, UK.
+Finally tried to make an analyst of dyslexia-brains and partner with Sir. Newton Howard at Oxford University, UK.
 
 Once done of the Deta Parser at 2019, the Author considered a VPCS could make a differential and
 integration in the same time. It was a symmetric statement. And the DNA sessional encription was 
@@ -25,9 +25,9 @@ by each set. If the scale size was 4, meant to do 4 * 4=16 times. so the formula
 Therefore, the author considered a non convolutional algorithms were needed by todays. For example 
 of DNA non-convolutional vision-computings.
 
-Implements of convolutional wavlet-component by Etl Unicorn.
+Implements of convolutional wavlet-component by ETL Unicorn.
 
-Once done of computer vision of 2012, the Author considered it could work as an Etl pipe node, 
+Once done of computer vision of 2012, the Author considered it could work as an ETL pipe node, 
 then built an Unicorn vision tools. Then integrated a java sound API, the below pictures did a well 
 show of the proofs. For example a max-min node pipes to the propotion-taylor node, to perform a 
 heartbeats filter.
