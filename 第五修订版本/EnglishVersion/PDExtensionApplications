@@ -1,6 +1,6 @@
 Definition: Non-Convolutional PDE Vision. 
 It determined a lower complex computing of photo pixel vision without a convolutional kernel. By each pix in the original 
-photo, would perform a PDE calculation only one time, the purpose of the goal which made a color distinction of adjuncency 
+photo, would perform a PDE calculation only one time, the purpose of the goal which made a color distinction of adjacent 
 pixes. It could be used in observation and recognization of processing the sili-photos. 
 
 
