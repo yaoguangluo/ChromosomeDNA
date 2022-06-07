@@ -139,6 +139,6 @@
 	The second question was an RNA computing with {F,DU}, Does base pair of {6-aminoxanthine, Cytosine Methylcytosine} 
 	a true thing in this real world.
 
-	作者罗瑶光, 稍后优化20220414, 20220416, 20220417, 20220531, 202220604
+	作者罗瑶光, 稍后优化
 	罗瑶光/Yaoguang. Luo             
              
