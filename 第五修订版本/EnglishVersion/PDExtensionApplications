@@ -9,7 +9,7 @@ It determined the original text could be encrypted by using Asymmetrical and Pro
 PDE process can make loop encriptions. Because of the probablitical way of topological calculation, the extended Initon 
 list would make an irreversible swap. for example, A= V+ S is ok for the PDE-PDS swap, but the E= DU or E= IU then would cause 
 irreversible computing of probablitical problem. Thus, probablitical PDE Encryption could do a prefix workflow, but not a 
-postfix workflow, it meant Asymmetrical PDE Encryption. Asymmetrical and Probablitical PDE Encryption does better used in 
+postfix workflow, it meant Asymmetrical PDE Encryption. Asymmetrical and Probablitical PDE Encryption did better used in 
 the Web Session transactions. And it also could make an encrypted combination of physic and sematic, to promote a safe level.
 
 
