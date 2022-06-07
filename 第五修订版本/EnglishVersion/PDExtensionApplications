@@ -6,11 +6,11 @@ pixes. It could be used in observation and recognization of processing the sili-
 
 Definition: Asymmetrical and Probablitical PDE Encryption. 
 It determined the original text could be encrypted by using Asymmetrical and Probablitical PDE(PDN extension), and this 
-PDE process can make loop encriptions. Because of the probablitical way of topological calculation, the extended Initon 
-list would make an irreversible swap. for example, A= V+ S is ok for the PDE-PDS swap, but the E= DU or E= IU then would cause 
+PDE process could make loop encriptions. Because of the probablitical way of topological calculation, the extended Initon 
+list would make an irreversible swap. For example, A= V+ S was ok for the PDE-PDS swap, but the E= DU or E= IU then would cause 
 irreversible computing of probablitical problem. Thus, probablitical PDE Encryption could do a prefix workflow, but not a 
 postfix workflow, it meant Asymmetrical PDE Encryption. Asymmetrical and Probablitical PDE Encryption did better used in 
-the Web Session transactions. And it also could make an encrypted combination of physic and sematic, to promote a safe level.
+the Web Sessional transactions. And it also could make an encrypted combination of physic and sematic, to promote a safe level.
 
 
 Definition: Speed Sorting the Hieroglyphics and Cuneiform characters by using a sequence of phonetics and strokes. 
@@ -18,7 +18,7 @@ Firstly, the author had already touched on a good foundation of quicksort and da
 2008. Then tried to sort the mixed string of Hieroglyphics and Cuneiform characters in a way of phonetics and spelling strokes. 
 and those Hieroglyphics, Cuneiform characters, phonetics and spelling strokes, were arranged and built as object keymaps. 
 The author did a comparative way of those string characters with an ASCII contrast, which meant the numeric ASCII of 
-these alphabetic chars. The distinct workflow as below. While the sorting engine found two characters were the same in 
+these alphabetic chars. The distincted workflow as below. While the sorting engine found two characters were the same in 
 phonetics, then began to check its conditional strokes. While the sorting engine found two characters were the same in 
 phonetics and strokes. Then began to check the numeric ASCII of these two alphabetic chars. 
 
