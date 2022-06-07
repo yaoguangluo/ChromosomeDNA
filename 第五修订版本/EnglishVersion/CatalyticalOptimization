@@ -24,9 +24,9 @@ considered a technology of balanced tree which could be used for a reference to 
 of Deta catalytic sort. For example deep value. Before the optimization of quicksort4D,  
 <<Introduction to Algorithms>>, which had already contained a ranged value, to avoid the 
 'out of memory stacks'. The author considered that ranged value had had only just suitable
-for a special environment. Such as a balanced recursions. Meant that the ranged value won't 
+for a special environment. Such as a balanced recursions. Meant that the ranged value wouldn't 
 enough for the author's defect, unbalanced and messy status of computings. Therefore, a deep
-value could scale the recursion and its hierarchical stacks, which look likes an 
+value could scale the recursion and its hierarchical stacks, which looked like an 
 'one-size-fits-all approach' of 'uniform limit'. Seem the deep+ range could do well limitations
 to scale the sort problem of 'Stacks Out of Memory'. 
 
