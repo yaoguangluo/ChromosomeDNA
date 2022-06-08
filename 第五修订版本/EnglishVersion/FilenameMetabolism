@@ -12,7 +12,7 @@ metabolism and another for indexing Metabase-intions metabolism.
 
 The organized definition of this photo was beblow. Initially, the assumption was that the indexed file name- 
 was an Initons encoded file name with its software functions and collections. The file name was 'AOP.POM.VEC.SID.java'.
-firstly just focusing on this Initons-string target we could find this string which contained a keyword section of
+Firstly just focusing on this Initons-string target we could find this string which contained a keyword section of
 'AOP.POM.', and this tail-root of 'VOC.SID', it would distinct other substrings with the same collection. So we can
 make a combination of these same pre-root sections. Then this indexed initons string did a separation of two sub
 roots, V-E and V-O. And then the trail of 'SID' will do a combination again. In this way, meta based Initons computing
