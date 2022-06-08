@@ -2,10 +2,10 @@ A Time Locus of Speed Fissile TSP about Ouler Forest
 The Author did a sixth foundation of Discrete Mathematics in a college time by following Father of Christ, 
 Dr. Joseph Varghese. Before Mr.Yaoguang went to Folsom Intel, he had finished a simple Ouler TSP Algorithm to deal 
 with the coordinates which amount less than 23 coords, then made an optimization which promoted to 49 coords. 
-Once the Deta Fissile Algorithm was build, the author thought that made a separation of those coordinates 
+Once the Deta Fissile Algorithm was built, the author thought that made a separation of those coordinates 
 by a long distance firstly, then did a Deta Fusion Algorithm by a short distance, and then made an Ouler 
 TSP connections based on short distance, and finally made an Ouler TSP connections based on long distance. 
-It seems like a Ouler Forest, and the inner short TSP distance groups such as tree clusters.
+It seemed like a Ouler Forest, and the inner short TSP distance groups such as tree clusters.
 
 
 Radar Mechine
@@ -14,7 +14,7 @@ is circularly to find a ratio collection of vectors between the central weight p
 the outer coordinates, because the distance from inner coordinates which is shorter than distance of scale input, hence will
 be removed by this scale filter. Then makes an arrangement of this vector list more sequence, means sorting them from the ratio
 of zero to the ratio of 360 (2* Pi). Finally makes the line connections of each two outer adjacent coordinate in this vectorial
-list. It may get a side end of input coordinates. Then find a density is simply,   because the author considered：
+list. It may get a side end of input coordinates. Then finds a density is simply,   because the author considers：
 {Density =  Area of Side End /  Amout of Coordinates }
 
 
