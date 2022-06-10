@@ -1,7 +1,7 @@
 An implementation of Secondary Metabolism about Meta Initons.
 
 At first, assume I have five ordinary java files, for samples are IncreaseData.java; DeleteData.java; CheckData.java; VisonaryIncreaseData.java; 
-VisonaryDeleteData.java; I should make a translation of whom from humanoid lexical to DNA meta Initons. Base of the PDN Encoding 
+VisonaryDeleteData.java; I shall make a translation of whom from humanoid lexical to DNA meta Initons. Base of the PDN Encoding 
 grammar: （I，D，U，Q- Increment，Decrement，Upgrate，Query； V，E，C，S- Vision, Execute，Control，Static）, the ordinary files will 
 change into（IS.java; DS.java; QS.java;）,（VDS.java; VIS.java）。
 
