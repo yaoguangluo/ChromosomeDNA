@@ -2,7 +2,7 @@ Implements of mouse manipulations of ETL unicorn.
 The author adopted a succinct way of effect mouse manipulations of ETL unicorn.
 To keep its way of simple, firstly built a tree manipulations where to make a
 classify of ETL nodes. Once did an expanded window to add the node into a canvas 
-board by mouse clicks. The mainly canvas will present this related node branch
+board by mouse clicks. The mainly canvas would present this related node branch
 and its manipulations by mouse-click. The left-mouse-click could well choose the 
 ETL node, to make a moving and dragging of the related node. The right-mouse-click 
 could well drag the ETL node arrow, to make a line-link, which connected to 
@@ -29,7 +29,7 @@ partner with Paris I's student. Finally got 2 development results lists of.
 about Alpha-brain wavelet. 
 2 The PCA of dyslexia and ICA of each patient, especially in a dyslexia-peak
 domain of messy mind, lowpass catching and frequent reading. And these theories
-of almost are changed from the author's thinking when at that times. 
+of almost were changed from the author's thinking when at that times. 
 
 Their has a new method of computing way of bitmap matrix. For example 
 array[weight][height] was a matrix, made it into an array[n]+ array[n]. So the 200
@@ -38,7 +38,7 @@ points of 50 heights* 50 weights of array[50][50], meant the ordinary perform we
 optimizational effect ratio was 2500/200= 12.5.  Made a well example of input 
 array[10][10], which equals true, so swapped for arrayofx[0]= 10 and  arrayofy[0]= 10, 
 then the next input array[13][9], which could swap for arrayofx[1]= 13 and  
-arrayofy[1]= 9, it seems fast and cool.
+arrayofy[1]= 9, it seemed fast and cool.
 
 Implements of OSGI Notes on Gitee 2019-06-26
 The author's inspirition behind OSGI could trace the liferay-theme applications 
@@ -61,7 +61,7 @@ The inheritance of ETL node classes were simple like the template-modes of overr
 and overloaders during 2013~2014. After the 2 month-duration and exceed 30 times 
 of Infosys interviews and frequently be asked of how about the classloader, Object
 Scan and JNI native parts by new JDKs, The author thought the ETL needed a change 
-of its node extensions by YangLiaoJing integrated.  And now these classloader-plugin
+of its node extensions by YangLiaoJing integrated. And now these classloader-plugin
 file-names became a 3 metas PDC(deta sixteen meta base, Initons char-code) word 
 branches of DNA indexing and encoding. 
 
@@ -81,7 +81,7 @@ tupe was a foundament of nero-network. For examples of ETL unicorn pipe UI, Deta
 Ouler TSP, and trace the central weights of each fissile group. Now became a powerful
 proof in Ouler TSP and adjacent way of Deta hexadecimal meta base Initons. 
 
-At the first time, the author try to build a batch script to do the time schedules
+At the first time, the author tried to build a batch script to do the time schedules
 such as Knime. But is seeming did lower effectives and much more messy computings by
 using multi-languages( mixed of Java, C, Shell, or others like Python and Ruby etc) . 
 Once the TinShell done, seem could be unified and conducted. Because it all based on
