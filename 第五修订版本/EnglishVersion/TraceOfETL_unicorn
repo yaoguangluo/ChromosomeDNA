@@ -1,6 +1,6 @@
 Implements of mouse manipulations of ETL unicorn. 
 The author adopted a succinct way of effect mouse manipulations of ETL unicorn.
-To keep it way of simple, firstly built a tree manipulations where to make a
+To keep its way of simple, firstly built a tree manipulations where to make a
 classify of ETL nodes. Once did an expanded window to add the node into a canvas 
 board by mouse clicks. The mainly canvas will present this related node branch
 and its manipulations by mouse-click. The left-mouse-click could well choose the 
