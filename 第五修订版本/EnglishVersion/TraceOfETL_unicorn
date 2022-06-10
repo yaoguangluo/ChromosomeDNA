@@ -44,11 +44,11 @@ Implements of OSGI Notes on Gitee 2019-06-26
 The author's inspirition behind OSGI could trace the liferay-theme applications 
 and presentations at class of <Adv Computer Network>, 2012. Then the development 
 of ETL unicorn. The author thought that canvas, which needed its own theme-skins 
-such likes Liferay. Then try to build unicorn-theme-UI by using original JDKs. 
+such likes Liferay. Then tried to build unicorn-theme-UI by using original JDKs. 
 And now became an UI parts of YangLiaoJing software. 
 
 The author appreciated the spring and its systematically. Since 2012, the author
-simulated CGI webs by using C at Callutherans, it emphasizes on HTTP, Web, CGI,
+simulated CGI webs by using C at Callutherans, its emphasis on HTTP, Web, CGI,
 Socket, TCP, SSH and Router. He considered an object oriented of web protocols of
 000~888, which could be used in an optimizational inheritance of socket registrations. 
 And now became a procedure parts of VPCS schedules.
