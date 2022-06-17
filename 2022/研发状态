@@ -94,6 +94,16 @@ https://register.ccopyright.com.cn/login.html
 scale游标设计成 鼠标点击松开按钮触发，减少大量计算浪费损耗。，已解决
 另外优化游标触发，响应更迅速。 ，已解决
 ZhongYaoSearch文件 195行进行将 ‘zhongyao’ 替换为‘key’，增加准确度。zhongyao变量是我用来文学输入的，key才是原输入。已解决
+写详细点-----------------------------------------
+if(temps.contains(zhongyao.replace(" ", ""))) {//中药是编辑字符，这里用zhongyao八纲增新
+	tempb+= code<< 7;
+}
+if(temps.contains(key.replace(" ", ""))) {//key是原输入字符，这里用key 原搜补漏
+	tempb+= code<< 3;
+}
+score_code[copyCount] = (int) (tempa/Math.pow(app.lookrot+ 1, 4) 
+		+ tempb*Math.pow(app.lookrot+ 1, 2));
+------------------------------------------------
 专家操作 选项进行了简单优化
 
 202206102221 停电1小时多了。来电了，那就洗漱下。
