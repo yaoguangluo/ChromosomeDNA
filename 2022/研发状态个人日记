@@ -110,7 +110,7 @@ score_code[copyCount] = (int) (tempa/Math.pow(app.lookrot+ 1, 4)
 20220620 
 准备所有搜索 排序 索引的技术全部自动集成在 专家搜索 中，进行全局默认优化，之前的专家选项 就改成 精度调节。
 
-ME.APM.VSQ.OPE.config 640行进行修正，全局软件
+ME.APM.VSQ.OPE.config 的 SectionJPanel 文件函数 640行进行修正，全局软件
 
 MVQ.button.DetaButton jlabel_flush_button= new MVQ.button.DetaButton("异常刷新:");
 		jlabel_flush_button.setBounds(10+100+30, 460, 100, 30);
