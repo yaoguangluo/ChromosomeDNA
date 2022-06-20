@@ -119,7 +119,7 @@ MVQ.button.DetaButton jlabel_flush_button= new MVQ.button.DetaButton("异常刷�
 				if(null!= app) {
 					app.jTabbedpane.validate();
 					//数据validate
-					app.appHospital.validate();
+					//app.appHospital.validate();先过滤掉，稍后线程
 					//电子医院validate
 					//app.appConfig.validate();先过滤掉，稍后线程
 					//搜素validate
