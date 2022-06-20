@@ -74,7 +74,7 @@ https://register.ccopyright.com.cn/login.html
 
 20220611
 1 单词发音显色
-2 vpcs并发上限 30/s
+2 vpcs并发上限 30个/s 已解决
 3 控制台加nullcheck 和validation
 
 20220615
@@ -105,6 +105,10 @@ score_code[copyCount] = (int) (tempa/Math.pow(app.lookrot+ 1, 4)
 		+ tempb*Math.pow(app.lookrot+ 1, 2));
 ------------------------------------------------
 专家操作 选项进行了简单优化
+
+
+20220620 
+准备所有搜索 排序 索引的技术全部自动集成在 专家搜索 中，进行全局默认优化，之前的专家选项 就改成 精度调节。
 
 202206102221 停电1小时多了。来电了，那就洗漱下。
 
