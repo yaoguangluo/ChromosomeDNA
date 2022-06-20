@@ -110,6 +110,33 @@ score_code[copyCount] = (int) (tempa/Math.pow(app.lookrot+ 1, 4)
 20220620 
 准备所有搜索 排序 索引的技术全部自动集成在 专家搜索 中，进行全局默认优化，之前的专家选项 就改成 精度调节。
 
+ME.APM.VSQ.OPE.config 640行进行修正，全局软件
+
+MVQ.button.DetaButton jlabel_flush_button= new MVQ.button.DetaButton("异常刷新:");
+		jlabel_flush_button.setBounds(10+100+30, 460, 100, 30);
+		jlabel_flush_button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(null!= app) {
+					app.jTabbedpane.validate();
+					//数据validate
+					app.appHospital.validate();
+					//电子医院validate
+					app.appConfig.validate();
+					//搜素validate
+					app.appSearch.validate();
+					//编辑页validate
+					app.editPane.validate();
+					//三维花validate
+					app.coAuthorForWord.validate();
+					//像诊断validate
+					app.monitor.validate();
+					//总体validate
+					app.validate();
+				}
+			}
+		});
+		this.add(jlabel_flush_button);
+
 202206102221 停电1小时多了。来电了，那就洗漱下。
 
 202206111611 （sweet00048 这微信号十年事多，这十年莫名报警至少30余次，最近一次110报警是2022年2月份，永久冻结，现在换绑），15116110525换绑我19173129338的Mr_HaHa0525 微信号
