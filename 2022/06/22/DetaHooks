@@ -1,4 +1,15 @@
 Theory of Deta Hooks
 
+In order to build a component, to catch all exceptions in a real time environment. The author will do 
+a hooking management system for exceptions arrangement, the logical assignment as below:
 
+                                                                   UI for V-VPCS  
+                                                                   ^
+Sleepers, Skiivies, Hallkeepers Threads  ->  any Exceptions  ->  Hooks  ->  log for S-VPCS  
+                                                                   ˇ
+                                                               Statistic for A-AOPM
+                                                               
+                                                                                                                            
+                                                                
+                                                               
 Yaoguang.Luo
