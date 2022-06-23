@@ -1,0 +1,66 @@
+package org.tinos.deta.hooks.main;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+//作者: 罗瑶光
+//时间: 20220623
+//描述: 这个函数主要用于Exception的传入进行登记. 通过序列号区分，时间记录，
+//文件记录和异常描述的4个维度进行异常登记。
+//输出结果如下，注意下 间隔符号为‘：’
+//归纳序列号：时间：文件名：异常描述
+//0.5844048143300494:1655970725648:java.lang.ArrayIndexOutOfBoundsException: 5
+//0.5844048143300494:1655970725648:org.tinos.deta.hooks.main.Hook.main(Hook.java:51)
+//0.4352716402101263:1655970725648:java.lang.Throwable: >_<!
+//0.4352716402101263:1655970725648:org.tinos.deta.hooks.main.Hook.main(Hook.java:56)
+public class Hook{
+	public List<String> exceptionList= new LinkedList<>();
+	//这个函数用于异常描述
+	public String getCurrentEnvironment(String session) {
+		String CurrentEnvironment= new String(session+ ":");//序列号
+		CurrentEnvironment+= System.currentTimeMillis()+ ":";//时间
+		return CurrentEnvironment;
+	}
+	
+	public void hookException(String session, Exception exception) {
+		exceptionList.add(new Hook().getCurrentEnvironment(session)+ exception.toString());
+		//System.out.println(new Hook().getCurrentEnvironment()+ exception.toString());
+		StackTraceElement[] stackTraceElements= exception.getStackTrace();
+		for(StackTraceElement stackTraceElement: stackTraceElements) {
+			exceptionList.add(new Hook().getCurrentEnvironment(session)+ stackTraceElement.toString());
+			//System.out.println(new Hook().getCurrentEnvironment()+ stackTraceElement.toString());
+		}
+	}
+
+	//这个函数用于异常描述
+	public void hookThrowable(String session, Throwable throwable) {
+		exceptionList.add(new Hook().getCurrentEnvironment(session)+ throwable.toString());
+		//System.out.println(new Hook().getCurrentEnvironment()+ throwable.toString());
+		StackTraceElement[] stackTraceElements= throwable.getStackTrace();
+		for(StackTraceElement stackTraceElement: stackTraceElements) {
+			exceptionList.add(new Hook().getCurrentEnvironment(session)+ stackTraceElement.toString());
+			//System.out.println(new Hook().getCurrentEnvironment()+ stackTraceElement.toString());
+		}	
+	}
+	
+	//例子
+	public static void main(String[] argv) {
+		Hook hook= new Hook();
+		try {
+			int[] a= new int[3];
+			a[5]= 10;
+		}catch(Exception e) {
+			hook.hookException(""+ Math.random(), e);
+		}
+
+		Throwable throwable= new Throwable(">_<!");
+		hook.hookThrowable(""+ Math.random(), throwable);
+		
+		//输出
+		Iterator<String> iterator= hook.exceptionList.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+	}
+}
