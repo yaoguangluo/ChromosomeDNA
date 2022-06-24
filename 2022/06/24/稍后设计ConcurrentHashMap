@@ -1,0 +1,81 @@
+package org.tinos.deta.hooks.main;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+//作者: 罗瑶光
+//时间: 20220623
+//描述: 这个函数主要用于Exception的传入进行登记. 通过序列号区分，时间记录，
+//文件记录和异常描述的4个维度进行异常登记。
+//输出结果如下，注意下 间隔符号为‘：’
+//归纳序列号：时间：文件名：异常描述
+//0.5150632510035108:1656061569150:java.lang.ArrayIndexOutOfBoundsException: 5
+//0.5150632510035108:1656061569150:org.tinos.deta.hooks.main.Hook.main(Hook.java:58)
+//0.20768208046248404:1656061569150:java.lang.Throwable: >_<!
+//0.20768208046248404:1656061569150:org.tinos.deta.hooks.main.Hook.main(Hook.java:63)
+//0.1421888516363965:1656061569150:>_<!!!
+
+//稍后处理异常循环准备用map，避免内存递增。
+public class Hook{
+	public List<String> exceptionList= new CopyOnWriteArrayList<>();
+	public Map<String, String> exceptionMap= new ConcurrentHashMap<>();//处理异常循环准备用map，避免内存递增。
+	//这个函数用于异常描述
+	public String getCurrentEnvironment(String session) {
+		String CurrentEnvironment= new String(session+ ":");//序列号
+		CurrentEnvironment+= System.currentTimeMillis()+ ":";//时间
+		return CurrentEnvironment;
+	}
+
+	public void hookException(Exception exception) {
+		String session= ""+ Math.random();
+		exceptionList.add(getCurrentEnvironment(session)+ exception.toString());
+		//System.out.println(new Hook().getCurrentEnvironment()+ exception.toString());
+		StackTraceElement[] stackTraceElements= exception.getStackTrace();
+		for(StackTraceElement stackTraceElement: stackTraceElements) {
+			exceptionList.add(getCurrentEnvironment(session)+ stackTraceElement.toString());
+			//System.out.println(new Hook().getCurrentEnvironment()+ stackTraceElement.toString());
+		}
+	}
+
+	//这个函数用于异常描述
+	public void hookThrowable(Throwable throwable) {
+		String session= ""+ Math.random();
+		exceptionList.add(getCurrentEnvironment(session)+ throwable.toString());
+		//System.out.println(new Hook().getCurrentEnvironment()+ throwable.toString());
+		StackTraceElement[] stackTraceElements= throwable.getStackTrace();
+		for(StackTraceElement stackTraceElement: stackTraceElements) {
+			exceptionList.add(getCurrentEnvironment(session)+ stackTraceElement.toString());
+			//System.out.println(new Hook().getCurrentEnvironment()+ stackTraceElement.toString());
+		}	
+	}
+
+	public void hookThrowable(String throwableString) {
+		String session= ""+ Math.random();
+		exceptionList.add(getCurrentEnvironment(session)+ throwableString);
+	}
+	//例子
+	public static void main(String[] argv) {
+		Hook hook= new Hook();
+		try {
+			int[] a= new int[3];
+			a[5]= 10;
+		}catch(Exception e) {
+			hook.hookException(e);
+		}
+
+		Throwable throwable= new Throwable(">_<!");
+		hook.hookThrowable(throwable);
+
+		hook.hookThrowable(">_<!!!");
+
+		//输出
+		Iterator<String> iterator= hook.exceptionList.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+	}
+}
