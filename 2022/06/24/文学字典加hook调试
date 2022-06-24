@@ -1,0 +1,188 @@
+package ME.APM.VSQ;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import SVQ.stable.StableAnnotation;
+import SVQ.stable.StableTag;
+//准备导入数据
+//罗瑶光
+//20211028
+public class 文学性{
+	public static List<String> 文学词库;
+	public static Map<String, String> 文言文词库;
+	public static void 初始词库() throws IOException {
+		if(null== 文学词库) {
+			文学词库= new ArrayList<>();
+			InputStream in= new 文学性().getClass().getResourceAsStream("BToW.lyg");
+			BufferedReader cReader= new BufferedReader(new InputStreamReader(in));  
+			String ctempString= null; 
+			while ((ctempString= cReader.readLine()) != null) {  
+				if(!ctempString.replace(" ","").equals("")) {
+					文学词库.add(ctempString);	
+				}
+			}
+			cReader.close();
+		}
+
+		if(null== 文言文词库) {
+			文言文词库= new HashMap<>();
+			InputStream in= new 文学性().getClass().getResourceAsStream("WToB.lyg");
+			BufferedReader cReader= new BufferedReader(new InputStreamReader(in));  
+			String ctempString= null; 
+			while ((ctempString= cReader.readLine())!= null) {  
+				if(!ctempString.replace(" ","").equals("")) {
+					if(ctempString.contains("/")) {
+						String[] strings= ctempString.split("/");
+						文言文词库.put(strings[0], strings[1]);
+					}
+				}
+			}
+			cReader.close();
+		}
+	}
+	//速度一般，精度一般
+	public static String 文字处理(App app, String input) throws IOException {
+		List<String> list= app._A.parserMixedString(input);
+		Iterator<String> iteratorList= list.iterator();
+		StringBuilder stringBuilder= new StringBuilder();
+		Here:
+			while(iteratorList.hasNext()) {
+				String stringIteratorList= iteratorList.next();
+				if(1< stringIteratorList.length()) {
+					if(null== 文学词库) {//局部调试,稍后进行合并，罗瑶光
+						文学性.初始词库();
+					}
+					Iterator<String> iterator= 文学词库.iterator();
+					while(iterator.hasNext()) {
+						String string= iterator.next();
+						if(string.contains(stringIteratorList)) {
+							stringBuilder.append(string);
+							continue Here;
+						}
+					}	
+				}
+				stringBuilder.append(stringIteratorList);
+			}
+		return stringBuilder.toString();
+	}
+	//速度慢，精度高,适用于文章短篇
+	public static String 文言文全文处理(App app, String input) {
+		String output= input.toString();
+		try {
+			if(null== 文言文词库) {//局部调试,稍后进行合并，罗瑶光
+				文学性.初始词库();
+			}
+			Iterator<String> iterator= 文言文词库.keySet().iterator();
+			while(iterator.hasNext()) {
+				String string= iterator.next();
+				output= output.replace(string, 文言文词库.get(string));
+			}
+		}catch(Exception e){
+			app.hook.hookException(e);
+			app.hook.hookThrowable("文言文全文处理异常.");
+		}
+		return output;
+	}
+	//速度快，精度一般，适用于专业白话文。
+	public static String 文言文线性处理(App app, String input) {
+		StringBuilder stringBuilder= new StringBuilder();
+		try {
+			List<String> list= app._A.parserMixedString(input);
+			Iterator<String> iteratorList= list.iterator();
+			while(iteratorList.hasNext()) {
+				String string= iteratorList.next();
+				if(null== 文言文词库) {//局部调试,稍后进行合并，罗瑶光
+					文学性.初始词库();
+				}
+				if(文言文词库.containsKey(string)) {
+					stringBuilder.append(文言文词库.get(string));
+				}else {
+					stringBuilder.append(string);
+				}
+			}
+		}catch(Exception e){
+			app.hook.hookException(e);
+			app.hook.hookThrowable("文言文线性处理异常.");
+		}
+		return stringBuilder.toString();
+	}
+	public static String 处理八纲辨证(String key) {
+		// TODO Auto-generated method stub
+		String keyZhenDuan= key.toString();
+		Here:
+			for(int i= 0; i< key.length(); i++) {
+				if(StableAnnotation.feng.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "风";
+					continue Here;
+				}
+				if(StableAnnotation.han.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "风寒";
+					continue Here;
+				}
+				if(StableAnnotation.hot.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "风热";
+					continue Here;
+				}
+				if(StableAnnotation.shi.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "风湿";
+					continue Here;
+				}
+				if(StableAnnotation.huo.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "火";
+					continue Here;
+				}
+				if(StableAnnotation.zao.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "燥";
+					continue Here;
+				}
+				if(StableAnnotation.liuYin.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "六淫";
+					continue Here;
+				}
+				if(StableAnnotation.qiQing.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "七情";
+					continue Here;
+				}
+				if(StableAnnotation.wangYang.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "亡阳";
+					continue Here;
+				}
+				if(StableAnnotation.wangYin.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "亡阴";
+					continue Here;
+				}
+				if(StableAnnotation.jiBaoShiChang.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "饥饱失常";
+					continue Here;
+				}
+				if(StableAnnotation.yinShiBuJie.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "饮食不洁";
+					continue Here;
+				}
+				if(StableAnnotation.tiaoShiPianShe.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "挑食偏食";
+					continue Here;
+				}
+				if(StableAnnotation.biaoHan.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "表寒";
+					continue Here;
+				}
+				if(StableAnnotation.biaoRe.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "表热";
+					continue Here;
+				}
+				if(StableAnnotation.yuXue.contains(StableTag.STRING_EMPTY+ key.charAt(i))) {
+					keyZhenDuan+= "淤";
+				}
+			}
+		return keyZhenDuan;
+	}
+}
