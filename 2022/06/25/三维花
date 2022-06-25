@@ -37,6 +37,7 @@ import MSV.OSU.string.NullObject;
 
 import javax.media.opengl.awt.GLCanvas;  
 import javax.media.opengl.glu.GLU;
+//作者 罗瑶光
 public class CoAuthorForWord extends JPanel implements MouseMotionListener, MouseListener
 , MouseWheelListener, KeyListener, GLEventListener { 
 	public Boolean clicked = false;
