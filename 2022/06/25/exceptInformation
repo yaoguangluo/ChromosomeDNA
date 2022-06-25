@@ -1,0 +1,21 @@
+package org.tinos.deta.hooks.main;
+
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+//作者罗瑶光
+//用于异常的并发循环登记。
+public class ExceptInformation{
+	public long exceptionCount= 0;//问题发生的次数
+	public String exceptionFile= new String();//问题发生在哪个文件
+	public String exceptionSession= new String();//问题的登记编号记录
+	public List<Long> exceptionTimes= new CopyOnWriteArrayList<>();//问题的发生时间
+	public String throwableString= new String();
+	private Exception exception;
+	public void putException(Exception inputException) {
+		this.exception= inputException;
+	}
+	public Exception getException() {
+		return this.exception;
+	}
+	//...这个文件可以扩展成单例，或者接口。
+}
