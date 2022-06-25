@@ -1,0 +1,167 @@
+package org.tinos.deta.hooks.main;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+//作者: 罗瑶光
+//时间: 20220623
+//描述: 这个函数主要用于Exception的传入进行登记. 通过序列号区分，时间记录，
+//文件记录和异常描述的4个维度进行异常登记。
+//输出结果如下，注意下 间隔符号为‘：’
+//归纳序列号：时间：文件名：异常描述
+//list输出
+/*
+int检查:1656144582443:java.lang.ArrayIndexOutOfBoundsException: 5
+int检查:1656144582443:org.tinos.deta.hooks.main.Hook.main(Hook.java:134)
+0.04816210950757038:1656144582444:java.lang.Throwable: >_<!
+0.04816210950757038:1656144582444:org.tinos.deta.hooks.main.Hook.main(Hook.java:142)
+0.3382155536703324:1656144582444:>_<!!!
+*/
+//map输出
+/*
+错误次数:10
+错误标记:int检查
+异常发生的时间:
+1656144582443
+1656144582444
+1656144582444
+1656144582444
+1656144582444
+1656144582444
+1656144582444
+1656144582444
+1656144582444
+1656144582444
+java.lang.ArrayIndexOutOfBoundsException: 5
+org.tinos.deta.hooks.main.Hook.main(Hook.java:134)
+*/
+//稍后处理异常循环准备用map，避免内存递增。
+public class Hook{
+	public List<String> exceptionList= new CopyOnWriteArrayList<>();
+	//处理异常循环准备用map，避免内存递增。
+	public Map<String, ExceptInformation> exceptionMap= new ConcurrentHashMap<>();
+
+	//这个函数用于异常描述
+	public String getCurrentEnvironment(String session) {
+		String CurrentEnvironment= new String(session+ ":");//序列号
+		CurrentEnvironment+= System.currentTimeMillis()+ ":";//时间
+		return CurrentEnvironment;
+	}
+
+	public String getCurrentFrequentEnvironment(String session, String timeMillis) {
+		String CurrentEnvironment= new String(session+ ":");//序列号
+		CurrentEnvironment+= timeMillis+ ":";//时间
+		return CurrentEnvironment;
+	}
+
+	public String getCurrentFrequentEnvironment(String session, Long timeMillis) {
+		String CurrentEnvironment= new String(session+ ":");//序列号
+		CurrentEnvironment+= timeMillis.toString()+ ":";//时间
+		return CurrentEnvironment;
+	}
+	//用于登记异常
+	public void hookException(Exception exception) {
+		String session= ""+ Math.random();
+		exceptionList.add(getCurrentEnvironment(session)+ exception.toString());
+		StackTraceElement[] stackTraceElements= exception.getStackTrace();
+		for(StackTraceElement stackTraceElement: stackTraceElements) {
+			exceptionList.add(getCurrentEnvironment(session)+ stackTraceElement.toString());
+		}
+	}
+	//用于显示异常
+	public void showException(Exception exception) {
+		System.out.println(exception.toString());
+		StackTraceElement[] stackTraceElements= exception.getStackTrace();
+		for(StackTraceElement stackTraceElement: stackTraceElements) {
+			System.out.println(stackTraceElement.toString());
+		}
+	}
+	//这里出现一个问题，便是session的随机循环异常无法有效的命名，
+	//于是准备将session提取出来到接口外定义，这样map价值就出来了。于是内容为捕捉的times记录。
+	public void hookFrequentException(String uniqueSessionKey, Long timeMillis, Exception exception) {
+		//如果出现同session 不同内容异常，不讨论，在函数上层进行区分。
+		if(exceptionMap.containsKey(uniqueSessionKey)) {
+			//map计数递增
+			ExceptInformation exceptInformation= exceptionMap.get(uniqueSessionKey);
+			exceptInformation.exceptionCount+= 1;
+			exceptInformation.exceptionTimes.add(timeMillis);
+			exceptionMap.put(uniqueSessionKey, exceptInformation);
+			return;
+		}
+		//map登记录入
+		ExceptInformation exceptInformation= new ExceptInformation();
+		exceptInformation.exceptionCount= 1;
+		exceptInformation.exceptionSession= uniqueSessionKey;
+		exceptInformation.exceptionTimes.add(timeMillis);
+		exceptInformation.putException(exception);
+		exceptionMap.put(uniqueSessionKey, exceptInformation);
+		//list 同步登记
+		exceptionList.add(getCurrentFrequentEnvironment(uniqueSessionKey, timeMillis)
+				+ exception.toString());
+		//System.out.println(new Hook().getCurrentEnvironment()+ exception.toString());
+		StackTraceElement[] stackTraceElements= exception.getStackTrace();
+		for(StackTraceElement stackTraceElement: stackTraceElements) {
+			exceptionList.add(getCurrentFrequentEnvironment(uniqueSessionKey, timeMillis)
+					+ stackTraceElement.toString());
+			//System.out.println(new Hook().getCurrentEnvironment()+ stackTraceElement.toString());
+		}
+	}
+	//这个函数用于异常描述
+	public void hookThrowable(Throwable throwable) {
+		String session= ""+ Math.random();
+		exceptionList.add(getCurrentEnvironment(session)+ throwable.toString());
+		//System.out.println(new Hook().getCurrentEnvironment()+ throwable.toString());
+		StackTraceElement[] stackTraceElements= throwable.getStackTrace();
+		for(StackTraceElement stackTraceElement: stackTraceElements) {
+			exceptionList.add(getCurrentEnvironment(session)+ stackTraceElement.toString());
+			//System.out.println(new Hook().getCurrentEnvironment()+ stackTraceElement.toString());
+		}	
+	}
+
+	public void hookThrowable(String throwableString) {
+		String session= ""+ Math.random();
+		exceptionList.add(getCurrentEnvironment(session)+ throwableString);
+	}
+	//例子
+	public static void main(String[] argv) {
+		Hook hook= new Hook();
+		for(int i=0; i< 10; i++) {
+			try {
+				int[] a= new int[3];
+				a[5]= 10;
+			}catch(Exception e) {
+				//hook.hookException(e);
+				//测试下
+				hook.hookFrequentException("int检查", System.currentTimeMillis(), e);
+			}
+		}
+		
+		Throwable throwable= new Throwable(">_<!");
+		hook.hookThrowable(throwable);
+
+		hook.hookThrowable(">_<!!!");
+
+		//list输出
+		Iterator<String> iterator= hook.exceptionList.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+
+		//map输出
+		Iterator<String> mapKeyIterator= hook.exceptionMap.keySet().iterator();
+		while(mapKeyIterator.hasNext()) {
+			ExceptInformation exceptInformation= hook.exceptionMap.get(mapKeyIterator.next());
+			System.out.println("错误次数:"+ exceptInformation.exceptionCount);
+			System.out.println("错误标记:"+ exceptInformation.exceptionSession);
+			System.out.println("异常发生的时间:");
+			Iterator<Long> iteratorLong= exceptInformation.exceptionTimes.iterator();
+			while(iteratorLong.hasNext()) {
+				System.out.println(iteratorLong.next());
+			}
+			hook.showException(exceptInformation.getException());
+		}
+	}
+}
