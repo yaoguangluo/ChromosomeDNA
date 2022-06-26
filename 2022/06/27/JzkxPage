@@ -42,6 +42,7 @@ import MVQ.button.DetaButton;
 //import OCI.ME.analysis.C.A;
 import OEI.ME.analysis.E.CogsBinaryForest_AE;
 import OSI.AOP.neo.tts.ReadChinese;
+//作者 罗瑶光
 public class JzkxPage extends Container implements MouseListener, KeyListener{
 	private static final long serialVersionUID = 1L;
 	public String key;
