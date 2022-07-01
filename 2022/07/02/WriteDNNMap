@@ -10,6 +10,7 @@ import java.util.Map;
 import ME.APM.VSQ.App;
 //作者 罗瑶光
 //20220701
+//20220702 新增一个总分写表
 public class WriteDNNMap{
 	//这个函数用于dnn的全文索引进行txt记录
 	public static void doWriteDNNMap(String stringPath, App app) {
@@ -22,16 +23,24 @@ public class WriteDNNMap{
 			Iterator<String> iterator= map.keySet().iterator();
 			while(iterator.hasNext()) {
 				String temp= iterator.next();
+				//添加数据名
 				bufferedWriter.write(temp+ "<>");
 				bufferedWriter.write("\r\n");
 				bufferedWriter.flush();
 				Map<String, Double> maps= map.get(temp);
 				Iterator<String> iterators= maps.keySet().iterator();
+				//添加数据实体
+				Double 总分= 0.0;
 				while(iterators.hasNext()) {
 					String string= iterators.next();
-					bufferedWriter.write(string+ "->"+ maps.get(string));
+					Double tempDouble= Double.valueOf(maps.get(string));
+					总分+= tempDouble;
+					bufferedWriter.write(string+ "->"+ tempDouble);
 					bufferedWriter.write("\r\n");
 				}
+				//DNN添加总分
+				bufferedWriter.write("总分"+ "->"+ 总分);
+				bufferedWriter.write("\r\n");
 			}
 			bufferedWriter.write("\r\n");
 			bufferedWriter.flush();
