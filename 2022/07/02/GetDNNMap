@@ -1,0 +1,56 @@
+package ME.APM.VSQ.dnn;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.util.HashMap;
+import java.util.Map;
+import ME.APM.VSQ.App;
+//作者 罗瑶光
+//20220701-20220702
+public class GetDNNMap{
+	//这个函数用于dnn的全文索引进行txt读取
+	@SuppressWarnings("static-access")
+	public static Map<String, Map<String, Double>> doGetDNNMap(App app) {
+		Map<String, Map<String, Double>> map= new HashMap<>();
+		try {
+			URL url= new GetDNNMap().getClass().getResource("DNN19090.lyg");
+			File file= new File(new URLDecoder().decode(url.getPath(),"UTF8"));  
+			BufferedReader bufferedWriter = new BufferedReader(new InputStreamReader
+					(new FileInputStream(file), "UTF8"));  
+			String line;
+			String page = "";
+			while((line= bufferedWriter.readLine())!=null){
+				if(line.contains("<>")) {
+					page= line.replace("<>", "");
+				}
+				if(line.contains("->")) {
+					String[] strings= line.split("->");
+					if(strings.length> 1) {//确定2行
+						String pageName= page.toString();
+						String wordName= strings[0].toString();
+						Double wordDNN=  Double.valueOf(strings[1].toString());
+						if(map.containsKey(pageName)) {
+							Map<String, Double> maps= map.get(pageName);
+							maps.put(wordName, wordDNN);
+							map.put(pageName, maps);
+						}else {
+							Map<String, Double> maps= new HashMap<>();
+							maps.put(wordName, wordDNN);
+							map.put(pageName, maps); 
+						}
+					}
+				}
+			}
+			bufferedWriter.close();
+		} catch (IOException e) {
+			app.hook.hookFrequentException("getDNNMap出错", System.currentTimeMillis(), e);
+		}
+		System.out.println("读取了"+ map.size()+ "行数据.");
+		return map;
+	}
+}
