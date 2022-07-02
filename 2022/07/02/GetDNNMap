@@ -18,8 +18,12 @@ public class GetDNNMap{
 	public static Map<String, Map<String, Double>> doGetDNNMap(App app) {
 		Map<String, Map<String, Double>> map= new HashMap<>();
 		try {
-			URL url= new GetDNNMap().getClass().getResource("DNN19090.lyg");
-			File file= new File(new URLDecoder().decode(url.getPath(),"UTF8"));  
+			File file;//配置文件在同一个文件架夹下便于管理。
+			file= new File(app.dbConfigPath.replace("DBconfig", "DNN19090"));
+			if(!file.exists()) {//上面的string稍后写在配置面板里面。
+				URL url= new GetDNNMap().getClass().getResource("DNN19090.lyg");
+				file= new File(new URLDecoder().decode(url.getPath(),"UTF8"));  
+			}
 			BufferedReader bufferedWriter = new BufferedReader(new InputStreamReader
 					(new FileInputStream(file), "UTF8"));  
 			String line;
