@@ -43,6 +43,7 @@ import SVQ.stable.StableFile;
 //作者 罗瑶光
 //新增DNN搜索加权，自带索引仅仅第一次运行耗时需要2分钟。之后保持在1秒内。
 //DNN+前10-25 PCA算法优化 加精度调节
+//179行加全文术名过滤
 public class AppSearch extends ScrollPane implements MouseListener, KeyListener, ActionListener{	
 	private static final long serialVersionUID= 1L;
 	//把德塔精度搜索的函数进行函数片段化去重，
@@ -174,6 +175,21 @@ public class AppSearch extends ScrollPane implements MouseListener, KeyListener,
 					if(待搜索词典.contains(mapSearchaAtII)) {
 						if(reg[copyCount]== 0){
 							count+= 1;
+						}
+						if(u.shuming_filter_box.isSelected()) {
+							String temp= u.name_filter.getText().trim();
+							if(待搜索词典.contains(temp)) {
+								reg[copyCount]+= 0;
+								score_code[copyCount]+= 0;
+								continue Here;
+							}	
+//							for(int j=0;j<temp.length();j++) {
+//								if(待搜索词典.contains(""+ temp.charAt(j))) {
+//									reg[copyCount]+= 1;
+//									score_code[copyCount]+= 1;
+//									continue Here;
+//								}	
+//							}
 						}
 						score[copyCount]= iteratorForCopyString;
 						if(keyIsPCA) {
