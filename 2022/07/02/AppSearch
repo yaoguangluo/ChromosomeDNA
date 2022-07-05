@@ -41,7 +41,7 @@ import PEQ.AMV.ECS.test.DNNTest;
 import PEQ.AMV.ECS.test.SensingTest;
 import SVQ.stable.StableFile;
 //作者 罗瑶光
-//新增DNN搜索加权，自带索引仅仅第一次运行耗时需要2分钟。之后保持在1秒内。
+//新增DNN搜索加权，自带索引仅仅第一次运行耗时需要2分钟。之后保持在1秒内。第一次索引 时间只要0.1秒
 //DNN+前10-25 PCA算法优化 加精度调节
 //179行加全文术名过滤
 public class AppSearch extends ScrollPane implements MouseListener, KeyListener, ActionListener{	
