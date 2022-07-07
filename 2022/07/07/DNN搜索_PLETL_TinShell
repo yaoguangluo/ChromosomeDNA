@@ -25,6 +25,16 @@ import OSA.shell.XA_ShellTables;
 import SVQ.stable.StableShellETL;
 @SuppressWarnings({"unused", "unchecked"})
 //稍后将DMA文件与内存操作替换成 jtable表内存操作 罗瑶光
+/*使用例子
+获取表名:中医诊断:进行选择;
+条件为:和:病症|DNN搜索|笔记| 发热咳嗽口渴痰黄|1:笔记|不包含|畏寒;
+获取表列名:ID:病症:笔记;
+操作:0|行至|20;
+操作:病症|进行分词|词性标注;
+操作:笔记|进行分词|DNN;
+操作:ID|颜色标记为|红色;
+操作:笔记|颜色标记为|黄色;
+*/
 public class P_CO_pl_XA_XCDX_Cache extends P_CO_pl_XA_XCDX {
 	public static void P_Cache(String[] sets, List<Map<String, Object>> output
 			, String tableName, Map<String, Object> object, String condition) {
