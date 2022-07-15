@@ -55,81 +55,71 @@ public class P_AO_PLETL {
 		//PLETL:中节点|进行表格合并|主码为|ID|模式为|有交集叠加列;
 		//PLETL:中节点|进行表格合并|主码为|ID|模式为|有交集新增列;
 		//PLETL:中节点|进行表格合并|主码为|ID|模式为|无交集新增列;
-//		if(sets[1].equalsIgnoreCase("进行表格合并")) {
-//			TinMap mapShell= null;
-//			String 列标识 = null;
-//			if(sets[0].equalsIgnoreCase("中节点")) {
-//				mapShell= (TinMap)object.get(StableShellETL.SHELL_ETL_MID_SHELL);
-//				列标识= "m_";
-//			}
-//			if(sets[0].equalsIgnoreCase("下节点")) {
-//				mapShell= (TinMap)object.get(StableShellETL.SHELL_ETL_DOWN_SHELL);
-//				列标识= "d_";
-//			}
-//
-//			//将上面进行内外循环 颠倒rotation 如下
-//			if(sets[2].equalsIgnoreCase("主码为")) {//先单一primary key， 之后再设计 forenge key 和 combination key
-//				//To do。。。初始
-//				Map<String, String> keyTemp= new HashMap<>(); 
-//				Map<String, Object> tinShellETL= (Map<String, Object>)mapShell.get(StableShellETL.SHELL_ETL_TIN_SHELL_ETL);
-//				List<Map<String, Object>> rowList= (List<Map<String, Object>>)tinShellETL.get("obj");
-//				//主循环
-//				List<Map<String, Object>> 主要输入轮训= (List<Map<String, Object>>)object.get("obj");
-//				Iterator<Map<String, Object>> outputTempIterator= 主要输入轮训.iterator();
-//				while(outputTempIterator.hasNext()) {
-//					Map<String, Object> rowOutputTempIterator= outputTempIterator.next();
-//					Map<String, Object> rowValueRowOutputTempIterator
-//					= (Map<String, Object>)rowOutputTempIterator.get(StableShellETL.SHELL_ETL_ROWVALUE);
-//					if(0!= rowList.size()) {
-//						//辅循环
-//						Iterator<Map<String, Object>> iterator= rowList.iterator();
-//						Here:
-//							while(iterator.hasNext()) {//非主要输入轮训
-//								Map<String, Object> row= iterator.next();
-//								Map<String, Object> rowValue= (Map<String, Object>)row.get(StableShellETL.SHELL_ETL_ROWVALUE);
-//								Map<String, Object> culumnValue= (Map<String, Object>)rowValue.get(sets[3]);
-//								//outputTemp
-//								if(rowValueRowOutputTempIterator.containsKey(sets[3])) {
-//									Map<String, Object> rowValueRowOutputTempIteratorCulumnValue
-//									= (Map<String, Object>)rowValueRowOutputTempIterator.get(sets[3]);
-//									//合并rowValueRowOutputTempIteratorCulumnValue 与 culumnValue
-//									//合并方式，1 叠加列合并 2 新增列合并
-//									//先实现简单的 新增列合并
-//									//在执行前进行sets[3]相等检查
-//									if(rowValueRowOutputTempIteratorCulumnValue.get("culumnValue")
-//											.equals(culumnValue.get("culumnValue"))) {
-//										if(sets[4].equalsIgnoreCase("模式为")) {
-//											model(sets, rowValue, 列标识, rowValueRowOutputTempIterator);
-//										}	
-//									}else {
-//										//这里不相等就直接合并进来。上面是相等的就考虑合并模式处理
-//										//按新增列合并进来
-//										//因为是做笛卡尔乘积的数据库join
-//										//所以只有2个1表 就只出两个结果母语是这里 要筛选没有相等的id 又没有出现的行也合并进来
-////										if(!keyTemp.containsKey(culumnValue.get("culumnValue").toString())) {
-////											keyTemp.put(culumnValue.get("culumnValue").toString(), "");
-////											model(sets, rowValue, 列标识, rowValueRowOutputTempIterator);//因为全部录进来，所以合并不要轻易用。
-////											//rowOutputTempIterator.put(StableShellETL.SHELL_ETL_ROWVALUE, rowValueRowOutputTempIterator);	
-////										}
-//									}
-//									//其他定状补语 函数 
-//									//。。。
-//									//。。。
-//									//。			
-//								}
-//								rowOutputTempIterator.put(StableShellETL.SHELL_ETL_ROWVALUE, rowValueRowOutputTempIterator);
-//								//outputTemp.add(rowOutputTempIterator);
-//							}
-//					}
-//					outputTemp.add(rowOutputTempIterator);
-//				}
-//			}
-//			//			if(sets[2].equalsIgnoreCase("自由定义各种命令。。")) {
-//			//			//To do。。。 
-//			//		}
-//			output.clear();
-//			output.addAll(outputTemp);
-//		}
+		if(sets[1].equalsIgnoreCase("进行表格补充")) {
+			TinMap mapShell= null;
+			String 列标识 = null;
+			if(sets[0].equalsIgnoreCase("中节点")) {
+				mapShell= (TinMap)object.get(StableShellETL.SHELL_ETL_MID_SHELL);
+				列标识= "m_";
+			}
+			if(sets[0].equalsIgnoreCase("下节点")) {
+				mapShell= (TinMap)object.get(StableShellETL.SHELL_ETL_DOWN_SHELL);
+				列标识= "d_";
+			}
+
+			//将上面进行内外循环 颠倒rotation 如下
+			if(sets[2].equalsIgnoreCase("主码为")) {//先单一primary key， 之后再设计 forenge key 和 combination key
+				//To do。。。初始
+				Map<String, String> keyTemp= new HashMap<>(); 
+				Map<String, Object> tinShellETL= (Map<String, Object>)mapShell.get(StableShellETL.SHELL_ETL_TIN_SHELL_ETL);
+				List<Map<String, Object>> rowList= (List<Map<String, Object>>)tinShellETL.get("obj");
+				//主循环
+				List<Map<String, Object>> 主要输入轮训= (List<Map<String, Object>>)object.get("obj");
+				Iterator<Map<String, Object>> outputTempIterator= 主要输入轮训.iterator();
+				while(outputTempIterator.hasNext()) {
+					Map<String, Object> rowOutputTempIterator= outputTempIterator.next();
+					Map<String, Object> rowValueRowOutputTempIterator
+					= (Map<String, Object>)rowOutputTempIterator.get(StableShellETL.SHELL_ETL_ROWVALUE);
+					if(0!= rowList.size()) {
+						//辅循环
+						Iterator<Map<String, Object>> iterator= rowList.iterator();
+						Here:
+							while(iterator.hasNext()) {//非主要输入轮训
+								Map<String, Object> row= iterator.next();
+								Map<String, Object> rowValue= (Map<String, Object>)row.get(StableShellETL.SHELL_ETL_ROWVALUE);
+								Map<String, Object> culumnValue= (Map<String, Object>)rowValue.get(sets[3]);
+								//outputTemp
+								if(rowValueRowOutputTempIterator.containsKey(sets[3])) {
+									Map<String, Object> rowValueRowOutputTempIteratorCulumnValue
+									= (Map<String, Object>)rowValueRowOutputTempIterator.get(sets[3]);
+									//合并rowValueRowOutputTempIteratorCulumnValue 与 culumnValue
+									//合并方式，1 叠加列合并 2 新增列合并
+									//先实现简单的 新增列合并
+									//在执行前进行sets[3]相等检查
+									if(rowValueRowOutputTempIteratorCulumnValue.get("culumnValue")
+											.equals(culumnValue.get("culumnValue"))) {
+										if(sets[4].equalsIgnoreCase("模式为")) {
+											model(sets, rowValue, 列标识, rowValueRowOutputTempIterator);
+										}	
+									}
+									//其他定状补语 函数 
+									//。。。
+									//。。。
+									//。			
+								}
+								rowOutputTempIterator.put(StableShellETL.SHELL_ETL_ROWVALUE, rowValueRowOutputTempIterator);
+							}
+					}
+					outputTemp.add(rowOutputTempIterator);
+				}
+			}
+			//			if(sets[2].equalsIgnoreCase("自由定义各种命令。。")) {
+			//			//To do。。。 
+			//		}
+			output.clear();
+			output.addAll(outputTemp);
+		}
+		
 		if(sets[1].equalsIgnoreCase("进行表格合并")) {
 			TinMap mapShell= null;
 			String 列标识 = null;
