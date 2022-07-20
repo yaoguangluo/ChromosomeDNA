@@ -14,7 +14,7 @@ is circularly to find a ratio collection of vectors between the central weight p
 the outer coordinates, because the distance from inner coordinates which is shorter than distance of scale input, hence will
 be removed by this scale filter. Then makes an arrangement of this vector list more sequence, means sorting them from the ratio
 of zero to the ratio of 360 (2* Pi). Finally makes the line connections of each two outer adjacent coordinate in this vectorial
-list. It may get a side end of input coordinates. Then finds a density is simply,   because the author considers：
+list. It might get a side end of input coordinates. Then finds a density is simply,   because the author considers：
 {Density =  Area of Side End /  Amout of Coordinates }
 
 
