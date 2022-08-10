@@ -33,7 +33,7 @@
 		//1.1假设 usrToken 表里面已经存在 概率钥匙数据
 		FullDNATokenPDI pDE_RNA_FullFormular= new FullDNATokenPDI();
 		pDE_RNA_FullFormular.text= uPassword.toString();
-		//1.1.1假设user表已经有了元基骰子。我搞不懂我写代码，为什么脑袋里闪烁我展示国家机密，是不是有病？我是著作权人，作者
+		//1.1.1假设user表已经有了元基骰子。**
 		//***不想再提***
 		pDE_RNA_FullFormular.lock= MD5dice_DNA[0];//我搞不懂为什么中文的符号要和英文的符号不一致，搞得我切来切去出问题繁琐。
 		//1.1.2 密码变元基
