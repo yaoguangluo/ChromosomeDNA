@@ -34,7 +34,7 @@
 		FullDNATokenPDI pDE_RNA_FullFormular= new FullDNATokenPDI();
 		pDE_RNA_FullFormular.text= uPassword.toString();
 		//1.1.1假设user表已经有了元基骰子。我搞不懂我写代码，为什么脑袋里闪烁我展示国家机密，是不是有病？我是著作权人，作者
-		//我写我的东西，竟然闪国家机密，我全球开源4年，国家机密是什么梗？是不是国家开些会把我套牌了？现在我家所有设备网络都是罗瑶光开头， 
+		//***不想再提***
 		pDE_RNA_FullFormular.lock= MD5dice_DNA[0];//我搞不懂为什么中文的符号要和英文的符号不一致，搞得我切来切去出问题繁琐。
 		//1.1.2 密码变元基
 		pDE_RNA_FullFormular.pdw= pDE_RNA_FullFormular.initonSect(pDE_RNA_FullFormular.text);
