@@ -1,0 +1,111 @@
+稍后设计下 验证操作 和 注册操作，dna session 就三个逻辑。
+著作权人 作者 罗瑶光
+思想：肽展公式， 作者著作权人罗瑶光
+20220811
+浏阳德塔软件开发有限公司
+湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路 阳光家园小区 10号别墅。
+
+//我笔记本的 养疗经已经用上了dna token demo， 现在网站这边也设计下。 罗瑶光 20220811
+	public static Map<String, Object> transactionLoginDNA(String uEmail, String uPassword)throws Exception {
+		Usr usr = LoginServiceImpl.findUsrByUEmail(uEmail);
+		/*
+		//String uEmail= "313699483@QQ.COM";
+		//String idString= String_ESU.charsetSwap(uEmail, "GBK", "GBK");
+		//到时候注意下http head是 什么编码就什么编码转换swap下。 罗瑶光 20220811
+		//String idEncoder= String_ESU.stringToURIencode(idString, "UTF8");
+		//String uPassword= "Fengyue1985!";
+		 */
+		//准备把这里拆开用从 Usr表 里面取，因为 注册的时候就要生成，到时候要注册表也要修改。罗瑶光20220811
+		String lock= "AISD>_<111111111111111"
+				+ ">_<11111111111111111111111111111111111111111111111111111111"
+				+ "111111111111111111111111111111111111111111111111111"
+				+ ">_<1111111111111111>_<10111011101101101110110110110110111011011011101110110110"
+				+ "1101101101101101110110110111011011011011011011011101101101101101101110110111011101";
+		//先做个简单的dna加密，MD5先不用，就概率钥匙。
+		String[] MD5dice_DNA= lock.split(StableToken.ETL_SYMBOL_SMILL);
+		//此时假设AISD 元基骰子已经出现usertoken 或user表里
+		UsrToken usrToken = LoginServiceImpl.findUsrTokenByUId(usr.getuId());
+		//String password = TokenUtil.getSecondMD5Password(uPassword);
+		//替换成dnapassword，还要 把user表修改下加对应的 概率钥匙 罗瑶光20220811
+		SessionValidation sessionValidation= new SessionValidation();
+		TokenCerts tokenCerts= sessionValidation.sessionTokenCertsInitWithHumanWordsByDNA(uPassword, true, MD5dice_DNA[0]);
+		//1用户输入的密码对比概率存储提取 进行整合 进行dna加密后的  pds string
+		//1.1假设 usrToken 表里面已经存在 概率钥匙数据
+		FullDNATokenPDI pDE_RNA_FullFormular= new FullDNATokenPDI();
+		pDE_RNA_FullFormular.text= uPassword.toString();
+		//1.1.1假设user表已经有了元基骰子。我搞不懂我写代码，为什么脑袋里闪烁我展示国家机密，是不是有病？我是著作权人，作者
+		//我写我的东西，竟然闪国家机密，我全球开源4年，国家机密是什么梗？是不是国家开些会把我套牌了？现在我家所有设备网络都是罗瑶光开头， 
+		pDE_RNA_FullFormular.lock= MD5dice_DNA[0];//我搞不懂为什么中文的符号要和英文的符号不一致，搞得我切来切去出问题繁琐。
+		//1.1.2 密码变元基
+		pDE_RNA_FullFormular.pdw= pDE_RNA_FullFormular.initonSect(pDE_RNA_FullFormular.text);
+		//1.2 元基进行骰子散列
+		for(int i= 0; i< pDE_RNA_FullFormular.pdw.length(); i++) {
+			pDE_RNA_FullFormular.code+= pDE_RNA_FullFormular.lock 
+					+ pDE_RNA_FullFormular.pdw.charAt(i);
+		}
+		//1.3 散列后开始概率密码pde，pds变换,假设 usrToken表里面已经有了 ieisdeds
+		//pDE_RNA_FullFormular.pdedeKey= usrToken.getpdedeKey;
+		//pDE_RNA_FullFormular.pdedsKey= usrToken.getpdedsKey;
+		//pDE_RNA_FullFormular.pdeieKey= usrToken.getpdeieKey;
+		//pDE_RNA_FullFormular.pdeisKey= usrToken.getpdeisKey;
+		pDE_RNA_FullFormular.doKeyPress(pDE_RNA_FullFormular.code, pDE_RNA_FullFormular, true);
+		//2与用户email取出的数据user表的dna加密数据 pds string。
+		//这1，2进行比对相同就通过。这里存pde算了，session出去给pds。
+		/*************************************************************
+		//pds逆向成pde//因为是登陆，不是验证操作，所以稍后设计
+		 **************************************************************/
+		//uPassword用PDE
+		if (!pDE_RNA_FullFormular.pde.equals(usr.getuPassword())) { 
+			//我要设计成数据库只存用户的加密后密码。罗瑶光20220811
+			Map<String, Object> out = new HashMap<>();
+			out.put("loginInfo", "unsuccess");
+			out.put("returnResult", "密码不正确");
+			return out;
+		}
+		//Token token = TokenUtil.getNewTokenFromUsrAndUsrToken(usr, usrToken);
+		//假设tokenCerts已经有了概率钥匙的属性
+		//添加token certs 的pde密码, 我思考把pde作为pdn 还是用筛子做pdn
+		tokenCerts.I_Pds(pDE_RNA_FullFormular.pds);
+		PEU.P.dna.Token token= new PEU.P.dna.Token();
+		TokenPDI pDE_RNA_Formular= new TokenPDI();
+		pDE_RNA_Formular.doKeyPress(tokenCerts.getPdnPassword(), pDE_RNA_Formular, false);
+		//System.out.println("静态肽展降元概率钥匙E: "+ pDE_RNA_Formular.pdedeKey);
+		//System.out.println("静态肽展降元概率钥匙S: "+ pDE_RNA_Formular.pdedsKey);
+		//System.out.println("静态肽展降元: "+ pDE_RNA_Formular.pds);
+		tokenCerts.I_Pds(pDE_RNA_Formular.pds);
+		/************************************************
+		//密钥如果是给第三方可以加，如果不给就保留在数据库
+		//也可以之后每次操作验证就改一次密钥，实时更新，
+		//token.I_Updsde(pDE_RNA_Formular.pdedeKey);
+		//token.I_Updsds(pDE_RNA_Formular.pdedsKey);
+		//token.I_Updsie(pDE_RNA_Formular.pdeieKey);
+		//token.I_Updsis(pDE_RNA_Formular.pdeisKey);
+		 ***********************************************/
+		//System.out.println("静态肽展增元概率钥匙E: "+ pDE_RNA_Formular.pdeieKey);
+		//System.out.println("静态肽展增元概率钥匙S: "+ pDE_RNA_Formular.pdeisKey);
+		//System.out.println("静态肽展增元: "+ pDE_RNA_Formular.pde);
+		pDE_RNA_Formular.time= "" + System.currentTimeMillis();
+		pDE_RNA_Formular.cacheId= "ID" + Math.random() + ":" + Math.random();
+		//System.out.println("时间:  " + pDE_RNA_Formular.time);
+		//System.out.println("账号随机缓存字符串:  " + pDE_RNA_Formular.cacheId);
+		//pDE_RNA_Formular.session_key= pDE_RNA_Formular.pde;
+		//System.out.println("Session: " + pDE_RNA_Formular.session_key);
+		//token.I_mPassword(pDE_RNA_Formular.pde);
+		//只给pds+个id给客户就够了。
+		token.I_mPasswordPDS(pDE_RNA_Formular.pds);
+		token.I_uEmail(uEmail);
+		/************************************************************************************
+		//PEU.P.dna.Token token= sessionValidation.sessionInitByTokenPDICertsDNA(tokenCerts);
+		 * 验证操作就用得到 用于刷新概率钥匙。pdn用 email去user取，骰子加密可有可无，可增加破解复杂度。  罗瑶光	
+		 */
+		String json = new Gson().toJson(token);
+		String jsonToken = StringUtil.encode(json);
+		//update也要把 MD5dice_DNA[0]进行重新筛子一次再生成新的密码罗瑶光20220811
+		//LoginServiceImpl.updateUsrTokenByUId(usr.getuId(), token.getuKey(), password, token.getuTime()/1000);
+		Map<String, Object> out = new HashMap<>();
+		out.put("userToken", jsonToken);
+		out.put("userEmail", uEmail);
+		out.put("loginInfo", "success");
+		return out;
+	}
+  
