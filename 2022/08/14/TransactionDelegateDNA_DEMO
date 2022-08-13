@@ -1,0 +1,214 @@
+稍后设计下 验证操作 和 注册操作，dna session 就三个逻辑。
+著作权人 作者 罗瑶光
+思想：肽展公式， 作者著作权人罗瑶光
+20220811
+浏阳德塔软件开发有限公司
+湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路 阳光家园小区 10号别墅。
+
+package org.lyg.vpc.transaction;
+import com.google.gson.Gson;
+
+import ESU.string.String_ESU;
+import MSU.AMS.VQS.SQV.SI.OSU.SMV.http.SessionValidation;
+import OSI.OPE.SI.SD.SU.SQ.ASU.OSU.PSU.MSU.AVQ.ASQ.ASU.MPE.procedure.pde.FullDNATokenPDI;
+import OSI.OPE.SI.SD.SU.SQ.ASU.OSU.PSU.MSU.AVQ.ASQ.ASU.MPE.procedure.pde.TokenPDI;
+import PEU.P.dna.TokenCerts;
+import SVQ.stable.StableToken;
+
+import org.json.JSONObject;
+import org.lyg.common.utils.StringUtil;
+import org.lyg.common.utils.TokenUtil;
+//import org.lyg.vpc.controller.company.LoginService;
+import org.lyg.vpc.process.companyImpl.LoginServiceImpl;
+import org.lyg.vpc.view.Token;
+import org.lyg.vpc.view.Usr;
+import org.lyg.vpc.view.UsrToken;
+import java.util.HashMap;
+import java.util.Map;
+//著作权人  作者 罗瑶光
+//md5和骰子加密思想不是罗瑶光的技术，谷歌百度搜索MD5看原文。
+public class TransactionDelegate {
+	public static Map<String, Object> transactionLogin(String uEmail, String uPassword)
+	throws Exception {
+		if(uEmail.contains("313699483@qq.com")) {
+			//我在德塔数据库里面做了概率钥匙表，
+			//已经测试成功。稍后就搞注册操作和验证操作，ok后然后就全部改dna。哈哈 罗瑶光20220814
+			System.out.println("DNA--");
+			return transactionLoginDNA(uEmail, uPassword);	
+		}else {
+			System.out.println("MD5--");
+			return transactionLoginMD5(uEmail, uPassword);
+		}
+	}
+
+	public static Map<String, Object> transactionLoginMD5(String uEmail
+	, String uPassword)throws Exception {
+		Usr usr = LoginServiceImpl.findUsrByUEmail(uEmail);
+		UsrToken usrToken = LoginServiceImpl.findUsrTokenByUId(usr.getuId());
+		String password = TokenUtil.getSecondMD5Password(uPassword);
+		if (!password.equals(usr.getuPassword())) {
+			Map<String, Object> out = new HashMap<>();
+			out.put("loginInfo", "unsuccess");
+			out.put("returnResult", "密码不正确");
+			return out;
+		}
+		Token token = TokenUtil.getNewTokenFromUsrAndUsrToken(usr, usrToken);
+		String json = new Gson().toJson(token);
+		String jsonToken = StringUtil.encode(json);
+		LoginServiceImpl.updateUsrTokenByUId(usr.getuId(), token.getuKey()
+		, password, token.getuTime()/1000);
+		Map<String, Object> out = new HashMap<>();
+		out.put("userToken", jsonToken);
+		out.put("userEmail", uEmail);
+		out.put("loginInfo", "success");
+		return out;
+	}
+
+	//我笔记本的 养疗经已经用上了dna token demo， 现在网站这边也设计下。 罗瑶光 20220811,20220814
+	public static Map<String, Object> transactionLoginDNA(String uEmail, String uPassword)
+			throws Exception {
+		Usr usr = LoginServiceImpl.findUsrByUEmail(uEmail);
+		/*
+		//String uEmail= "313699483@QQ.COM";
+		//String idString= String_ESU.charsetSwap(uEmail, "GBK", "GBK");
+		//到时候注意下http head是 什么编码就什么编码转换swap下。 罗瑶光 20220811
+		//String idEncoder= String_ESU.stringToURIencode(idString, "UTF8");
+		//String uPassword= "Fengyue1985!";
+		//这是我网站313699483的admin真实密码，跪求黑客大佬不要压力测试我，我做非盈利demo用。不要骗别的小孩。
+		 */
+		//准备把这里拆开用从 Usr表 里面取，因为 注册的时候就要生成，到时候要注册表也要修改。罗瑶光20220811
+		//String lock= "AISD>_<111111111111111"
+		//+ ">_<11111111111111111111111111111111111111111111111111111111"
+		//+ "111111111111111111111111111111111111111111111111111"
+		//+ ">_<1111111111111111>_<10111011101101101110110110110110111011011011101110110110"
+		//+ "1101101101101101110110110111011011011011011011011101101101101101101110110111011101";
+		//先做个简单的dna加密，MD5先不用，就概率钥匙。
+		//String[] MD5dice_DNA= lock.split(StableToken.ETL_SYMBOL_SMILL);
+		String[] MD5dice_DNA= new String[2];//准备模拟生成一个新的dna 概率密钥。
+		//此时假设AISD 元基骰子已经出现usertoken 或user表里
+		UsrToken usrToken= LoginServiceImpl.findUsrTokenByUId(usr.getuId());
+		//我假设在usertoken表里面先
+		MD5dice_DNA[0]= usrToken.getuDNADice();
+		//String password= TokenUtil.getSecondMD5Password(uPassword);
+		//替换成dnapassword，还要 把user表修改下加对应的 概率钥匙 罗瑶光20220811
+		SessionValidation sessionValidation= new SessionValidation();
+		TokenCerts tokenCerts
+		= sessionValidation.sessionTokenCertsInitWithHumanWordsByDNA(uPassword, true, MD5dice_DNA[0]);
+		//1用户输入的密码对比概率存储提取 进行整合 进行dna加密后的  pds string
+		//1.1假设 usrToken 表里面已经存在 概率钥匙数据
+		FullDNATokenPDI pDE_RNA_FullFormular= new FullDNATokenPDI();
+		pDE_RNA_FullFormular.text= uPassword.toString();
+		//1.1.1假设user表已经有了元基骰子。
+		pDE_RNA_FullFormular.lock= MD5dice_DNA[0];
+		//我搞不懂为什么中文的符号要和英文的符号不一致，搞得我切来切去出问题繁琐。
+		//1.1.2 密码变元基
+		pDE_RNA_FullFormular.pdw= pDE_RNA_FullFormular.initonSect(pDE_RNA_FullFormular.text);
+		//1.2 元基进行骰子散列
+		for(int i= 0; i< pDE_RNA_FullFormular.pdw.length(); i++) {
+			pDE_RNA_FullFormular.code+= pDE_RNA_FullFormular.lock 
+					+ pDE_RNA_FullFormular.pdw.charAt(i);
+		}
+		//1.3 散列后开始概率密码pde，pds变换,假设 usrToken表里面已经有了 ieisdeds
+		pDE_RNA_FullFormular.pdedeKey= usrToken.getuPdedeKey();
+		pDE_RNA_FullFormular.pdedsKey= usrToken.getuPdedsKey();
+		pDE_RNA_FullFormular.pdeieKey= usrToken.getuPdeieKey();
+		pDE_RNA_FullFormular.pdeisKey= usrToken.getuPdeisKey();
+		pDE_RNA_FullFormular.doKeyPress(pDE_RNA_FullFormular.code, pDE_RNA_FullFormular, true);
+		//2与用户email取出的数据user表的dna加密数据 pds string。
+		//这1，2进行比对相同就通过。这里存pde算了，session出去给pds。
+		/*************************************************************
+		//pds逆向成pde//因为是登陆，不是验证操作，所以稍后设计
+		 **************************************************************/
+		//uPassword用PDE//现在出现一个问题，如果我做成一个pde为替换密钥，那概率钥匙就要做成第三方库保管，防止数据库管理员同时获取，
+		if (!pDE_RNA_FullFormular.pde.equals(usr.getuPassword())) { 
+			//我要设计成数据库只存用户的加密后密码。罗瑶光20220811
+			Map<String, Object> out = new HashMap<>();
+			out.put("loginInfo", "unsuccess");
+			out.put("returnResult", "密码不正确");
+			return out;
+		}
+		//Token token = TokenUtil.getNewTokenFromUsrAndUsrToken(usr, usrToken);
+		//假设tokenCerts已经有了概率钥匙的属性
+		//添加token certs 的pde密码, 我思考把pde作为pdn 还是用筛子做pdn
+		//tokenCerts.I_Pds(pDE_RNA_FullFormular.pds);
+		PEU.P.dna.Token token= new PEU.P.dna.Token();
+		/*
+		TokenPDI pDE_RNA_Formular= new TokenPDI();
+		pDE_RNA_Formular.doKeyPress(tokenCerts.getPdnPassword(), pDE_RNA_Formular, false);
+		//如果这里我重新生成一个概率钥匙，就要request 第三方概率钥匙库update这个概率钥匙，
+		 * 我先简单点用一个数据库存在user token表中。罗瑶光 20220814
+		 */
+		//System.out.println("静态肽展降元概率钥匙E: "+ pDE_RNA_Formular.pdedeKey);
+		//System.out.println("静态肽展降元概率钥匙S: "+ pDE_RNA_Formular.pdedsKey);
+		//System.out.println("静态肽展降元: "+ pDE_RNA_Formular.pds);
+		tokenCerts.I_Pds(pDE_RNA_FullFormular.pds);
+		/************************************************
+		//密钥如果是给第三方可以加，如果不给就保留在数据库
+		//也可以之后每次操作验证就改一次密钥，实时更新，
+		//token.I_Updsde(pDE_RNA_Formular.pdedeKey);
+		//token.I_Updsds(pDE_RNA_Formular.pdedsKey);
+		//token.I_Updsie(pDE_RNA_Formular.pdeieKey);
+		//token.I_Updsis(pDE_RNA_Formular.pdeisKey);
+		 ***********************************************/
+		//System.out.println("静态肽展增元概率钥匙E: "+ pDE_RNA_Formular.pdeieKey);
+		//System.out.println("静态肽展增元概率钥匙S: "+ pDE_RNA_Formular.pdeisKey);
+		//System.out.println("静态肽展增元: "+ pDE_RNA_Formular.pde);
+		pDE_RNA_FullFormular.time= "" + System.currentTimeMillis();
+		pDE_RNA_FullFormular.cacheId= "ID" + Math.random() + ":" + Math.random();
+		//System.out.println("时间:  " + pDE_RNA_Formular.time);
+		//System.out.println("账号随机缓存字符串:  " + pDE_RNA_Formular.cacheId);
+		//pDE_RNA_Formular.session_key= pDE_RNA_Formular.pde;
+		//System.out.println("Session: " + pDE_RNA_Formular.session_key);
+		//token.I_mPassword(pDE_RNA_Formular.pde);
+		//只给pds+个id给客户就够了。
+		token.I_mPasswordPDS(pDE_RNA_FullFormular.pds);
+		token.I_uEmail(uEmail);
+		/************************************************************************************
+		//PEU.P.dna.Token token= sessionValidation.sessionInitByTokenPDICertsDNA(tokenCerts);
+		 * 验证操作就用得到 用于刷新概率钥匙。pdn用 email去user取，骰子加密可有可无，可增加破解复杂度。  罗瑶光	
+		 */
+		String json = new Gson().toJson(token);
+		String jsonToken = StringUtil.encode(json);
+		//update也要把 MD5dice_DNA[0]进行重新筛子一次再生成新的密码罗瑶光20220811
+		//LoginServiceImpl.updateUsrTokenByUId(usr.getuId(), token.getuKey()
+		, password, token.getuTime()/1000);
+		Map<String, Object> out = new HashMap<>();
+		out.put("userToken", jsonToken);
+		out.put("userEmail", uEmail);
+		out.put("loginInfo", "success");
+		return out;
+	}
+
+	public static Map<String, Object> transactionRegister(String uEmail
+	, String uEmailEnsure, String uName, String uPassword,
+			String uPassWDEnsure, String uAddress, String uPhone
+			, String uWeChat, String uQq, String uAge,
+			String uSex) throws Exception {
+		Usr usr = LoginServiceImpl.findUsrByUEmail(uEmail);
+		if(usr.getuEmail()!=null) {
+			Map<String, Object> out = new HashMap<>();
+			out.put("loginInfo", "unsuccess");
+			out.put("returnResult", "邮箱已注册");
+			return out;
+		}
+		JSONObject jsobj=new JSONObject();
+		jsobj.put("u_email", uEmail);
+		jsobj.put("u_name", uName);
+		jsobj.put("u_password", TokenUtil.getSecondMD5Password(uPassword));
+		jsobj.put("u_address", uAddress);
+		jsobj.put("u_phone", uPhone);
+		jsobj.put("u_weChat", uWeChat);
+		jsobj.put("u_qq", uQq);
+		jsobj.put("u_age", uAge);
+		jsobj.put("u_sex", uSex);
+		jsobj.put("u_id", "random");
+		LoginServiceImpl.insertRowByTablePath("backend", "usr", jsobj);
+		usr = LoginServiceImpl.findUsrByUEmail(uEmail);
+		JSONObject jsobjToken = new JSONObject();
+		jsobjToken.put("u_id", usr.getuId());
+		jsobjToken.put("u_level", "low");
+		jsobjToken.put("u_password", TokenUtil.getSecondMD5Password(uPassword));
+		LoginServiceImpl.insertRowByTablePath("backend", "usrToken", jsobjToken);
+		return transactionLogin(uEmail, uPassword);
+	}
+}
