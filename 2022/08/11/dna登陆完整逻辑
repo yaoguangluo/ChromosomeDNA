@@ -5,8 +5,9 @@
 浏阳德塔软件开发有限公司
 湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路 阳光家园小区 10号别墅。
 
-//我笔记本的 养疗经已经用上了dna token demo， 现在网站这边也设计下。 罗瑶光 20220811
-	public static Map<String, Object> transactionLoginDNA(String uEmail, String uPassword)throws Exception {
+//我笔记本的 养疗经已经用上了dna token demo， 现在网站这边也设计下。 罗瑶光 20220811,20220814
+	public static Map<String, Object> transactionLoginDNA(String uEmail, String uPassword)
+			throws Exception {
 		Usr usr = LoginServiceImpl.findUsrByUEmail(uEmail);
 		/*
 		//String uEmail= "313699483@QQ.COM";
@@ -16,26 +17,30 @@
 		//String uPassword= "Fengyue1985!";
 		 */
 		//准备把这里拆开用从 Usr表 里面取，因为 注册的时候就要生成，到时候要注册表也要修改。罗瑶光20220811
-		String lock= "AISD>_<111111111111111"
-				+ ">_<11111111111111111111111111111111111111111111111111111111"
-				+ "111111111111111111111111111111111111111111111111111"
-				+ ">_<1111111111111111>_<10111011101101101110110110110110111011011011101110110110"
-				+ "1101101101101101110110110111011011011011011011011101101101101101101110110111011101";
+		//String lock= "AISD>_<111111111111111"
+		//+ ">_<11111111111111111111111111111111111111111111111111111111"
+		//+ "111111111111111111111111111111111111111111111111111"
+		//+ ">_<1111111111111111>_<10111011101101101110110110110110111011011011101110110110"
+		//+ "1101101101101101110110110111011011011011011011011101101101101101101110110111011101";
 		//先做个简单的dna加密，MD5先不用，就概率钥匙。
-		String[] MD5dice_DNA= lock.split(StableToken.ETL_SYMBOL_SMILL);
+		//String[] MD5dice_DNA= lock.split(StableToken.ETL_SYMBOL_SMILL);
+		String[] MD5dice_DNA= new String[2];//准备模拟生成一个新的dna 概率密钥。
 		//此时假设AISD 元基骰子已经出现usertoken 或user表里
-		UsrToken usrToken = LoginServiceImpl.findUsrTokenByUId(usr.getuId());
-		//String password = TokenUtil.getSecondMD5Password(uPassword);
+		UsrToken usrToken= LoginServiceImpl.findUsrTokenByUId(usr.getuId());
+		//我假设在usertoken表里面先
+		MD5dice_DNA[0]= usrToken.getuDNADice();
+		//String password= TokenUtil.getSecondMD5Password(uPassword);
 		//替换成dnapassword，还要 把user表修改下加对应的 概率钥匙 罗瑶光20220811
 		SessionValidation sessionValidation= new SessionValidation();
-		TokenCerts tokenCerts= sessionValidation.sessionTokenCertsInitWithHumanWordsByDNA(uPassword, true, MD5dice_DNA[0]);
+		TokenCerts tokenCerts
+		= sessionValidation.sessionTokenCertsInitWithHumanWordsByDNA(uPassword, true, MD5dice_DNA[0]);
 		//1用户输入的密码对比概率存储提取 进行整合 进行dna加密后的  pds string
 		//1.1假设 usrToken 表里面已经存在 概率钥匙数据
 		FullDNATokenPDI pDE_RNA_FullFormular= new FullDNATokenPDI();
 		pDE_RNA_FullFormular.text= uPassword.toString();
-		//1.1.1假设user表已经有了元基骰子。**
-		//***不想再提***
-		pDE_RNA_FullFormular.lock= MD5dice_DNA[0];//我搞不懂为什么中文的符号要和英文的符号不一致，搞得我切来切去出问题繁琐。
+		//1.1.1假设user表已经有了元基骰子。
+		pDE_RNA_FullFormular.lock= MD5dice_DNA[0];
+		//我搞不懂为什么中文的符号要和英文的符号不一致，搞得我切来切去出问题繁琐。
 		//1.1.2 密码变元基
 		pDE_RNA_FullFormular.pdw= pDE_RNA_FullFormular.initonSect(pDE_RNA_FullFormular.text);
 		//1.2 元基进行骰子散列
@@ -44,17 +49,17 @@
 					+ pDE_RNA_FullFormular.pdw.charAt(i);
 		}
 		//1.3 散列后开始概率密码pde，pds变换,假设 usrToken表里面已经有了 ieisdeds
-		//pDE_RNA_FullFormular.pdedeKey= usrToken.getpdedeKey;
-		//pDE_RNA_FullFormular.pdedsKey= usrToken.getpdedsKey;
-		//pDE_RNA_FullFormular.pdeieKey= usrToken.getpdeieKey;
-		//pDE_RNA_FullFormular.pdeisKey= usrToken.getpdeisKey;
+		pDE_RNA_FullFormular.pdedeKey= usrToken.getuPdedeKey();
+		pDE_RNA_FullFormular.pdedsKey= usrToken.getuPdedsKey();
+		pDE_RNA_FullFormular.pdeieKey= usrToken.getuPdeieKey();
+		pDE_RNA_FullFormular.pdeisKey= usrToken.getuPdeisKey();
 		pDE_RNA_FullFormular.doKeyPress(pDE_RNA_FullFormular.code, pDE_RNA_FullFormular, true);
 		//2与用户email取出的数据user表的dna加密数据 pds string。
 		//这1，2进行比对相同就通过。这里存pde算了，session出去给pds。
 		/*************************************************************
 		//pds逆向成pde//因为是登陆，不是验证操作，所以稍后设计
 		 **************************************************************/
-		//uPassword用PDE
+		//uPassword用PDE//现在出现一个问题，如果我做成一个pde为替换密钥，那概率钥匙就要做成第三方库保管，防止数据库管理员同时获取，
 		if (!pDE_RNA_FullFormular.pde.equals(usr.getuPassword())) { 
 			//我要设计成数据库只存用户的加密后密码。罗瑶光20220811
 			Map<String, Object> out = new HashMap<>();
@@ -108,4 +113,3 @@
 		out.put("loginInfo", "success");
 		return out;
 	}
-  
