@@ -5,10 +5,13 @@
 浏阳德塔软件开发有限公司
 湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路 阳光家园小区 10号别墅。
 
+Refer：
+2019年06月24日 4.罗瑶光. 《德塔 Socket流可编程数据库语言引擎系统 V1.0.0》. 中华人民共和国国家版权局，软著登字第4317518号. 2019.
+2020年10月09日 7.罗瑶光, 罗荣武. 《类人DNA与 神经元基于催化算子映射编码方式 V_1.2.2》. 中华人民共和国国家版权局，国作登字-2021-A-00097017. 2021.
+2020年10月31日 8.罗瑶光. 《肽展公式推导与元基编码进化计算以及它的应用发现》. 中华人民共和国国家版权局，国作登字-2021-A-00042587. 2021.
 
 package org.lyg.vpc.transaction;
 import com.google.gson.Gson;
-
 import ESU.string.String_ESU;
 import MSU.AMS.VQS.SQV.SI.OSU.SMV.http.SessionValidation;
 import OSI.OPE.SI.SD.SU.SQ.ASU.OSU.PSU.MSU.AVQ.ASQ.ASU.MPE.procedure.pde.FullDNATokenPDI;
