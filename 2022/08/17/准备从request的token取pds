@@ -1,0 +1,101 @@
+package org.lyg.vpc.process.portImpl;
+
+import org.json.JSONObject;
+import org.lyg.cache.CacheManager;
+import org.lyg.common.utils.DetaDBUtil;
+import org.lyg.db.update.imp.UpdateRowsImp;
+import org.lyg.vpc.process.companyImpl.LoginServiceImpl;
+import org.lyg.vpc.view.Usr;
+import org.lyg.vpc.view.UsrToken;
+
+import MSU.AMS.VQS.SQV.SI.OSU.SMV.http.SessionValidation;
+import OSI.OPE.SI.SD.SU.SQ.ASU.OSU.PSU.MSU.AVQ.ASQ.ASU.MPE.procedure.pde.FullDNATokenPDI;
+import OSI.OPE.SI.SD.SU.SQ.ASU.OSU.PSU.MSU.AVQ.ASQ.ASU.MPE.procedure.pde.FullTokenPDI;
+import OSI.OPE.SI.SD.SU.SQ.ASU.OSU.PSU.MSU.AVQ.ASQ.ASU.MPE.procedure.pde.TokenPDI;
+import PEU.P.dna.TokenCerts;
+import VPC.transaction.PdeSwapFix;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+
+//著作权人，作者，罗瑶光
+public class RestYLJImpl {
+	public static String dataYL(String medicine, String email, String token) 
+			throws UnsupportedEncodingException, IOException {
+		//检查是否有email
+		Usr usr = LoginServiceImpl.findUsrByUEmail(email);
+		if(null== usr.getuEmail()) {//邮箱不存在退出
+			return "";//稍后json改成 map输出
+		}
+		//取user
+		//RestLoginPortImpl.checkStatus(token);
+		//取usertoken
+		UsrToken usrToken= LoginServiceImpl.findUsrTokenByUId(usr.getuId());
+		//对比状态是有效
+		//dna验证token里的 pds准备和内部计算pde和pds 对比验证
+		String pds= "token中取pds";//token中取pds
+		//pds变换pde根据概率钥匙
+		FullTokenPDI pDE_RNA_FullFormular= new FullTokenPDI();
+		//交叉pds转pde
+		pDE_RNA_FullFormular.pdeieKey= usrToken.getuPdeieKey().toString();
+		pDE_RNA_FullFormular.pdeisKey= usrToken.getuPdeisKey().toString();
+		pDE_RNA_FullFormular.pdedeKey= usrToken.getuPdeieKey().toString();
+		pDE_RNA_FullFormular.pdedsKey= usrToken.getuPdeisKey().toString();
+		String pde= PdeSwapFix.pdsToPde(pds, "",  pDE_RNA_FullFormular.pdedeKey
+				,  pDE_RNA_FullFormular.pdedsKey
+				,  pDE_RNA_FullFormular.pdeieKey
+				,  pDE_RNA_FullFormular.pdeisKey);
+		System.out.println(pde.equals(usrToken.getuPassword())? "正确": "失败");
+		//uPassword用PDE//现在出现一个问题，如果我做成一个pde为替换密钥，那概率钥匙就要做成第三方库管，防止数据库管理员同时获取，
+		if (!pde.equals(usrToken.getuPassword())) { 
+			//我要设计成数据库只存用户的加密后密码。罗瑶光20220811
+			//			Map<String, Object> out = new HashMap<>();
+			//			out.put("loginInfo", "unsuccess");
+			//			out.put("returnResult", "密码不正确");
+			return "";
+		}
+		//监察是否有点
+		//usertoken....
+		String usrPointString= usrToken.getuUsrPoints();
+		if(null== usrPointString) {
+			//数据表出错就退出
+			return "";//稍后json改成 map输出
+		}
+		long usrPoints= Long.valueOf(usrToken.getuUsrPoints());
+		if(usrPoints> 0) {
+			usrPoints-= 1;//点击一次扣1点
+		}else {
+			//没有点就退出
+			return "";//稍后json改成 map输出
+		}
+		//没有就返回点不足
+		//有点就执行
+		String object= DetaDBUtil.huaRuiJiRequest("dataYL?medicine=" + URLEncoder.encode(medicine, "UTF-8"));
+		//String object= "";
+		if(null!= object) {
+			if(object.contains("Failed")) {
+				return object;
+			}
+			//请求成功就更新减点
+			JSONObject jsobjToken= new JSONObject();
+			int id= usr.getuId();
+			//jsobjToken.put("u_id", usr.getuId());
+			//jsobjToken.put("u_level", "low");
+			//jsobjToken.put("u_password", TokenUtil.getSecondMD5Password(uPassword));
+			jsobjToken.put("u_usePoints", usrPoints);
+			//LoginServiceImpl.insertRowByTablePath("backend", "usrToken", jsobjToken);
+			//LoginDAOImpl.updateUsrTokenByUId(uId, key, uPassword, uTime);
+			//稍后重新排列 我的后端 factory，service，dao的函数分类。
+			UpdateRowsImp.updateRowByTablePathAndAttribute(CacheManager.getCacheInfo("DBPath").getValue()+"/backend/usrToken"
+					, "u_id", "" + id, jsobjToken);
+			//稍后改成我的plsql
+			//稍后改成我的plorm	
+		}
+		//然后减少1点 更新user token表
+		//update usertoken,先不考虑usrtoken的肽锁更新，和 概率钥匙更新，以后商业化再加就是了。先给我老爸仅开一个账号用用。
+		return object;
+	}
+}
