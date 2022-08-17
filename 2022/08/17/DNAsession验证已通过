@@ -32,6 +32,7 @@ import java.util.Map;
 //湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路 阳光家园小区10号别墅
 
 //著作权人，作者，罗瑶光
+//我tinshell极其强大，记得注释掉plsql，plorm，pletl，plregex的写操作权限，或设置权限逻辑，不然出了问题别哭。自己负责。
 public class RestYLJImpl {
 	public static String dataYL(String medicine, String email, String token) 
 			throws Exception {
