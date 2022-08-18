@@ -1,0 +1,146 @@
+package org.sevlet.upload;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+
+import org.deta.boot.vpc.vision.VPCSRequest;
+import org.deta.boot.vpc.vision.VPCSResponse;
+//这个函数用于Javascript前端socket请求后端数据通讯的握手协议
+//作者 著作权人 罗瑶光 20220819-0-30
+//思想 socket 数据通讯,  java 文件读写。
+//稍后优化 关于buffer的 字符验证和gzip解压等问题 校验 细节。。,
+//refer: https://blog.csdn.net/qq_14815049/article/details/49640963
+//refer: https://blog.csdn.net/qq_29777207/article/details/112391382
+
+//Content-Length: 1130835
+//Accept-Encoding: gzip
+//filename="涓嬭浇 (10).jpg"
+//image/jpeg
+//尾巴------WebKit
+//file 1 存储，2 bufferedimage取像素计算用。
+//form-->POST /dataSC HTTP/1.1
+//form-->Host: tinos.qicp.vip
+//form-->Connection: keep-alive
+//form-->Content-Length: 1130835
+//form-->Cache-Control: max-age=0
+//form-->Upgrade-Insecure-Requests: 1
+//form-->Origin: http://tinos.qicp.vip
+//form-->Content-Type: multipart/form-data;
+//boundary=----WebKitFormBoundarywA2HkAKn1AiXiZNG
+//form-->User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) 
+//AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36
+//form-->Accept: text/html,application/xhtml+xml,application/xml;q=0.9
+//,image/avif,image/webp,image/apng,*/*;q=0.8
+//,application/signed-exchange;v=b3;q=0.9
+//form-->Referer: http://tinos.qicp.vip/data.html
+//form-->Accept-Encoding: gzip, deflate
+//form-->Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+//form-->Cookie: token=*******************313699483*******
+//form-->
+//form-->------WebKitFormBoundarywA2HkAKn1AiXiZNG
+//form-->Content-Disposition: form-data; name="image";
+//filename="涓嬭浇 (10).jpg"
+//form-->Content-Type: image/jpeg
+//form-->
+//form-->???
+public class FileUploader{
+  //socket 获取 客户端 form 图表
+  public static void processForm(VPCSRequest vPCSRequest
+      , VPCSResponse vPCSResponse) throws IOException {
+    InputStreamReader inputStreamReader
+    = new InputStreamReader(vPCSResponse.getSocket().getInputStream());
+    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+    String message;
+    long bufferSize;
+    String type;
+    String boundary= null;
+    while((message= bufferedReader.readLine())!= null){
+      System.out.println("form-->"+ message);
+      if(message.contains("Content-Length:")) {//用于验证文件长度
+        bufferSize= Long.valueOf(message.replace("Content-Length:", "").replace(" ",""));
+        System.out.println("大小SIZE:"+ bufferSize);
+      }
+      if(message.contains("boundary")) {//用于验证文件长度
+        boundary= message.split("boundary=")[1];//划界
+        System.out.println("boundary:"+ boundary);
+      }
+      if(message.contains("Content-Type:")) {//用于验证文件类型
+        type= message.replace("Content-Type:", "");
+        if(type.contains("image/jpeg")||type.contains("image/png")) {
+          fileLoader(message, bufferedReader, boundary);
+        }
+      }
+    }
+  }
+
+  @SuppressWarnings("resource")
+  private static void fileLoader(String message
+      , BufferedReader bufferedReader, String boundary) 
+          throws UnsupportedEncodingException, IOException {
+    boundary=(boundary== null? "---WebKitForm": boundary);
+    BufferedOutputStream bufferedOutputStream= null;
+    FileOutputStream fileOutputStream= null;
+    File file= null;
+    String outPath= "C:/Users/Administrator/Desktop/tempIMG/"; 
+    //"temp 路径, 用完就删除";
+    String fileName= "temp5.jpg"; 
+    // 用完就删除";
+    //文件夹建立
+    
+    
+    ******************************************************************
+    *File fileCategory= new File(outPath);
+    *if (!fileCategory.exists()&& !fileCategory.isFile()) { 
+    *  //判断文件目录是否存在
+    *  fileCategory.mkdirs();
+    *}
+    ******************************************************************
+   
+    //文件书写建立
+   
+   
+    ******************************************************************
+    *file= new File(outPath+ fileName);
+    *fileOutputStream= new FileOutputStream(file);
+    *bufferedOutputStream= new BufferedOutputStream(fileOutputStream);
+    ******************************************************************
+   
+    int count= 0;
+    while((message= bufferedReader.readLine())!= null){
+      if(!message.contains(boundary)) {
+        //开始留心取bytes
+        try {
+          if(message.length()> 0) {//稍后验证是什么编码。
+         
+         
+          ***********************************************************************
+          *bufferedOutputStream.write(message.getBytes("GBK"));
+          **********************************************************************
+          
+          
+            Thread.sleep(5);
+            if(count++> 100) {//flush刷新频率
+              count= 0;
+              bufferedOutputStream.flush();
+            }
+          }
+        }catch(Exception e) {
+          bufferedOutputStream.close();
+          fileOutputStream.close();
+          return;
+        }
+      }else {
+        bufferedOutputStream.close();
+        fileOutputStream.close();
+        return;
+      }
+    }
+    bufferedOutputStream.flush();
+    bufferedOutputStream.close();
+    fileOutputStream.close();
+  }
+}
