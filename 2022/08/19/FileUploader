@@ -13,6 +13,8 @@ import org.deta.boot.vpc.vision.VPCSResponse;
 //这个函数用于Javascript前端socket请求后端数据通讯的握手协议
 //作者 著作权人 罗瑶光 20220819-0-30
 //思想 socket 数据通讯,  java 文件读写。
+
+//refer引用行 62, 101，103，106行
 //refer: https://blog.csdn.net/qq_14815049/article/details/49640963
 //refer: https://blog.csdn.net/qq_29777207/article/details/112391382
 
