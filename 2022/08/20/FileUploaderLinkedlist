@@ -1,0 +1,205 @@
+	package org.sevlet.upload;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import org.deta.boot.vpc.vision.VPCSRequest;
+import org.deta.boot.vpc.vision.VPCSResponse;
+//这个函数用于Javascript前端socket请求后端数据通讯的握手协议
+//作者 著作权人 罗瑶光 20220819-0-30~ 20220820-0-27
+//思想 socket 数据通讯,  java 文件读写。
+//refer: https://blog.csdn.net/qq_14815049/article/details/49640963
+//refer: https://blog.csdn.net/qq_29777207/article/details/112391382
+
+//Content-Length: 1130835
+//Accept-Encoding: gzip
+//filename="涓嬭浇 (10).jpg"
+//image/jpeg
+//尾巴------WebKit
+//file 1 存储，2 bufferedimage取像素计算用。
+//form-->POST /dataSC HTTP/1.1
+//form-->Host: tinos.qicp.vip
+//form-->Connection: keep-alive
+//form-->Content-Length: 1130835
+//form-->Cache-Control: max-age=0
+//form-->Upgrade-Insecure-Requests: 1
+//form-->Origin: http://tinos.qicp.vip
+//form-->Content-Type: multipart/form-data;
+//boundary=----WebKitFormBoundarywA2HkAKn1AiXiZNG
+//form-->User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) 
+//AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36
+//form-->Accept: text/html,application/xhtml+xml,application/xml;q=0.9
+//,image/avif,image/webp,image/apng,*/*;q=0.8
+//,application/signed-exchange;v=b3;q=0.9
+//form-->Referer: http://tinos.qicp.vip/data.html
+//form-->Accept-Encoding: gzip, deflate
+//form-->Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+//form-->Cookie: token=*******************313699483*******
+//form-->
+//form-->------WebKitFormBoundarywA2HkAKn1AiXiZNG
+//form-->Content-Disposition: form-data; name="image";
+//filename="涓嬭浇 (10).jpg"
+//form-->Content-Type: image/jpeg
+//form-->
+//form-->???
+//415776
+public class FileUploader{
+  //socket 获取 客户端 form 图表
+  //内存占用巨大，
+  public static void processForm(VPCSRequest vPCSRequest
+      , VPCSResponse vPCSResponse) {
+    InputStream inputStream = null;
+    try {
+      inputStream = vPCSResponse.getSocket().getInputStream();
+
+      String outPath= "C:/Users/Administrator/Desktop/tempIMG/"; 
+      String fileName= "temp1"+ System.currentTimeMillis()+ Math.random()+ ".jpg"; 
+      //文件夹建立
+      File fileCategory= new File(outPath);
+      if (!fileCategory.exists()&& !fileCategory.isFile()) { 
+        fileCategory.mkdirs();
+      }
+      int length= 0;
+      int count= 0;
+      DoubleListBytes doubleListBytes= new DoubleListBytes();
+      byte[] bytes= new byte[1];
+      while((length= inputStream.read(bytes))> 0) {//读头
+        doubleListBytes.thisByte= bytes[0];
+        doubleListBytes.next= new DoubleListBytes();
+        doubleListBytes.next.prev= doubleListBytes;
+        doubleListBytes= doubleListBytes.next;
+        if(count++>256) {
+          count= 0;
+          Thread.sleep(1);
+        }
+      }
+      //前裁
+      while(doubleListBytes.prev!= null) {
+        doubleListBytes= doubleListBytes.prev;
+        if(count++>256) {
+          count= 0;
+          Thread.sleep(1);
+        }
+      }
+      StringBuilder stringBuilderPrefix= new StringBuilder();
+      while(null!= doubleListBytes) {
+        stringBuilderPrefix.append(doubleListBytes.thisByte);
+        if(stringBuilderPrefix.toString().contains("image/jpeg")
+            ||stringBuilderPrefix.toString().contains("image/png")) {
+          doubleListBytes= doubleListBytes.next;
+          doubleListBytes.prev= null;
+          break;
+        }
+        if(null== doubleListBytes.next) {
+          break;
+        }
+        doubleListBytes= doubleListBytes.next;
+        if(count++>256) {
+          count= 0;
+          Thread.sleep(1);
+
+        }
+      }
+      //后裁
+      StringBuilder stringBuilderPostfix= new StringBuilder();
+      while(doubleListBytes.next!= null) {
+        doubleListBytes= doubleListBytes.next;
+        if(count++>256) {
+          count= 0;
+          Thread.sleep(1);
+        }
+      }
+      while(null!= doubleListBytes) {
+        stringBuilderPostfix.append(doubleListBytes.thisByte);
+        if(stringBuilderPrefix.toString().contains("------WebKitFormBoundary")) {
+          doubleListBytes= doubleListBytes.prev;
+          doubleListBytes.next= null;
+          break;
+        }
+        if(null== doubleListBytes.prev) {
+          break;
+        }
+        doubleListBytes= doubleListBytes.prev;
+        if(count++>256) {
+          count= 0;
+          Thread.sleep(1);
+        }
+      }
+      while(null!= doubleListBytes.prev) {
+        doubleListBytes= doubleListBytes.prev;
+        if(count++>256) {
+          count= 0;
+          Thread.sleep(1);
+        }
+      }
+      File file= new File(outPath+ fileName);
+      FileOutputStream fileOutputStream = null;
+      fileOutputStream = new FileOutputStream(file);
+      while(null!= doubleListBytes) {
+        fileOutputStream.write(doubleListBytes.thisByte);
+        if(null== doubleListBytes.next) {
+          fileOutputStream.close();
+          break;
+        }
+        doubleListBytes= doubleListBytes.next;
+        if(count++>256) {
+          count= 0;
+          Thread.sleep(1);
+        }
+      }
+      fileOutputStream.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+  }
+}
+//
+//StringBuilder stringbuilderHeader= new StringBuilder();
+//stringbuilderHeader.append(bytes);//查询器
+//if(stringbuilderHeader.toString().contains("image/jpeg\r\n\r\n")
+//    ||stringbuilderHeader.toString().contains("image/png\r\n\r\n")) {
+//  while((length= inputStream.read(bytes))> 0) {//读头
+//    StringBuilder stringbuilderBody= new StringBuilder();
+//    stringbuilderBody.append(bytes);//查询器
+//    if(!stringbuilderBody.toString().contains("\r\n--")){
+//      fileOutputStream.write(bytes);
+//    }else {
+//      
+//    }
+//  }
+//}
+//
+//
+
+
+//    System.out.println("form-->"+ message);
+//    String[] byteStrings= message.split("Content-Type: image/jpeg");
+//    if(byteStrings.length< 2) {
+//      byteStrings= message.split("Content-Type: image/png");
+//      if(byteStrings.length< 2) {
+//        return;
+//      }
+//    }
+//    String byteString= byteStrings[1];
+//    byte[] stringBytes= byteString.getBytes();
+//    System.out.println("data-->"+ new String(stringBytes));
+//    fileOutputStream.write(stringBytes, 0, stringBytes.length);
+//    
+//    while((len= inputStream.read(bytes))> 0) {
+//      message= new String(bytes);
+//      String[] byteBoundarys= message.split("------WebKitFormBoundary");
+//      if(byteBoundarys.length> 1) {
+//        String byteBoundary= byteBoundarys[0];
+//        byte[] boundaryBytes= byteBoundary.getBytes();
+//        System.out.println("data-->"+ new String(boundaryBytes));
+//        fileOutputStream.write(boundaryBytes, 0, boundaryBytes.length);
+//        fileOutputStream.close();
+//        return;
+//      }
+//      System.out.println("data-->"+ message);
+//      fileOutputStream.write(bytes, 0, len);
+//    }
+//  }  
+//}
