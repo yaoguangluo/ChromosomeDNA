@@ -1,0 +1,126 @@
+Copyright 2018~2022. 罗瑶光.
+15116110525, 19173129338
+浏阳德塔软件开发有限公司. All rights reserved.
+湖南省 浏阳市 集里街道 神仙坳社区
+大塘冲路206号 阳光家园小区 第10栋别墅
+  
+  //20220822 登陆 刷新 概率钥匙机制
+  //罗瑶光
+  public static Map<String, Object> transactionLoginDNAWithNewEncryption(String uEmail, String uPassword)
+      throws Exception {
+    Usr usr= LoginServiceImpl.findUsrByUEmail(uEmail);
+    String[] MD5dice_DNA= new String[2];//准备模拟生成一个新的dna 概率密钥。
+    //此时假设AISD 元基骰子已经出现usertoken 或user表里
+    UsrToken usrToken= LoginServiceImpl.findUsrTokenByUId(usr.getuId());
+    //我假设在usertoken表里面先
+    MD5dice_DNA[0]= usrToken.getuDNADice();
+    SessionValidation sessionValidation= new SessionValidation();
+    TokenCerts tokenCerts
+    = sessionValidation.sessionTokenCertsInitWithHumanWordsByDNA(uPassword, true, MD5dice_DNA[0]);
+    //1用户输入的密码对比概率存储提取 进行整合 进行dna加密后的  pds string
+    //1.1假设 usrToken 表里面已经存在 概率钥匙数据
+    FullDNATokenPDI pDE_RNA_FullFormular= new FullDNATokenPDI();
+    pDE_RNA_FullFormular.text= uPassword.toString();
+    //1.1.1假设user表已经有了元基骰子。
+    pDE_RNA_FullFormular.lock= MD5dice_DNA[0];
+    //我搞不懂为什么中文的符号要和英文的符号不一致，搞得我切来切去出问题繁琐。
+    //1.1.2 密码变元基
+    pDE_RNA_FullFormular.pdw= pDE_RNA_FullFormular.initonSect(pDE_RNA_FullFormular.text);
+    //1.2 元基进行骰子散列
+    for(int i= 0; i< pDE_RNA_FullFormular.pdw.length(); i++) {
+      pDE_RNA_FullFormular.code+= pDE_RNA_FullFormular.lock 
+          + pDE_RNA_FullFormular.pdw.charAt(i);
+    }
+    //1.3 散列后开始概率密码pde，pds变换,假设 usrToken表里面已经有了 ieisdeds
+    pDE_RNA_FullFormular.pdedeKey= usrToken.getuPdedeKey();
+    pDE_RNA_FullFormular.pdedsKey= usrToken.getuPdedsKey();
+    pDE_RNA_FullFormular.pdeieKey= usrToken.getuPdeieKey();
+    pDE_RNA_FullFormular.pdeisKey= usrToken.getuPdeisKey();
+    pDE_RNA_FullFormular.doKeyPress(pDE_RNA_FullFormular.code, pDE_RNA_FullFormular, true);
+    //2与用户email取出的数据user表的dna加密数据 pds string。
+    //这1，2进行比对相同就通过。这里存pde算了，session出去给pds。
+    /*************************************************************
+    //pds逆向成pde//因为是登陆，不是验证操作，所以稍后设计
+     **************************************************************/
+    //uPassword用PDE//现在出现一个问题，如果我做成一个pde为替换密钥，那概率钥匙就要做成第三方库保管，防止数据库管理员同时获取，
+    if (!pDE_RNA_FullFormular.pde.equals(usrToken.getuPassword())) { 
+      //我要设计成数据库只存用户的加密后密码。罗瑶光20220811
+      Map<String, Object> out = new HashMap<>();
+      out.put("loginInfo", "unsuccess");
+      out.put("returnResult", "密码不正确");
+      return out;
+    }
+    FullDNATokenPDI pDE_RNA_FullFormular1= refreshAsserts(pDE_RNA_FullFormular, uPassword, usr);
+    PEU.P.dna.Token token= new PEU.P.dna.Token();
+    tokenCerts.I_Pds(pDE_RNA_FullFormular1.pds);
+    pDE_RNA_FullFormular1.time= "" + System.currentTimeMillis();
+    pDE_RNA_FullFormular1.cacheId= "ID" + Math.random() + ":" + Math.random();
+    token.I_mPasswordPDS(pDE_RNA_FullFormular1.pds);
+    token.I_uEmail(uEmail);
+    String json = new Gson().toJson(token);
+    String jsonToken = StringUtil.encode(json);
+
+    Map<String, Object> out = new HashMap<>();
+    out.put("userToken", jsonToken);
+    out.put("userEmail", uEmail);
+    out.put("loginInfo", "success");
+    return out;
+  }  
+  //20220822  刷新 概率钥匙机制
+  //罗瑶光
+  public static FullDNATokenPDI refreshAsserts(FullDNATokenPDI pDE_RNA_FullFormular
+      , String uPassword, Usr usr) throws IOException {
+    //生成新的肽锁
+    FullDNATokenPDI pDE_RNA_FullFormular1= new FullDNATokenPDI();
+    pDE_RNA_FullFormular1.key[0]= 0.5;
+    pDE_RNA_FullFormular1.key[1]= 0.5;
+    pDE_RNA_FullFormular1.key[2]= 0.5;
+    pDE_RNA_FullFormular1.key[3]= 0.5;
+    pDE_RNA_FullFormular1.text= uPassword.toString();
+    System.out.println("原文: "+ pDE_RNA_FullFormular.text);
+    pDE_RNA_FullFormular1.pdw= pDE_RNA_FullFormular1.initonSect(pDE_RNA_FullFormular.text);
+    System.out.println("肽语: "+ pDE_RNA_FullFormular1.pdw);
+    //因为是初始就生成下,肽锁匙不需要bys。 罗瑶光20220815-2-56
+    String[] lock= new String[12];
+    lock[0] = "A"; lock[3] = "O"; lock[6] = "P"; lock[9]  = "M";
+    lock[1] = "V"; lock[4] = "E"; lock[7] = "C"; lock[10] = "S";
+    lock[2] = "I"; lock[5] = "D"; lock[8] = "U"; lock[11] = "Q";
+    int i= (int)(Math.random()* 12)% 12;
+    pDE_RNA_FullFormular1.lock+= lock[i];
+    i= (int)(Math.random()* 12)% 12;
+    pDE_RNA_FullFormular1.lock+= lock[i];
+    i= (int)(Math.random()* 12)% 12;
+    pDE_RNA_FullFormular1.lock+= lock[i];
+    i= (int)(Math.random()* 12)% 12;
+    pDE_RNA_FullFormular1.lock+= lock[i];
+    for(i= 0; i< pDE_RNA_FullFormular1.pdw.length(); i++) {
+      pDE_RNA_FullFormular1.code+= pDE_RNA_FullFormular1.lock 
+          + pDE_RNA_FullFormular1.pdw.charAt(i);
+    }
+    System.out.println("肽锁: "+ pDE_RNA_FullFormular1.lock);
+    //生成新的pdn
+    System.out.println("散列肽语:"+ pDE_RNA_FullFormular1.code);
+    //生成新的pde
+    pDE_RNA_FullFormular1.doKeyPress(pDE_RNA_FullFormular1.code, pDE_RNA_FullFormular1, false);
+    System.out.println("散列肽语:"+ pDE_RNA_FullFormular1.pde);
+    //生成新的pds
+    System.out.println("散列肽语:"+ pDE_RNA_FullFormular1.pds);
+    //pds分发
+    JSONObject jsobjToken = new JSONObject();
+    jsobjToken.put("u_id", usr.getuId());
+    //这里也可以拆开分库分表。//罗瑶光20220815-3-17
+    jsobjToken.put("u_DNADice", pDE_RNA_FullFormular1.lock);
+    //这里也可以拆开分库分表。//罗瑶光20220815-3-17
+    jsobjToken.put("u_PdedeKey", pDE_RNA_FullFormular1.pdedeKey.toString());
+    jsobjToken.put("u_PdedsKey", pDE_RNA_FullFormular1.pdedsKey.toString());
+    //这里也可以拆开分库分表。//罗瑶光20220815-3-17
+    jsobjToken.put("u_PdeieKey", pDE_RNA_FullFormular1.pdeieKey.toString());
+    jsobjToken.put("u_PdeisKey", pDE_RNA_FullFormular1.pdeisKey.toString());
+    //这里也可以拆开分库分表。//罗瑶光20220815-3-17
+    //拆的越多，分级越多，越安全。
+    jsobjToken.put("u_password", pDE_RNA_FullFormular1.pde.toString());
+    //更新新的随机概率钥匙和肽锁，这里 dna编码的文本 不新new，因为编码文本太大。用户可自定义。我是按ascii编译的，不是语意编的。图简单先。
+    UpdateRowsImp.updateRowByTablePathAndAttribute(CacheManager.getCacheInfo("DBPath").getValue()
+        + "/backend/usrToken", "u_id", "" + usr.getuId(), jsobjToken);
+    return pDE_RNA_FullFormular;
+  }
