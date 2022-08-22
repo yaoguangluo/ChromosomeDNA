@@ -1,0 +1,148 @@
+package org.sevlet.upload;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.deta.boot.rest.VPC;
+import org.deta.boot.vpc.vision.VPCSRequest;
+import org.deta.boot.vpc.vision.VPCSResponse;
+import org.lyg.common.maps.VtoV;
+//这个函数用于Javascript前端socket请求后端数据通讯的握手协议
+//作者 著作权人 罗瑶光 20220819-0-30~ 20220820-0-27~20220822
+//思想 socket 数据通讯, java 文件读写。
+public class FileUploaderSimple{
+	public static void processPrefix(String string, byte[] bytesIn
+			, FileOutputStream fileOutputStream, int contentSize){
+		try {
+			byte[] bytesStrings= string.getBytes();
+			int position= -1;
+			int positionHere= -1;
+			int fullLength= bytesIn.length- bytesStrings.length;
+			Here:
+				for(int i= 0; i< fullLength; i++) {
+					position= i;
+					for(int j= 0; j< bytesStrings.length; j++) {
+						if(bytesIn[i+ j]!= bytesStrings[j]) {
+							position= -1;
+							continue Here;
+						}
+					}
+					if(position!= -1) {
+						positionHere= position;
+						break;
+					}
+				}
+			int len= contentSize- positionHere- bytesStrings.length;
+			byte[] newBytes= new byte[len];
+			for(int i= 0; i< len; i++) {
+				newBytes[i]= bytesIn[positionHere+ bytesStrings.length+ i];
+			}
+			fileOutputStream.write(newBytes);	
+			Thread.sleep(5);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+	public static void processForm(InputStream inputStream, byte[] bytesIn
+			, String type, VPCSRequest vPCSRequest, VPCSResponse vPCSResponse) {
+		try {
+			//全部写出来成文件
+			String outPath= "C:/Users/Administrator/Desktop/tempIMG/"; 
+			String fileName= "temp"+ System.currentTimeMillis()+ (int)(Math.random()*10000000)+ type; 
+			//文件夹建立
+			File fileCategory= new File(outPath);
+			if (!fileCategory.exists()&& !fileCategory.isFile()) { 
+				fileCategory.mkdirs();
+			}
+			int length= 0;
+			byte[] bytes= new byte[1024];
+			File file= new File(outPath+ fileName);
+			FileOutputStream fileOutputStream= new FileOutputStream(file);
+			String stringIn= new String(bytesIn);
+			if(stringIn.contains("image/jpeg\r\n\r\n")) {
+				processPrefix("image/jpeg\r\n\r\n", bytesIn, fileOutputStream, 1600);
+			}
+			if(stringIn.contains("image/png\r\n\r\n")) {
+				processPrefix("image/png\r\n\r\n", bytesIn, fileOutputStream, 1600);
+			}
+			while((length= inputStream.read(bytes))>=0) {//读头
+				//System.out.println(new String(bytes));	
+				String string= new String(bytes);
+				if(string.contains("image/jpeg\r\n\r\n")) {
+					processPrefix("image/jpeg\r\n\r\n", bytesIn, fileOutputStream, 1024);
+				}else if(string.contains("image/png\r\n\r\n")) {
+					processPrefix("image/png\r\n\r\n", bytesIn, fileOutputStream, 1024);
+				}else if(string.contains("------WebKitFormBoundary")) {
+					byte[] bytesStrings= "------WebKitFormBoundary".getBytes();
+					int position= -1;
+					int positionHere= -1;
+					int fullLength= bytes.length- bytesStrings.length;
+					Here:
+						for(int i= 0; i< fullLength; i++ ) {
+							position= i;
+							for(int j= 0; j< bytesStrings.length; j++ ) {
+								if(bytes[i+ j]!= bytesStrings[j]) {
+									position= -1;
+									continue Here;
+								}
+							}
+							if(position!= -1) {
+								positionHere= position;
+								break;
+							}
+						}
+					int len= positionHere;
+					byte[] newBytes= new byte[len];
+					for(int i= 0; i< len; i++) {
+						newBytes[i]= bytes[i];
+					}
+					fileOutputStream.write(newBytes);	
+					Thread.sleep(5);
+					break;
+				}else {
+					fileOutputStream.write(bytes, 0, length);
+					Thread.sleep(5);
+				}
+				Thread.sleep(5);
+			}
+			//inputStream.close();
+			fileOutputStream.flush();
+			fileOutputStream.close();
+			//文件裁剪
+
+			//文件操作
+
+			//输出
+			Map<String, Object> outputMap = new HashMap<>();
+			outputMap.put("sc", URLEncoder.encode("上传成功", "UTF-8"));
+			String output= VtoV.ObjectToJsonString(outputMap);
+			PrintWriter pw 
+			= new PrintWriter(new BufferedWriter(new OutputStreamWriter(vPCSResponse.getSocket()
+					.getOutputStream(), "UTF-8")), true);
+			if(output.length()> 0) {
+				pw.println("HTTP/1.1 200 OK\n\n"); 
+				output=output.charAt(0)=='"'?output.substring(1,output.length()):output;
+				output=output.charAt(output.length()-1)=='"'?output.substring(0
+						, output.length()-1):output;
+				pw.println(output.replace("\\\"","\""));
+				pw.flush();
+				pw.close();	
+				vPCSResponse.getSleeperHall().removeThreadById(vPCSResponse.getSocket().hashCode());
+			}else {
+				System.out.print(vPCSRequest.getRequestLink());
+				System.out.print(vPCSRequest.getRequestFilePath());
+				return;
+			}	
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}
