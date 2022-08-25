@@ -1,0 +1,275 @@
+package org.html5.upload;
+import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+import javax.imageio.ImageIO;
+import javax.imageio.stream.FileImageOutputStream;
+import org.deta.boot.vpc.vision.VPCSRequest;
+import org.deta.boot.vpc.vision.VPCSResponse;
+import org.lyg.common.maps.VtoV;
+
+import ISQ.VSU.feature.DoPDEofSkin;
+import ISQ.VSU.feature.GetSkinBy;
+//这个函数用于Javascript前端socket请求后端数据通讯的握手协议
+//作者 著作权人 罗瑶光 20220819-0-30~ 20220820-0-27~20220822,20220825
+//思想 socket 数据通讯, java 文件读写。
+public class FileUploaderSimpleDNA{
+	public static void processPrefix(String string, byte[] bytesIn
+			, FileImageOutputStream fileOutputStream, int contentSize){
+		try {
+			byte[] bytesStrings= string.getBytes();
+			int position= -1;
+			int positionHere= -1;
+			int fullLength= bytesIn.length- bytesStrings.length;
+			Here:
+				for(int i= 0; i< fullLength; i++) {
+					position= i;
+					for(int j= 0; j< bytesStrings.length; j++) {
+						if(bytesIn[i+ j]!= bytesStrings[j]) {
+							position= -1;
+							continue Here;
+						}
+					}
+					if(position!= -1) {
+						positionHere= position;
+						break;
+					}
+				}
+			int len= contentSize- positionHere- bytesStrings.length;
+			byte[] newBytes= new byte[len];
+			for(int i= 0; i< len; i++) {
+				newBytes[i]= bytesIn[positionHere+ bytesStrings.length+ i];
+			}
+			fileOutputStream.write(newBytes);	
+			Thread.sleep(2);
+			return;
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+	public static void processForm(InputStream inputStream, byte[] bytesIn
+			, String type, VPCSRequest vPCSRequest, VPCSResponse vPCSResponse) {
+		try {
+			//全部写出来成文件
+			String outPath= "C:/Users/Administrator/Desktop/tempIMG/"; 
+			String fileName= "temp"+ System.currentTimeMillis()+ (int)(Math.random()*10000000)+ type; 
+			//文件夹建立
+			File fileCategory= new File(outPath);
+			if (!fileCategory.exists()&& !fileCategory.isFile()) { 
+				fileCategory.mkdirs();
+			}
+			int length= 0;
+			byte[] bytes= new byte[1024];
+			File file= new File(outPath+ fileName);
+			FileImageOutputStream fileOutputStream= new FileImageOutputStream(file);
+			String stringIn= new String(bytesIn);
+			if(stringIn.contains("image/jpeg\r\n\r\n")) {
+				processPrefix("image/jpeg\r\n\r\n", bytesIn, fileOutputStream, 1600);
+			}
+			if(stringIn.contains("image/png\r\n\r\n")) {
+				processPrefix("image/png\r\n\r\n", bytesIn, fileOutputStream, 1600);
+			}
+			while((length= inputStream.read(bytes))>=0) {//读头
+				//System.out.println(new String(bytes));	
+				String string= new String(bytes);
+				if(string.contains("image/jpeg\r\n\r\n")) {
+					processPrefix("image/jpeg\r\n\r\n", bytesIn, fileOutputStream, 1024);
+				}else if(string.contains("image/png\r\n\r\n")) {
+					processPrefix("image/png\r\n\r\n", bytesIn, fileOutputStream, 1024);
+				}else if(string.contains("------WebKitForm")) {
+					byte[] bytesStrings= "------WebKitForm".getBytes();
+					int position= -1;
+					int positionHere= -1;
+					int fullLength= bytes.length- bytesStrings.length;
+					Here:
+						for(int i= 0; i< fullLength; i++ ) {
+							position= i;
+							for(int j= 0; j< bytesStrings.length; j++ ) {
+								if(bytes[i+ j]!= bytesStrings[j]) {
+									position= -1;
+									continue Here;
+								}
+							}
+							if(position!= -1) {
+								positionHere= position;
+								break;
+							}
+						}
+					int len= positionHere;
+					byte[] newBytes= new byte[len];
+					for(int i= 0; i< len; i++) {
+						newBytes[i]= bytes[i];
+					}
+					fileOutputStream.write(newBytes);	
+					Thread.sleep(2);
+					break;
+				}else {
+					fileOutputStream.write(bytes, 0, length);
+					Thread.sleep(2);
+				}
+				Thread.sleep(5);
+			}
+			fileOutputStream.flush();
+		//	fileOutputStream.close();
+			//文件裁剪
+			BufferedImage bufferedImage= ImageIO.read(file);
+			//dna十六元基腐蚀
+			int[][][] getSkinBy= new GetSkinBy().getSkinBy(bufferedImage);
+			int[][][] doPDEofSkin= new DoPDEofSkin().doPDEofSkin_AOPM_VECS_IDUQ_TXH_AC(getSkinBy, 85);
+			int[][] g = doPDEofSkin[0];
+			int[][] r = doPDEofSkin[1];
+			int[][] b = doPDEofSkin[2];
+			int h = bufferedImage.getHeight();
+			int w = bufferedImage.getWidth();
+			System.out.println(h+"&&"+w);
+			double maxc= h*w;
+			double rc= 0;
+			double gc= 0;
+			double bc= 0;
+			double rp= 0;
+			double gp= 0;
+			double bp= 0;
+			double rs= 0;
+			double gs= 0;
+			double bs= 0;
+			double rh= 0;
+			double gh= 0;
+			double bh= 0;
+			double rm= 0;
+			double gm= 0;
+			double bm= 0;
+			double bYellow= 0;
+			double bmYellow= 0;
+			double blYellow= 0;
+			for (int i = 0; i < h; i++){
+				for (int j = 0; j < w; j++){
+					if(r[i][j]> 128) {
+						if(g[i][j]> 128&& b[i][j]> 5 ) {
+							 bYellow++;
+							 if(g[i][j]> 192&& b[i][j]> 5 ) {
+								 bmYellow++;
+								 if(g[i][j]> 230&& b[i][j]>5) {
+									 blYellow++;
+								}
+							}
+						}
+					}
+					if(r[i][j]>0) {
+						rc++;
+					}
+					if(g[i][j]>0) {
+						gc++;
+					}
+					if(b[i][j]>0) {
+						bc++;
+					}
+					if(r[i][j]>22) {
+						rp++;
+					}
+					if(g[i][j]>22) {
+						gp++;
+					}
+					if(b[i][j]>22) {
+						bp++;
+					}
+					if(r[i][j]>96) {
+						rs++;
+					}
+					if(g[i][j]>96) {
+						gs++;
+					}
+					if(b[i][j]>96) {
+						bs++;
+					}
+					if(r[i][j]>128) {
+						rh++;
+					}
+					if(g[i][j]>128) {
+						gh++;
+					}
+					if(b[i][j]>128) {
+						bh++;
+					}
+					if(r[i][j]>200) {
+						rm++;
+					}
+					if(g[i][j]>200) {
+						gm++;
+					}
+					if(b[i][j]>200) {
+						bm++;
+					}
+				}
+			}
+			//文件操作
+			file.delete();
+			Thread.sleep(5);
+			fileOutputStream.close();
+			file.delete();
+			Thread.sleep(15);
+			//输出
+			Map<String, Object> outputMap= new HashMap<>();
+			String string= "上传成功，计算方式: DNA十六元基腐蚀浓度 85%"
+					+ "\r\n"
+					+ "高->"+ h+ "宽->"+ w
+					+ "\r\n"
+					+ "所有像素总数->"+ maxc
+					+ "\r\n"
+					+"; 红像素腐蚀总数->"+ rc+ ", PCA比->"+ rc/maxc + "\r\n"
+					+"; 绿像素腐蚀总数->"+ gc+ ", PCA比->"+ gc/maxc	+ "\r\n"
+					+"; 蓝像素腐蚀总数->"+ bc+ ", PCA比->"+ bc/maxc	+ "\r\n"
+					+ "\r\n"
+					+"; 能识别红像素腐蚀总数->"+ rp+ ", PCA比->"+ rp/maxc+ ", ICA比->"+ rp/rc+ "\r\n"
+					+"; 能识别绿像素腐蚀总数->"+ gp+ ", PCA比->"+ gp/maxc+ ", ICA比->"+ gp/gc+ "\r\n"
+					+"; 能识别蓝像素腐蚀总数->"+ bp+ ", PCA比->"+ bp/maxc+ ", ICA比->"+ bp/bc+ "\r\n"
+					+ "\r\n"
+					+"; 有价值红像素腐蚀总数->"+ rs+ ", PCA比->"+ rs/maxc+ ", ICA比->"+ rs/rc+ "\r\n"
+					+"; 有价值绿像素腐蚀总数->"+ gs+ ", PCA比->"+ gs/maxc+ ", ICA比->"+ gs/gc+ "\r\n"
+					+"; 有价值蓝像素腐蚀总数->"+ bs+ ", PCA比->"+ bs/maxc+ ", ICA比->"+ bs/bc+ "\r\n"
+					+ "\r\n"
+					+"; PCA红像素腐蚀总数->"+ rh+ ", PCA比->"+ rh/maxc+ ", ICA比->"+ rh/rs+ "\r\n"
+					+"; PCA绿像素腐蚀总数->"+ gh+ ", PCA比->"+ gh/maxc+ ", ICA比->"+ gh/gs+ "\r\n"
+					+"; PCA蓝像素腐蚀总数->"+ bh+ ", PCA比->"+ bh/maxc+ ", ICA比->"+ bh/bs+ "\r\n"
+					+ "\r\n"
+					+"; 强烈红像素腐蚀总数->"+ rm+ ", PCA比->"+ rm/maxc+ ", ICA比->"+ rm/rh+ "\r\n"
+					+"; 强烈绿像素腐蚀总数->"+ gm+ ", PCA比->"+ gm/maxc+ ", ICA比->"+ gm/gh+ "\r\n"
+					+"; 强烈蓝像素腐蚀总数->"+ bm+ ", PCA比->"+ bm/maxc+ ", ICA比->"+ bm/bh+ "\r\n"
+					+ "\r\n"
+					+"; 普通黄像素腐蚀总数->"+ bYellow+ ", PCA比->"+ bYellow/maxc+ "\r\n"
+					+";  PCA黄像素腐蚀总数->"+ bmYellow+ ", PCA比->"+ bmYellow/maxc+ ", ICA比->"+ bmYellow/bYellow+ "\r\n"
+					+"; 强烈黄像素腐蚀总数->"+ blYellow+ ", PCA比->"+ blYellow/maxc + ", ICA比->"+ blYellow/bYellow;
+			outputMap.put("sc", URLEncoder.encode(string, "UTF-8"));
+			String output= VtoV.ObjectToJsonString(outputMap);
+			PrintWriter pw = null; 
+			try {
+				pw= new PrintWriter(new BufferedWriter(new OutputStreamWriter(vPCSResponse.getSocket()
+						.getOutputStream(), "UTF-8")), true);
+			}catch(Exception e) {
+				System.out.println();
+			}
+			if(output.length()> 0) {
+				pw.println("HTTP/1.1 200 OK\n\n"); 
+				output=output.charAt(0)=='"'?output.substring(1,output.length()):output;
+				output=output.charAt(output.length()-1)=='"'?output.substring(0
+						, output.length()-1):output;
+				pw.println(output.replace("\\\"","\""));
+				pw.flush();
+				pw.close();	
+				vPCSResponse.getSleeperHall().removeThreadById(vPCSResponse.getSocket().hashCode());
+			}else {
+				System.out.print(vPCSRequest.getRequestLink());
+				System.out.print(vPCSRequest.getRequestFilePath());
+				return;
+			}	
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}
