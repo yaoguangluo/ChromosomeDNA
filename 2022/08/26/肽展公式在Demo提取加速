@@ -25,8 +25,10 @@ public class FileUploaderSimpleDNA{
 	static Map<String, String> initonsCode;
 	static Map<String, String> initonsMap;	
 	static Map<String, Integer> numberSet;	
+	static String[] stringsDNA255With16Encoder;
+	static Map<String, Integer> stringsDNA255With16Decoder;	
 	public static void processPrefix(String string, byte[] bytesIn
-			, FileImageOutputStream fileOutputStream, int contentSize){
+			, FileImageOutputStream fileOutputStream, int contentSize){//稳定后 这段就进行函数去重到时候，按sonar，没白去英特尔。哈 罗瑶光 服了 
 		try {
 			byte[] bytesStrings= string.getBytes();
 			int position= -1;
@@ -270,10 +272,10 @@ public class FileUploaderSimpleDNA{
 					.getOutputStream(), "UTF-8")), true);
 			if(output.length()> 0) {
 				pw.println("HTTP/1.1 200 OK\n\n"); 
-				output=output.charAt(0)=='"'?output.substring(1,output.length()):output;
-				output=output.charAt(output.length()-1)=='"'?output.substring(0
-						, output.length()-1):output;
-				pw.println(output.replace("\\\"","\""));
+				output= output.charAt(0)== '"'? output.substring(1, output.length()): output;
+				output= output.charAt(output.length()- 1)== '"'? output.substring(0
+						, output.length()- 1): output;
+				pw.println(output.replace("\\\"", "\""));
 				pw.flush();
 				pw.close();	
 				vPCSResponse.getSleeperHall().removeThreadById(vPCSResponse.getSocket().hashCode());
@@ -294,7 +296,8 @@ public class FileUploaderSimpleDNA{
 		for(int i= 0; i< ps.length; i++) {
 			for(int j= 0; j< ps[0].length; j++) {
 				//String IDUQ= new RangePDI().PDS_P_USQ_ECP_I_17(ps[i][j], 17);
-				String IDUQ= PDS_P_USQ_ECP_I_16(ps[i][j], 16);
+				//String IDUQ= PDS_P_USQ_ECP_I_16(ps[i][j], 16);
+				String IDUQ= stringsDNA255With16Encoder[ps[i][j]];
 				char[][] OIQ= new char[1][IDUQ.length()];
 				Here:
 				for(int k= 0; k< IDUQ.length(); k++) {
@@ -393,7 +396,6 @@ public class FileUploaderSimpleDNA{
 						OIQ[0][k]= IDUQ.charAt(k);
 					}
 				}
-				//ps[i][j]= new InitonsPDS().DO_ACP_IDV_17(OIQ, 17);
 				ps[i][j]= DO_ACP_IDV_16(OIQ, 16);
 			}
 		}
@@ -404,6 +406,8 @@ public class FileUploaderSimpleDNA{
 		initonsCode= new HashMap<>();
 		initonsMap= new HashMap<>();
  		numberSet= new HashMap<>();	
+ 		stringsDNA255With16Encoder= new String[255];
+ 		
 		initonsSet.put("0", "0");
 		initonsSet.put("1", "1");
 		initonsSet.put("2", "2");
@@ -471,6 +475,10 @@ public class FileUploaderSimpleDNA{
  		numberSet.put("D", 13);
  		numberSet.put("E", 14);
  		numberSet.put("F", 15);
+ 		
+ 		for(int i= 0; i< 255; i++) {
+ 			stringsDNA255With16Encoder[i]= PDS_P_USQ_ECP_I_16(i, 16);
+ 		}
 		return;
 	}
 	
