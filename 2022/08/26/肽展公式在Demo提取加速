@@ -16,8 +16,9 @@ import org.lyg.common.maps.VtoV;
 import OSI.OPE.SI.SD.SU.SQ.ASU.OSU.PSU.MSU.AVQ.ASQ.ASU.MPE.procedure.pde.InitonsPDS;
 //这个函数用于Javascript前端socket请求后端数据通讯的握手协议
 //作者 著作权人 罗瑶光 20220819-0-30~ 20220820-0-27~20220822,20220825,20220826
-//思想 socket 数据通讯, java 文件读写。
-//思想 DNA十六元基 数字 物理编码， 语义肽展公式PDE GPL2.0
+//思想 socket 数据通讯, 著作权人 Surhone, Lambert M.; Tennoe, Mariam T.; Henssonow, Susan F.
+//思想 java 文件读写。著作权人 JDK SUN Tech， 
+//思想 DNA十六元基 数字 物理编码， 语义肽展公式PDE GPL2.0 著作权人 罗瑶光.
 public class FileUploaderSimpleDNA{
 	public static void processPrefix(String string, byte[] bytesIn
 			, FileImageOutputStream fileOutputStream, int contentSize){
