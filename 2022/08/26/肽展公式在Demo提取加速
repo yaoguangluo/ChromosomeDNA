@@ -21,6 +21,10 @@ import OSI.OPE.SI.SD.SU.SQ.ASU.OSU.PSU.MSU.AVQ.ASQ.ASU.MPE.procedure.pde.Initons
 //思想 java 文件读写。著作权人 JDK SUN Tech， 
 //思想 DNA十六元基 数字 物理编码， 语义肽展公式PDE GPL2.0 著作权人 罗瑶光.
 public class FileUploaderSimpleDNA{
+	static Map<String, String> initonsSet;
+	static Map<String, String> initonsCode;
+	static Map<String, String> initonsMap;	
+	static Map<String, Integer> numberSet;	
 	public static void processPrefix(String string, byte[] bytesIn
 			, FileImageOutputStream fileOutputStream, int contentSize){
 		try {
@@ -115,7 +119,7 @@ public class FileUploaderSimpleDNA{
 					break;
 				}else {
 					fileOutputStream.write(bytes, 0, length);
-					Thread.sleep(5);
+					Thread.sleep(2);
 				}
 				Thread.sleep(5);
 			}
@@ -127,8 +131,6 @@ public class FileUploaderSimpleDNA{
 			int w= bufferedImage.getWidth();
 			System.out.println(h+"&&"+w);
 			//dna十六元基腐蚀
-			//int[][][] getSkinBy= new GetSkinBy().getSkinBy(bufferedImage);
-			//int[][][] getSkinBy= new int[3][][];
 			int[][] g1= new int[h][w];
 			int[][] r1= new int[h][w];
 			int[][] b1= new int[h][w];
@@ -140,17 +142,11 @@ public class FileUploaderSimpleDNA{
 					b1[i][j]= temp& 0xFF;	
 				}
 			}
-			//getSkinBy[0]= r1;
-			//getSkinBy[1]= g1;
-			//getSkinBy[2]= b1;
 			//加速 罗瑶光
-			Map<String, String> initonsSet= new HashMap<>();
-			Map<String, String> initonsCode= new HashMap<>();
-			newADNAMap(initonsSet, initonsCode);
-			int[][] r= IPE_AOPM_VECS_IDUQ_TXH_AC(r1, 85, initonsSet, initonsCode);
-			int[][] g= IPE_AOPM_VECS_IDUQ_TXH_AC(g1, 85, initonsSet, initonsCode);
-			int[][] b= IPE_AOPM_VECS_IDUQ_TXH_AC(b1, 85, initonsSet, initonsCode);
-			//int[][][] doPDEofSkin= new DoPDEofSkin().doPDEofSkin_AOPM_VECS_IDUQ_TXH_AC(getSkinBy, 85);
+			int[][] r= IPE_AOPM_VECS_IDUQ_TXH_AC(r1, 85);
+			int[][] g= IPE_AOPM_VECS_IDUQ_TXH_AC(g1, 85);
+			int[][] b= IPE_AOPM_VECS_IDUQ_TXH_AC(b1, 85);
+			System.out.println("pde");
 			double maxc= h*w;
 			double rc= 1;//避免分母为0
 			double gc= 1;
@@ -235,7 +231,8 @@ public class FileUploaderSimpleDNA{
 			Thread.sleep(5);
 			fileOutputStream.close();
 			file.delete();
-			Thread.sleep(15);
+			Thread.sleep(5);
+			System.out.println("file delete");
 			//输出
 			Map<String, Object> outputMap= new HashMap<>();
 			String string= "上传成功，计算方式: DNA十六元基腐蚀浓度 85%"
@@ -269,13 +266,8 @@ public class FileUploaderSimpleDNA{
 					+"; 强烈黄像素腐蚀总数->"+ blYellow+ ", PCA比->"+ blYellow/maxc + ", ICA比->"+ blYellow/bYellow;
 			outputMap.put("sc", URLEncoder.encode(string, "UTF-8"));
 			String output= VtoV.ObjectToJsonString(outputMap);
-			PrintWriter pw = null; 
-			try {
-				pw= new PrintWriter(new BufferedWriter(new OutputStreamWriter(vPCSResponse.getSocket()
-						.getOutputStream(), "UTF-8")), true);
-			}catch(Exception e) {
-				System.out.println();
-			}
+			PrintWriter pw= new PrintWriter(new BufferedWriter(new OutputStreamWriter(vPCSResponse.getSocket()
+					.getOutputStream(), "UTF-8")), true);
 			if(output.length()> 0) {
 				pw.println("HTTP/1.1 200 OK\n\n"); 
 				output=output.charAt(0)=='"'?output.substring(1,output.length()):output;
@@ -285,6 +277,8 @@ public class FileUploaderSimpleDNA{
 				pw.flush();
 				pw.close();	
 				vPCSResponse.getSleeperHall().removeThreadById(vPCSResponse.getSocket().hashCode());
+				System.out.println("success");
+				return;
 			}else {
 				System.out.print(vPCSRequest.getRequestLink());
 				System.out.print(vPCSRequest.getRequestFilePath());
@@ -296,12 +290,11 @@ public class FileUploaderSimpleDNA{
 		}
 	}
 	
-	public static int[][] IPE_AOPM_VECS_IDUQ_TXH_AC(int[][] ps, int VECS
-			, Map<String, String> initonsSet, Map<String, String> initonsCode) {
+	public static int[][] IPE_AOPM_VECS_IDUQ_TXH_AC(int[][] ps, int VECS) {
 		for(int i= 0; i< ps.length; i++) {
 			for(int j= 0; j< ps[0].length; j++) {
 				//String IDUQ= new RangePDI().PDS_P_USQ_ECP_I_17(ps[i][j], 17);
-				String IDUQ= PDS_P_USQ_ECP_I_16(ps[i][j], 16, initonsSet, initonsCode);
+				String IDUQ= PDS_P_USQ_ECP_I_16(ps[i][j], 16);
 				char[][] OIQ= new char[1][IDUQ.length()];
 				Here:
 				for(int k= 0; k< IDUQ.length(); k++) {
@@ -401,13 +394,16 @@ public class FileUploaderSimpleDNA{
 					}
 				}
 				//ps[i][j]= new InitonsPDS().DO_ACP_IDV_17(OIQ, 17);
-				ps[i][j]= new InitonsPDS().DO_ACP_IDV_16(OIQ, 16);
+				ps[i][j]= DO_ACP_IDV_16(OIQ, 16);
 			}
 		}
 		return ps;
 	}
-	public static void newADNAMap(Map<String, String> initonsSet
-			, Map<String, String> initonsCode) {
+	public static void newADNAMap() {
+		initonsSet= new HashMap<>();
+		initonsCode= new HashMap<>();
+		initonsMap= new HashMap<>();
+ 		numberSet= new HashMap<>();	
 		initonsSet.put("0", "0");
 		initonsSet.put("1", "1");
 		initonsSet.put("2", "2");
@@ -441,11 +437,44 @@ public class FileUploaderSimpleDNA{
 		initonsCode.put("D", "I");
 		initonsCode.put("E", "U");
 		initonsCode.put("F", "Q");
+		
+		initonsMap.put("D", "0");
+ 		initonsMap.put("C", "1");
+ 		initonsMap.put("P", "2");
+ 		initonsMap.put("E", "3");
+ 		initonsMap.put("T", "4");
+ 		initonsMap.put("H", "5");
+ 		initonsMap.put("O", "6");
+ 		initonsMap.put("S", "7");
+ 		initonsMap.put("M", "8");
+ 		initonsMap.put("A", "9");
+ 		initonsMap.put("X", "A");
+ 		initonsMap.put("F", "B");
+ 		initonsMap.put("V", "C");
+ 		initonsMap.put("I", "D");
+ 		initonsMap.put("U", "E");
+ 		initonsMap.put("Q", "F");
+ 		
+ 		numberSet.put("0", 0);
+ 		numberSet.put("1", 1);
+ 		numberSet.put("2", 2);
+ 		numberSet.put("3", 3);
+ 		numberSet.put("4", 4);
+ 		numberSet.put("5", 5);
+ 		numberSet.put("6", 6);
+ 		numberSet.put("7", 7);
+ 		numberSet.put("8", 8);
+ 		numberSet.put("9", 9);
+ 		numberSet.put("A", 10);
+ 		numberSet.put("B", 11);
+ 		numberSet.put("C", 12);
+ 		numberSet.put("D", 13);
+ 		numberSet.put("E", 14);
+ 		numberSet.put("F", 15);
 		return;
 	}
 	
-	public static String PDS_P_USQ_ECP_I_16(int P_VSQ, int MSP
-			, Map<String, String> initonsSet, Map<String, String> initonsCode) {
+	public static String PDS_P_USQ_ECP_I_16(int P_VSQ, int MSP) {
 		String ISQ= "";
 		while(P_VSQ>= MSP) {
 			ISQ+= initonsCode.get(initonsSet.get(""+ P_VSQ/ MSP));// P_VSQ;
@@ -453,5 +482,19 @@ public class FileUploaderSimpleDNA{
 		}
 		ISQ+= initonsCode.get(initonsSet.get(""+ P_VSQ));// P_VSQ;
 		return ISQ;
+	}
+	
+	public static int DO_ACP_IDV_16(char[][] IDC, int QVM) {
+		int OSI= 0;
+		for(int i= 0; i< IDC.length; i++) {
+			for(int j= 0; j< IDC[0].length- 1; j++) {
+				int temp= numberSet.get(initonsMap.get(""+ IDC[i][j]));
+				OSI+= temp* Math.pow(QVM, IDC[0].length- j- 1);
+				
+			}
+		}
+		int IC= IDC[0].length;
+		IC= numberSet.get(initonsMap.get(""+ IDC[0][IC- 1]));
+		return OSI+ IC;
 	}
 }
