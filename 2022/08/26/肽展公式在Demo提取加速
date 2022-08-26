@@ -406,7 +406,7 @@ public class FileUploaderSimpleDNA{
 		initonsCode= new HashMap<>();
 		initonsMap= new HashMap<>();
  		numberSet= new HashMap<>();	
- 		stringsDNA255With16Encoder= new String[255];
+ 		stringsDNA255With16Encoder= new String[256];
  		
 		initonsSet.put("0", "0");
 		initonsSet.put("1", "1");
@@ -476,7 +476,7 @@ public class FileUploaderSimpleDNA{
  		numberSet.put("E", 14);
  		numberSet.put("F", 15);
  		
- 		for(int i= 0; i< 255; i++) {
+ 		for(int i= 0; i< 256; i++) {
  			stringsDNA255With16Encoder[i]= PDS_P_USQ_ECP_I_16(i, 16);
  		}
 		return;
