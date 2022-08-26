@@ -1,0 +1,454 @@
+package org.html5.upload;
+import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+import javax.imageio.ImageIO;
+import javax.imageio.stream.FileImageOutputStream;
+import org.deta.boot.vpc.vision.VPCSRequest;
+import org.deta.boot.vpc.vision.VPCSResponse;
+import org.lyg.common.maps.VtoV;
+import OSI.OPE.SI.SD.SU.SQ.ASU.OSU.PSU.MSU.AVQ.ASQ.ASU.MPE.procedure.pde.InitonsPDS;
+//这个函数用于Javascript前端socket请求后端数据通讯的握手协议
+//作者 著作权人 罗瑶光 20220819-0-30~ 20220820-0-27~20220822,20220825,20220826
+//思想 socket 数据通讯, java 文件读写。
+public class FileUploaderSimpleDNA{
+	public static void processPrefix(String string, byte[] bytesIn
+			, FileImageOutputStream fileOutputStream, int contentSize){
+		try {
+			byte[] bytesStrings= string.getBytes();
+			int position= -1;
+			int positionHere= -1;
+			int fullLength= bytesIn.length- bytesStrings.length;
+			Here:
+				for(int i= 0; i< fullLength; i++) {
+					position= i;
+					for(int j= 0; j< bytesStrings.length; j++) {
+						if(bytesIn[i+ j]!= bytesStrings[j]) {
+							position= -1;
+							continue Here;
+						}
+					}
+					if(position!= -1) {
+						positionHere= position;
+						break;
+					}
+				}
+			int len= contentSize- positionHere- bytesStrings.length;
+			byte[] newBytes= new byte[len];
+			for(int i= 0; i< len; i++) {
+				newBytes[i]= bytesIn[positionHere+ bytesStrings.length+ i];
+			}
+			fileOutputStream.write(newBytes);	
+			Thread.sleep(2);
+			return;
+		}catch(Exception e){
+			//e.printStackTrace();
+			System.out.print("processPrefix error");//以后设计error log
+			return;
+		}
+	}
+
+	public static void processForm(InputStream inputStream, byte[] bytesIn
+			, String type, VPCSRequest vPCSRequest, VPCSResponse vPCSResponse) {
+		try {
+			//全部写出来成文件
+			String outPath= "C:/Users/Administrator/Desktop/tempIMG/"; 
+			String fileName= "temp"+ System.currentTimeMillis()+ (int)(Math.random()*10000000)+ type; 
+			//文件夹建立
+			File fileCategory= new File(outPath);
+			if (!fileCategory.exists()&& !fileCategory.isFile()) { 
+				fileCategory.mkdirs();
+			}
+			int length= 0;
+			byte[] bytes= new byte[1024];
+			File file= new File(outPath+ fileName);
+			FileImageOutputStream fileOutputStream= new FileImageOutputStream(file);
+			String stringIn= new String(bytesIn);
+			if(stringIn.contains("image/jpeg\r\n\r\n")) {
+				processPrefix("image/jpeg\r\n\r\n", bytesIn, fileOutputStream, 1600);
+			}
+			if(stringIn.contains("image/png\r\n\r\n")) {
+				processPrefix("image/png\r\n\r\n", bytesIn, fileOutputStream, 1600);
+			}
+			while((length= inputStream.read(bytes))>=0) {//读头
+				//System.out.println(new String(bytes));	
+				String string= new String(bytes);
+				if(string.contains("image/jpeg\r\n\r\n")) {
+					processPrefix("image/jpeg\r\n\r\n", bytesIn, fileOutputStream, 1024);
+				}else if(string.contains("image/png\r\n\r\n")) {
+					processPrefix("image/png\r\n\r\n", bytesIn, fileOutputStream, 1024);
+				}else if(string.contains("------WebKitForm")) {
+					byte[] bytesStrings= "------WebKitForm".getBytes();
+					int position= -1;
+					int positionHere= -1;
+					int fullLength= bytes.length- bytesStrings.length;
+					Here:
+						for(int i= 0; i< fullLength; i++ ) {
+							position= i;
+							for(int j= 0; j< bytesStrings.length; j++ ) {
+								if(bytes[i+ j]!= bytesStrings[j]) {
+									position= -1;
+									continue Here;
+								}
+							}
+							if(position!= -1) {
+								positionHere= position;
+								break;
+							}
+						}
+					int len= positionHere;
+					byte[] newBytes= new byte[len];
+					for(int i= 0; i< len; i++) {
+						newBytes[i]= bytes[i];
+					}
+					fileOutputStream.write(newBytes);	
+					Thread.sleep(2);
+					break;
+				}else {
+					fileOutputStream.write(bytes, 0, length);
+					Thread.sleep(5);
+				}
+				Thread.sleep(5);
+			}
+			fileOutputStream.flush();
+		//	fileOutputStream.close();
+			//文件裁剪
+			BufferedImage bufferedImage= ImageIO.read(file);
+			int h= bufferedImage.getHeight();
+			int w= bufferedImage.getWidth();
+			System.out.println(h+"&&"+w);
+			//dna十六元基腐蚀
+			//int[][][] getSkinBy= new GetSkinBy().getSkinBy(bufferedImage);
+			//int[][][] getSkinBy= new int[3][][];
+			int[][] g1= new int[h][w];
+			int[][] r1= new int[h][w];
+			int[][] b1= new int[h][w];
+			for (int i= 0; i< h; i++){
+				for (int j= 0; j< w; j++){//加速 罗瑶光
+					int temp= bufferedImage.getRGB(j, i);
+					g1[i][j]= temp>> 8 & 0xFF;		
+					r1[i][j]= temp>> 16 & 0xFF;
+					b1[i][j]= temp& 0xFF;	
+				}
+			}
+			//getSkinBy[0]= r1;
+			//getSkinBy[1]= g1;
+			//getSkinBy[2]= b1;
+			//加速 罗瑶光
+			Map<String, String> initonsSet= new HashMap<>();
+			Map<String, String> initonsCode= new HashMap<>();
+			newADNAMap(initonsSet, initonsCode);
+			int[][] r= IPE_AOPM_VECS_IDUQ_TXH_AC(r1, 85, initonsSet, initonsCode);
+			int[][] g= IPE_AOPM_VECS_IDUQ_TXH_AC(g1, 85, initonsSet, initonsCode);
+			int[][] b= IPE_AOPM_VECS_IDUQ_TXH_AC(b1, 85, initonsSet, initonsCode);
+			//int[][][] doPDEofSkin= new DoPDEofSkin().doPDEofSkin_AOPM_VECS_IDUQ_TXH_AC(getSkinBy, 85);
+			double maxc= h*w;
+			double rc= 0;
+			double gc= 0;
+			double bc= 0;
+			double rp= 0;
+			double gp= 0;
+			double bp= 0;
+			double rs= 0;
+			double gs= 0;
+			double bs= 0;
+			double rh= 0;
+			double gh= 0;
+			double bh= 0;
+			double rm= 0;
+			double gm= 0;
+			double bm= 0;
+			double bYellow= 0;
+			double bmYellow= 0;
+			double blYellow= 0;
+			for (int i = 0; i < h; i++){
+				for (int j = 0; j < w; j++){
+					if(r[i][j]> 128) {
+						if(g[i][j]> 128&& b[i][j]> 5 ) {
+							 bYellow++;
+							 if(g[i][j]> 192&& b[i][j]> 5 ) {
+								 bmYellow++;
+								 if(g[i][j]> 230&& b[i][j]>5) {
+									 blYellow++;
+								}
+							}
+						}
+					}
+					if(r[i][j]>0) {
+						rc++;
+					}
+					if(g[i][j]>0) {
+						gc++;
+					}
+					if(b[i][j]>0) {
+						bc++;
+					}
+					if(r[i][j]>22) {
+						rp++;
+					}
+					if(g[i][j]>22) {
+						gp++;
+					}
+					if(b[i][j]>22) {
+						bp++;
+					}
+					if(r[i][j]>96) {
+						rs++;
+					}
+					if(g[i][j]>96) {
+						gs++;
+					}
+					if(b[i][j]>96) {
+						bs++;
+					}
+					if(r[i][j]>128) {
+						rh++;
+					}
+					if(g[i][j]>128) {
+						gh++;
+					}
+					if(b[i][j]>128) {
+						bh++;
+					}
+					if(r[i][j]>200) {
+						rm++;
+					}
+					if(g[i][j]>200) {
+						gm++;
+					}
+					if(b[i][j]>200) {
+						bm++;
+					}
+				}
+			}
+			//文件操作
+			file.delete();
+			Thread.sleep(5);
+			fileOutputStream.close();
+			file.delete();
+			Thread.sleep(15);
+			//输出
+			Map<String, Object> outputMap= new HashMap<>();
+			String string= "上传成功，计算方式: DNA十六元基腐蚀浓度 85%"
+					+ "\r\n"
+					+ "高->"+ h+ "宽->"+ w
+					+ "\r\n"
+					+ "所有像素总数->"+ maxc
+					+ "\r\n"
+					+"; 红像素腐蚀总数->"+ rc+ ", PCA比->"+ rc/maxc + "\r\n"
+					+"; 绿像素腐蚀总数->"+ gc+ ", PCA比->"+ gc/maxc	+ "\r\n"
+					+"; 蓝像素腐蚀总数->"+ bc+ ", PCA比->"+ bc/maxc	+ "\r\n"
+					+ "\r\n"
+					+"; 能识别红像素腐蚀总数->"+ rp+ ", PCA比->"+ rp/maxc+ ", ICA比->"+ rp/rc+ "\r\n"
+					+"; 能识别绿像素腐蚀总数->"+ gp+ ", PCA比->"+ gp/maxc+ ", ICA比->"+ gp/gc+ "\r\n"
+					+"; 能识别蓝像素腐蚀总数->"+ bp+ ", PCA比->"+ bp/maxc+ ", ICA比->"+ bp/bc+ "\r\n"
+					+ "\r\n"
+					+"; 有价值红像素腐蚀总数->"+ rs+ ", PCA比->"+ rs/maxc+ ", ICA比->"+ rs/rc+ "\r\n"
+					+"; 有价值绿像素腐蚀总数->"+ gs+ ", PCA比->"+ gs/maxc+ ", ICA比->"+ gs/gc+ "\r\n"
+					+"; 有价值蓝像素腐蚀总数->"+ bs+ ", PCA比->"+ bs/maxc+ ", ICA比->"+ bs/bc+ "\r\n"
+					+ "\r\n"
+					+"; PCA红像素腐蚀总数->"+ rh+ ", PCA比->"+ rh/maxc+ ", ICA比->"+ rh/rs+ "\r\n"
+					+"; PCA绿像素腐蚀总数->"+ gh+ ", PCA比->"+ gh/maxc+ ", ICA比->"+ gh/gs+ "\r\n"
+					+"; PCA蓝像素腐蚀总数->"+ bh+ ", PCA比->"+ bh/maxc+ ", ICA比->"+ bh/bs+ "\r\n"
+					+ "\r\n"
+					+"; 强烈红像素腐蚀总数->"+ rm+ ", PCA比->"+ rm/maxc+ ", ICA比->"+ rm/rh+ "\r\n"
+					+"; 强烈绿像素腐蚀总数->"+ gm+ ", PCA比->"+ gm/maxc+ ", ICA比->"+ gm/gh+ "\r\n"
+					+"; 强烈蓝像素腐蚀总数->"+ bm+ ", PCA比->"+ bm/maxc+ ", ICA比->"+ bm/bh+ "\r\n"
+					+ "\r\n"
+					+"; 普通黄像素腐蚀总数->"+ bYellow+ ", PCA比->"+ bYellow/maxc+ "\r\n"
+					+";  PCA黄像素腐蚀总数->"+ bmYellow+ ", PCA比->"+ bmYellow/maxc+ ", ICA比->"+ bmYellow/bYellow+ "\r\n"
+					+"; 强烈黄像素腐蚀总数->"+ blYellow+ ", PCA比->"+ blYellow/maxc + ", ICA比->"+ blYellow/bYellow;
+			outputMap.put("sc", URLEncoder.encode(string, "UTF-8"));
+			String output= VtoV.ObjectToJsonString(outputMap);
+			PrintWriter pw = null; 
+			try {
+				pw= new PrintWriter(new BufferedWriter(new OutputStreamWriter(vPCSResponse.getSocket()
+						.getOutputStream(), "UTF-8")), true);
+			}catch(Exception e) {
+				System.out.println();
+			}
+			if(output.length()> 0) {
+				pw.println("HTTP/1.1 200 OK\n\n"); 
+				output=output.charAt(0)=='"'?output.substring(1,output.length()):output;
+				output=output.charAt(output.length()-1)=='"'?output.substring(0
+						, output.length()-1):output;
+				pw.println(output.replace("\\\"","\""));
+				pw.flush();
+				pw.close();	
+				vPCSResponse.getSleeperHall().removeThreadById(vPCSResponse.getSocket().hashCode());
+			}else {
+				System.out.print(vPCSRequest.getRequestLink());
+				System.out.print(vPCSRequest.getRequestFilePath());
+				return;
+			}	
+		}catch(Exception e){
+			System.out.print("processForm error");//以后设计error log
+			return;
+		}
+	}
+	
+	public static int[][] IPE_AOPM_VECS_IDUQ_TXH_AC(int[][] ps, int VECS
+			, Map<String, String> initonsSet, Map<String, String> initonsCode) {
+		for(int i= 0; i< ps.length; i++) {
+			for(int j= 0; j< ps[0].length; j++) {
+				//String IDUQ= new RangePDI().PDS_P_USQ_ECP_I_17(ps[i][j], 17);
+				String IDUQ= PDS_P_USQ_ECP_I_16(ps[i][j], 16, initonsSet, initonsCode);
+				char[][] OIQ= new char[1][IDUQ.length()];
+				Here:
+				for(int k= 0; k< IDUQ.length(); k++) {
+					if(IDUQ.charAt(k)== 'U') {//g
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'Q';
+						}else {
+							OIQ[0][k]= 'U';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'Q') {//s
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'Q';
+						}else {
+							OIQ[0][k]= 'U';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'I') {//s
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'I';
+						}else {
+							OIQ[0][k]= 'D';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'D') {//g
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'I';
+						}else {
+							OIQ[0][k]= 'D';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'V') {//U   //DIUQ
+						if(Math.random()* 100< VECS) {    //SEVC 相对应
+							OIQ[0][k]= 'C';
+						}else {
+							OIQ[0][k]= 'V';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'E') {//I
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'E';
+						}else {
+							OIQ[0][k]= 'S';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'C') {//Q
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'C';
+						}else {
+							OIQ[0][k]= 'V';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'S') {//D
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'E';
+						}else {
+							OIQ[0][k]= 'S';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'A') {//A = V + S, 酸 = C + E = P,  碱 = V + S = A
+						if(Math.random()* 100< VECS) {    
+							OIQ[0][k]= 'P';                 
+						}else {
+							OIQ[0][k]= 'A';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'O') {//O = E + S, 酸= E + E = E ,  碱 = V + S = A
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'E';
+						}else {
+							OIQ[0][k]= 'A';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'P') {//P = E + C, 酸 = E + C = P,  碱 = S + V = A
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'P';
+						}else {
+							OIQ[0][k]= 'A';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'M') {//M = C + S, 酸 = C + E = P,  碱 = V + S = A
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'P';
+						}else {
+							OIQ[0][k]= 'A';
+						}
+						continue Here;
+					}else if(IDUQ.charAt(k)== 'F') {//F = E+  C + S, 酸 = H,  碱 = V
+						if(Math.random()* 100< VECS) {
+							OIQ[0][k]= 'H';
+						}else {
+							OIQ[0][k]= 'V';
+						}
+						continue Here;
+					}else {
+						OIQ[0][k]= IDUQ.charAt(k);
+					}
+				}
+				//ps[i][j]= new InitonsPDS().DO_ACP_IDV_17(OIQ, 17);
+				ps[i][j]= new InitonsPDS().DO_ACP_IDV_16(OIQ, 16);
+			}
+		}
+		return ps;
+	}
+	public static void newADNAMap(Map<String, String> initonsSet
+			, Map<String, String> initonsCode) {
+		initonsSet.put("0", "0");
+		initonsSet.put("1", "1");
+		initonsSet.put("2", "2");
+		initonsSet.put("3", "3");
+		initonsSet.put("4", "4");
+		initonsSet.put("5", "5");
+		initonsSet.put("6", "6");
+		initonsSet.put("7", "7");
+		initonsSet.put("8", "8");
+		initonsSet.put("9", "9");
+		initonsSet.put("10", "A");
+		initonsSet.put("11", "B");
+		initonsSet.put("12", "C");
+		initonsSet.put("13", "D");
+		initonsSet.put("14", "E");
+		initonsSet.put("15", "F");
+
+		initonsCode.put("0", "D");
+		initonsCode.put("1", "C");
+		initonsCode.put("2", "P");
+		initonsCode.put("3", "E");
+		initonsCode.put("4", "T");
+		initonsCode.put("5", "H");
+		initonsCode.put("6", "O");
+		initonsCode.put("7", "S");
+		initonsCode.put("8", "M");
+		initonsCode.put("9", "A");
+		initonsCode.put("A", "X");
+		initonsCode.put("B", "F");
+		initonsCode.put("C", "V");
+		initonsCode.put("D", "I");
+		initonsCode.put("E", "U");
+		initonsCode.put("F", "Q");
+		return;
+	}
+	
+	public static String PDS_P_USQ_ECP_I_16(int P_VSQ, int MSP
+			, Map<String, String> initonsSet, Map<String, String> initonsCode) {
+		String ISQ= "";
+		while(P_VSQ>= MSP) {
+			ISQ+= initonsCode.get(initonsSet.get(""+ P_VSQ/ MSP));// P_VSQ;
+			P_VSQ%= MSP;
+		}
+		ISQ+= initonsCode.get(initonsSet.get(""+ P_VSQ));// P_VSQ;
+		return ISQ;
+	}
+}
