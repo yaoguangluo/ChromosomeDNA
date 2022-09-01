@@ -233,9 +233,12 @@ public class FileUploaderSimpleSocket{
 				output=output.charAt(output.length()-1)=='"'?output.substring(0
 						, output.length()-1):output;
 				pw.println(output.replace("\\\"","\""));
+				Thread.sleep(150);
 				pw.flush();
 				pw.close();	
+				Thread.sleep(15);
 				vPCSResponse.getSleeperHall().removeThreadById(vPCSResponse.getSocket().hashCode());
+				Thread.sleep(15);
 				System.out.println("success all");
 			}else {
 				System.out.print(vPCSRequest.getRequestLink());
