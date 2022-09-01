@@ -171,14 +171,19 @@ public class FileUploaderSimpleSocket{
 					break;
 				}else {
 					fileOutputStream.write(bytes, 0, length);
-					Thread.sleep(5);
+					Thread.sleep(2);
 				}
 				Thread.sleep(5);
 			}
 			fileOutputStream.flush();
 			//文件裁剪
 			FileImageInputStream inputStreamTemp= new FileImageInputStream(file);
-			BufferedImage bufferedImage= ImageIO.read(inputStreamTemp);
+			BufferedImage bufferedImageIn= ImageIO.read(inputStreamTemp);
+			BufferedImage bufferedImage= bufferedImageIn;
+			if(bufferedImageIn.getHeight()> 600 || bufferedImageIn.getWidth()>600) {
+				bufferedImage= new BufferedImage(500, 400, BufferedImage.TYPE_INT_RGB);
+				bufferedImage.getGraphics().drawImage(bufferedImageIn, 0, 0, 500, 400, null);
+			}
 			int h= bufferedImage.getHeight();
 			int w= bufferedImage.getWidth();
 			System.out.println(h+ "&&"+ w);
