@@ -1,0 +1,265 @@
+/*
+ * 作者， 著作权人： 罗瑶光， 浏阳
+ * */
+var am = angular.module("data", ['ngCookies']);
+am.controller('data', ['$cookieStore', '$scope', '$http', '$compile'
+	, function ($cookieStore, $scope, $http, $compile, fileReader) {
+	$scope.dataWS = function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataWS?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					var temp= decodeURIComponent(response.data.ws,"UTF-8");
+					alert("询问测试！" + temp);
+					document.getElementById("data-right-textarea").value= temp; 
+				}, function errorCallback(response) {
+				});
+	}
+	
+	$scope.dataCX= function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataCX?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					document.getElementById("data-right-textarea").value 
+					= decodeURIComponent(response.data.cx,"UTF-8"); 
+				}, function errorCallback(response) {
+				});
+	}
+	
+	$scope.dataFJ= function () {
+		 document.getElementById("data-left-textarea").value= "获取表名:中医方剂:进行选择;\r\n" +
+		 		"条件为:和:病症&药名|包含|汤:用药参考|包含|当归;\r\n" +
+		 		"获取表列名:病症&药名:用药参考;\r\n" +
+		 		"操作:0|行至|15;"; 
+	}
+	
+	$scope.dataXY= function () {
+		 document.getElementById("data-left-textarea").value= "获取表名:西药手册:进行选择;\r\n" +
+		 		"条件为:和:西药名|包含|林:适应症|包含|感染;\r\n" +
+		 		"获取表列名:西药名:主要成份:适应症:注意事项:用量;\r\n" +
+		 		"操作:0|行至|15;"; 
+	}
+	
+	$scope.dataZY= function () {
+		 document.getElementById("data-left-textarea").value= "获取表名:中药同源:进行选择;\r\n" +
+		 		"条件为:和:功效|精度搜索|风寒咳嗽|1;\r\n" +
+		 		"条件为:和:中药名称|字符串长度大于|1;\r\n" +
+		 		"条件为:和:性味|不包含|寒:脉络|包含|肺:性味|不包含|凉;\r\n" +
+		 		"获取表列名:中药名称;\r\n" +
+		 		"操作:0|行至|30;\r\n" +
+		 		"操作:中药名称|颜色标记为|红色;"; 
+	}
+	
+	$scope.dataCY = function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataCY?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					document.getElementById("data-right-textarea").value 
+					= decodeURIComponent(response.data.cy,"UTF-8"); 
+				}, function errorCallback(response) {
+				});
+	}
+	$scope.dataXL = function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataXL?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					document.getElementById("data-right-textarea").value
+					= decodeURIComponent(response.data.xl,"UTF-8"); 
+				}, function errorCallback(response) {
+				});
+	}
+	$scope.dataRN = function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataRN?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					document.getElementById("data-right-textarea").value
+					= decodeURIComponent(response.data.rn,"UTF-8"); 
+				}, function errorCallback(response) {
+				});
+	}
+	
+	$scope.dataCG = function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataCG?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					document.getElementById("data-right-textarea").value
+					= decodeURIComponent(response.data.cg,"UTF-8"); 
+				}, function errorCallback(response) {
+				});
+	}
+	$scope.dataCJ = function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataCJ?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					document.getElementById("data-right-textarea").value 
+					= decodeURIComponent(response.data.cj,"UTF-8");
+				}, function errorCallback(response) {
+				});
+	}
+	$scope.dataCL = function () {
+		window.location.href='http://tinos.qicp.vip/loginto.html';
+//		var askMessage = document.getElementById("data-left-textarea").value;
+//		$http.post('dataCL?message=' + encodeURIComponent(askMessage))
+//				.then(function successCallback(response) {
+//					document.getElementById("data-right-textarea").value 
+//					= decodeURIComponent(response.data.cl,"UTF-8"); 
+//				}, function errorCallback(response) {
+//				});
+	}
+	
+	$scope.dataXX= function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataXX?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					document.getElementById("data-right-textarea").value 
+					= decodeURIComponent(response.data.xx,"UTF-8"); 
+				}, function errorCallback(response) {
+				});
+	}
+	
+	$scope.dataHF= function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataHF?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					document.getElementById("data-right-textarea").value 
+					= decodeURIComponent(response.data.hf,"UTF-8"); 
+				}, function errorCallback(response) {
+				});
+	}
+	
+	$scope.dataCP= function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataCP?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					document.getElementById("data-right-textarea").value 
+					= decodeURIComponent(response.data.cp,"UTF-8"); 
+				}, function errorCallback(response) {
+				});
+	}
+	
+	$scope.dataZF= function () {
+		var askMessage = document.getElementById("data-left-textarea").value;
+		$http.post('dataZF?message=' + encodeURIComponent(askMessage))
+				.then(function successCallback(response) {
+					document.getElementById("data-right-textarea").value 
+					= decodeURIComponent(response.data.zf, "UTF-8"); 
+				}, function errorCallback(response) {
+				});
+	}
+	//20220816 罗瑶光
+	//准备加点后端发来的pds token，充10000点，进行计费模式 使用一次减1点。
+	//准备加token和email 从cookie里面post后端。
+	//PDStoken到后端pde计算与 email的pde计算相同就减点。
+	$scope.dataYL= function () {
+		var askMessage= document.getElementById("data-left-textarea").value;
+		var tokenPDS= $cookieStore.get('token');
+		var email= $cookieStore.get('email');
+		alert("询问测试！" + email);
+		$http.post('dataYL?message=' + encodeURIComponent(askMessage),
+				//+'&token='+ encodeURIComponent(tokenPDS)
+				//+'&email='+ encodeURIComponent(email)
+				{timeout: 600000}
+		).then(function successCallback(response) {
+//			console.log(response);
+//			alert("询问测试！" + response);
+			var temp= decodeURIComponent(response.data.yl,"UTF-8"); 
+			console.log(temp);
+			var string= temp.toString();
+			alert("询问测试！" + string);
+			console.log(string);
+			string= string.replaceAll("+", " ");
+			string= string.replaceAll("/r/n", "\r\n");
+			string= string.replaceAll("{rowValue=", "\r\n\r\n{rowValue=");
+			temp= "Tinshell PLSQL 执行结果：\r\n"+ string;
+			//console.log(response.data.sb);
+			//temp= temp.split('\r\n');
+//			document.getElementById("data-right-textarea").innerHTML= temp; 
+			document.getElementById("data-right-textarea").value= temp; 
+				}, function errorCallback(response) {
+					window.location.href='http://tinos.qicp.vip/loginto.html';
+				});
+	}
+	//20220818 罗瑶光
+	//准备angular上传图片,做不保存处理计算，避免文件写操作出现病毒无法识别的安全问题。
+	$scope.dataSC= function () {
+		document.getElementById("data-right-textarea").value 
+		= decodeURIComponent("正在上传计算中，请等待，请勿上传太大图片.","UTF-8"); 
+		var form = document.forms.namedItem("fileUpLoader");
+		//—————formdata 的refer ——————————
+		//版权声明：本文为CSDN博主「Eknow05」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+		//原文链接：https://blog.csdn.net/xieyixiao_123/article/details/77816429
+		//罗瑶光调通
+		var formData = new FormData(form);
+		//—————formdata 的refer ————还是refer下，虽然就这一行，但是无比重要，我知道了angular可以new html的原生函数。——————
+		$http.post("dataSC", formData, { 
+			headers: {'Content-Type': 'multipart/form-data'}, 
+			transformRequest: angular.identity,
+			timeout: 600000
+		}).then(function successCallback(response) {
+			console.log(response);
+			document.getElementById("data-right-textarea").value 
+			= decodeURIComponent(response.data.sc,"UTF-8"); 
+		}, function errorCallback(response) {
+			console.log(response);
+			//window.location.href='http://tinos.qicp.vip/loginto.html';
+		});
+	}
+	
+	//20220818 罗瑶光
+	//准备angular上传图片,做不保存处理计算，避免文件写操作出现病毒无法识别的安全问题。
+	$scope.dataTC= function () {
+		document.getElementById("data-right-textarea").value 
+		= decodeURIComponent("正在上传计算中，请等待，请勿上传太大图片.","UTF-8"); 
+		var form = document.forms.namedItem("fileUpLoader");
+		//—————formdata 的refer ——————————
+		//版权声明：本文为CSDN博主「Eknow05」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+		//原文链接：https://blog.csdn.net/xieyixiao_123/article/details/77816429
+		//罗瑶光调通
+		var formData = new FormData(form);
+		//—————formdata 的refer ————还是refer下，虽然就这一行，但是无比重要，我知道了angular可以new html的原生函数。——————
+		$http.post("dataTC", formData, { 
+			headers: {'Content-Type': 'multipart/form-data'}, 
+			transformRequest: angular.identity,
+			timeout: 600000
+		}).then(function successCallback(response) {
+			console.log(response);
+			document.getElementById("data-right-textarea").value 
+			= decodeURIComponent(response.data.tc,"UTF-8"); 
+		}, function errorCallback(response) {
+			console.log(response);
+			//window.location.href='http://tinos.qicp.vip/loginto.html';
+		});
+	}
+	
+	//20220818 罗瑶光
+	//准备angular上传图片,做不保存处理计算，避免文件写操作出现病毒无法识别的安全问题。
+	$scope.dataSB= function () {
+		document.getElementById("data-right-textarea").value 
+		= decodeURIComponent("正在上传计算中，请等待，请勿上传太大图片.","UTF-8"); 
+		var form = document.forms.namedItem("fileUpLoader");
+		//—————formdata 的refer ——————————
+		//版权声明：本文为CSDN博主「Eknow05」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+		//原文链接：https://blog.csdn.net/xieyixiao_123/article/details/77816429
+		//罗瑶光调通
+		var formData= new FormData(form);
+		//—————formdata 的refer ————还是refer下，虽然就这一行，但是无比重要，我知道了angular可以new html的原生函数。——————
+		$http.post("dataSB", formData, { 
+			headers: {'Content-Type': 'multipart/form-data'}, 
+			transformRequest: angular.identity,
+			timeout: 600000
+		}).then(function successCallback(response) {
+			console.log(response);
+			var temp= decodeURIComponent(response.data.sb,"UTF-8"); 
+			//console.log(temp);
+			var json= JSON.parse(temp);
+			//console.log(json["sb"]);
+			temp= "DNA十六元基腐蚀PDE图片识别计算结果：\r\n"+ json["sb"];
+			//console.log(response.data.sb);
+			//temp= temp.split('\r\n');
+			document.getElementById("data-right-textarea").value= temp; 
+		}, function errorCallback(response) {
+			console.log(response);
+			//window.location.href='http://tinos.qicp.vip/loginto.html';
+		});
+	}
+	
+}]);	
