@@ -1,0 +1,222 @@
+package org.deta.boot.rest;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URLDecoder;
+import java.util.Map;
+
+import org.deta.boot.vpc.vision.VPCSRequest;
+import org.deta.boot.vpc.vision.VPCSResponse;
+import org.html5.upload.FileUploaderSimple;
+import org.html5.upload.FileUploaderSimpleDNA;
+import org.html5.upload.FileUploaderSimpleSocket;
+import org.html5.upload.FileUploaderSimpleSocketPDE;
+import org.html5.upload.FileUploaderSimpleSocketSound;
+import org.html5.upload.FileUploaderSimpleSocketSoundImage;
+//著作权人,作者 罗瑶光
+//430181198505250014
+//浏阳德塔软件开发有限公司
+public class LocalRestCall{
+	public static void doDataSB(String[] stringInputs
+			, VPCSResponse vPCSResponse, VPCSRequest vPCSRequest
+			, String stringInput, String mess, InputStream inputStream
+			, byte[] bytes) throws IOException, InterruptedException {
+		for(String contentLength:stringInputs) {
+			if(contentLength.contains("Content-Length")) {
+				String[] strings= contentLength.split(":");
+				if(Long.valueOf(strings[1].replace(" ",""))> 9999999) {
+					vPCSResponse.returnErrorCode(200);
+					return;
+				}
+			}
+		}//checkstatus
+		System.out.println(mess);
+		if(stringInput.contains(".png")||stringInput.contains(".jpeg")
+				||stringInput.contains("JFIF")||stringInput.contains(".jpg")) {
+			System.out.println(2);	
+			Thread.sleep(5);
+			FileUploaderSimpleSocket.processForm(inputStream, bytes
+					, ".jpg", vPCSRequest, vPCSResponse, stringInput);
+		}else {
+			vPCSResponse.returnErrorCode(200);
+			inputStream.close();
+			return;
+		}
+		inputStream.close();
+	}
+
+	public static void doDataYL(String[] stringInputs
+			, VPCSResponse vPCSResponse, VPCSRequest vPCSRequest
+			, String stringInput, String mess, InputStream inputStream
+			, byte[] bytes, int length, Map<String, String> data) 
+					throws IOException, InterruptedException {
+		byte[] bytesNext= new byte[1600];
+		if(length== 1600) {
+			length= inputStream.read(bytesNext);	
+			String stringInputNext= new String(bytesNext);
+			String[] stringInputsFull= (stringInput+stringInputNext).split("\r\n");
+			for(String string:stringInputsFull) {
+				if(string.contains("email=")&&string.contains("token=")) {
+					String[] stringsEmail= string.split("email=");
+					String[] stringsEmailStop= stringsEmail[1].split(";");
+					data.put("email", URLDecoder.decode(stringsEmailStop[0], "UTF-8"));
+					String[] stringsToken= string.split("token=");
+					data.put("token", URLDecoder.decode(stringsToken[1], "UTF-8"));
+				}
+			}
+		}else {
+			String[] stringInputsFull= (stringInput).split("\r\n");
+			for(String string:stringInputsFull) {
+				if(string.contains("email=")&&string.contains("token=")) {
+					String[] stringsEmail= string.split("email=");
+					String[] stringsEmailStop= stringsEmail[1].split(";");
+					data.put("email", URLDecoder.decode(stringsEmailStop[0], "UTF-8"));
+					String[] stringsToken= string.split("token=");
+					data.put("token", URLDecoder.decode(stringsToken[1], "UTF-8"));
+				}
+			}
+		}
+	}
+
+	public static void doDataZT(String[] stringInputs
+			, VPCSResponse vPCSResponse, VPCSRequest vPCSRequest
+			, String stringInput, String mess, InputStream inputStream
+			, byte[] bytes) throws IOException, InterruptedException {
+		//通过 就存储文件和操作 //稍后去重
+		for(String contentLength:stringInputs) {
+			if(contentLength.contains("Content-Length")) {
+				String[] strings= contentLength.split(":");
+				if(Long.valueOf(strings[1].replace(" ",""))> 9999999) {
+					vPCSResponse.returnErrorCode(200);
+					return;
+				}
+			}
+		}
+		System.out.println(mess);
+		if(stringInput.contains(".wav")) {
+			System.out.println(2);	
+			Thread.sleep(5);
+			FileUploaderSimpleSocketSoundImage.processForm(inputStream
+					, bytes, ".wav", vPCSRequest, vPCSResponse, stringInput);
+			return;
+		}else {
+			vPCSResponse.returnErrorCode(200);
+			return;
+		}
+	}
+
+	public static void doDataPDE(String[] stringInputs
+			, VPCSResponse vPCSResponse, VPCSRequest vPCSRequest
+			, String stringInput, String mess, InputStream inputStream
+			, byte[] bytes) throws IOException, InterruptedException {
+		//通过 就存储文件和操作
+		//稍后去重
+		for(String contentLength:stringInputs) {
+			if(contentLength.contains("Content-Length")) {
+				String[] strings= contentLength.split(":");
+				if(Long.valueOf(strings[1].replace(" ",""))> 9999999) {
+					vPCSResponse.returnErrorCode(200);
+					return;
+				}
+			}
+		}
+		//checkstatus
+		System.out.println(mess);
+		if(stringInput.contains(".png")||stringInput.contains(".jpeg")
+				||stringInput.contains("JFIF")||stringInput.contains(".jpg")) {
+			System.out.println(2);	
+			Thread.sleep(5);
+			FileUploaderSimpleSocketPDE.processForm(inputStream, bytes
+					, ".jpg", vPCSRequest, vPCSResponse, stringInput);
+			inputStream.close();
+			return;
+		}else {
+			vPCSResponse.returnErrorCode(200);
+			inputStream.close();
+			return;
+		}
+	}
+
+	public static void doDataTC(String[] stringInputs
+			, VPCSResponse vPCSResponse, VPCSRequest vPCSRequest
+			, String stringInput, String mess, InputStream inputStream
+			, byte[] bytes)throws IOException, InterruptedException {
+		//通过 就存储文件和操作
+		//稍后去重
+		for(String contentLength:stringInputs) {
+			if(contentLength.contains("Content-Length")) {
+				String[] strings= contentLength.split(":");
+				if(Long.valueOf(strings[1].replace(" ",""))> 9999999) {
+					vPCSResponse.returnErrorCode(200);
+					return;
+				}
+			}
+		}
+		System.out.println(mess);
+		if(stringInput.contains(".png")||stringInput.contains(".jpeg")
+				||stringInput.contains("JFIF")||stringInput.contains(".jpg")) {
+			System.out.println(2);	
+			Thread.sleep(5);
+			FileUploaderSimple.processForm(inputStream, bytes
+					, ".jpg", vPCSRequest, vPCSResponse);
+		}else {
+			vPCSResponse.returnErrorCode(200);
+			return;
+		}
+	}
+
+	public static void doDataSC(String[] stringInputs
+			, VPCSResponse vPCSResponse, VPCSRequest vPCSRequest
+			, String stringInput, String mess, InputStream inputStream
+			, byte[] bytes)throws IOException, InterruptedException {
+		//通过 就存储文件和操作 //稍后去重
+		for(String contentLength:stringInputs) {
+			if(contentLength.contains("Content-Length")) {
+				String[] strings= contentLength.split(":");
+				if(Long.valueOf(strings[1].replace(" ",""))> 9999999) {
+					vPCSResponse.returnErrorCode(200);
+					return;
+				}
+			}
+		}
+		System.out.println(mess);
+		if(stringInput.contains(".png")||stringInput.contains(".jpeg")
+				||stringInput.contains("JFIF")||stringInput.contains(".jpg")) {
+			System.out.println(2);	
+			Thread.sleep(5);
+			FileUploaderSimpleDNA.processForm(inputStream, bytes
+					, ".jpg", vPCSRequest, vPCSResponse);
+			return;
+		}else {
+			vPCSResponse.returnErrorCode(200);
+			return;
+		}
+	}
+
+	public static void doDataSY(String[] stringInputs
+			, VPCSResponse vPCSResponse, VPCSRequest vPCSRequest
+			, String stringInput, String mess, InputStream inputStream
+			, byte[] bytes) throws IOException, InterruptedException {
+		//通过 就存储文件和操作 //稍后去重
+		for(String contentLength:stringInputs) {
+			if(contentLength.contains("Content-Length")) {
+				String[] strings= contentLength.split(":");
+				if(Long.valueOf(strings[1].replace(" ",""))> 9999999) {
+					vPCSResponse.returnErrorCode(200);
+					return;
+				}
+			}
+		}
+		System.out.println(mess);
+		if(stringInput.contains(".wav")) {
+			System.out.println(2);	
+			Thread.sleep(5);
+			FileUploaderSimpleSocketSound.processForm(inputStream, bytes
+					, ".wav", vPCSRequest, vPCSResponse, stringInput);
+			return;
+		}else {
+			vPCSResponse.returnErrorCode(200);
+			return;
+		}
+	}
+}
