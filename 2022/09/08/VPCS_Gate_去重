@@ -1,0 +1,133 @@
+package org.deta.boot.vpc.controller;
+
+import java.io.InputStream;
+import java.net.URLDecoder;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import org.deta.boot.rest.LocalRestCall;
+import org.deta.boot.vpc.vision.VPCSRequest;
+import org.deta.boot.vpc.vision.VPCSResponse;
+//import org.sevlet.upload.FileUploader;
+//import org.sevlet.upload.FileUploaderSimple;
+//著作权人,作者 罗瑶光
+//430181198505250014
+//浏阳德塔软件开发有限公司
+//通过 就存储文件和操作
+//稍后去重
+public class RequestRecordController {
+	public static void requestIpRecoder(VPCSRequest vPCSRequest, VPCSResponse vPCSResponse) {
+		vPCSRequest.setRequestIp(vPCSResponse.getSocket().getInetAddress().getHostAddress());
+		vPCSRequest.setRequestName(vPCSResponse.getSocket().getInetAddress().getHostName());
+	}
+	//准备根据浏览器进行识别来推荐wap页面
+	@SuppressWarnings("unused")
+	public static void requestLinkRecoder(VPCSRequest vPCSRequest, VPCSResponse vPCSResponse) throws Exception {	
+		//稍后修改数据为form分流
+		InputStream br= vPCSResponse.getSocket().getInputStream();
+		int length= 0;
+		byte[] bytes= new byte[1600];
+		length= br.read(bytes);	
+		String stringInput= new String(bytes);
+		String[] stringInputs= stringInput.split("\r\n");
+		String mess= stringInputs[0];
+		if(null== mess){
+			vPCSResponse.returnErrorCode(200);
+			return;
+		}
+		if(mess.length()> 3000) {
+			vPCSResponse.returnErrorCode(200);
+			return;
+		}
+		if(mess.equalsIgnoreCase("") || !mess.contains("HTTP")){
+			vPCSResponse.returnErrorCode(200);
+			return;
+		}
+		if(mess.contains(".php")||mess.contains(".jsp")){
+			vPCSResponse.returnErrorCode(200);
+			return;
+		}
+		//cell phone check
+		if(!stringInput.contains("Win")) {
+			//wap
+			mess= mess.replace("GET HTTP/1.1", "GET /indexCellPhone.html HTTP/1.1");
+			mess= mess.replace("GET / HTTP/1.1", "GET /indexCellPhone.html HTTP/1.1");
+			mess= mess.replace("GET /index.html HTTP/1.1", "GET /indexCellPhone.html HTTP/1.1");
+		}
+		if(mess.contains("dataSY")) {
+			LocalRestCall.doDataSY(stringInputs, vPCSResponse, vPCSRequest, stringInput, mess, br, bytes);
+			return;
+		}
+		if(mess.contains("dataSC")) {
+			LocalRestCall.doDataSC(stringInputs, vPCSResponse, vPCSRequest, stringInput, mess, br, bytes);
+			return;
+		}
+		if(mess.contains("dataTC")) {	
+			LocalRestCall.doDataTC(stringInputs, vPCSResponse, vPCSRequest, stringInput, mess, br, bytes);
+			return;
+		}
+		String[] type= mess.split(" ");
+		if(type.length< 3){
+			vPCSResponse.returnErrorCode(200);
+			return;
+		}
+		System.out.println(type[1]);
+		String[] content= type[1].split("\\?");
+		if(content.length== 2) {
+			if(content[0].contains(".woff")|| content[0].contains(".ttf")) {
+				vPCSRequest.setRequestIsRest(false);
+				vPCSResponse.returnErrorCode(200);
+				String reg= "";
+				int count= 0;//打印header行数
+				return;
+			}else if(content[0].equalsIgnoreCase("/")|| content[0].contains(".js")|| content[0].contains(".css")
+					|| content[0].contains(".html")){
+				vPCSRequest.setRequestIsRest(false);	
+			}else {
+				vPCSRequest.setRequestIsRest(true);
+				if(content[1]== null ||content[1].equals("")||!content[1].contains("=")){
+					vPCSResponse.returnErrorCode(200);
+					return;
+				}	
+			}
+		}else {
+			vPCSRequest.setRequestIsRest(false);
+		}
+		if(vPCSRequest.getRequestIsRest()){
+			String[] column= content[1].split("&");
+			Map<String, String> data= new ConcurrentHashMap<>();
+			for(String cell:column){
+				String[] cells= cell.split("=");
+				if(cells.length> 1) {
+					String string=URLDecoder.decode(cells[1], "UTF-8");
+					if(string.length()> 800) {
+						string= string.substring(0, 800);
+					}
+					data.put(cells[0], string);
+				}
+			}
+			//load
+			if(mess.contains("dataYL")) {
+				LocalRestCall.doDataYL(stringInputs, vPCSResponse, vPCSRequest, stringInput, mess, br, bytes, length, data);
+			}
+			vPCSRequest.setRequestValue(data);	
+		}
+		if(mess.contains("dataSB")) {	
+			LocalRestCall.doDataSB(stringInputs, vPCSResponse, vPCSRequest, stringInput, mess, br, bytes);
+			return;
+		}
+		if(mess.contains("dataPDE")|| mess.contains("object%20HTMLInputElement")) {	
+			LocalRestCall.doDataPDE(content, vPCSResponse, vPCSRequest, stringInput, mess, br, bytes);
+			return;
+		}
+		if(mess.contains("dataZT")) {
+			LocalRestCall.doDataZT(content, vPCSResponse, vPCSRequest, stringInput, mess, br, bytes);
+			return;
+		}
+		if(content[0].equals("/")) {
+			vPCSRequest.setRequestLink(content[0]+ "index.html");	
+		}else {
+			vPCSRequest.setRequestLink(content[0]);	
+		}
+	}
+}
