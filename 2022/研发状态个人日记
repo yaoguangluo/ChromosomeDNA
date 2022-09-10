@@ -527,6 +527,10 @@ C:\Users\Administrator>tracert -d tinos.qicp.vip
 20220908
 准备tinos。qicp.vip 网站网页编辑 章分节点击
 
+20220911
+将图片的肽计算腐蚀后颜色进行分开坐标存储。
+按照 map<颜色，list<像素的coords坐标object>>方式。然后每一个颜色，求它的坐标的焦点，分布，向量，我的德塔数据预测 project 就用上了。
+
 罗瑶光
 
 202206102221 停电1小时多了。来电了，那就洗漱下。
