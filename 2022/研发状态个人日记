@@ -543,6 +543,12 @@ C:\Users\Administrator>tracert -d tinos.qicp.vip
 
 3 web tinshell demo多做点基础按钮扩展
 
+20220920
+1 dnn 文件优化
+2 搜索通过回车执行，减少计算浪费。
+3 准备降低 智能相诊的帧，每秒5-10个足够了。
+
+
 罗瑶光
 
 202206102221 停电1小时多了。来电了，那就洗漱下。
