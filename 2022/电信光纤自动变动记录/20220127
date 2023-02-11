@@ -207,6 +207,8 @@ C:\Users\Administrator>tracert tinos.qicp.vip
  13     *        *        *     请求超时。                                      
  14    28 ms    28 ms    28 ms  81.71.132.174
  
+ 我一般每天也就tracert几次， 电信ip如果一天变得太多太快我就不管了。没那个精力
+ 
 -----------------------------------------------------------------------------
 罗瑶光/Yaoguang.Luo
 yaoguangluo@outlook.com
