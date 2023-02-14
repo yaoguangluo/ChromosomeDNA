@@ -1,0 +1,93 @@
+
+肽展公式在函数新陈代谢中的三个应用实例
+
+DNA元基编码与肽计算第五版7102的182页 函数模拟费洛蒙精简优化的
+计算猜想模式到后来第二次新陈代谢254, 279, 287页 中有简单的元基新陈代谢
+的函数优化模拟。
+
+我在这里提供3个实例，关于肽展公式在函数新陈代谢中的具体应用。
+
+1 亲源函数的归纳肽展编码代谢模式
+2 亲源函数的归纳肽展缩进代谢模式
+3 神经网络的归纳肽展索引代谢模式
+
+1
+举例 1 亲源函数的归纳肽展编码代谢模式
+public class AOP.MVE.CSI.DUQ{
+	value AOP.CSI.DUQ;
+  value AOP.DUQ;
+}
+------------第二次新陈代谢--------------
+public class AOP.AOP.MVE.CSI.DUQ{
+	value CSI.DUQ;
+  value DUQ;
+}
+--------前后缀去重-和顶针探索--M=C+S----
+public class AOP.MVE.MI{
+	value DUQ;
+  value _X;
+}
+
+2
+举例 2 亲源函数的归纳肽展缩进代谢模式
+import AOP.MVE.CSI.DUQ.E    static 函数1
+import AOP.MVE.CSI.DUQ.S    static 函数2
+import AOP.MVE.CSI.DUQ.P    static 函数3
+import AOP.MVE.CSI.DUQ.M   static 函数4
+通过简单去重 可计算
+import AOP.MVE.CSI.DUQ.E    static 函数1
+-------------代谢---------- .S    static 函数2
+-------------代谢---------- .P    static 函数3
+-------------代谢---------- .M   static 函数4
+通过 M=C+S,  O=E+S 可计算
+import AOP.MVE.MI.DUQ.O    static 函数1, static 函数2
+-------------代谢---------- .P    static 函数3
+-------------代谢---------- .M   static 函数4
+
+3
+举例3 神经网络的归纳肽展索引代谢模式
+import AOP.MVE.DUQ.A       static 函数1
+import MVE.CII.DUQ.D       static 函数2
+import AMQ.CSO.UVE.P       static 函数3
+通过简单rotation
+import AOP.MVE.DUQ.A       static 函数1
+import AMQ.CSO.UVE.P       static 函数3
+import MVE.CII.DUQ.D       static 函数2
+通过 S=I+Q,  可计算
+import AOP.MVE.DUQ.A       static 函数1
+import AMQ.CIQO.UVE.P      static 函数3
+import MVE.CII.DUQ.D       static 函数2
+通过简单rotation
+import AOP.MVE.DUQ.A       static 函数1
+import AMQ.CI--I.DUQ.D     static 函数2
+import MVE.CI--QO.UVE.P    static 函数3
+通过 E=D+U,  可计算
+import AOP.MVE.EQ.A        static 函数1
+import AMQ.CI-- I.EQ.D     static 函数2
+import MVE.CI--QO.UVE.P    static 函数3
+神经网络新陈代谢表达
+import A OP.MVE.EQ.A       static 函数1
+------ A ------ EQ
+import --MQ.CI- I.-.D    static 函数2
+----------- CI
+import MVE.----QO.UVE.P    static 函数3
+
+好理解吗？
+
+
+Refer
+2020年10月31日 8.罗瑶光. 《肽展公式推导与元基编码进化计算以及它的应用发现》. 中华人民共和国国家版权局，国作登字-2021-A-00042587. 2021.
+2020年10月09日 7.罗瑶光, 罗荣武. 《类人DNA与 神经元基于催化算子映射编码方式 V_1.2.2》. 中华人民共和国国家版权局，国作登字-2021-A-00097017. 2021. 
+2022年01月27日 14.罗瑶光, 罗荣武. 《DNA元基催化与肽计算 第四修订版 V00919》. 中华人民共和国国家版权局，SD-2022Z11L0025809. 2022. (受理号:2022Z11S1032939).登记号：国作登字-2022-L-10071310
+2022年06月06日 15. 罗瑶光, 罗荣武. 《DNA元基催化与肽计算_第五修订版_V0007102》. 著作权版本申请序列号为 2022Z11L0144353.登记号：国作登字-2022-L-10181589
+
+养疗经一直在这个方向走。
+
+-------------------------------------------------------------------------------------------
+罗瑶光/Yaoguang.Luo
+yaoguangluo@outlook.com-313699483@qq.com-2080315360@qq.com-lygtin@sina.com
+15116110525-19173129338-16674208794
+430181198505250014-G24402609-EB0581342
+204925063-389418686-F2406501-0626136
+湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路 一段 206-208 阳光家园别墅小区 第10栋
+------------------------------------------------------------------------------------------
