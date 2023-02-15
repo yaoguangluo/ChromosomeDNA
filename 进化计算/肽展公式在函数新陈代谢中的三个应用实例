@@ -15,17 +15,22 @@ DNA元基编码与肽计算第五版7102的182页 函数模拟费洛蒙精简优
 举例 1 亲源函数的归纳肽展编码代谢模式
 public class AOP.MVE.CSI.DUQ{
 	value AOP.CSI.DUQ;
-  value AOP.DUQ;
+        value AOP.DUQ;
 }
 ------------第二次新陈代谢--------------
 public class AOP.AOP.MVE.CSI.DUQ{
 	value CSI.DUQ;
-  value DUQ;
+        value DUQ;
 }
 --------前后缀去重-和顶针探索--M=C+S----
 public class AOP.MVE.MI{
 	value DUQ;
-  value _X;
+        value DUQ_X;
+}
+-----------------完整点--缩进-E=D+U-----
+public class AOP.MVE.MIE{
+	value Q;
+        value Q_X;
 }
 
 2
