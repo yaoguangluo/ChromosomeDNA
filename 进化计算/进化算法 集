@@ -54,9 +54,7 @@
    D = LINE COST, F = TIMES, T = RUN COST.
    
 4 德塔DNN罗氏重心算法：ann中心加rnn为加权 求解核心词汇算法 --refer 1，7
-   4.1 Ei(0 - n)[SUM] * PO_q = Ej(0 - n)DNN[PI_q] 
-   <-> Ej(0 - n)DNN[PI_n] * CO_q = DNN BETA_q 
-   <-> Ej(0 - n)DNN[BETA_n] * ED_q = OUT_q
+   4.1 Ei(0 - n)[SUM] * PO_q = DNN（PI_q） <-> Ej(0 - n)DNN[PI_n] * CO_q = DNN（BETA_q） <-> Ej(0 - n)DNN[BETA_n] * ED_q = OUT_q
    
    SUMi= SEi + ENi + MOi + EMi --> ANN SUM
    
