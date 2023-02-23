@@ -1,16 +1,36 @@
 准备归纳下已有的进化算法 归纳中。
+著作权算法
 1 肽展公式：AOPM VECS IDUQ的 增元公式，降元公式，概率钥匙酸碱公式 --refer 8，9
-
+   
 2 算能公式：计算力效率比公式 -- refer 7 ，15
 
 3 微分催化公式：流水阀门算法，统计微分函数前移算法 --refer 1，2，7，15
-   3.1 流水阀门算法= f(冯诺依曼从左到右，从上到下模式流水阀门)--
+   3.1 流水阀门算法= f(冯诺依曼从左到右，从上到下模式流水阀门 进行 return输出)--
    3.2 统计微分函数前移算法= Ei(0-n)[minOfI[fi(0-n)[fj(0-n)[DjFiTi]]]]--
    
 4 DNN罗氏重心算法：ann中心加rnn为加权 求解核心词汇算法 --refer 1，7
-
+   4.1 Ei(0 - n)[SUM] * PO_q = Ej(0 - n)DNN[PI_q] 
+   <-> Ej(0 - n)DNN[PI_n] * COq = DNN BETA_q 
+   <-> Ej(0 - n)DNN[BETA_n] * EDq = OUTq
+   
+   SUMi= SEi + ENi + MOi + EMi --> ANN SUM
+   
+   SE= SENSING RATIO
+   EN= ENVIRONMENT RATIO 
+   MO= MOTIVATION RATIO 
+   EM= EMOTION RATIO
+   PO= POS RATIO
+   CO= CORRELATION RATIO 
+   ED= E-DISTANCE RATIO
 5 PLETL：tinshell的 PLSQL 语言编译机 --refer 4，12，13
 
+6 极值边缘算法 side end
+
+非著作权算法
+1 卷积算法
+2 LRC电感积分公式
+3 欧拉算法
+4 路径算法
 
 refer
 https://github.com/yaoguangluo/YangLiaoJing_HuaRuiJi/tree/18701/%E8%AF%81%E4%B9%A6    
