@@ -3,13 +3,17 @@
 1 肽展公式：AOPM VECS IDUQ的 增元公式，降元公式，概率钥匙酸碱公式 --refer 8，9
    
 2 算能公式：计算力效率比公式 -- refer 7 ，15
+  N = S（AON）/s（AON）
+  N = 算能单位
+  S = 每时间秒 函数非结束状态执行的与或非 累积次数 总和
+  s = 函数本身执行 与或非 的 单元器件 总和
 
 3 微分催化公式：流水阀门算法，统计微分函数前移算法 --refer 1，2，7，15
-   3.1 流水阀门算法= f(冯诺依曼从左到右，从上到下模式流水阀门 进行 return输出)--
-   3.2 统计微分函数前移算法= Ei(0 - n)[minOfI[fi(0 - n)[fj(0 - n)[Dj * Fi * Ti]]]]--
+   3.1 德塔分词的流水阀门算法= f(冯诺依曼从左到右，从上到下模式流水阀门 进行 return输出)--
+   3.2 德塔分词的统计微分函数前移算法= Ei(0 - n)[minOfI[fi(0 - n)[fj(0 - n)[Dj * Fi * Ti]]]]--
    D= LINE COST, F= TIMES, T= RUN COST.
    
-4 DNN罗氏重心算法：ann中心加rnn为加权 求解核心词汇算法 --refer 1，7
+4 德塔DNN罗氏重心算法：ann中心加rnn为加权 求解核心词汇算法 --refer 1，7
    4.1 Ei(0 - n)[SUM] * PO_q = Ej(0 - n)DNN[PI_q] 
    <-> Ej(0 - n)DNN[PI_n] * COq = DNN BETA_q 
    <-> Ej(0 - n)DNN[BETA_n] * EDq = OUTq
