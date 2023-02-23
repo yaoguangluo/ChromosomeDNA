@@ -51,7 +51,7 @@
 3 微分催化公式：流水阀门算法，统计微分函数前移算法 --refer 1，2，7，15
    3.1 德塔分词的流水阀门算法= f(冯诺依曼从左到右，从上到下模式流水阀门 进行 return输出)--
    3.2 德塔分词的统计微分函数前移算法= Ei(0 - n)[minOfI[fi(0 - n)[fj(0 - n)[Dj * Fi * Ti]]]]--
-   D= LINE COST, F= TIMES, T= RUN COST.
+   D = LINE COST, F = TIMES, T = RUN COST.
    
 4 德塔DNN罗氏重心算法：ann中心加rnn为加权 求解核心词汇算法 --refer 1，7
    4.1 Ei(0 - n)[SUM] * PO_q = Ej(0 - n)DNN[PI_q] 
@@ -67,15 +67,15 @@
    PO= POS RATIO
    CO= CORRELATION RATIO 
    ED= E-DISTANCE RATIO
-5 PLETL：tinshell的 PLSQL 语言编译机 --refer 4，12，13
+   
+5 PLETL：tinshell的 PLSQL 语言编译机节点化 --refer 4，12，13
 
-6 极值边缘算法 side end
-
-非著作权算法
-1 卷积算法
-2 LRC电感积分公式
-3 欧拉算法
-4 路径算法
+-------------------------------------------------------------------------
+非著作权三个算法 表述略
+6 KNN 路径算法，用于求解最短欧拉路径 
+7 欧拉路径算法，用于求解元基进制
+8 LRC 电感微分公式，用于元基编码的硬件智慧扩展。
+-------------------------------------------------------------------------
 
 refer
 https://github.com/yaoguangluo/YangLiaoJing_HuaRuiJi/tree/18701/%E8%AF%81%E4%B9%A6    
