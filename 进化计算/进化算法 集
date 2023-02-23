@@ -1,46 +1,46 @@
 准备归纳下《DNA元基催化与肽计算_第五修订版_V0007102》已有的进化算法。
 著作权算法
 1 肽展公式：AOPM VECS IDUQ的 增元公式，降元公式，概率钥匙酸碱公式 --refer 8，9
-   1.1 PDE MASK LAW/ 离散反码定理
-   I = D!
-   D = I!
-   U = Q!
-   Q = U!
+  1.1 PDE MASK LAW/ 离散反码定理
+      I = D!
+      D = I!
+      U = Q!
+      Q = U!
 
-   1.2 PDE COMP'S LAW/ 离散补码定理
-   DD = ++Q
-   I = ++D
-   U = ++I
-   Q = ++U
+  1.2 PDE COMP'S LAW/ 离散补码定理
+      DD = ++Q
+      I = ++D
+      U = ++I
+      Q = ++U
 
-   1.3 PDE (肽减/PDE DECREMENT) LAW
-   C = D ( 肽减/PDE DECREMENT)
-   S = I ( 肽减/PDE DECREMENT)
-   S = Q ( 肽减/PDE DECREMENT)
+  1.3 PDE (肽减/PDE DECREMENT) LAW
+      C = D ( 肽减/PDE DECREMENT)
+      S = I ( 肽减/PDE DECREMENT)
+      S = Q ( 肽减/PDE DECREMENT)
 
-   1.4 PDE (肽增/PDE INCREMENT) LAW
-   D = DD ( 肽增/PDE INCREMENT)
-   U = E ( 肽增/PDE INCREMENT)
-   I = U ( 肽增/PDE INCREMENT)
-   E = I + E ( 肽增/PDE INCREMENT)
-   P = P + D ( 肽增/PDE INCREMENT)
-   C = U + D + D( 肽增/PDE INCREMENT)
+  1.4 PDE (肽增/PDE INCREMENT) LAW
+      D = DD ( 肽增/PDE INCREMENT)
+      U = E ( 肽增/PDE INCREMENT)
+      I = U ( 肽增/PDE INCREMENT)
+      E = I + E ( 肽增/PDE INCREMENT)
+      P = P + D ( 肽增/PDE INCREMENT)
+      C = U + D + D( 肽增/PDE INCREMENT)
 
-   A = U + Q + I (不饱和／错误肽展/UNSAFE PDE); 
-   O = I + U + Q (不饱和／错误肽展/UNSAFE PDE); 
-   P = I + U + D (不饱和／错误肽展/UNSAFE PDE); 
-   M = I + D + Q (不饱和／错误肽展/UNSAFE PDE); 
+      A = U + Q + I (不饱和／错误肽展/UNSAFE PDE); 
+      O = I + U + Q (不饱和／错误肽展/UNSAFE PDE); 
+      P = I + U + D (不饱和／错误肽展/UNSAFE PDE); 
+      M = I + D + Q (不饱和／错误肽展/UNSAFE PDE); 
 
-   A = V + S (肽展/PDE);
-   O = E + S (肽展/PDE);
-   P = E + C (肽展/PDE);
-   M = C + S (肽展);
+      A = V + S (肽展/PDE);
+      O = E + S (肽展/PDE);
+      P = E + C (肽展/PDE);
+      M = C + S (肽展);
 
-   V = U + Q (肽展/PDE);
-   E = D + U (肽展/PDE);
-   E = I + U (肽展/PDE);
-   C = I + D (肽展/PDE);
-   S = I + Q (肽展/PDE);
+      V = U + Q (肽展/PDE);
+      E = D + U (肽展/PDE);
+      E = I + U (肽展/PDE);
+      C = I + D (肽展/PDE);
+      S = I + Q (肽展/PDE);
  
 2 算能公式：计算力效率比公式 -- refer 7 ，15
   N = S（AON）/s（AON）
@@ -49,33 +49,46 @@
   s = 函数本身执行 与或非 的 单元器件 总和
 
 3 微分催化公式：流水阀门算法，统计微分函数前移算法 --refer 1，2，7，15
-   3.1 德塔分词的流水阀门算法= f(冯诺依曼从左到右，从上到下模式流水阀门 进行 return输出)--
-   3.2 德塔分词的统计微分函数前移算法= Ei(0 - n)[minOfI[fi(0 - n)[fj(0 - n)[Dj * Fi * Ti]]]]--
-   D = LINE COST, F = TIMES, T = RUN COST.
+  3.1 德塔分词的流水阀门算法= f(冯诺依曼从左到右，从上到下模式流水阀门 进行 return输出)--
+  3.2 德塔分词的统计微分函数前移算法= Ei(0 - n)[minOfI[fi(0 - n)[fj(0 - n)[Dj * Fi * Ti]]]]--
+      D = LINE COST, F = TIMES, T = RUN COST.
    
 4 德塔DNN罗氏重心算法：ann中心加rnn为加权 求解核心词汇算法 --refer 1，7
-   4.1 Ei(0 - n)[SUM] * PO_q = DNN（PI_q） <-> Ej(0 - n)DNN[PI_n] * CO_q = DNN（BETA_q） <-> Ej(0 - n)DNN[BETA_n] * ED_q = OUT_q
+  4.1 Ei(0 - n)[SUM] * PO_q = DNN（PI_q） <-> Ej(0 - n)DNN[PI_n] * CO_q = DNN（BETA_q） <-> Ej(0 - n)DNN[BETA_n] * ED_q = OUT_q
    
-   SUMi= SEi + ENi + MOi + EMi --> ANN SUM
+      SUMi= SEi + ENi + MOi + EMi --> ANN SUM
    
-   SE= SENSING RATIO
-   EN= ENVIRONMENT RATIO 
-   MO= MOTIVATION RATIO 
-   EM= EMOTION RATIO
-   PO= POS RATIO
-   CO= CORRELATION RATIO 
-   ED= E-DISTANCE RATIO
+      SE= SENSING RATIO
+      EN= ENVIRONMENT RATIO 
+      MO= MOTIVATION RATIO 
+      EM= EMOTION RATIO
+      PO= POS RATIO
+      CO= CORRELATION RATIO 
+      ED= E-DISTANCE RATIO
    
 5 PLETL：tinshell的 PLSQL 语言编译机节点化 --refer 4，12，13
+  5.1 ETL UNICORN的 节点单一化 和命令化。
+  5.2 元基花的函数扩展，平台扩展，版本更新，花粉工程等用途。
+  5.3 OSGI的系统工程扩展。
+
+6 一,二次新陈代谢算法 --refer 7, 15
+  定义：元基的 新陈代谢一般指 源码工程的函数文件 进行元基编码后的 内容逻辑 接口和类 索引优化方式，主要体现在 文件 的分类，剔除，继承，分配。
+  定义：元基的 二次新陈代谢一般指 源码工程的函数文件名 进行元基编码后的 文件名称 索引优化方式，主要体现在 元基 的分类，剔除，缩进，分配。
+
+7 DNA索引算法
+  元基花定义 一般指 软件工程源码 在 进化计算 表达中， 能够进行 将执行函数 序列化的 索引组件。
+  元基枝定义 一般指 软件工程源码 在 进化计算 表达中， 能够识别 元基花 索引组件 的引擎和终端。
 
 -------------------------------------------------------------------------
 非著作权三个算法 表述略
-6 KNN 路径算法，用于求解最短欧拉路径 
-7 欧拉路径算法，用于求解元基进制
-8 LRC 电感微分公式，用于元基编码的硬件智慧扩展。
+8 KNN 路径算法，用于求解最短欧拉路径 
+9 欧拉路径算法，用于求解元基进制
+10 LRC 电感微分公式，用于元基编码的硬件智慧扩展。
+
+11 其他算法 不涉及进化计算的直接关系，这里全部略
 -------------------------------------------------------------------------
 
-其他算法 不涉及进化计算的直接关系，这里全部略
+ 
 
 
 refer
