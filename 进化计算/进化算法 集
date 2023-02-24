@@ -42,12 +42,12 @@
       C = I + D (肽展/PDE);
       S = I + Q (肽展/PDE);
 
-      T = V + E
-      T = V + HE
-      X = V + C 
-      X = V + HC
-      HH = HE OR HC
-      F = I OR D OR U OR Q
+      T = V + E;
+      T = V + HE;
+      X = V + C; 
+      X = V + HC;
+      HH = HE OR HC;
+      {全嘌呤 活性大，略先 F = H = V = E = S = C = I + D = I + U = I + Q = D + U = D + Q = U + Q};
 
   1.5 频率公式
       1.5.1 DNA 
@@ -82,31 +82,31 @@
             T{HH} = T{E + C} ;
             T(羟羟 羟羟) = T(羟 羟氨) ;
  
-2 算能公式：计算力效率比公式 -- refer 7 ，15
+2 算能公式：计算力效率比公式 -- refer 7, 15
   N = S（AON）/s（AON）
   N = 算能单位
   S = 每时间秒 函数非结束状态执行的与或非 累积次数 总和
   s = 函数本身执行 与或非 的 单元器件 总和
 
-3 微分催化公式：流水阀门算法，统计微分函数前移算法 --refer 1，2，7，15
-  3.1 德塔分词的流水阀门算法= f(冯诺依曼从左到右，从上到下模式流水阀门 进行 return输出)--
-  3.2 德塔分词的统计微分函数前移算法= Ei(0 - n)[minOfI[fi(0 - n)[fj(0 - n)[Dj * Fi * Ti]]]]--
+3 微分催化公式：流水阀门算法，统计微分函数前移算法 --refer 1, 2, 7, 15
+  3.1 德塔分词的流水阀门算法 = f(冯诺依曼从左到右，从上到下模式流水阀门 进行 return输出) --
+  3.2 德塔分词的统计微分函数前移算法 = Ei(0 - n)[minOfI[fi(0 - n)[fj(0 - n)[Dj * Fi * Ti]]]] --
       D = LINE COST, F = TIMES, T = RUN COST.
    
-4 德塔DNN罗氏重心算法：ann中心加rnn为加权 求解核心词汇算法 --refer 1，7
+4 德塔DNN罗氏重心算法：ann中心加rnn为加权 求解核心词汇算法 --refer 1, 7
   4.1 Ei(0 - n)[SUM] * PO_q = DNN（PI_q） <-> Ej(0 - n)DNN[PI_n] * CO_q = DNN（BETA_q） <-> Ej(0 - n)DNN[BETA_n] * ED_q = OUT_q
    
-      SUMi= SEi + ENi + MOi + EMi --> ANN SUM
+      SUMi = SEi + ENi + MOi + EMi --> ANN SUM
    
-      SE= SENSING RATIO
-      EN= ENVIRONMENT RATIO 
-      MO= MOTIVATION RATIO 
-      EM= EMOTION RATIO
-      PO= POS RATIO
-      CO= CORRELATION RATIO 
-      ED= E-DISTANCE RATIO
+      SE = SENSING RATIO
+      EN = ENVIRONMENT RATIO 
+      MO = MOTIVATION RATIO 
+      EM = EMOTION RATIO
+      PO = POS RATIO
+      CO = CORRELATION RATIO 
+      ED = E-DISTANCE RATIO
    
-5 PLETL：tinshell的 PLSQL 语言编译机节点化 --refer 4，12，13
+5 PLETL：tinshell的 PLSQL 语言编译机节点化 --refer 4, 12, 13
   5.1 ETL UNICORN的 节点单一化 和命令化。
   5.2 元基花的函数扩展，平台扩展，版本更新，花粉工程等用途。
   5.3 OSGI的系统工程扩展。
@@ -115,22 +115,22 @@
   定义：元基的 新陈代谢一般指 源码工程的函数文件 进行元基编码后的 内容逻辑 接口和类 索引优化方式，主要体现在 文件 的分类，剔除，继承，分配。
   定义：元基的 二次新陈代谢一般指 源码工程的函数文件名 进行元基编码后的 文件名称 索引优化方式，主要体现在 元基 的分类，剔除，缩进，分配。
 
-7 DNA索引算法--refer 7, 15
+7 DNA索引算法 --refer 7, 15
   元基花定义 一般指 软件工程源码 在 进化计算 表达中， 能够进行 将执行函数 序列化的 索引组件。
   元基枝定义 一般指 软件工程源码 在 进化计算 表达中， 能够识别 元基花 索引组件 的引擎和终端。
 
-8 六元催化 DNA 意识--refer 7, 14, 《Catalytic Computing 2019》
+8 六元催化 DNA 意识 --refer 7, 14, 《Catalytic Computing 2019》
   见 github.com - yaoguangluo/Deta_Catalytic_DNA/tree/master/TinGod/org/humanoid/tin/dna/processor
-  用于智慧体的理性情感控制和表达（永久略）
+  用于智慧体的理性情感控制和表达（永久略）.
   
 -------------------------------------------------------------------------
 非著作权一些算法 表述略
-9 卷积计算 CNN 用于求解 最短KNN路径卷积，德塔罗氏ANN RNN DNN数值词汇卷积，（CNN视觉卷积略）
-10 KNN 路径算法，用于求解最短欧拉路径 
-11 欧拉路径算法，用于求解元基进制
+9 卷积计算 CNN 用于求解 最短KNN路径卷积，德塔罗氏ANN RNN DNN数值词汇卷积，（CNN视觉卷积略）.
+10 KNN 路径算法，用于求解最短欧拉路径 .
+11 欧拉路径算法，用于求解元基进制.
 12 LRC 电感微分公式，用于元基编码的硬件智慧扩展。
 
-13 其他算法 不涉及进化计算的直接关系，这里全部略
+13 其他算法 不涉及进化计算的直接关系，这里全部略.
 -------------------------------------------------------------------------
 
  
