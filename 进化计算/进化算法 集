@@ -1,6 +1,6 @@
 准备归纳下《DNA元基催化与肽计算_第五修订版_V0007102》已有的进化算法。
 著作权算法
-1 肽展公式：AOPM VECS IDUQ的 增元公式，降元公式，概率钥匙酸碱公式 --refer 8，9
+1 肽展公式：AOPM VECS IDUQ的 增元公式，降元公式，概率钥匙酸碱公式 --refer 8, 9, 15
   1.1 PDE MASK LAW/ 离散反码定理
       I = D!
       D = I!
@@ -41,6 +41,46 @@
       E = I + U (肽展/PDE);
       C = I + D (肽展/PDE);
       S = I + Q (肽展/PDE);
+
+      T = V + E
+      T = V + HE
+      X = V + C 
+      X = V + HC
+      HH = HE OR HC
+      F = I OR D OR U OR Q
+
+  1.5 频率公式
+      1.5.1 DNA 
+            T{I} = T(羟基 + 羟基) ;
+            T{D} = T(羟基 + 氨基) ;
+            T{U} = T(羟基 + 氨基 + 甲基) ;
+            T{Q} = T(羟基 + 羟基 + 甲基) ;
+            T{V} = T{Q + U} ;
+           T{E} = T{I + U} = T{D + U} ;
+            T{C} = T{I + D} ;
+            T{S} = T{I + Q} ;
+            T{A} = T{V + S} ;
+            T{O} = T{E + S} ;
+            T{P} = T{E + C} ;
+            T{M} = T{C + S} ;
+            T{T} = T{V + E} ;
+            T{X} = T{V + C} ;
+            T{H} = T{(E + C) / 2} ;
+            T{HE} = T{H + E}；
+            T{HC} = T{H + C} ;
+
+      1.5.2 RNA 
+            T{F} = T{D + D} ;
+            T{FF} = T{CC} ;
+            T{HH} = T{E + C} = T{P} ;
+            {} 为元基 ;
+            ()为化合基 ;
+            .. .. .. =>T (氨基) = T (2*羟基) ;
+            .. .. .. =>T (甲基) = T ( ？) ;
+            f 频率 = 1 / T 周期 ;
+            关于 T (氨基) = T (2*羟基)的 推导 如下 ;
+            T{HH} = T{E + C} ;
+            T(羟羟 羟羟)= T(羟 羟氨) ;
  
 2 算能公式：计算力效率比公式 -- refer 7 ，15
   N = S（AON）/s（AON）
