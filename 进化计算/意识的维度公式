@@ -9,13 +9,15 @@ PDC = {AOPM,VECS,IDUQ}
 CATALYTIC = {爱, 学习, 创新, 帮助, 工作, 安全。。。}
 
 3 归纳分层模式 
----refer ....不知道refer谁好，refer 我从小到大接触的全人类。。记得当年英特尔我第一天任职填写报告ppt也有 5个When why where which who。
+---refer ....不知道refer谁好，refer 我从小到大接触的全人类。。公安局？记得当年英特尔我第一天任职填写报告ppt也有 5个When why where which who。
 event = {事件，时间，地点，对象，工具，结果}
 
 4 事件轴 dt 
 ---refer 古巴比伦人和苏美尔人 公元前3000年。
 
-于是有维度关系算法:  Min_Of_HFXT(DNN{fd(0-n)[relation(PDC) * relation(catalytic) * relation(event) *dt]}) 
+5 当然也有其他模式分层 SN = {S1, S2, S3, S4, ..., Sn}. 不由罗瑶光先生的主观意志决定。
+
+于是有维度关系算法:  Min_Of_HFXT(DNN{fd(0-n)[relation(PDC) * relation(catalytic) * relation(event) * {f(S1-Sn)relation(SN)} *dt]}) 
 内核kernel：
 x 由 AOPM
 y 由 VECS
@@ -24,9 +26,7 @@ z 由 IDUQ
 J 由 event
 K 由 catalytic
 L 由 dt
-可以做罗氏
-
-DNN思维意识卷积。方法论构造
+可以做罗氏DNN思维意识卷积。方法论构造
 
 refer
 https://github.com/yaoguangluo/YangLiaoJing_HuaRuiJi/tree/18701/%E8%AF%81%E4%B9%A6    证件标注完成日期: 另外 德塔ETL 前身 Unicorn的 qq微博 发布日期 2013年10月20日， Google微博 后更名SW-AI 发布日期 2013年10月23日，后更名为LYG-AI 发布日期 2013年11月20日。
