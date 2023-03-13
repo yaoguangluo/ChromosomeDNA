@@ -42,6 +42,9 @@ C:\Users\Administrator>tracert tinos.qicp.vip
 
 UA
 Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.78
+
+我安装的谷歌浏览器utool测试UA
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
  
   最新电信ip显示 113.246.171.235
  C:\Users\Administrator>tracert tinos.qicp.vip
