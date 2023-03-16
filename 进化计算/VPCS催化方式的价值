@@ -15,14 +15,17 @@ DNA元基催化与肽计算_第五修订版_V0007102
 5 通过 package 到 import 到 class 到 function 的四步流程，可减少为 package 到 import 到 prototype 形成3步。
 
 VPCS催化方式的价值就体现出来了
-1 精确的对应
-2 减少计算复杂度
+1 3-3-3精确的对应
+2 3-3-3减少计算复杂度
 
 package   ----- AOPM----语义搜索----主语
 import    ----- VECS----意识接口----谓语
 class     ----- IDUQ----排序统计----宾语
 
+因此意识维度公式中的叠加打分的方式在这种思维的归纳环境下，可以精确描述为 语言命令的三元根在 语义搜索的过程中进行文字匹配打分
+和 16元基编码的单个元基统计比来 绝对值 数列统计 排序，确定最适合 最匹配 最靠前的函数待执行队列。
 
+关于待执行队列中的函数筛选这里先略。
 
 refer
 https://github.com/yaoguangluo/YangLiaoJing_HuaRuiJi/tree/18701/%E8%AF%81%E4%B9%A6    
