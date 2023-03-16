@@ -12,7 +12,7 @@ DNA元基催化与肽计算_第五修订版_V0007102
 2
 3
 4
-5
+5 通过 package 到 import 到 class 到 function 的四步流程，可减少为 package 到 import 到 class-function 形成3步
 
 
 refer
