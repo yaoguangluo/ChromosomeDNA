@@ -6,13 +6,22 @@ DNA元基催化与肽计算 第四修订版 V00919
 然后也有一个逐渐完善的文字图片描述如
 DNA元基催化与肽计算_第五修订版_V0007102
 
-这里可以简单描述下为什么我会设计成VPCS的模式让函数和class进行1对1映射。
+这里可以简单描述下为什么我会设计成VPCS的模式让prototype里的函数function和文件class进行1对1映射。
 
 1 作者喜欢将文字结构搜索方式定义为 意识， 统计排序方式定义为操作。
 2 函数在确定结构属性的方式，主要为 文字结构搜索方式和统计排序方式。
 3 函数从VPCS层入手，在确定函数索引属性中，仅仅向上AOPM 溯源 和 向下IDUQ探索即可。
 4 元基编码比较稳定的 语义过程主要为 1主语2谓语和3宾语， 而元基编码的意识分层 主要为 AOPM, VECS 和IDUQ3层。
-5 通过 package 到 import 到 class 到 function 的四步流程，可减少为 package 到 import 到 class-function 形成3步。
+5 通过 package 到 import 到 class 到 function 的四步流程，可减少为 package 到 import 到 prototype 形成3步。
+
+VPCS催化方式的价值就体现出来了
+1 精确的对应
+2 减少计算复杂度
+
+package   ----- AOPM----语义搜索----主语
+import    ----- VECS----意识接口----谓语
+class     ----- IDUQ----排序统计----宾语
+
 
 
 refer
