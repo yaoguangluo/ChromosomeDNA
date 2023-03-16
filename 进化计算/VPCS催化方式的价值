@@ -10,9 +10,9 @@ DNA元基催化与肽计算_第五修订版_V0007102
 
 1
 2
-3
-4 元基编码比较稳定的 语义过程主要为 1主语2谓语和3宾语， 而元基编码的意识分层 主要为 AOPM, VECS 和IDUQ3层
-5 通过 package 到 import 到 class 到 function 的四步流程，可减少为 package 到 import 到 class-function 形成3步
+3 函数从VPCS层入手，在确定函数索引属性中，仅仅向上AOPM 溯源 和 向下IDUQ探索即可。
+4 元基编码比较稳定的 语义过程主要为 1主语2谓语和3宾语， 而元基编码的意识分层 主要为 AOPM, VECS 和IDUQ3层。
+5 通过 package 到 import 到 class 到 function 的四步流程，可减少为 package 到 import 到 class-function 形成3步。
 
 
 refer
