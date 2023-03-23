@@ -1,0 +1,69 @@
+进化计算2代公式 
+*= RELATIONS PCA
+D= CONTINURING
+R= theroy division
+Kernel= DNN{AOPM, VECS, IDUQ, TXHF}
+E= Eh(0, 无穷大){Rh* Kernel}
+O= Dn(0, 无穷大){On* E} 
+R= Dm(0, 无穷大){Rm* O}
+Revolution= R = Ratio of suitable 。。。
+
+
+一代公式会出现在我之后的著作权文件中。推导有6万字
+罗瑶光
+
+
+
+
+软件函数的理解方式 不断增量描述中
+------------------------------------------------------------------
+以后我用这个后辍发布家里花生壳的ip dns不再更新，没必要耗着。
+现在发布时的当前本机IP 222.247.163.2
+ C:\Users\Administrator>tracert tinos.qicp.vip
+通过最多 30 个跃点跟踪                                                                   
+到 tinos.qicp.vip [81.71.132.174] 的路由:                                                
+  1    <1 毫秒   <1 毫秒   <1 毫秒 192.168.2.1                                           
+  2     1 ms    <1 毫秒   <1 毫秒 PC-罗瑶光 [192.168.1.1]                                
+  3     3 ms     5 ms     4 ms  100.69.64.1
+  4     3 ms     *        *     61.187.27.45                                              
+  5     *        3 ms     4 ms  61.137.4.49
+  6     3 ms     3 ms     3 ms  61.137.6.114
+  7     4 ms     3 ms     3 ms  175.6.45.10
+  8     4 ms     4 ms     4 ms  175.6.45.114
+  9     *        *        *     请求超时。                                               
+ 10     *        *        *     请求超时。                                               
+ 11     *        *        *     请求超时。                                               
+ 12     *        *        *     请求超时。                                               
+ 13     *        *        *     请求超时。                                               
+ 14    14 ms    14 ms    14 ms  81.71.132.174
+
+UA
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 
+Edg/109.0.1518.78
+
+屏幕分辨率 1920×1080
+IP地址	222.247.163.2
+IP归属地	湖南省长沙市(电信)
+设备语言	zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+浏览器	Chrome: 109.0.0.0
+产品ID      00426-OEM-8992662-00173
+网卡 PCI\VEN_8086&DEV_15B8&SUBSYS_7A751462&REV_00
+显卡 PCI\VEN_10DE&DEV_1C82&SUBSYS_11BF1B4C&REV_A1
+cpu ACPI\GenuineIntel_-_Intel64_Family_6_Model_158
+硬盘 PCI\VEN_8086&DEV_A282&SUBSYS_7A751462&REV_00
+
+eclipse Version: 2019-09 R (4.13.0) -- Build id: 20190917-1200
+花生壳 luoyaoguang88 -- 21761404 -- tinos.qicp.vip
+
+键盘 CADEVE--ACPI\PNP0303--HID\VID_1C4F&PID_0002&REV_0150&MI_00
+鼠标 1746HS07W1C8--M100R--HID\VID_046D&PID_C077&REV_7200--ACPI\PNP0F03
+屏幕 飞利浦326E8Q-SW/93--WJ1A18020029063FD 飞生上海电子科技有限公司
+--------------------------------------------------------------------------------------             
+罗瑶光/Yaoguang.Luo          
+yaoguangluo@outlook.com-313699483@qq.com-2080315360@qq.com-lygtin@sina.com     
+15116110525-19173129338-16674208794           
+430181198505250014-G24402609-EB0581342       
+204925063-389418686-F2406501-0626136         
+湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路 一段 206-208 阳光家园 第10号别墅  
+--全球唯一地址  周围无社会群众交集--   
+--------------------------------------------------------------------------------------
