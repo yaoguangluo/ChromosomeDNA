@@ -128,7 +128,55 @@ sn-dc211251
 鼠标
 
 dell-cn-0k6j9n-lo300-142-0blo-ms116t1-canices-3b-nmb-3b
-
+hub转接器ssk-sc200
+USB2.1 Hub：
+  产品ID：      0x0610
+  厂商ID：      0x05e3  (Genesys Logic, Inc.)
+  版本：        6.63
+  速度：        最高可达480 Mb/秒
+  生产企业：    GenesysLogic
+  位置ID：      0x01100000 / 1
+  可用电流(mA)：        500
+  所需电流(mA)：        100
+  额外的操作电流(mA)：  0
+Dell MS116 USB Optical Mouse：
+  产品ID：      0x301a
+  厂商ID：      0x413c  (Dell Inc.)
+  版本：        1.00
+  速度：        最高可达1.5 Mb/秒
+  生产企业：    PixArt
+  位置ID：      0x01120000 / 8
+  可用电流(mA)：        500
+  所需电流(mA)：        100
+  额外的操作电流(mA)：  0
+USB 2.0 Hub：
+  产品ID：      0x0101
+  厂商ID：      0x1a40  (TERMINUS TECHNOLOGY INC.)
+  版本：        1.11
+  速度：        最高可达480 Mb/秒
+  位置ID：      0x01130000 / 3
+  可用电流(mA)：        500
+  所需电流(mA)：        100
+  额外的操作电流(mA)：  0
+USB Audio Device：
+  产品ID：      0x2008
+  厂商ID：      0x1b3f
+  版本：        1.00     
+  速度：        最高可达12 Mb/秒
+  生产企业：    GeneralPlus
+  位置ID：      0x01133000 / 6
+  可用电流(mA)：        500
+  所需电流(mA)：        100
+  额外的操作电流(mA)：  0
+USB Keyboard：
+  产品ID：      0x7663
+  厂商ID：      0x0c45  (Sonix Technology Co., Ltd.)
+  版本：        1.00
+  速度：        最高可达1.5 Mb/秒
+  位置ID：      0x01132000 / 7
+  可用电流(mA)：        500
+  所需电流(mA)：        100
+  额外的操作电流(mA)：  0
 
 网卡
   软件版本：
