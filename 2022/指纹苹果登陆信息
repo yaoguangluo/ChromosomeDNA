@@ -74,3 +74,49 @@ cpu 、
   LowPowerMode：        0
   降低亮度：    是
 
+
+硬件配置：
+
+  UPS已安装：   否
+
+交流充电器信息：
+
+  已连接：      是
+  ID：  0x7003
+  瓦特数(W)：   30
+  系列：        0xe000400a
+  序列号：      C06232206SK1695AV
+  名称：        30W USB-C Power Adapter
+  生产企业：    Apple Inc.
+  硬件版本：    1.0
+  固件版本：    1030053
+  正在充电：    是
+
+电源事件：
+
+下一个计划的事件：
+
+  appPID：      557
+  类型：        唤醒
+  计划安排：    com.apple.alarm.user-visible-Weekly Usage Report
+  时间：        2023/4/2 01:03
+  UserVisible： 0
+
+
+视屏头
+
+  型号ID：      FaceTime HD Camera
+  唯一ID：      EAB7A68FEC2B4487AADFD8A91C1CB782
+
+内存：  8 GB
+  类型：        LPDDR4
+
+键盘
+
+产品ID：        0x0281
+  供应商ID：    0x05ac (Apple Inc.)
+  ST版本：      9.35
+  MT版本：      5.30
+  序列号：      F0T2267Z4Y7N4J7BX+TEM
+  生产企业：    Apple Inc.
+  位置ID：      0x00000025
