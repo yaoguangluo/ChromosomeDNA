@@ -218,3 +218,51 @@ ap1: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
         media: autoselect
         status: inactive
 
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=6463<RXCSUM,TXCSUM,TSO4,TSO6,CHANNEL_IO,PARTIAL_CSUM,ZEROINVERT_CSUM>
+        ether d0:88:0c:b2:b7:f4
+        inet6 fe80::c1:7a68:124c:16ba%en0 prefixlen 64 secured scopeid 0xb
+        inet 192.168.2.110 netmask 0xffffff00 broadcast 192.168.2.255
+        nd6 options=201<PERFORMNUD,DAD>
+        media: autoselect
+        status: active
+awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+        options=400<CHANNEL_IO>
+        ether 52:37:6c:f6:bf:39
+        inet6 fe80::5037:6cff:fef6:bf39%awdl0 prefixlen 64 scopeid 0xc
+        nd6 options=201<PERFORMNUD,DAD>
+        media: autoselect
+        status: active
+llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=400<CHANNEL_IO>
+        ether 52:37:6c:f6:bf:39
+        inet6 fe80::5037:6cff:fef6:bf39%llw0 prefixlen 64 scopeid 0xd
+        nd6 options=201<PERFORMNUD,DAD>
+        media: autoselect
+        status: active
+bridge0: flags=8822<BROADCAST,SMART,SIMPLEX,MULTICAST> mtu 1500
+        options=63<RXCSUM,TXCSUM,TSO4,TSO6>
+        ether 36:71:2c:e5:92:00
+        Configuration:
+                id 0:0:0:0:0:0 priority 0 hellotime 0 fwddelay 0
+                maxage 0 holdcnt 0 proto stp maxaddr 100 timeout 1200
+                root id 0:0:0:0:0:0 priority 0 ifcost 0 port 0
+                ipfilter disabled flags 0x0
+        member: en1 flags=3<LEARNING,DISCOVER>
+                ifmaxaddr 0 port 8 priority 0 path cost 0
+        member: en2 flags=3<LEARNING,DISCOVER>
+                ifmaxaddr 0 port 9 priority 0 path cost 0
+        media: <unknown type>
+        status: inactive
+utun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
+        inet6 fe80::f80f:4859:b229:97ea%utun0 prefixlen 64 scopeid 0xf
+        nd6 options=201<PERFORMNUD,DAD>
+utun1: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 2000
+        inet6 fe80::76bd:7361:443c:40d9%utun1 prefixlen 64 scopeid 0x10
+        nd6 options=201<PERFORMNUD,DAD>
+utun2: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1000
+        inet6 fe80::ce81:b1c:bd2c:69e%utun2 prefixlen 64 scopeid 0x11
+        nd6 options=201<PERFORMNUD,DAD>
+utun3: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
+        inet6 fe80::76d3:9678:b5f6:c8b4%utun3 prefixlen 64 scopeid 0x12
+        nd6 options=201<PERFORMNUD,DAD>
