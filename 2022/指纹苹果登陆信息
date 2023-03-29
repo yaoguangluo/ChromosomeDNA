@@ -266,3 +266,44 @@ utun2: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1000
 utun3: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
         inet6 fe80::76d3:9678:b5f6:c8b4%utun3 prefixlen 64 scopeid 0x12
         nd6 options=201<PERFORMNUD,DAD>
+        
+en5: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=6467<RXCSUM,TXCSUM,VLAN_MTU,TSO4,TSO6,CHANNEL_IO,PARTIAL_CSUM,ZEROINVERT_CSUM>
+        ether a4:53:ee:d2:e9:78
+        nd6 options=201<PERFORMNUD,DAD>
+        media: autoselect (none)
+        status: inactive
+
+打开浏览器
+
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.54、、
+
+luoyaoguang430181198505250014@luoyaoguang430181198505250014deMacBook-Air ~ % traceroute tinos.qicp.vip
+traceroute to tinos.qicp.vip (81.71.132.174), 64 hops max, 52 byte packets
+ 1  192.168.2.1 (192.168.2.1)  2.903 ms  2.167 ms  3.944 ms
+ 2  localhost (192.168.1.1)  7.117 ms  3.915 ms  6.799 ms
+
+------------------------家里的浏阳电信变动字段区-------------------
+3  100.69.64.1 (100.69.64.1)  5.831 ms  10.684 ms  14.916 ms
+ 4  61.187.27.53 (61.187.27.53)  13.188 ms
+    61.187.27.49 (61.187.27.49)  6.742 ms
+    61.187.27.41 (61.187.27.41)  6.488 ms
+ 5  61.137.4.61 (61.137.4.61)  14.629 ms
+    61.137.5.61 (61.137.5.61)  9.417 ms
+    61.137.7.233 (61.137.7.233)  8.011 ms
+ 6  61.137.5.146 (61.137.5.146)  12.492 ms
+    61.137.4.130 (61.137.4.130)  12.488 ms
+    61.137.5.186 (61.137.5.186)  14.075 ms
+ 7  * * 175.6.12.130 (175.6.12.130)  20.601 ms
+ 8  175.6.45.106 (175.6.45.106)  10.591 ms  15.368 ms
+    175.6.45.118 (175.6.45.118)  11.282 ms
+-------------------------浏阳电信变动字段区-----------------
+主要登陆GitHub 和 知乎
+
+----该设备是带罗瑶光先生指纹设备-------
+
+
+进行笔记文字编辑
+
+地址
+
