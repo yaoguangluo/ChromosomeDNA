@@ -212,8 +212,8 @@ TP-LINK_yaoguangluo3F：
   传输速率：    130
   MCS索引：     15
 
-走路由器
-走路由器
+家旁边-20230329的- ifconfig ipconfig netstatus 等可以发现如下这些设备公共发现，避免误区。
+另外本人私人个人电脑设备数据发布让同行知道，避免我私人电脑带发票的商品被各种 无线投屏，网络共享，超级终端等手法侵蚀。
 
 o0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
         options=1203<RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP>
