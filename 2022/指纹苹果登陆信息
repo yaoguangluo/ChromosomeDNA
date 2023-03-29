@@ -165,3 +165,56 @@ TP-LINK_yaoguangluo3F：
   MCS索引：     15
 
 走路由器
+走路由器
+
+o0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
+        options=1203<RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP>
+        inet 127.0.0.1 netmask 0xff000000
+        inet6 ::1 prefixlen 128
+        inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1
+        nd6 options=201<PERFORMNUD,DAD>
+gif0: flags=8010<POINTOPOINT,MULTICAST> mtu 1280
+stf0: flags=0<> mtu 1280
+anpi1: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=400<CHANNEL_IO>
+        ether f2:a1:8a:e5:08:95
+        inet6 fe80::f0a1:8aff:fee5:895%anpi1 prefixlen 64 scopeid 0x4
+        nd6 options=201<PERFORMNUD,DAD>
+        media: none
+        status: inactive
+anpi0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=400<CHANNEL_IO>
+        ether f2:a1:8a:e5:08:94
+        inet6 fe80::f0a1:8aff:fee5:894%anpi0 prefixlen 64 scopeid 0x5
+        nd6 options=201<PERFORMNUD,DAD>
+        media: none
+        status: inactive
+en3: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=400<CHANNEL_IO>
+        ether f2:a1:8a:e5:08:74
+        nd6 options=201<PERFORMNUD,DAD>
+        media: none
+        status: inactive
+en4: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=400<CHANNEL_IO>
+        ether f2:a1:8a:e5:08:75
+        nd6 options=201<PERFORMNUD,DAD>
+        media: none
+        status: inactive
+en1: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+        options=460<TSO4,TSO6,CHANNEL_IO>
+        ether 36:71:2c:e5:92:00
+        media: autoselect <full-duplex>
+        status: inactive
+en2: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+        options=460<TSO4,TSO6,CHANNEL_IO>
+        ether 36:71:2c:e5:92:04
+        media: autoselect <full-duplex>
+        status: inactive
+ap1: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=400<CHANNEL_IO>
+        ether f2:88:0c:b2:b7:f4
+        nd6 options=201<PERFORMNUD,DAD>
+        media: autoselect
+        status: inactive
+
