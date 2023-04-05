@@ -20,6 +20,65 @@ map<元基，map<函数名，函数>>
 
 我要优化的东西和动机 越来越具体，方便我编码下手。
 
+刚看了下 dna元基催化与肽计算 7102-7108的 287页更进计算数据结构优化了下。
+
+结果
+aop pom v e c sid
+aop pom v e p sid
+aop pom v o c sid
+aop pom s e c si o
+aop pom s e c si d
+----------------------
+aop pom v e c sid
+aop pom v e p sid
+aop pom v e+s c sid
+aop pom s e c si o
+aop pom s e c si d
+--------------------
+aop pom v e c sid
+aop pom v e p sid
+aop pom v o c sid
+aop pom s e c sio
+aop pom s e c sid
+--------------------
+aop pom s e c sio
+aop pom s e c sid
+aop pom v e c sid
+aop pom v e p sid
+aop pom v o c sid
+--------------------
+aop pom s e c sio
+--- --- - - c sid
+
+--- --- v - c sid
+--- --- - - p sid
+--- --- - o c sid
+--------------------
+aop pom s e c sio
+--- --- - - - --d
+
+--- --- v - c sid
+--- --- - - p sid
+--- --- - o c sid
+--------------------
+aop pom s e c sio
+--- --- - - - --d
+
+--- --- - o c sid
+--- --- v - c sid
+--- --- - - p sid
+--------------------
+aop pom s e c sio
+--- --- - - - --d
+
+--- --- - o - ---
+--- --- v - - ---
+--- --- - - p ---
+--------------------
+注意空格的作用，插枝分解。
+
+
+
 
 222.247.162.55
 luoyaoguang430181198505250014@luoyaoguang430181198505250014deMacBook-Air dna元基编码与肽计算第六版 % traceroute tinos.qicp.vip
