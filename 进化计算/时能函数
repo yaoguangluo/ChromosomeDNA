@@ -2,6 +2,18 @@
 56页微积分推导公式过程这里略，可付费咨询 罗瑶光先生。这里感谢下微分拓扑学 和 库里图基fft。为时能函数 推导提供了思维和模型。
 另外时函数 量子原型已经出现在 德塔分词和dna元基催化与肽计算第4版的我著作权文件中。见末尾
 
+|tero(x)>+|tcol(x)> =  deta (t1-t0)*m(t）/ deta1(t1-t0)*p(t)
+公式对应数学逻辑解析
+E = [f(d)] * [f(d)] * i * di
+beta m = 1/ (2 * sqrt(i)) * sin(A - B)
+ft + fd * fr = E
+fi = ft * fr / fd
+ft = fi * fd / fr
+fd = {- sin(A + B) * (2 * cosAcosB - 1)}^(1/2)
+fi = cosAcosB * (cosAcosB - 1) + sinAsinB
+fio= 1/ (2 * sqrt(i)) * { sin(A + B)sin(A - B) - 2 * sin(A + B)sin(A - B) * cosAcosB } 
+output[j] =  math.fabs(out[j].b * out[j].cpi - (2 * out[j].ca * out[j].cb * out[j].b* out[j].cpi));
+见35行
 
 package jniLYGAFDCDFFT;
 
