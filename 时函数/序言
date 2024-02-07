@@ -43,7 +43,7 @@ C = sin.b * sin.b
 A = B * C
 
 虚空与内积的关系 
-f.k = f.deta.t * f.deta.d/f.deta.r + f.deta.d * f.deta.d = f.deta.ik * (1 / 2 * sqrt(i)) + C
+f.k = f.deta.ti' * f.deta.d'/f.deta.r' + f.deta.d' * f.deta.d' = f.deta.ik * (1 / 2 * sqrt(i)) + C
 
 虚空展开式
 f（a + b * c- e / f 。。）= f.deta.a + f.deta.b * f.deta.i 。。。。。 = f.deta.a-> + f.deta.b-> + f.deta.c-> - f.deta.e-> - f.deta.f->...... 
