@@ -31,7 +31,7 @@ fio= 1/ (2 * sqrt(i)) * { sin(A + B)sin(A - B) - 2 * sin(A + B)sin(A - B) * cosA
 te-> = f（i * di）+ c  = sin（ai - b）** en *（t * 1 / sqrt(i)）** en 
 
 时间微分方程
-ff（deta.e * deta.ft）=f‘’ * (m * v) / (s * t) = e->dt
+ff（deta.e * deta.ft）=f‘’ * (mm * mv) / (ms * mt) = e->dt
 
 时间微分与复变域的关系
 deta ik = deta（a - b）/deta1（a - b）= cos.a * cos.a * cos.b * cos.b - cos(a + b) + c
@@ -75,6 +75,10 @@ deta.t = 1 / deta = 1 /（cos.a * cos.a * cos.b * cos.b + cos(a + b)） + C = de
 运动 p
 能量 e
 物质 m
+物质的观测 mm
+活动的观测 mv
+活动的状态 ms
+存在的时间 mt
 虚空 i
 内积 k
 距离 s
