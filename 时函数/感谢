@@ -43,7 +43,76 @@
 而原音中本身也有 高斯噪，低频噪，我迫切需要一种滤波技术来抵抗这些强干扰噪音。我想到了量子数学。于是第一次系统的应用。受益匪浅。
 收获颇丰。而这些最大的价值不是时函数公式的数学方程解析，而是我发现了时间有噪音。
 
+时间如果真的有噪音，那么就直接确定了时间属于能量，属于一种基础物质。
+关于这个论点，我目前有76页数学推导过程，这个过程得到的解析式方程目前已经用在了快速傅立叶的振幅能级变换中具体如下，效果惊人。展示出极强滤波能力。
+
+
+for (int j = 0; j < input.length; j++) {
+            output[j] =  math.fabs(1/1024 + out[j].b * out[j].cpi - 2 * out[j].ca * out[j].cb * out[j].b * out[j].cpi);
+        }
+
+for (int j = 0; j < n / 2; j++) {
+            double kcc = c * cc - s * ss;
+            double kss = s * cc + c * ss;
+            double kii = i * cc - c * ii;
+            cc = kcc;
+            ss = kss;
+            ii = kii;
+            lcc[j] = cc;
+            lss[j] = ss;
+            lii[j] = ii;
+        }
+
+for (int j = 0; j < n / 2; j++) {
+            c = lcc[j];
+            s = lss[j];
+            i = lii[j];
+            double ccc = a[j].a;
+            double sss = a[j].b;
+            double iii = a[j].cpi;
+            double kss = s * ccc + c * sss;
+            double kcc = c * ccc - s * sss;
+            double kii = i * ccc - c * iii;
+            output[j].a = ab[j].a + kcc;
+            output[j].ca = ab[j].ca + ccc ;
+            output[j].cb = ab[j].cb + c;
+
+            output[j].b = ab[j].b + kss;
+            output[j].cpi = ab[j].cpi + kii;
+            output[j].sa = ab[j].sa + sss;
+            output[j].sb = ab[j].sb + s;
+
+            output[j + n / 2].a = abc[j].a - kcc;
+            output[j + n / 2].ca = abc[j].ca - ccc;
+            output[j + n / 2].cb = abc[j].cb - c;
+
+            output[j + n / 2].b = abc[j].b - kss;
+            output[j + n / 2].cpi = abc[j].cpi - kii;
+            output[j + n / 2].sa = abc[j].sa - sss;
+            output[j + n / 2].sb = abc[j].sb - s;
+        }
+
 更新中。。
+
+关于76页公式推导，我想开源，但是2019年的德塔图灵分词，2020年的肽展公式，2022年的dna元基催化与肽计算 开源教训 告诉我，
+我开源必定会产生新一波的被社会骚扰。我是个普通人，不是笼子里的猩猩。于是
+
+|tero(x)> + |tcol(x)> =  deta (t1-t0) * m(t）/ deta1(t1 - t0) * p(t) = 1  （感谢这个母公式） 
+
+上面的源码片段是我的deta (t1 - t0) * m(t）/ deta1(t1 - t0) 求导应用在真实的环境。
+很好的解释了能量在时间与空间上的表达关系，刚好傅立叶变换也是这个关系。可以通用，如下。
+fi = cosAcosB * (cosAcosB - 1) + sinAsinB
+fio= 1/ (2 * sqrt(i)) * { sin(A + B)sin(A - B) - 2 * sin(A + B)sin(A - B) * cosAcosB } 
+
+我仅仅替换了原来的 根号（a * a + b * b）输出。效果惊人。展示出极强滤波能力。
+最近很多人，包括父母都在刺激我，说我又搞什么鬼，我一直在思考。
+
+1 时间如果有噪音，这个噪音与一些癌症是否有关联。养疗经可以应用。
+2 噪音如果展开，我有了一些方法。
+3 76页推导过程不应改展开。。。变嘧啶，时函数。。是不是有人在调侃我。
+4 我的动机仅仅是瞬间转移，没有想到，我得到了这么多东西。
+
+
 
 
 
