@@ -46,7 +46,7 @@ A = B * C
 f.k = f.deta.ti' * f.deta.d'/f.deta.r' + f.deta.d' * f.deta.d' = f.deta.ik * (1 / 2 * sqrt(i)) + C
 
 虚空展开式
-f（a + b * c- e / f 。。）= f.deta.a + f.deta.b * f.deta.i 。。。。。 = f.deta.a-> + f.deta.b-> + f.deta.c-> - f.deta.e-> - f.deta.f->...... 
+f（a + b * c- e / f 。。）= f.deta.a + f.deta.b * f.deta.c 。。。。。 = f.deta.a-> + f.deta.b-> + f.deta.c-> - f.deta.e-> - f.deta.f->...... 
 
 爱因斯坦流逝时间deta.t 与 罗瑶光时函数流逝比重 deta 关系
 deta.t = 1 / deta = 1 /（cos.a * cos.a * cos.b * cos.b + cos(a + b)） + C = deta1(a - b)/ deta(a - b)
