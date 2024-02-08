@@ -5,17 +5,28 @@ d.true = d.f(cosA * cosA + sinA * sinA)
 = l.d.f(cos(A+B)) + l.d.f(cos(A+B)) + l.d.f(sin(A+B)) + l.d.f(sin(A+B))
 = l.d.f(cos(A+B)) + l.d.f(sin(A+B))
 = l.d.f(cosa*cosb - sina*sinb) + l.d.f(sina*cosb + cosa*sinb) 
-= l.f(cosa'* cosb + cosa * cosb' + (-sina)'* sinb + (-sina) * sinb') + l.f(sina'* cosb + cosa * sinb' + cosa'* sinb + cosa * sinb') 
-= l.f((-sina)* cosb + cosa * (-sinb) + (-cosa)* sinb + (-sina) * cosb)+ l.f(cosa* cosb + cosa * cosb + (-sina)* sinb + cosa * cosb) 
+= l.f(cosa'* cosb + cosa * cosb' + (-sina)'* sinb + (-sina) * sinb') 
++ l.f(sina'* cosb + cosa * sinb' + cosa'* sinb + cosa * sinb') 
+
+= l.f((-sina)* cosb + cosa * (-sinb) + (-cosa)* sinb + (-sina) * cosb)
++ l.f(cosa* cosb + cosa * cosb + (-sina)* sinb + cosa * cosb) 
+
 = l.f(-2sina * cosb -2cosa * sinb) + l.f(2cosa * cosb -2 sina * sinb)
 = l.l.f(-2sin(a + b) + 2cos(a + b))
 = l.l.deta.cos(a + b) - l.l.deta.sin(a + b)
 = l.l.deta.cos(C) - l.l.deta.sin(C) + N
 
+在本人的80页时函数推导中，虚空无理级函数应用率接近30%。就不一一免费展示了。用法与思维同上。
+
+目前我有完整的虚空展开式，虚空分解方程组，力学无理拓扑，虚度偏移方程，公式和用法我会一一像上面这样细致的帖出来。
+但是公式的推导完整过程+当时想法思路就免了，不能这样做人吧。。吸取我当年德塔分词，元基编码，进化算法等的一系列开源教训。
+虽然我东西不多，但即使要开源，也得是一种有意义的开源。。。
+
 大家好理解吗？
+因为涉及太多的权，刚把头像换成司法身份证件算了，其实我不帅。还很丑，又懒。。所以大家如果想了解虚空无理级函数的更多用法，
+可以随时咨询本人，也可付费咨询。备注标明 姓名 + 动机。即可。
 
 --------------------------------------------------------------------------------------
-
 罗瑶光/Yaoguang.Luo
 yaoguangluo@outlook.com-313699483@qq.com-2080315360@qq.com-lygtin@sina.com
 15116110525-19173129338-16674208794
