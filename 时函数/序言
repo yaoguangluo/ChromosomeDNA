@@ -20,6 +20,9 @@ ft + fd * fr = E
 fi = ft * fr / fd
 ft = fi * fd / fr
 
+质量能级与空间变换的噪音计算方程
+l.f.deta.n = 1/N - 2 * cosA * cosB
+
 单位时间粒子与质量的关系
 fd = {- sin(A + B) * (2 * cosAcosB - 1)}^(1/2)
 
