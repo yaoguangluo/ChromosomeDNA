@@ -1,0 +1,26 @@
+我举个例子先，告诉大家用法。
+true = 1
+d.true = d.f(cosA * cosA + sinA * sinA)
+= d.f(cos(A+B) * cos(A+B) + sin(A+B) * sin(A+B))
+= l.d.f(cos(A+B)) + l.d.f(cos(A+B)) + l.d.f(sin(A+B)) + l.d.f(sin(A+B))
+= l.d.f(cos(A+B)) + l.d.f(sin(A+B))
+= l.d.f(cosa*cosb - sina*sinb) + l.d.f(sina*cosb + cosa*sinb) 
+= l.f(cosa'* cosb + cosa * cosb' + (-sina)'* sinb + (-sina) * sinb') + l.f(sina'* cosb + cosa * sinb' + cosa'* sinb + cosa * sinb') 
+= l.f((-sina)* cosb + cosa * (-sinb) + (-cosa)* sinb + (-sina) * cosb)+ l.f(cosa* cosb + cosa * cosb + (-sina)* sinb + cosa * cosb) 
+= l.f(-2sina * cosb -2cosa * sinb) + l.f(2cosa * cosb -2 sina * sinb)
+= l.l.f(-2sin(a + b) + 2cos(a + b))
+= l.l.deta.cos(a + b) - l.l.deta.sin(a + b)
+= l.l.deta.cos(C) - l.l.deta.sin(C) + N
+
+大家好理解吗？
+
+--------------------------------------------------------------------------------------
+
+罗瑶光/Yaoguang.Luo
+yaoguangluo@outlook.com-313699483@qq.com-2080315360@qq.com-lygtin@sina.com
+15116110525-19173129338-16674208794
+430181198505250014-G24402609-EB0581342
+204925063-389418686-F2406501-0626136
+湖南省 长沙市 浏阳市区 集里街道 神仙坳社区 大塘冲路 一段 208 阳光家园别墅小区 第10栋别墅
+--------------------------------------------------------------------------------------
+
