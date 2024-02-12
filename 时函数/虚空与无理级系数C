@@ -1,6 +1,6 @@
 l = i * {i^(1/3)}
 l.c.e = 0.2962963...
-l.l + l.i = l.cos(ai - bi)
+l.l + l.i = l.cos(ai + bi) = l.0
 
 应用领域，稍后更新。
 
