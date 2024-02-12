@@ -1,6 +1,6 @@
 l = i * {i^(1/3)}
 l.c.e = 0.2962963...
-l.l + l.i = l.cos(ai + bi)  + l.sin(ai + bi) + l.sin(ai - bi) = l.0 + N  
+l.l.l + l.l.i = l.l.l.cos(ai + bi)  + l.l.l.sin(ai + bi) + l.l.l.sin(ai - bi) = l.l.l.0 + l.l.N  
 
 应用领域，稍后更新。
 
