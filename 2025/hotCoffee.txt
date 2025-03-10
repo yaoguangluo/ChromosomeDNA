@@ -1,10 +1,10 @@
 因为是基于-DNA元基催化与肽计算-7102-7108+的著作权作品中思想工程优化加升级，源码就不公开了。
 1 关于元基编码的工程应用实践
 1.1 对第133页中的TVM肽语map指令集中VPCS矩阵chromesome24组函数计算进行List<boolean>排序 01010101.。来频率剔除不常用的函数。 
-1.2 用134页OSGI的插件模式来封装单个chromesome24组函数来逐个扩展TVM map 指令集
+1.2 用134页OSGI的插件模式来封装单个chromosome24组函数来逐个扩展TVM map 指令集
 1.3 用130页中的AOPM VPCS（去重为VECN）IDUQ 来索引TVM map 指令集 比如 ‘删除-表’ ‘剔除-表’ ‘去掉-表’ ‘除去-表’ key指令可优化为-> ‘D-表’
 1.4 封装所有容易null的对象进行 肽模块化 简化exception 等。
-1.5 适应环境的各种源码跨平台版本函数修改，从win7-win10-linux-unix-eclipseC-javaC-mac-jni-ctype-YLJFrame单例化-...
+1.5 适应环境的各种源码跨平台版本函数修改，从win7-win10-linux-unix-eclipseC-javaC-mac-jni-ctype-YLJFrame单例化(类人tin模式 去static class)-...
 1.6 太多略。
 
 未来是16元基新陈代谢的软件计算时代，大家可以细看我已经开源的 著作权文件
