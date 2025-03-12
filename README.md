@@ -2,8 +2,8 @@
 ![](https://img.shields.io/badge/Platform-Windows|Linux|Ios|Solaris|Unix|Android|ARM-blue.svg)
 ![](https://img.shields.io/badge/Language-Java-pink.svg)
 ![](https://img.shields.io/badge/License-GPL2.0-pink.svg)                                  
-![](https://img.shields.io/badge/Book-V00919-green.svg)
-![](https://img.shields.io/badge/API-V20028-green.svg)
+![](https://img.shields.io/badge/Book-V0007102-green.svg)
+![](https://img.shields.io/badge/API-V501956-green.svg)
 ![](https://img.shields.io/badge/Environment-JDK1.8及以上-green.svg)                                           
 ![](https://img.shields.io/badge/Author-罗瑶光-yellow.svg)
 ![](https://img.shields.io/badge/National-China-red.svg)          
@@ -49,7 +49,7 @@
 	10 内含 DNA元基编码，肽计算语义公式，DNA元基解码，AOPM VECS IDUQ TXHF 16进制 DCPE THOS MAXF VIUQ 罗盘元基数术 完整推导论述，100%完整开放源码。
 	11 2020年12月内含 DNA元基催化与肽计算在 DNA互联网登陆非对称概率钥匙加密，非卷积肽腐蚀图片识别，函数新陈代谢进化索引编码优化的真实应用。100%完整开放源码。 
 	12 人类史 首次 提出包含频率语义元基RNA ｛F，U｝ 硬件数字逻辑思维发散，锁存器，寄存器，触发器，PN管等。在书籍中。	
-	13 人类史 首次实现了 将计算机软件执行函数 按 序列化可记忆排列 进行 规范化遗传编码。 如 Tinshell PLETL 与 元基索引花。 在api与书籍中。
+	13 人类史 首次实现了 将计算机软件执行函数 按 序列化可记忆排列 进行 规范化遗传编码。 如 Tinshell PLETL 与 元基索引花。 在api与书籍中。501956华瑞集版本中含有简单实例。
 	14 人类史 首次全嘌呤与变嘧啶RNA 推导与定义，开启元基费洛蒙计算领域。在书籍中。
 	15 2020年11月 人类史 首次画出和定义语义的 对称嘌呤元基体系 AOPMTX ‘嘧啶并咪唑并嘧啶并咪唑’分子式和周期语义肽展公式 
 
@@ -145,8 +145,8 @@
 	
 	--------------------------------------------------------------------------------------             
 	罗瑶光/Yaoguang.Luo          
-	yaoguangluo@outlook.com-313699483@qq.com-2080315360@qq.com-lygtin@sina.com     
-	15116110525-19173129338-16674208794           
+	yaoguangluo@outlook.com-313699483@qq.com-2080315360@qq.com   
+	15116110525          
 	430181198505250014-G24402609-EB0581342       
 	204925063-389418686-F2406501-0626136         
 	湖南省 长沙市 浏阳市区 集里街道 神仙坳社区 大塘冲路 一段 208 阳光家园别墅小区 第10栋别墅        
