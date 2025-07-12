@@ -1,4 +1,4 @@
-华瑞集api 商业化逻辑 实践应用描述版本 V0.006
+华瑞集api 商业化逻辑 实践应用描述版本 V0.007
 
 该文件详细描述如何将DNA元基催化与肽计算 与德塔大数据软件集在工业，农业和手工服务产业变现。亲近资本家产业投资者。
 2018年后我一直在湖南省浏阳市集里大塘路1段 7年，大家要找我投资，辩论，直接来即可，来前记得打我短信电话。
@@ -116,7 +116,7 @@
       --package InterfaceTest.tinShell;
 
 4 花语操作表 逻辑接口商业测试
-  --适用于各类文字形式的报表检索，数据库类型的数据操作和检索。和嵌入式命令脚本操作只能系统。
+  --适用于各类文字形式的报表检索，数据库类型的数据操作和检索。和嵌入式命令脚本操作智能系统。
   4.1 tinshell
       --package InterfaceTest.tinShell;
   4.2 plshell
@@ -168,12 +168,16 @@
   8.5
 
 9 DNN计算类 逻辑接口商业测试
-  --用于决策类计算和深度思考领域，确定计算权重的文本类思想提纯的操作。
-  9.1 ANN
-  9.2 CNN
-  9.3 DNN --package InterfaceTest.tinShell;
-  9.4 推荐
-  9.5 RNN
+  --用于决策类计算和深度思考领域如公安，教育，哲学，法院，艺术等领域，确定计算权重的文本类思想提纯的操作。
+  9.1 ANN --package InterfaceTest.TextDNN; --ANNTestTest
+  9.2 CNN --package InterfaceTest.TextDNN; --基础
+  9.3 DNN --package InterfaceTest.tinShell; --DNNTestTest
+  9.4 推荐 --package InterfaceTest.TextDNN; --太多略
+  9.5 RNN --package InterfaceTest.TextDNN; --RNN_IDETestTest
+  9.6 教育水平 --package InterfaceTest.TextDNN; --EducationLevelTestTest
+  9.7 英文翻译 --package InterfaceTest.TextDNN; --DemoTSLTTest
+  9.8 文学修养 --package InterfaceTest.TextDNN; --LiterarinessLevelTestTest
+  9.9 情绪执行成功率 --package InterfaceTest.TextDNN; --SuccessICATestTest
   。。。
 
 10  数据加密类 逻辑接口商业测试
