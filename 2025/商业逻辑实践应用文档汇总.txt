@@ -65,7 +65,7 @@
       //Theory yaoguang.luo 20191219, 欧基里德
       System.out.println("//处理fusion 先 fissile 采样 Fissile_X_fissilePosition2D");
       DemoCoords5Test._E(inputs);
-  1.7 欧几里德距离坐标团重心计算。
+  1.7 欧基里德距离坐标团重心计算。
       //思想：欧基里德
       //实现：罗瑶光
       System.out.println("//处理fusion 先 fissile 采样 然后fusion 1 观测heart Euclid_X_findHeartPosition2D");
