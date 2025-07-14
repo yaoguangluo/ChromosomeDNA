@@ -1,9 +1,9 @@
 # 《ChromosomeDNA》
-![](https://img.shields.io/badge/Platform-Windows|Linux|Ios|Solaris|Unix|Android|ARM-blue.svg)
+![](https://img.shields.io/badge/Platform-Windows|Linux|Ios｜MAC|Solaris|Unix|Android|ARM-blue.svg)
 ![](https://img.shields.io/badge/Language-Java-pink.svg)
 ![](https://img.shields.io/badge/License-GPL2.0-pink.svg)                                  
 ![](https://img.shields.io/badge/Book-V0007102-green.svg)
-![](https://img.shields.io/badge/API-V501956-green.svg)
+![](https://img.shields.io/badge/API-V5019652-green.svg)
 ![](https://img.shields.io/badge/Environment-JDK1.8及以上-green.svg)                                           
 ![](https://img.shields.io/badge/Author-罗瑶光-yellow.svg)
 ![](https://img.shields.io/badge/National-China-red.svg)          
@@ -16,13 +16,13 @@
 	
 #### 核心贡献
 
-	1 Java api https://github.com/yaoguangluo/ChromosomeDNA/blob/main/华瑞集19222.jar
+	1 Java api https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/华瑞集5019652_core.jar
 	1.1 jar api 大小仅仅5兆， 其中class文件 含有完整 阅读source 对应，综合大小 仅仅14兆。 
 	2 论著书籍  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理 的 V00919 编号。
 	2.1 docx 论著 十七章， 35万余字， 1800页+。 上下册 总大小36兆- 。
 	3 论著PPT https://github.com/yaoguangluo/ChromosomeDNA/tree/main/ppt
 	4 论著UML https://github.com/yaoguangluo/ChromosomeDNA/tree/main/UML
-	5 最新Api 测试实例Demo https://github.com/yaoguangluo/ChromosomeDNA/tree/main/Demo
+	5 最新Api 测试实例Demo https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/商业逻辑实践应用文档汇总.txt
 	6 基于第4版本ppt设计的无源码第五版 中英文对照 
 	https://github.com/yaoguangluo/ChromosomeDNA/blob/main/第五修订版本/归纳/DNA元基催化与肽计算_第5修订版本V0007108.pdf
 	https://gitee.com/DetaChina/ChromosomeDNA/blob/main/第五修订版本/归纳/DNA元基催化与肽计算_第5修订版本V0007102.pdf
@@ -86,6 +86,8 @@
 #### 使用方法
 	Demo真实例子 基于 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar 使用举例。 
 	Demo真实源码调用实例 见 https://github.com/yaoguangluo/ChromosomeDNA/tree/main/Demo
+ 	最新API见 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/华瑞集5019652_core.jar 
+ 	最新API DEMO测试见 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/商业逻辑实践应用文档汇总.txt
 
 
 #### Outlook
