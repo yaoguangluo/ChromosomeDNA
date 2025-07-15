@@ -1,4 +1,4 @@
-华瑞集api 商业化逻辑 实践应用描述版本 V0.009
+华瑞集api 商业化逻辑 实践应用描述版本 V0.010
 
 该文件详细描述如何将DNA元基催化与肽计算 与德塔大数据软件集在工业，农业和手工服务产业变现。亲近资本家产业投资者。
 2018年后我一直在湖南省浏阳市集里大塘路1段 7年，大家要找我投资，辩论，直接来即可，来前记得打我短信电话。
@@ -179,6 +179,7 @@
   9.7 英文翻译 --package InterfaceTest.TextDNN; --DemoTSLTTest
   9.8 文学修养 --package InterfaceTest.TextDNN; --LiterarinessLevelTestTest
   9.9 情绪执行成功率 --package InterfaceTest.TextDNN; --SuccessICATestTest
+  9.10 写作习惯 --package InterfaceTest.TextDNN; --InitBehaviorICAKernelTest
   。。。
 
 10  数据加密类 逻辑接口商业测试
