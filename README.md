@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/Language-Java-pink.svg)
 ![](https://img.shields.io/badge/License-GPL2.0-pink.svg)                                  
 ![](https://img.shields.io/badge/Book-V0007102-green.svg)
-![](https://img.shields.io/badge/API-V5019652-green.svg)
+![](https://img.shields.io/badge/API-V5019656-green.svg)
 ![](https://img.shields.io/badge/Environment-JDK1.8及以上-green.svg)                                           
 ![](https://img.shields.io/badge/Author-罗瑶光-yellow.svg)
 ![](https://img.shields.io/badge/National-China-red.svg)          
@@ -16,8 +16,8 @@
 	
 #### 核心贡献
 
-	1 Java api https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/华瑞集5019652_core.jar
-	1.1 jar api 大小仅仅5兆， 其中class文件 含有完整 阅读source 对应，综合大小 仅仅14兆。 
+	1 Java api https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/华瑞集5019656_core.jar
+	1.1 jar api 大小仅仅3.5兆， 其中class文件 含有完整 阅读source 对应，综合大小 仅仅5兆。 
 	2 论著书籍  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理 的 V00919 编号。
 	2.1 docx 论著 十七章， 35万余字， 1800页+。 上下册 总大小36兆- 。
 	3 论著PPT https://github.com/yaoguangluo/ChromosomeDNA/tree/main/ppt
@@ -36,7 +36,7 @@
 	世界首发并论证： 在进化计算中, 软件函数文件进行 DNA 语义元基索引编码的 PDE 新陈代谢优化方式, 是一种有效的进化方式.  
 	In the evolutionary domain of software computation, the DNA catalytic and the PDN metabolic is an effective evolutionary method where based on indexing optimization by humanoid INITONS (16 Init-Atons, AOPM VECS IDUQ TXHF). 
  	1 单机戴尔 5510笔记本win10 实测峰值每秒 中文分词1632~2334万+中文字， 词库65000+，函数准确率100%，缺失语法函数 0.3%-， 算法准确率 99.97%+， 100%完整开放源码，在api与书籍中。
-	2 单机联想Y7000笔记本win10 实测峰值每秒 double高精度数组 每秒可排序1150万，准确率100% 见top sort 5代 100%完整开放源码，在api与书籍中。
+	2 单机联想Y7000笔记本win10 实测峰值每秒 double高精度数组 每秒可排序1150万，准确率100% 见top sort 5代 100%完整开放源码，在api与书籍中。--当前版本不断元基编码化，损失一定性能，可见当年的老版本。
 	3 单机联想Y7000笔记本win10 实测峰值每秒 精度索引 900万字+中文数据，准确率100%，100%完整开放源码，在api与书籍中。
 	4 单机联想Y7000笔记本win10 实测峰值每秒 计算 600万字+ DNN 的极速文章重心识别. 100%完整开放源码，在api与书籍中。
 	5 单机联想Y7000笔记本win10 实测峰值每秒 计算 200万+ 坐标的极速雷达边缘坐标识别. 100%完整开放源码，在api与书籍中。
@@ -86,7 +86,7 @@
 #### 使用方法
 	Demo真实例子 基于 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/BloomChromosome_V19001_20220108.jar 使用举例。 
 	Demo真实源码调用实例 见 https://github.com/yaoguangluo/ChromosomeDNA/tree/main/Demo
- 	最新API见 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/华瑞集5019652_core.jar 
+ 	最新API见 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/华瑞集5019656_core.jar 
  	最新API DEMO测试见 https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/商业逻辑实践应用文档汇总.txt
 
 
