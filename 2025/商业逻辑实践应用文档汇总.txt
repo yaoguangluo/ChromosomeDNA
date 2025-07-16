@@ -1,239 +1,245 @@
-华瑞集api 商业化逻辑 实践应用描述版本 V0.012
+# Trif 2.0
+## 该作品对应下面工程jar开始同步github更新,当前插件版本 华瑞集V5.019657。
+###### https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/华瑞集5019579_core.jar
+#### 国内解码与更进 华瑞集插件 的源码优化，本人只做优化，不再搞新东西了,这个项目罗瑶光主要是公开展示下自己的编码实力，知道自己的真实斤两。同时填补下软算 DNA编码领域的国际空白。2018年10月就贴出了本人生活地址，方便各类大佬组织现场技术群挑。
+#### 华瑞集api 商业化逻辑 实践应用描述版本 V0.015
 
-该文件详细描述如何将DNA元基催化与肽计算 与德塔大数据软件集在工业，农业和手工服务产业变现。亲近资本家产业投资者。
-2018年后我一直在湖南省浏阳市集里大塘路1段 7年，大家要找我投资，辩论，直接来即可，来前记得打我短信电话。
-我有齐全的个人著作权，身份证和法人银行账号等各类权属，各类合作可以直接租赁方式交易，不要老是骚扰我父母和亲戚等无关群体。
-有时间我文档pdf化。先把test文件归纳 SRC下面的test/java/InterfaceTest 区。
+###### 该文件详细描述如何将DNA元基催化与肽计算 与德塔大数据软件集在工业，农业和手工服务产业变现。亲近资本家产业投资者。2018年后我一直在湖南省浏阳市集里大塘路1段 7年，大家要找我投资，辩论，直接来即可，来前记得打我短信电话。我有齐全的个人著作权，身份证和法人银行账号等各类权属，各类合作可以直接租赁方式交易.有时间我文档pdf化。先把test文件归纳 SRC下面的test/java/InterfaceTest 区。
 
-接口分类
-1 sonar接口 --用于一些巨型企业和项目的启动前环境整体测试，工程中所有函数进行启动前源码覆盖率测试。，
-2 逻辑功能接口 --用于所有商业运行逻辑中 有效需求操作 测试，盈利根本性和条件性测试。
-3 web rest接口 --用于服务器部署中所有第三方应用的需求操作接口测试，围绕逻辑功能测试。
+#### 接口分类
+###### 1 sonar接口 --用于一些巨型企业和项目的启动前环境整体测试，工程中所有函数进行启动前源码覆盖率测试。，
+###### 2 逻辑功能接口 --用于所有商业运行逻辑中 有效需求操作 测试，盈利根本性和条件性测试。
+###### 3 web rest接口 --用于服务器部署中所有第三方应用的需求操作接口测试，围绕逻辑功能测试。
 
-接口溯源
-一开始我是基于医学数据搜索来设计的 我一个著作权产品 养疗经api，国内因为医学产业被一些部门和证件卡的严实，我寸步难行又被迫开源。
-于是利用这严实，我把 养疗经api 中公共接口和逻辑全部剥离出来，去掉医学组件，成为华瑞集API，发现用途巨大，适用面更广，很多产业
-逻辑底层是相同相通的。于是将开源编码进行元基编码化，一边测试，一边开源，一边论证，一边优化。于是形成了这个 DNA时微分编码 体系。
+#### 接口溯源
+###### 一开始我是基于医学数据搜索来设计的 我一个著作权产品 养疗经api，国内因为医学产业被一些部门和证件卡的严实，我寸步难行又被迫开源。于是利用这严实，我把 养疗经api 中公共接口和逻辑全部剥离出来，去掉医学组件，成为华瑞集API，发现用途巨大，适用面更广，很多产业逻辑底层是相同相通的。于是将开源编码进行元基编码化，一边测试，一边开源，一边论证，一边优化。于是形成了这个 DNA时微分编码 体系。
 
-商业领域
-这个API主要应用与数据智能工程，处理各种形式的海量数据类工程，如坐标，文本，列表，波形和图片流的搜索，计算，分析，处理服务。。
+#### 商业领域
+###### 这个API主要应用与数据智能工程，处理各种形式的海量数据类工程，如坐标，文本，列表，波形和图片流的搜索，计算，分析，处理服务。。
 
-------
-测试逻辑文件夹分类
-1  坐标类计算 逻辑接口商业测试 --package InterfaceTest.coordinatesTracement;
-2  排序类计算 逻辑接口商业测试 --package InterfaceTest.sort.arraySort.chineseSort;
-3  分词类计算 逻辑接口商业测试 --package InterfaceTest.chineseParser;
-4  花语操作表 逻辑接口商业测试 --package InterfaceTest.tinShell;
-5  元基编码类 逻辑接口商业测试 --package InterfaceTest.DNASession;
-6  数据变换类 逻辑接口商业测试 --package InterfaceTest.computingPDE.linePage;
-7  ETL计算类 逻辑接口商业测试 --package ME.VPC.M.C; later
-8  搜索计算类 逻辑接口商业测试 --package InterfaceTest.tinShell;
-9  DNN计算类 逻辑接口商业测试 --package InterfaceTest.tinShell;
-10 数据加密类 逻辑接口商业测试 --package InterfaceTest.DNASession;
-11 web接口类 逻辑接口商业测试 --package ME.VPC.M.C; later
-12 进化计算类 逻辑接口商业测试 --见整个工程的TVM指令集，索引目录，分类目录，缩进字符和编码函数方式。
-13 卷积计算类 逻辑接口商业测试 --路德大学计算机视觉课后作业。
+#### 测试逻辑文件夹分类 有时间我文档pdf化。先把test文件归纳 SRC下面的test/java/InterfaceTest 区。
+###### 1  坐标类计算 逻辑接口商业测试 --package test.java.InterfaceTest.coordinatesTracement;
+###### 2  排序类计算 逻辑接口商业测试 --package test.java.InterfaceTest.sort.arraySort.chineseSort;
+###### 3  分词类计算 逻辑接口商业测试 --package test.java.InterfaceTest.chineseParser;
+###### 4  花语操作表 逻辑接口商业测试 --package test.java.InterfaceTest.tinShell;
+###### 5  元基编码类 逻辑接口商业测试 --package test.java.InterfaceTest.DNASession;
+###### 6  数据变换类 逻辑接口商业测试 --package test.java.InterfaceTest.computingPDE.linePage;
+###### 7  ETL计算类 逻辑接口商业测试 --package ME.VPC.M.C; later
+###### 8  搜索计算类 逻辑接口商业测试 --package test.java.InterfaceTest.tinShell;
+###### 9  DNN计算类 逻辑接口商业测试 --package test.java.InterfaceTest.tinShell;
+###### 10 数据加密类 逻辑接口商业测试 --package test.java.InterfaceTest.DNASession;
+###### 11 web接口类 逻辑接口商业测试 --package ME.VPC.M.C; later
+###### 12 进化计算类 逻辑接口商业测试 --见整个工程的TVM指令集，索引目录，分类目录，缩进字符和编码函数方式。
+###### 13 卷积计算类 逻辑接口商业测试 --路德大学计算机视觉课后作业。
 
-------
-商业功能细分文件分类 --适用于各类需要2维和3维坐标计算的逻辑场景。
-1 坐标类计算 逻辑接口商业测试 --package InterfaceTest.coordinatesTracement;
-  1.1 //oberserverPCAScale：确定主要有效最短路径的观测数
-      //sortRangeScale：确定坐标距离排序时的相似成份多少来确定堆栈冗余比,避免堆栈溢出。
-      //求坐标团的主要有效距离成份集的平均压强算法
-      //适用于 观测/预测坐标集中某精度邻接坐标集的 平均距离 来确定 紧凑度,压力,压强,斥力等。
-      //2D坐标团中 每一个坐标的斥力预测算法。
-      System.out.println("//处理Distance_X_findPascalMeanDistanceByEachPositions2D");
-      DemoCoordsTest._E(inputs);
-  1.2 //一种仅仅通过坐标重心来描绘射极边缘面探测使用方法。
-      System.out.println("//处理 side end SideEnd_X_getSideEnd2D");
-      DemoCoords1Test._E_(inputs);
-  1.3 //通过scale 距离来进行 坐标团切裂。
-      System.out.println("//处理fissile Fissile_X_fissilePosition2D");
-      DemoCoords2Test._E(inputs);
-  1.4 //带精度 2维 商旅路径团簇 森林单元 隔离 算法
-      //Theory 《神经网络: 权距》,欧基里德, Yaoguang.Luo 20191220
-      //Application Yaoguang.Luo
-      //适用于 最短路径,最小距离,商旅分析预测,等项目中
-      System.out.println("//处理处理商旅森林 isolation Forest_X_getTSPForestIsolationGroups2D");
-      DemoCoords3Test._E(inputs);
-  1.5 //带精度 2维(非欧拉权距)商旅路径团簇 隔离 算法
-      //Theory 《神经网络: 权距》,欧基里德, Yaoguang.Luo 20191220
-      //Application Yaoguang.Luo
-      //适用于 最短路径,最小距离,商旅分析预测,等项目中
-      System.out.println("//处理商旅簇 isolation Isolation_X_getTSPIsolationGroups2D");
-      DemoCoords4Test._E(inputs);
-  1.6 //通过scale 距离来进行 坐标团切裂。
-      //Theory yaoguang.luo 20191219, 欧基里德
-      System.out.println("//处理fusion 先 fissile 采样 Fissile_X_fissilePosition2D");
-      DemoCoords5Test._E(inputs);
-  1.7 欧基里德距离坐标团重心计算。
-      //思想：欧基里德
-      //实现：罗瑶光
-      System.out.println("//处理fusion 先 fissile 采样 然后fusion 1 观测heart Euclid_X_findHeartPosition2D");
-      DemoCoords6Test._E(inputs);
-  1.8 //通过scale 距离来进行坐标团集合 融聚。
-      //Theory yaoguang.luo 20191219, 欧基里德
-      System.out.println("//处理fusion 先 fissile 采样 然后fusion 1 观测heart 再 Fusion_X_fusionPosition2DwithHeart");
-      DemoCoords7Test._E(inputs);
-  1.9 //这个函数用于通过重心位移距离来进行坐标分类
-      //思想：欧基里德
-      //实现：罗瑶光
-      System.out.println("//处理Classification Classification_X_addNewPositionWithoutHeart");
-      DemoCoords8Test._E(inputs);
-  1.10 随机森林的中心团 --严重超出了民用商用级别，略。
-  1.11 压强的坐标系运动趋势 --严重超出了民用商用级别，略。
-  1.12 平均区间的饱和态 --严重超出了民用商用级别，略。
-  1.13 空间中簇的融聚 --严重超出了民用商用级别，略。
-  1.14 空间中簇的移动趋势 --严重超出了民用商用级别，略。
-  1.15 处理海量坐标的欧拉最短环路计算 --package test.java.InterfaceTest.coordinatesTracement;
-       --TSP2D_X_getYaoguangLuo2DEulerRingTSP2DTest 
-  1.16
-  1.17
+###### 商业功能细分文件分类 --适用于各类需要2维和3维坐标计算的逻辑场景。
+#### 1 坐标类计算 逻辑接口商业测试 --package test.java.InterfaceTest.coordinatesTracement;
+##### 1.1 oberserverPCAScale：确定主要有效最短路径的观测数
+###### sortRangeScale：确定坐标距离排序时的相似成份多少来确定堆栈冗余比,避免堆栈溢出。
+###### 求坐标团的主要有效距离成份集的平均压强算法
+###### 适用于 观测/预测坐标集中某精度邻接坐标集的 平均距离 来确定 紧凑度,压力,压强,斥力等。
+###### 2D坐标团中 每一个坐标的斥力预测算法。
+###### --Distance_X_findPascalMeanDistanceByEachPositions2D"
+###### DemoCoordsTest._E(inputs);
 
-2 排序类计算 逻辑接口商业测试
-  --适用于各类需要进行 拼音 笔画 数量排序的数组场景，如邮政地址搜索，航班搜索，姓名，排序，等工业，农业，手工服务业数字计算领域
-  2.1 非对称排序
-      --package InterfaceTest.sort.arraySort.chineseSort;
-  2.2 double排序
-      --package InterfaceTest.sort.arraySort.chineseSort;
-  2.3 top sort 5代
-      --package InterfaceTest.sort.arraySort.LYG4DQS4D;
-  2.4 映射方式排序
-      --package InterfaceTest.sort.arraySort.reflection.IntStringSort;
-  2.5
+##### 1.2 一种仅仅通过坐标重心来描绘射极边缘面探测使用方法。--package test.java.InterfaceTest.coordinatesTracement;
+###### 处理 side end --SideEnd_X_getSideEnd2D
+###### DemoCoords1Test._E_(inputs);
 
-3 分词类计算 逻辑接口商业测试
-  --各类浏览器中文搜索匹配。
-  --各类AI中文搜索匹配，关键字搜索匹配。
-  3.1 文本分词
-      --package InterfaceTest.chineseParser;
-      --package InterfaceTest.tinShell;
-  3.2 词性分词
-      --package InterfaceTest.chineseParser;
-  3.3 分词统计
-      --package InterfaceTest.chineseParser;
-  3.4 频率分词
-  3.5 DNN重心分词
-      --package InterfaceTest.chineseParser;
-      --package InterfaceTest.tinShell;
+##### 1.3 通过scale 距离来进行 坐标团切裂。--package test.java.InterfaceTest.coordinatesTracement;
+###### 处理fissile --Fissile_X_fissilePosition2D
+###### DemoCoords2Test._E(inputs);
 
-4 花语操作表 逻辑接口商业测试
-  --适用于各类文字形式的报表检索，数据库类型的数据操作和检索。和嵌入式命令脚本操作智能系统。
-  4.1 tinshell
-      --package InterfaceTest.tinShell;
-  4.2 plshell
-  4.3 initon flower --package ME.VPC.M.X; --App_XCDX
-      --用于语言操作 函数生成和执行的单元逻辑。
-  4.4 VPCS序列化函数标注 package InterfaceTest.tinShell; --ShellJPanelTest函数文件中 --第326行
-      --用于遗传编码与进化计算领域。
-  4.5
+##### 1.4 带精度 2维 商旅路径团簇 森林单元 隔离 算法 --package test.java.InterfaceTest.coordinatesTracement;
+###### 适用于 最短路径,最小距离,商旅分析预测,等项目中
+###### 处理处理商旅森林 isolation --Forest_X_getTSPForestIsolationGroups2D
+###### DemoCoords3Test._E(inputs);
 
-5 元基编码类 逻辑接口商业测试
-  --适用于各类加密领域，web加密。dna词汇编码，索引缩进计算。
-  5.1 肽展公式AOPM VECS IDUQ 层级变换
-      --package InterfaceTest.DNASession;
-  5.2 非对称变化文本加密
-      --package InterfaceTest.DNASession;
-  5.3 词汇加密
-      --package InterfaceTest.DNASession;
-  5.4 词汇浓度缩进 --严重超出了民用商用级别，略。
-  5.5 古拉丁语DNA编码 --严重超出了民用商用级别，略。
-  5。6
-  5。7
+##### 1.5 带精度 2维(非欧拉权距)商旅路径团簇 隔离 算法 --package test.java.InterfaceTest.coordinatesTracement;
+###### 适用于 最短路径,最小距离,商旅分析预测,等项目中
+###### 处理商旅簇 isolation --Isolation_X_getTSPIsolationGroups2D
+###### DemoCoords4Test._E(inputs);
 
-6 数据变换类 逻辑接口商业测试
-  6.1 结构变换 --data swap 变量变换包，太过简单，这里略。 --package U_V.ESU;
-  6.2 离散VPCS新陈代谢 --工程目录，函数文件
-  6.3 费洛蒙变换模拟 --严重超出了民用商用级别，略。
-  6.4 时函数变换 --package InterfaceTest.timeNorms.jniLYGAFDCDFFT;
-  6.5 时流积噪音分析 --package InterfaceTest.timeNorms.jniLYGAFDCDFFT;
-      --可应用于极速滤波观测。如机器的螺丝稳定，空间的噪音分布，地震源分析，等各类需要追溯时间空间变化的滤波的场景。
-  6.6 非卷积肽数字滤波变换 --package InterfaceTest.computingPDE.linePage;
-  6.7 非卷积肽数字矩阵变换 --package InterfaceTest.computingPDE.matrixPage;
-      --可应用于图片进行数字矩阵变换后产生的团进行坐标化，然后用轨迹分析来确定团的内积和运动趋势的切裂与融聚计算算法计算。
-      --如工控，内积，地理，航海，农业，蜂群，虫群，鸟群，各类数据分析。
+##### 1.6 通过scale 距离来进行 坐标团切裂。 --package test.java.InterfaceTest.coordinatesTracement;
+###### 处理fusion 先 fissile 采样 --Fissile_X_fissilePosition2D
+###### DemoCoords5Test._E(inputs);
 
-7 ETL计算类 逻辑接口商业测试
-  7.1 ETL 批处理 如一键导入，一键执行，一键保存。
-  7.2 ETL OSGI 可以扩充jar插件包 系统功能。
-  7.3 ETL crab 类似7.2 可以散化系统组件。
-  7.4 PLETL --package InterfaceTest.tinShell;
-  7.5 ETL 皮肤界面 仿照jdk theme 写 unicorn插件包。--package ME.VPC.M.X; --AppInit_XCDX
-      --UIManager.put("ScrollBarUI", "OPE.OVQ.MSQ.OVU.PQE.platForm.UnicornScrollBarUI");
+##### 1.7 欧基里德距离坐标团重心计算。--package test.java.InterfaceTest.coordinatesTracement;
+###### 处理fusion 先 fissile 采样 然后fusion 1 观测heart Euclid_X_findHeartPosition2D
+###### DemoCoords6Test._E(inputs);
 
-8 搜索计算类 逻辑接口商业测试
-  --适用于各类海量数据库和报表中的字符串检索。如 操作系统检索，全文检索，数据库检索，表格类office检索等。
-  8.1 DNN 搜索 --package InterfaceTest.tinShell;
-  8.2 object array 搜索 --package InterfaceTest.tinShell;
-  8.3 语言化搜索 --package InterfaceTest.tinShell;
-  8.4
-  8.5
+##### 1.8 通过scale 距离来进行坐标团集合 融聚。--package test.java.InterfaceTest.coordinatesTracement;
+###### 处理fusion 先 fissile 采样 然后fusion 1 观测heart 再 Fusion_X_fusionPosition2DwithHeart
+###### DemoCoords7Test._E(inputs);
 
-9 DNN计算类 逻辑接口商业测试
-  --用于决策类计算和深度思考领域如公安，教育，哲学，法院，艺术等领域，确定计算权重的文本类思想提纯的操作。
-  9.1 ANN --package InterfaceTest.TextDNN; --ANNTestTest
-  9.2 CNN --package InterfaceTest.TextDNN; --基础
-  9.3 DNN --package InterfaceTest.tinShell; --DNNTestTest
-  9.4 推荐 --package InterfaceTest.TextDNN; --太多略
-  9.5 RNN --package InterfaceTest.TextDNN; --RNN_IDETestTest
-  9.6 教育水平 --package InterfaceTest.TextDNN; --EducationLevelTestTest
-  9.7 英文翻译 --package InterfaceTest.TextDNN; --DemoTSLTTest
-  9.8 文学修养 --package InterfaceTest.TextDNN; --LiterarinessLevelTestTest
-  9.9 情绪执行成功率 --package InterfaceTest.TextDNN; --SuccessICATestTest
-  9.10 写作习惯 --package InterfaceTest.TextDNN; --InitBehaviorICAKernelTest
-  9.11 词意联想 --package InterfaceTest.TextDNN; --LenovoInitTest
-       --这是一个 用于文本的词汇意义来计算文章的内容属性的德塔图灵分词个人著作权中的权重内核模块，如动机 倾向，决策力等。
+##### 1.9 这个函数用于通过重心位移距离来进行坐标分类 --package test.java.InterfaceTest.coordinatesTracement;
+###### 处理Classification --Classification_X_addNewPositionWithoutHeart
+###### DemoCoords8Test._E(inputs);
+##### 1.10 随机森林的中心团 --严重超出了民用商用级别，略。
+##### 1.11 压强的坐标系运动趋势 --严重超出了民用商用级别，略。
+##### 1.12 平均区间的饱和态 --严重超出了民用商用级别，略。
+##### 1.13 空间中簇的融聚 --严重超出了民用商用级别，略。
+##### 1.14 空间中簇的移动趋势 --严重超出了民用商用级别，略。
+##### 1.15 处理海量坐标的欧拉最短环路计算 --package test.java.InterfaceTest.coordinatesTracement;
+######     --TSP2D_X_getYaoguangLuo2DEulerRingTSP2DTest
 
+#### 2 排序类计算 逻辑接口商业测试
+###### --适用于各类需要进行 拼音 笔画 数量排序的数组场景，如邮政地址搜索，航班搜索，姓名，排序，等工业，农业，手工服务业数字计算领域
+##### 2.1 非对称排序
+######    --package test.java.InterfaceTest.sort.arraySort.chineseSort;
+##### 2.2 double排序
+######    --package test.java.InterfaceTest.sort.arraySort.chineseSort;
+##### 2.3 top sort 5代
+######    --package test.java.InterfaceTest.sort.arraySort.LYG4DQS4D;
+##### 2.4 映射方式排序
+######    --package test.java.InterfaceTest.sort.arraySort.reflection.IntStringSort;
 
-10  数据加密类 逻辑接口商业测试
-    --在web等各类的账号密码登陆中，可以用token肽计算化密码提示符号，这样密码错误，得到的提示反馈dna解码后有助于使用者记忆密码。
-    10.1  文本加密
-          --package InterfaceTest.DNASession;
-    10.2  session加密
-          --package InterfaceTest.DNASession;
-    10.3  token加密
-          --package InterfaceTest.DNASession;
-    10.4  非对称加密
-          --package InterfaceTest.DNASession;
-    10.5  。。。
+#### 3 分词类计算 逻辑接口商业测试
+###### --各类浏览器中文搜索匹配。
+###### --各类AI中文搜索匹配，关键字搜索匹配。
+##### 3.1 文本分词
+######    --package test.java.InterfaceTest.chineseParser;
+######    --package test.java.InterfaceTest.tinShell;
+##### 3.2 词性分词
+######    --package test.java.InterfaceTest.chineseParser;
+##### 3.3 分词统计
+######    --package test.java.InterfaceTest.chineseParser;
+##### 3.4 频率分词
+##### 3.5 DNN重心分词
+######    --package test.java.InterfaceTest.chineseParser;
+######    --package test.java.InterfaceTest.tinShell;
 
-11  web接口类 逻辑接口商业测试
-    --适用于服务器部署，如我的戴尔+vivo部署的 德塔官网就是 VPCS部署的老版本。以后会开源，就几十kb源码。跑了7年了。
-    11.1  前端服务器
-    11.2  后端服务器
-    11.3  缓存服务器
-    11.4  数据库服务器
-      11.4.1  增加数据操作
-      11.4.2  减少数据操作
-      11.4.3  改变数据操作
-      11.4.4  查看数据操作
-    11.5  面向GRPC的 vpcs系统
+#### 4 花语操作表 逻辑接口商业测试
+###### --适用于各类文字形式的报表检索，数据库类型的数据操作和检索。和嵌入式命令脚本操作智能系统。
+##### 4.1 tinshell
+######    --package test.java.InterfaceTest.tinShell;
+##### 4.2 plshell
+##### 4.3 initon flower --package ME.VPC.M.X; --App_XCDX
+######    --用于语言操作 函数生成和执行的单元逻辑。
+##### 4.4 VPCS序列化函数标注 package test.java.InterfaceTest.tinShell; --ShellJPanelTest函数文件中 --第326行
+######    --用于遗传编码与进化计算领域。
 
-13  卷积计算类 逻辑接口商业测试 --package C_R_U 下 P.image;
-    --package InterfaceTest.convolution;
-    --路德大学计算机视觉课后作业。适用于工业，农业，服务业各类矩阵数据，视觉数据分析。
-    13.1 Sobel索贝尔梯度计算 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
-    13.2 Emboss因博士浮雕计算 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
-    13.3 Guassian高斯模糊滤波计算 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
-    13.4 Strech尺度拉扯计算 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
-    13.5 Closing像素腐蚀融聚计算 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
-    13.6 其他太过简单。略 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
-    13.7 Convolutional PDE Trif --严重超出民用商业级别，略。
+#### 5 元基编码类 逻辑接口商业测试
+###### --适用于各类加密领域，web加密。dna词汇编码，索引缩进计算。
+##### 5.1 肽展公式AOPM VECS IDUQ 层级变换
+######    --package test.java.InterfaceTest.DNASession;
+##### 5.2 非对称变化文本加密
+######    --package test.java.InterfaceTest.DNASession;
+##### 5.3 词汇加密
+######    --package test.java.InterfaceTest.DNASession;
+##### 5.4 词汇浓度缩进 --严重超出了民用商用级别，略。
+##### 5.5 古拉丁语DNA编码 --严重超出了民用商用级别，略。
 
-2600多个函数，接口太多，都是可运行的，不断整理到一起这 商业归纳即可。
-医学部分所有接口已去，
+#### 6 数据变换类 逻辑接口商业测试
+##### 6.1 结构变换 --data swap 变量变换包，太过简单，这里略。 --package U_V.ESU;
+##### 6.2 离散VPCS新陈代谢 --工程目录，函数文件
+##### 6.3 费洛蒙变换模拟 --严重超出了民用商用级别，略。
+##### 6.4 时函数变换 --package test.java.InterfaceTest.timeNorms.jniLYGAFDCDFFT;
 
-作者 罗瑶光
+##### 6.5 时流积噪音分析 --package test.java.InterfaceTest.timeNorms.jniLYGAFDCDFFT;
+######    --可应用于极速滤波观测。如机器的螺丝稳定，空间的噪音分布，地震源分析，等各类需要追溯时间空间变化的滤波的场景。
 
-/*
- * 个人著作权人, 第一作者 罗瑶光, 浏阳
- * yaoguangluo@outlook.com, 313699483@qq.com, 2080315360@qq.com,
- *（lyg.tin@gmail.com2018年后因G网屏蔽不再使用）
- * 15116110525-（唯一标识）
- * 430181198505250014, G24402609, EB0581342
- * 204925063, 389418686, F2406501, 0626136
- * 湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路一段 208号 阳光家园别墅小区 第十栋别墅
- * */
+##### 6.6 非卷积肽数字滤波变换 --package test.java.InterfaceTest.computingPDE.linePage;
+
+##### 6.7 非卷积肽数字矩阵变换 --package test.java.InterfaceTest.computingPDE.matrixPage;
+######    --可应用于图片进行数字矩阵变换后产生的团进行坐标化，然后用轨迹分析来确定团的内积和运动趋势的切裂与融聚计算算法计算。
+######    --如工控，内积，地理，航海，农业，蜂群，虫群，鸟群，各类数据分析。
+
+#### 7 ETL计算类 逻辑接口商业测试
+##### 7.1 ETL 批处理 如一键导入，一键执行，一键保存。
+##### 7.2 ETL OSGI 可以扩充jar插件包 系统功能。
+##### 7.3 ETL crab 类似7.2 可以散化系统组件。
+##### 7.4 PLETL --package test.java.InterfaceTest.tinShell;
+##### 7.5 ETL 皮肤界面 仿照jdk theme 写 unicorn插件包。--package ME.VPC.M.X; --AppInit_XCDX
+######    --UIManager.put("ScrollBarUI", "OPE.OVQ.MSQ.OVU.PQE.platForm.UnicornScrollBarUI");
+
+#### 8 搜索计算类 逻辑接口商业测试
+###### --适用于各类海量数据库和报表中的字符串检索。如 操作系统检索，全文检索，数据库检索，表格类office检索等。
+##### 8.1 DNN 搜索 --package test.java.InterfaceTest.tinShell;
+##### 8.2 object array 搜索 --package test.java.InterfaceTest.tinShell;
+##### 8.3 语言化搜索 --package test.java.InterfaceTest.tinShell;
+##### 8.4 直接报表化 语言shell搜索 --package test.java.InterfaceTest.tinShell; --这个例子很综合很大，稍后拆解细化测试即可，
+##### 8.5 最简数组文字数据搜索 --package test.java.InterfaceTest.tinShell; --StaticFunctionMapQ_VECS_ETest
+
+#### 9 DNN计算类 逻辑接口商业测试
+###### --用于决策类计算和深度思考领域如公安，教育，哲学，法院，艺术等领域，确定计算权重的文本类思想提纯的操作。
+##### 9.1 ANN --package test.java.InterfaceTest.TextDNN; --ANNTestTest
+######    --这是一个 用于文本的pos频率词汇比重ANN计算文本价值的德塔图灵分词个人著作权中的权重内核的核心模块计算
+
+##### 9.2 CNN --package test.java.InterfaceTest.TextDNN; --基础
+##### 9.3 DNN --package test.java.InterfaceTest.tinShell; --DNNTestTest
+######    --这是一个 用于文本的深度词汇比重计算文本重心的德塔图灵分词个人著作权中的权重内核的核心模块计算
+
+##### 9.4 推荐 --package test.java.InterfaceTest.TextDNN; --太多略
+##### 9.5 RNN --package test.java.InterfaceTest.TextDNN; --RNN_IDETestTest
+######    --这是一个 德塔罗氏深度计算个人著作权中的RNN距离中心权重内核模块计算 测试main函数demo的test版本
+
+##### 9.6 教育水平 --package test.java.InterfaceTest.TextDNN; --EducationLevelTestTest
+######    --这是一个 用于文本的词汇比重计算教育程度的德塔图灵分词个人著作权中的权重内核模块计算 测试main函数demo的test版本
+
+##### 9.7 英文翻译 --package test.java.InterfaceTest.TextDNN; --DemoTSLTTest
+######    --这是一个 用于中英文翻译测试探索， 测试main函数demo的test版本
+
+##### 9.8 文学修养 --package test.java.InterfaceTest.TextDNN; --LiterarinessLevelTestTest
+######    --这是一个 用于文本的词汇比重计算文学分析程度的德塔图灵分词个人著作权中的权重内核模块计算 测试main函数demo的test版本
+
+##### 9.9 情绪执行成功率 --package test.java.InterfaceTest.TextDNN; --SuccessICATestTest
+######    --这是一个 情绪执行成功率，用于执行力 决策力测试 测试main函数demo的test版本
+
+##### 9.10 写作习惯 --package test.java.InterfaceTest.TextDNN; --InitBehaviorICAKernelTest
+######     --这是一个 用于文本的词汇比重计算文章作者的写作习惯的德塔图灵分词个人著作权中的权重内核模块计算
+
+##### 9.11 词意联想 --package test.java.InterfaceTest.TextDNN; --LenovoInitTest
+######     --这是一个 用于文本的词汇意义来计算文章的内容属性的德塔图灵分词个人著作权中的权重内核模块，如动机 倾向，决策力等。
+
+#### 10  数据加密类 逻辑接口商业测试
+###### --在web等各类的账号密码登陆中，可以用token肽计算化密码提示符号，这样密码错误，得到的提示反馈dna解码后有助于使用者记忆密码。
+##### 10.1  文本加密 --字符串类和文件数据加密。
+###### --package test.java.InterfaceTest.DNASession;
+##### 10.2  session加密 --互联网token http头描述区
+###### --package test.java.InterfaceTest.DNASession;
+##### 10.3  token加密 --非对称访问类请求头加密。
+###### --package test.java.InterfaceTest.DNASession;
+##### 10.4  非对称加密 --适用各类非对称握手协议。
+###### --package test.java.InterfaceTest.DNASession;--这个例子很综合很大，稍后拆解细化测试即可，
+##### 10.5  。。。
+
+#### 11  web接口类 逻辑接口商业测试
+#### --适用于服务器部署，如我的戴尔+vivo部署的 德塔官网就是 VPCS部署的老版本。以后会开源，就几十kb源码。跑了7年了。
+##### 11.1  前端服务器
+##### 11.2  后端服务器
+##### 11.3  缓存服务器
+##### 11.4  数据库服务器
+###### 11.4.1  增加数据操作
+###### 11.4.2  减少数据操作
+###### 11.4.3  改变数据操作
+###### 11.4.4  查看数据操作
+###### 11.5  面向GRPC的 vpcs系统
+
+#### 13  卷积计算类 逻辑接口商业测试 --package C_R_U 下 P.image;
+###### --package test.java.InterfaceTest.convolution;
+###### --路德大学计算机视觉课后作业。适用于工业，农业，服务业各类矩阵数据，漫画，图片，机械，视觉数据分析。
+###### 13.1 Sobel索贝尔梯度计算边缘和立体填充 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
+###### 13.2 Emboss因博士浮雕分层计算 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
+###### 13.3 Guassian高斯模糊滤波计算 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
+###### 13.4 Strech尺度拉扯颜色鲜艳度计算 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
+###### 13.5 Closing像素腐蚀融聚图片修复保真类计算 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
+###### 13.6 其他太过简单。略 --授课RenHart， 教材computerVision绿皮书， 编码作者罗瑶光。
+###### 13.7 Convolutional PDE Trif --严重超出民用商业级别，略。
+
+###### 2600多个函数，接口太多，都是可运行的，不断整理到一起这 商业归纳即可。
+###### 医学部分所有接口已去，
+
+###### 个人作者:罗瑶光
+###### /*
+###### * 个人著作权人, 第一作者 罗瑶光, 浏阳
+###### * yaoguangluo@outlook.com, 313699483@qq.com, 2080315360@qq.com,
+######   *（lyg.tin@gmail.com2018年后因G网屏蔽不再使用）
+###### * 15116110525-（唯一标识）
+###### * 430181198505250014, G24402609, EB0581342
+###### * 204925063, 389418686, F2406501, 0626136
+###### * 湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路一段 208号 阳光家园别墅小区 第十栋别墅
+###### * */
 
 ##### Refer
 ###### https://github.com/yaoguangluo/YangLiaoJing_HuaRuiJi/tree/18701/%E8%AF%81%E4%B9%A6
@@ -254,9 +260,30 @@
 ###### 2022年01月27日  14.著作权人:罗瑶光. 作者:罗瑶光, 罗荣武. 《DNA元基催化与肽计算 第四修订版 V00919》. 中华人民共和国国家版权局，SD-2022Z11L0025809. 2022. (受理号:2022Z11S1032939).登记号：国作登字-2022-L-10071310
 ###### 2022年06月06日  15.著作权人:罗瑶光. 作者:罗瑶光, 罗荣武. 《DNA元基催化与肽计算_第五修订版_V0007102》. 著作权版本申请序列号为 2022Z11L0144353.登记号：国作登字-2022-L-10181589
 ###### [词条引用日期2020-03-05] 16.类人数据生命的DNA计算思想 Github  https://github.com/yaoguangluo/Deta_Resource
-
 ###### 2019年08月06日 17 著作权人:罗瑶光. 作者:罗瑶光.《华瑞集》. 中华人民共和国国家版权局. 国作登字-2019-F-00943469, 国作登字-2019-F-00943472, 国作登字-2019-F-00943473. 2019.
 ###### 2019年08月06日 18 著作权人:罗瑶光. 作者:罗瑶光.《养疗经》. 中华人民共和国国家版权局. 国作登字-2019-F-00943474, 国作登字-2019-F-00943475, 国作登字-2019-F-00943471. 2019.
+
+### 每次优化我会特别标注明优化方式和优化途径。
+### 大家好，我叫罗瑶光，很高兴认识各位！
+##### 关于浏阳德塔软件开发有限公司，我也不做多介绍了，因为是我个人著作权体系，导致一个独立的私人小公司空壳子而已。
+###### 个人著作权人, 作者 罗瑶光, 浏阳
+###### yaoguangluo@outlook.com, 313699483@qq.com, 2080315360@qq.com,  430181198505250014, G24402609, EB0581342, 204925063, 389418686, F2406501, 0626136
+###### 研发注意: 15116110525-（真我实时蓝牙开启，身份证实名发票手机 身份证实名纸质本票手机卡 内置指纹 nfc 5g 联合国等各类app 16种传感器和实时权限全开）--当前研发设备- 身份证实名发票 mac ios+指纹+瞳膜苹果笔记本。+联合国，eu等各类app 22种传感器和实时权限全开）
+###### 地址注意: 湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路一段 208号 阳光家园别墅小区 第十栋 ---- 208西南门入口进入别墅区内左转第3栋 人脸正面面对正门的连体别墅左户（左是十栋，右是十一栋）,同时也靠近美林花苑入口大门（美林花苑小区内见到阳光家园的最前面金属围栏后便是10栋和（11栋）2户联体别墅），美林花苑小区位于大塘冲路一段的十字路口，若路口对应其二维平面一个点轴心，美林花苑则位于第一象限，其斜对面第三象限 标志建筑是 浏阳市 大塘实验(普特融合)小学 --
+###### 穿着注意: 本人172cm，性别男，头发右分三七开，齐耳齐眉。性格活泼，声音大，对烟酒强烈过敏，学不会棋牌麻将，因为从来就没赢过。。。--编码业余爱好钢琴书法绘画剑术烹饪等。
+###### 通讯注意: 另外国内手机号不是永久个人属性的物品，导致之前我这几十年 公开的软件里含有 好几个手机号 资源页面，容易被各类欺诈组织 利用各类套路布局和手机GPRS不准乱飘惹事，特别是市场还有卡贴，电子狗这类东西，防不胜防。 这里申明下，大家小心倪端。
+###### 活动注意: 本人罗瑶光2018年1月回国与家周围邻居从无任何形式的串门，从无聚众街头聊天，从无踏入邻居家门一次，与周围邻社无亲戚关系。特别是面朝建筑的右连十一栋彭府，和左旁独立9栋邱府，以及西南门大门口的王府鲁府等。避免任何纠纷。另外我身份证是户口薄上对应住址，是姑姑姑爷罗庆华目前住着，和我大塘地址不是一个，本人回国后只进过1次中医院大门-因舅公中风-。另外本人从不和家周围邻居，爸妈同行，有任何形式，任何话题的接触关联，避免纠纷。
+###### 资金注意: 本人罗瑶光目前仅一个公司非盈利对公账户8111601012600368197， 私人使用银行卡仅一张6214467873142057287，警惕各类社会组织非法套路策划诈骗。--
+###### 聚众注意: 本人罗瑶光非明星，传媒，领导，名人，因私外出被一些陌生群体卡点尾随 导致的各类资本耗损套路本人不承担任何消费与赔偿责任。本人各类权属证件从不私人外借。--。
+###### 建筑注意: 本人罗瑶光居家三楼为轻质砖结构建材建筑，外被美林花苑居民楼建筑在西北方均距十五米呈手电筒状直角半开围裹，本人房间正处于'灯泡'位置。因此造成立体声声音方位识别混乱。大家注意倪端，谨防诈骗。
+###### 就职注意: 本人罗瑶光2018年1月回国后，仅在浏阳德塔软件开发有限公司就职，小心各类策划自来熟套牌挂职欺诈。--父母罗荣武 刘瑞珍是长沙乐好妇产医院合伙级股权人。2017年7月父母未退休，罗瑶光因此在美国挂职建院现金投资董事，（股东分红身份2022年后给了罗荣武，至今不享受现金收入），当时罗瑶光在美国佛森英特尔 fm6就职 fullstack application4，intel月薪8000美金。至今从未在乐好妇产医院工作。可查医院院内7年监控日志和银行流水。
+###### 家庭注意: 本人罗瑶光职业软件研发人员。父亲罗荣武，前浏阳中医院脑外科临床退休医生，母亲刘瑞珍，前浏阳妇幼妇产科退休医生，女儿罗雅佳美国公民，前妻李妙环/Ring.Li，广东新会移民，美国公民在美国政府工作。身份特殊本人个人著作权又多，所以在国内不想待见任何人，能开源的都免费公开了，特别是软件同行，避免纠纷。平时因私活动购零食，晚上七点后从不外出，归途另算。
+###### 环境注意: 本人罗瑶光因喜欢本地未包装特色零食，加之身边传感器繁杂，导致易接触霉菌，时域频率与毒素过敏源多。经常莫名发胖，虚胖，腹胀，话多，头皮出油，脸部肌肉充盈，发色时白时黑，容易被摄影邋遢篡改猫腻。之后会系统地注意和纠正一些坏习惯。
+###### 出国原因: 本人罗瑶光当年属于留学+亲属移民。不是偷渡和技术移民这里申明下，避免纠纷。通过中印留学纪燕萍+公证学历委培极差地方生成绩单等 去印度班加罗尔大学瑞拉理工学院留学后560/800考试 加研二满分汇编转学TC从印度基督大学（前班加罗尔大学基督学院）。后也是这个极差委培成绩单公证（公证人周谦）并隐藏印度不错的学历找上海发改委下属华恒留学宋尧入读千橡els106开始，后10个月后转学到加州路德大学GPA3.85毕业。因去美国前陈嘉诚在上海（非华恒中介的留学生）给的ELS112和去美国后宿友台湾tony给的DMV答案。群发答案脸书并报警，2012年产生波动。留学生群体莫见怪。（陈当时对我挺热情。我到美国后还特意带我去千橡tmobile店买美国用三星手机）
+###### 遗嘱继承: 本人罗瑶光所有个人资料与个人著作权的法定继承人 Christina.YAJA.Luo/罗雅加, 早定早超度，避免社会人利用各类克隆套牌，虚假挂职，盗取指纹，NFC设备尾随蹭我钱包口袋，仿脸面具，口罩眼镜头套，生命特征，步行至十字路口被卡点汽车尾气，隐性涂改墨水，签名盗取，科技传感器+音频卡点辅助，蹭饭局绞尽脑汁从我这捞尽好处。这七年我接了至少4000个骚扰电话。各类骗局。作为7年步行侠我出门连个摩托驾照都没有，防不胜防，哎哟喂。求放过。关于本人时流积应用，待有缘人再会。
+###### 合作方式: 本人罗瑶光 基于 法人公章合同交易方式和对公账户盈利模式 参与 各类保密协议和商业协作活动 与 社会各界人士交流合作，可付费可免费。求一些第三方实体别拿个互联网私人公司app账号玩各类擦边文字猫腻游戏。
+
+
 
 
 
