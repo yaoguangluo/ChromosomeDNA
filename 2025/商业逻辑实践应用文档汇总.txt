@@ -1,8 +1,8 @@
 # Trif 2.0
-## 该作品对应下面工程jar开始同步github更新,当前插件版本 华瑞集V5.019657。
+## 该作品对应下面工程jar开始同步github更新,当前插件版本 华瑞集V5.019658。
 ###### https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/华瑞集5019579_core.jar
 #### 国内解码与更进 华瑞集插件 的源码优化，本人只做优化，不再搞新东西了,这个项目罗瑶光主要是公开展示下自己的编码实力，知道自己的真实斤两。同时填补下软算 DNA编码领域的国际空白。2018年10月就贴出了本人生活地址，方便各类大佬组织现场技术群挑。
-#### 华瑞集api 商业化逻辑 实践应用描述版本 V0.015
+#### 华瑞集api 商业化逻辑 实践应用描述版本 V0.016
 
 ###### 该文件详细描述如何将DNA元基催化与肽计算 与德塔大数据软件集在工业，农业和手工服务产业变现。亲近资本家产业投资者。2018年后我一直在湖南省浏阳市集里大塘路1段 7年，大家要找我投资，辩论，直接来即可，来前记得打我短信电话。我有齐全的个人著作权，身份证和法人银行账号等各类权属，各类合作可以直接租赁方式交易.有时间我文档pdf化。先把test文件归纳 SRC下面的test/java/InterfaceTest 区。
 
@@ -16,7 +16,7 @@
 
 #### 商业领域
 ###### 这个API主要应用与数据智能工程，处理各种形式的海量数据类工程，如坐标，文本，列表，波形和图片流的搜索，计算，分析，处理服务。。
-
+#### 使用方式，一台干净的电脑，下个jdk1.8+ 如java11版本，下个ide，然后导入api，和相关底层api如 mock ，jason， javacv等（github我早期工程中lib文件夹中都有），就可以运行测试了，找个软件工程师2年经验+几乎都能配置好。有问题也联系我罗瑶光本人,
 #### 测试逻辑文件夹分类 有时间我文档pdf化。先把test文件归纳 SRC下面的test/java/InterfaceTest 区。
 ###### 1  坐标类计算 逻辑接口商业测试 --package test.java.InterfaceTest.coordinatesTracement;
 ###### 2  排序类计算 逻辑接口商业测试 --package test.java.InterfaceTest.sort.arraySort.chineseSort;
@@ -81,18 +81,32 @@
 ##### 1.13 空间中簇的融聚 --严重超出了民用商用级别，略。
 ##### 1.14 空间中簇的移动趋势 --严重超出了民用商用级别，略。
 ##### 1.15 处理海量坐标的欧拉最短环路计算 --package test.java.InterfaceTest.coordinatesTracement;
-######     --TSP2D_X_getYaoguangLuo2DEulerRingTSP2DTest
+######     --TSP2D_X_getYaoguangLuo2DEulerRingTSP2DTest 
 
 #### 2 排序类计算 逻辑接口商业测试
 ###### --适用于各类需要进行 拼音 笔画 数量排序的数组场景，如邮政地址搜索，航班搜索，姓名，排序，等工业，农业，手工服务业数字计算领域
 ##### 2.1 非对称排序
 ######    --package test.java.InterfaceTest.sort.arraySort.chineseSort;
+
 ##### 2.2 double排序
 ######    --package test.java.InterfaceTest.sort.arraySort.chineseSort;
+
 ##### 2.3 top sort 5代
 ######    --package test.java.InterfaceTest.sort.arraySort.LYG4DQS4D;
-##### 2.4 映射方式排序
+
+##### 2.4 映射方式排序 拆分映射含相同比较数 高级
 ######    --package test.java.InterfaceTest.sort.arraySort.reflection.IntStringSort;
+
+##### 2.5 映射方式排序 map映射去相同比较数 
+######    --用于德塔快速排序5代进行左右比对分词优化的算法对map提取变换的double数组排序demo
+######    --package test.java.InterfaceTest.sort.objectSort.mapSort;
+######    --Map_ESU_X_mapToListTest
+
+##### 2.6 映射方式排序 矩阵映射含相同比较数 高级
+######    --用于德塔快速排序5代进行左右比对分词优化的算法对object矩阵变换的double数组排序demo
+######    --package test.java.InterfaceTest.sort.objectSort.listSort;
+######    --List_ESU_X_listToArrayTest
+
 
 #### 3 分词类计算 逻辑接口商业测试
 ###### --各类浏览器中文搜索匹配。
@@ -100,10 +114,13 @@
 ##### 3.1 文本分词
 ######    --package test.java.InterfaceTest.chineseParser;
 ######    --package test.java.InterfaceTest.tinShell;
+
 ##### 3.2 词性分词
 ######    --package test.java.InterfaceTest.chineseParser;
+
 ##### 3.3 分词统计
 ######    --package test.java.InterfaceTest.chineseParser;
+
 ##### 3.4 频率分词
 ##### 3.5 DNN重心分词
 ######    --package test.java.InterfaceTest.chineseParser;
@@ -113,20 +130,26 @@
 ###### --适用于各类文字形式的报表检索，数据库类型的数据操作和检索。和嵌入式命令脚本操作智能系统。
 ##### 4.1 tinshell
 ######    --package test.java.InterfaceTest.tinShell;
+
 ##### 4.2 plshell
 ##### 4.3 initon flower --package ME.VPC.M.X; --App_XCDX
 ######    --用于语言操作 函数生成和执行的单元逻辑。
-##### 4.4 VPCS序列化函数标注 package test.java.InterfaceTest.tinShell; --ShellJPanelTest函数文件中 --第326行
+
+##### 4.4 VPCS序列化函数标注 package test.java.InterfaceTest.tinShell; 
+######    --ShellJPanelTest函数文件中 --第326行
 ######    --用于遗传编码与进化计算领域。
 
 #### 5 元基编码类 逻辑接口商业测试
 ###### --适用于各类加密领域，web加密。dna词汇编码，索引缩进计算。
 ##### 5.1 肽展公式AOPM VECS IDUQ 层级变换
 ######    --package test.java.InterfaceTest.DNASession;
+
 ##### 5.2 非对称变化文本加密
 ######    --package test.java.InterfaceTest.DNASession;
+
 ##### 5.3 词汇加密
 ######    --package test.java.InterfaceTest.DNASession;
+
 ##### 5.4 词汇浓度缩进 --严重超出了民用商用级别，略。
 ##### 5.5 古拉丁语DNA编码 --严重超出了民用商用级别，略。
 
@@ -266,7 +289,7 @@
 ### 每次优化我会特别标注明优化方式和优化途径。
 ### 大家好，我叫罗瑶光，很高兴认识各位！
 ##### 关于浏阳德塔软件开发有限公司，我也不做多介绍了，因为是我个人著作权体系，导致一个独立的私人小公司空壳子而已。
-###### 个人著作权人, 作者 罗瑶光, 浏阳
+###### 个人著作权人, 作者 罗瑶光, 浏阳         
 ###### yaoguangluo@outlook.com, 313699483@qq.com, 2080315360@qq.com,  430181198505250014, G24402609, EB0581342, 204925063, 389418686, F2406501, 0626136
 ###### 研发注意: 15116110525-（真我实时蓝牙开启，身份证实名发票手机 身份证实名纸质本票手机卡 内置指纹 nfc 5g 联合国等各类app 16种传感器和实时权限全开）--当前研发设备- 身份证实名发票 mac ios+指纹+瞳膜苹果笔记本。+联合国，eu等各类app 22种传感器和实时权限全开）
 ###### 地址注意: 湖南省 浏阳市 集里街道 神仙坳社区 大塘冲路一段 208号 阳光家园别墅小区 第十栋 ---- 208西南门入口进入别墅区内左转第3栋 人脸正面面对正门的连体别墅左户（左是十栋，右是十一栋）,同时也靠近美林花苑入口大门（美林花苑小区内见到阳光家园的最前面金属围栏后便是10栋和（11栋）2户联体别墅），美林花苑小区位于大塘冲路一段的十字路口，若路口对应其二维平面一个点轴心，美林花苑则位于第一象限，其斜对面第三象限 标志建筑是 浏阳市 大塘实验(普特融合)小学 --
@@ -282,7 +305,6 @@
 ###### 出国原因: 本人罗瑶光当年属于留学+亲属移民。不是偷渡和技术移民这里申明下，避免纠纷。通过中印留学纪燕萍+公证学历委培极差地方生成绩单等 去印度班加罗尔大学瑞拉理工学院留学后560/800考试 加研二满分汇编转学TC从印度基督大学（前班加罗尔大学基督学院）。后也是这个极差委培成绩单公证（公证人周谦）并隐藏印度不错的学历找上海发改委下属华恒留学宋尧入读千橡els106开始，后10个月后转学到加州路德大学GPA3.85毕业。因去美国前陈嘉诚在上海（非华恒中介的留学生）给的ELS112和去美国后宿友台湾tony给的DMV答案。群发答案脸书并报警，2012年产生波动。留学生群体莫见怪。（陈当时对我挺热情。我到美国后还特意带我去千橡tmobile店买美国用三星手机）
 ###### 遗嘱继承: 本人罗瑶光所有个人资料与个人著作权的法定继承人 Christina.YAJA.Luo/罗雅加, 早定早超度，避免社会人利用各类克隆套牌，虚假挂职，盗取指纹，NFC设备尾随蹭我钱包口袋，仿脸面具，口罩眼镜头套，生命特征，步行至十字路口被卡点汽车尾气，隐性涂改墨水，签名盗取，科技传感器+音频卡点辅助，蹭饭局绞尽脑汁从我这捞尽好处。这七年我接了至少4000个骚扰电话。各类骗局。作为7年步行侠我出门连个摩托驾照都没有，防不胜防，哎哟喂。求放过。关于本人时流积应用，待有缘人再会。
 ###### 合作方式: 本人罗瑶光 基于 法人公章合同交易方式和对公账户盈利模式 参与 各类保密协议和商业协作活动 与 社会各界人士交流合作，可付费可免费。求一些第三方实体别拿个互联网私人公司app账号玩各类擦边文字猫腻游戏。
-
 
 
 
