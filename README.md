@@ -17,7 +17,7 @@
 #### 核心贡献
 
 	1 Java api https://github.com/yaoguangluo/ChromosomeDNA/blob/main/2025/华瑞集5019659_core.jar
-	1.1 jar api 大小仅仅3.5兆， 其中class文件 含有完整 阅读source 对应，综合大小 仅仅5兆。 
+	1.1 jar api 大小仅仅2兆， 其中class文件 含有完整 阅读source 对应，综合大小 仅仅3.5兆。 
 	2 论著书籍  https://github.com/yaoguangluo/ChromosomeDNA/tree/main/元基催化与肽计算第四修订版本整理 的 V00919 编号。
 	2.1 docx 论著 十七章， 35万余字， 1800页+。 上下册 总大小36兆- 。
 	3 论著PPT https://github.com/yaoguangluo/ChromosomeDNA/tree/main/ppt
