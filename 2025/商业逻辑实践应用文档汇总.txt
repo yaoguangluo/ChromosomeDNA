@@ -6,9 +6,10 @@
 ###### --适用--数据智能工程-生物信息学-计算机应用科学-高年级专业基础教学中真实具体的功能实验版本。
 ###### --动机--推动社会商业产业真实落地, 通过创造新的生产工具来提高生产力和改变生产环境关系。
 ###### --溯源--一开始我是基于医学数据搜索来设计的 我一个著作权产品 养疗经api, 国内因为医学产业的严谨性，被一些部门和证件卡的严实, 我寸步难行又被迫开源。于是利用这严实, 我把-养疗经api-中公共接口和逻辑全部剥离出来, 去掉医学组件, 成为华瑞集API, 发现用途巨大, 适用面更广, 很多产业逻辑底层是相同相通的。于是将开源编码进行元基编码化, 一边测试, 一边开源, 一边论证, 一边优化。于是形成了这个 DNA时微分编码 体系。
+###### --扩展--该JAVA算法包API因为属于纯基础领域底层计算逻辑, 不含第三方API接口借用, 所以可以轻易地, 直接地翻译成C/C++ python，QT php等计算机语言。--翻译需谨慎。
 &nbsp;
 # --当前进展--
-###### --标记---华瑞集R-api-商业化逻辑测试-实践应用描述版本-V0.055-
+###### --标记---华瑞集R-api-商业化逻辑测试-实践应用描述版本-V0.056-
 ###### --任务--先把华瑞集R-api的所有可test文件进行综合功能测试归纳, 统一打包 SRC下面的test/java/InterfaceTest区。
 ###### --字符--UTF8-!!!特别注意不支持UTF8编码的一切操作系统 请先文件解压转码 或者 下载UTF8插件。不然后果自负!!! 任何出现文件字符 encoding的地方，都要设置成UTF8，免得夜长梦多。
 ###### --方法--通过一种在真实的环境下, 用极简源码, 详细描述, 直观逻辑, 具体对象并含有输入输出参数实例的测试DEMO, 进行丰富地论证API的商业前景和使用价值。
@@ -50,74 +51,84 @@
 #####  --可商业化探索-- 无人机路径, 区域类的人口统计, 气场雷达, 分布规律领域, 广度分布式数据搜索领域。
 #####  --可商业化探索-- 游戏类策划, 运动轨迹类跟踪与复位 职业领域, 海洋地理气候变化 团计算领域。
 #####  --可商业化探索-- 点单送外卖超出司机精度距离来判断增发新司机用途。如1.2, 1.3+等例子
+#####  --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，路德上课授课老师-卡拉森，源码设计者-罗瑶光
 &nbsp;
-##### 1.1 oberserverPCAScale：确定主要有效最短路径的观测数
+##### 1.1 observerPCAScale：确定主要有效最短路径的观测数
+######    --算法思想-算法编码-算法设计-作者著作权人-罗瑶光
 ######    --sortRangeScale：确定坐标距离排序时的相似成份多少来确定堆栈冗余比,避免堆栈溢出。
 ######    --求坐标团的主要有效距离成份集的平均压强算法
 ######    --适用于 观测/预测坐标集中某精度邻接坐标集的 平均距离 来确定 紧凑度,压力,压强,斥力等。
 ######    --2D坐标团中 每一个坐标的斥力预测算法。
 ######    --文件名-Distance_X_findPascalMeanDistanceByEachPositions2D"
 ######    --函数名-DemoCoordsTest._E(inputs);
-######    --输入-坐标X和Y, 精度
-######    --输出-坐标X和Y
+######    --输入-坐标集合X和Y, double,精度参数
+######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.2 一种仅仅通过坐标重心来描绘射极边缘面探测使用方法。
+######    --算法思想-算法编码-算法设计-作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######    --处理 side end --文件名-SideEnd_X_getSideEnd2D
 ######    --函数名-DemoCoords1Test._E_(inputs);
-######    --输入-坐标X和Y, 精度
-######    --输出-坐标X和Y
+######    --输入-坐标集合X和Y, double,精度参数
+######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.3 通过scale 距离来进行 坐标团切裂。
+######    --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，路德上课授课老师-卡拉森，源码设计者-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######    --处理fissile --文件名-Fissile_X_fissilePosition2D
 ######    --DemoCoords2Test._E(inputs);
-######    --输入-坐标X和Y, 精度
-######    --输出-坐标X和Y
+######    --输入-坐标集合X和Y, double,精度参数
+######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.4 带精度 2维 商旅路径团簇 森林单元 隔离 算法
+######    --算法思想-算法编码-算法设计-作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######    --适用于 最短路径,最小距离,商旅分析预测,等项目中
 ######    --处理处理商旅森林 isolation --文件名-Forest_X_getTSPForestIsolationGroups2D
 ######    --DemoCoords3Test._E(inputs);
-######    --输入-坐标X和Y, 精度
-######    --输出-坐标X和Y
+######    --输入-坐标集合X和Y, double,精度参数
+######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.5 带精度 2维(非欧拉权距)商旅路径团簇 隔离 算法
+######    --算法思想-算法编码-算法设计-作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######    --适用于 最短路径,最小距离,商旅分析预测,等项目中
 ######    --处理商旅簇 isolation --文件名-Isolation_X_getTSPIsolationGroups2D
 ######    --DemoCoords4Test._E(inputs);
-######    --输入-坐标X和Y, 精度
-######    --输出-坐标X和Y
+######    --输入-坐标集合X和Y, double,精度参数
+######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.6 通过scale 距离来进行 坐标团切裂。
+######    --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，路德上课授课老师-卡拉森，源码设计者-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######    --处理fusion 先 fissile 采样 --文件名-Fissile_X_fissilePosition2D
 ######    --DemoCoords5Test._E(inputs);
-######    --输入-坐标X和Y, 精度
-######    --输出-坐标X和Y
+######    --输入-坐标集合X和Y, double,精度参数
+######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.7 欧基里德距离坐标团重心计算。
+######    --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，路德上课授课老师-卡拉森，源码设计者-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######    --处理fusion 先 fissile 采样 然后fusion 1 观测heart 文件名-Euclid_X_findHeartPosition2D
 ######    --DemoCoords6Test._E(inputs);
-######    --输入-坐标X和Y, 精度
-######    --输出-坐标X和Y
+######    --输入-坐标集合X和Y, double,精度参数
+######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.8 通过scale 距离来进行坐标团集合 融聚。
+######    --算法思想-算法编码-算法设计-作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######    --处理fusion 先 fissile 采样 然后fusion 1 观测heart 再 文件名-Fusion_X_fusionPosition2DwithHeart
 ######    --DemoCoords7Test._E(inputs);
-######    --输入-坐标X和Y, 精度
-######    --输出-坐标X和Y
+######    --输入-坐标集合X和Y, double,精度参数
+######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.9 这个函数用于通过重心位移距离来进行坐标分类
+######    --算法思想-算法编码-算法设计-作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######    --处理Classification --文件名-Classification_X_addNewPositionWithoutHeart
 ######    --DemoCoords8Test._E(inputs);
-######    --输入-坐标X和Y, 精度
-######    --输出-坐标X和Y
+######    --输入-坐标集合X和Y, double,精度参数
+######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.10 随机森林的中心团 --严重超出了民用商用级别, 略。
 ##### 1.11 压强的坐标系运动趋势 --严重超出了民用商用级别, 略。
@@ -126,6 +137,7 @@
 ##### 1.14 空间中簇的移动趋势 --严重超出了民用商用级别, 略。
 &nbsp;
 ##### 1.15 处理海量坐标的欧拉最短环路计算
+######     --算法思想-算法编码-算法设计-作者著作权人-罗瑶光
 ######     --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######     --文件名-TSP2D_X_getYaoguangLuo2DEulerRingTSP2DTest
 ######     --输入-坐标X和Y, 精度
@@ -137,18 +149,24 @@
 ######  --可商业化探索-- 各类序列号排序,  各类旅行班次信息文字列表排序, 各类地址排序, 各类人名, 书名, 城市名排序等。
 &nbsp;
 #####  2.1 非对称排序 拼音笔画排序
+######     --算法思想-霍夫快速排序4代-算法导论教材
+######     --算法编码优化-小高峰算法设计-作者著作权人-罗瑶光
 ######     --文件位置-package test.java.InterfaceTest.sort.arraySort.chineseSort;
 ######     --文件名-LYG10D13D_X_CASTest；
 ######     --输入-数组,  strings[]
 ######     --输出-数组
 &nbsp;
 #####  2.2 double排序
+######     --算法思想-霍夫快速排序4代-算法导论教材
+######     --算法编码优化-小高峰算法设计-作者著作权人-罗瑶光
 ######     --文件位置-package test.java.InterfaceTest.sort.arraySort.chineseSort;
 ######     --文件位置-package test.java.InterfaceTest.sort.arraySort.LYG4DQS4D;
 ######     --输入-数组, double[]
 ######     --输出-数组
 &nbsp;
 #####  2.3 top sort 5代
+######     --算法思想-霍夫快速排序4代-算法导论教材
+######     --算法编码优化-小高峰算法设计-作者著作权人-罗瑶光
 ######     --文件位置-package test.java.InterfaceTest.sort.arraySort.LYG4DQS4D;
 ######     --文件名-LYG9DWithDoubleTopSort5DTest
 ######     --函数名-testDouble();
@@ -159,6 +177,8 @@
 ######     --输出-数组
 &nbsp;
 #####  2.4 映射方式排序 拆分映射含相同比较数 高级 --int数组排序
+######     --算法思想-霍夫快速排序4代-算法导论教材
+######     --算法编码优化-小高峰算法设计-作者著作权人-罗瑶光
 ######     --文件位置-package test.java.InterfaceTest.sort.arraySort.reflection.IntStringSort;
 ######     --文件名-Quick9DLYGWithString_ESUTest；
 ######     --int数组排序算法映射int数据数组排序demo
@@ -181,6 +201,8 @@
 ######     --输出-数组   int[] a 和对应的 String[], double[], float[] 等对应的 object[]
 &nbsp;
 #####  2.5 映射方式排序 map映射去相同比较数
+######     --算法思想-霍夫快速排序4代-算法导论教材
+######     --算法编码优化-小高峰算法设计-作者著作权人-罗瑶光
 ######     --用于德塔快速排序5代进行左右比对分词优化的算法对map提取变换的double数组排序demo
 ######     --文件位置-package test.java.InterfaceTest.sort.objectSort.mapSort;
 ######     --文件名-Map_ESU_X_mapToListTest
@@ -188,6 +210,8 @@
 ######     --输出-数组
 &nbsp;
 #####  2.6 映射方式排序 矩阵映射含相同比较数 高级
+######     --算法思想-霍夫快速排序4代-算法导论教材
+######     --算法编码优化-小高峰算法设计-作者著作权人-罗瑶光
 ######     --用于德塔快速排序5代进行左右比对分词优化的算法对object矩阵变换的double数组排序demo
 ######     --文件位置-package test.java.InterfaceTest.sort.objectSort.listSort;
 ######     --文件名-List_ESU_X_listToArrayTest
@@ -200,37 +224,44 @@
 ###### --各类AI中文搜索匹配, 关键字搜索匹配。
 ###### --可商业化探索
 ###### --各类含有中文字符串的文本分词, 如教育, 报社, 编辑, 文档, 词典, 图书, 文印等场景。
+###### --refer Fnlp，作者的2018扔在github的2万多词性词汇语料库文件是用它1天内loop生成的。-以及新华字典手动输入词汇，偷了很多懒。
 &nbsp;
 ##### 3.1 文本分词
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.chineseParser; --DemoEX
 ######    --文件位置-package test.java.InterfaceTest.tinShell;
 ######    --输入-String
 ######    --输出-LIst<String>
 &nbsp;
 ##### 3.2 词性分词
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.chineseParser;
 ######    --输入-String
 ######    --输出-LIst<String>
 &nbsp;
 ##### 3.3 分词统计
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.chineseParser;
 ######    --函数名-DemoEX
 ######    --输入-String
 ######    --输出-LIst<String>
 &nbsp;
 ##### 3.4 分词归纳 --用于各类文本高级计算前的基础数据准备。
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.chineseParser;
 ######    --文件名-DemoPOSTest
 ######    --输入-String
 ######    --输出-LIst<String>, map<String, WordFrequency>
 &nbsp;
 ##### 3.5 DNN重心分词
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.chineseParser;
 ######    --文件位置-package test.java.InterfaceTest.tinShell;
 ######    --输入-String
 ######    --输出-LIst<String>
 &nbsp;
 ##### 3.6 病句分词批量举例探索
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --用于修正冗余的和错误的语料库词汇结构 以及 补充新的分词逻辑进入分词算法引擎 用于及时观测校准。
 ######    --这是一个 关于极速分词 测试main函数demo的test版本, 对这个测试函数进行广泛的跟进测试,
 ######    --用于补充流水阀门POS函数集合 让分词更加准确目前的四字分词内核函数量99.7%,
@@ -241,6 +272,7 @@
 ######    --输出-String[]
 &nbsp;
 ##### 3.7 探索自然语言写作质量痕迹归纳。
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --分词后输出格式化按行长增维进行词性词团--先-3.4 分词归纳-再通过-1.3 scale 重心轨迹距离来进行 坐标团切裂。
 ######    --该测试DEMO用于公文申请书类优化, 适用于高等院校进修材料, 留学申请, 写作优化,
 ######    --写作习惯等办公学习场景, 适用于教育和传媒宣传领域。
@@ -250,6 +282,7 @@
 ######    --输出-坐标X和Y
 &nbsp;
 ##### 3.8 探索自然语言写作质量流畅度归纳。
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --例子是名词思维在写作中的静态距离变化的切裂方式, 用于探索大脑的思绪记忆变化频率。
 ######    --分词后输出格式化按行长增维进行词性词团--先-3.4 分词归纳-再通过-非重心 scale 距离来进行 普通坐标团切裂。
 ######    --该测试DEMO用于公文申请书类优化, 适用于高等院校进修材料, 留学申请, 写作优化, 作者写作词汇分子空间浓度特征观测
@@ -266,28 +299,33 @@
 ######  --可商业化探索-- 流程化办公场景, 如生产线, bpm, 工作流程, 思维方式, 以及稳定的商业办公自动化场景,
 &nbsp;
 ##### 4.1 tinshell
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.tinShell;
 ######    --输入-String
 ######    --输出-Tinmap
 &nbsp;
 ##### 4.2 plshell
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --TVM虚拟机位置-package O_V.OSM.shell;
 ######    --函数名-E_pl_XA_E
 ######    --输入-String
 ######    --输出-Tinmap
 &nbsp;
 ##### 4.3 initon flower --文件位置-package ME.VPC.M.X; --App_XCDX
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --用于语言操作 函数生成和执行的单元逻辑。
 ######    --输入-String
 ######    --输出-Tinmap
 &nbsp;
 ##### 4.4 VPCS序列化函数标注 package test.java.InterfaceTest.tinShell;
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --ShellJPanelTest函数文件中 --第326行
 ######    --用于遗传编码与进化计算领域。
 ######    --输入-String
 ######    --输出-Tinmap
 &nbsp;
 ##### 4.5 PLSearch tinshell 文档一键批处理多分层命令语言流实例
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --这是一个 tinshell 批处理拆分非clone结果测试, 区别于OSGI的节点流拆分可clone分层结果,  执行复杂条件搜索逻辑,
 ######    --区别于--功能测试例子--7.6-Sample_X_I_MapAddPluginTest PLETL函数的计算模式。
 ######    --关于人类语言命令分段计算执行实例 含 十六元基的token密钥关于物理解码例子。
@@ -307,12 +345,14 @@
 ######  --可商业化探索-- 非对称握手加密通信协议, 说话的语言意义浓缩领域, 文本意义特征提炼和索引。适用于公务场景。
 &nbsp;
 #####  5.1 肽展公式AOPM VECS IDUQ 层级变换
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --DNA十六元基编码真实应用
 ######     --文件位置-package test.java.InterfaceTest.DNASession;
 ######     --输入-String
 ######     --输出-PDE_RNA_FullFormular
 &nbsp;
 ##### 5.2 非对称变化文本加密
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --DNA十六元基编码真实应用
 ######    --文件位置-package test.java.InterfaceTest.DNASession;
 ######    --文件名-FullDNATokenPDITest；
@@ -320,12 +360,14 @@
 ######    --输出-PDE_RNA_FullFormular
 &nbsp;
 ##### 5.3 词汇加密
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --DNA十六元基编码真实应用
 ######    --文件位置-package test.java.InterfaceTest.DNASession;
 ######    --输入-String
 ######    --输出-PDE_RNA_FullFormular
 &nbsp;
 ##### 5.4 词汇浓度缩进
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --DNA十六元基编码真实应用
 ######    --严重超出了民用商用级别, 为了增加使用者的阅读噱头, 还是添加下bonus,
 ######    --这个函数用于寻找不同酸碱浓度下可能存在的PDE变换, 寻找最短的元基编码字符串浓缩结果。
@@ -338,6 +380,7 @@
 ##### 5.5 古拉丁语DNA编码 --严重超出了民用商用级别, 略。
 &nbsp;
 ##### 5.6 PDW词汇在酸碱浓度下的PDE变化输出
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --DNA十六元基编码真实应用
 ######    --适用于PDE计算中 各类维度的十六肽元基编码数据进行变换前的 准备基础。
 ######    --这个函数用于寻找不同酸碱浓度下可能存在的PDE变换,
@@ -354,16 +397,19 @@
 #####  --可商业化探索-- 对一些格式化数据中非主要成分需要精确的解析场景, 如制造业, 质量检测, 环境评估领域。
 &nbsp;
 #####  6.1 结构变换
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --data swap 变量变换包, 太过简单, 这里略。
 ######     --文件位置-package U_V.ESU;
 #####  6.2 离散VPCS新陈代谢 --工程目录, 函数文件
 #####  6.3 费洛蒙变换模拟 --严重超出了民用商用级别, 略。
 #####  6.4 时函数变换
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件位置-package test.java.InterfaceTest.timeNorms.jniLYGAFDCDFFT;
 ######     --输入-double[]
 ######     --输出-double[]
 &nbsp;
 #####  6.5 时流积噪音分析
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件位置-package test.java.InterfaceTest.timeNorms.jniLYGAFDCDFFT;
 ######     --可应用于极速滤波观测。如机器的螺丝稳定, 空间的噪音分布, 地震源分析, 等各类需要追溯时间空间变化的滤波的场景。
 ######     --适用于噪音来源种类与频率解析, 各类马达噪音中辨别机械磨损故障, 刹车制动系统的衔接隐患分析。
@@ -371,11 +417,13 @@
 ######     --输出-double[]
 &nbsp;
 #####  6.6 非卷积肽数字滤波变换 --DNA十六元基编码真实应用
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件位置-package test.java.InterfaceTest.computingPDE.linePage;
 ######     --输入-int[]
 ######     --输出-int[]
 &nbsp;
 #####  6.7 非卷积肽数字矩阵变换 --DNA十六元基编码真实应用
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件位置-package test.java.InterfaceTest.computingPDE.matrixPage;
 ######     --可应用于图片进行数字矩阵变换后产生的团进行坐标化, 然后用轨迹分析来确定团的内积和运动趋势的切裂与融聚计算算法计算。
 ######     --如工控, 内积, 地理, 航海, 农业, 蜂群, 虫群, 鸟群, 各类数据分析。
@@ -385,36 +433,44 @@
 &nbsp;
 #### <font color=red>7 ETL计算类 逻辑接口商业测试</font>
 #####  --可商业化探索-- 办公自动化, 操作自动化, 操作系统优化, 等支持序列化生产线的职业, 工业场景, 如工商管理, 工厂办公应用等。
+#####  --refer Knime sdk，作者2009年就了解了ETL思维，
+#####  --refer OSGI，作者2009年就了解了插件应用。
 &nbsp;
 #####  7.1 ETL 批处理 如一键导入, 一键执行, 一键保存。
+######    --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######    --文件位置-package OSI.OPE.gui;
 ######    --函数名-Sample_X_I_Map
 ######    --输入- //line page 358
 ######    --输出- gUISample 内部计算, 注意含窗口弹出组件, 批处理计算需要注释掉 改写下。
 &nbsp;
 #####  7.2 ETL OSGI 可以扩充jar插件包 系统功能。
-######    --文件位置-package OPE.SI.MCI.OEI.OVU.PQE.extOSGI;
-######    --文件名-package OPE.SI.MCI.OEI.OVU.PQE.extOSGI;
-######    --输入- //line page 282, OSGI plugin file, OSGI jar file, OSGI object etc
-######    --输出- linknode, nodeOSGI etc
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
+######     --文件位置-package OPE.SI.MCI.OEI.OVU.PQE.extOSGI;
+######     --文件名-package OPE.SI.MCI.OEI.OVU.PQE.extOSGI;
+######     --输入- //line page 282, OSGI plugin file, OSGI jar file, OSGI object etc
+######     --输出- linknode, nodeOSGI etc
 &nbsp;
 #####  7.3 ETL crab 类似7.2 可以散化系统组件。
-######    --文件位置-Blooming/
-######    --文件夹名-OSI.OSU.crab
-######    --输入-extends file
-######    --输出-CrabInterface class
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
+######     --文件位置-Blooming/
+######     --文件夹名-OSI.OSU.crab
+######     --输入-extends file
+######     --输出-CrabInterface class
 &nbsp;
 #####  7.4 PLETL --文件位置-package test.java.InterfaceTest.tinShell;
-######    --文件位置-package S_I.OSI.PEI.PCI.PSI.tinShell;
-######    --文件名-AddTinShellNodeASQ_OCQ_OSI_PCI_PCU_MCI_MCU_MSI
-######    --输入-如7.1进行分节点来拆开写 tinshell 命令。
-######    --输出-Tinmap
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
+######     --文件位置-package S_I.OSI.PEI.PCI.PSI.tinShell;
+######     --文件名-AddTinShellNodeASQ_OCQ_OSI_PCI_PCU_MCI_MCU_MSI
+######     --输入-如7.1进行分节点来拆开写 tinshell 命令。
+######     --输出-Tinmap
 &nbsp;
 #####  7.5 ETL 皮肤界面 仿照jdk theme 写 unicorn插件包。
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件位置-package ME.VPC.M.X; --函数名-AppInit_XCDX
 ######     --使用方式-UIManager.put("ScrollBarUI", "OPE.OVQ.MSQ.OVU.PQE.platForm.UnicornScrollBarUI
 &nbsp;
 #####  7.6 PLETL tinshell 存档一键批处理多节点流实例
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --关于人类语言命令分段计算执行实例 含 十六元基的token密钥关于物理解码例子。
 ######     --文件位置-package test.java.InterfaceTest.tinShell.bootBatchFilePLETL;
 ######     --函数名-Sample_X_I_MapAddPluginTest
@@ -434,27 +490,32 @@
 ######  --可商业化探索-- 如需要对复杂的数据排序搜索的场景, 如邮政信息, 学校ID信息, 公交车站信息, 地址信息, 等领域。
 &nbsp;
 #####  8.1 DNN 搜索 --文件位置-package test.java.InterfaceTest.tinShell;
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件名-ShellJPanelTest
 ######     --输入-string
 ######     --输出-Tinmap
 &nbsp;
 #####  8.2 object array 搜索 --文件位置-package test.java.InterfaceTest.tinShell;
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件名-ShellJPanelTest
 ######     --输入-string
 ######     --输出-Tinmap
 &nbsp;
 #####  8.3 语言化搜索 --文件位置-package test.java.InterfaceTest.tinShell;
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件名-ShellJPanelTest
 ######     --输入-String
 ######     --输出-Tinmap
 &nbsp;
 #####  8.4 直接报表化 语言shell搜索 --文件位置-package test.java.InterfaceTest.tinShell;
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --这个例子很综合很大, 稍后拆解细化测试即可,
 ######     --文件名-ShellJPanelTest
 ######     --输入-XLS, XLSX, TXT, DB...
 ######     --输出-Tinmap
 &nbsp;
 #####  8.5 最简数组文字数据搜索 --文件位置-package test.java.InterfaceTest.tinShell;
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --StaticFunctionMapQ_VECS_ETest
 ######     --输入-String[]
 ######     --输出-String[]
@@ -464,51 +525,60 @@
 ###### --用于决策类计算和深度思考领域如公安, 教育, 哲学, 法院, 艺术等领域, 确定计算权重的文本类思想提纯的操作。
 &nbsp;
 #####  9.1 ANN --文件位置-package test.java.InterfaceTest.TextDNN; --文件名-ANNTestTest
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --这是一个 用于文本的pos频率词汇比重ANN计算文本价值的德塔图灵分词个人著作权中的权重内核的核心模块计算
 ######     --输入-String
 ######     --输出-String[][]
 &nbsp;
 #####  9.2 CNN --文件位置-package test.java.InterfaceTest.TextDNN; --基础
 #####  9.3 DNN --文件位置-package test.java.InterfaceTest.tinShell; --文件名-DNNTestTest
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --这是一个 用于文本的深度词汇比重计算文本重心的德塔图灵分词个人著作权中的权重内核的核心模块计算
 ######     --输入-String
 ######     --输出-String[][]
 &nbsp;
 #####  9.4 推荐 --文件位置-package test.java.InterfaceTest.TextDNN; --太多略
 #####  9.5 RNN --文件位置-package test.java.InterfaceTest.TextDNN; --文件名-RNN_IDETestTest
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --这是一个 德塔罗氏深度计算个人著作权中的RNN距离中心权重内核模块计算 测试main函数demo的test版本
 ######     --输入-String
 ######     --输出-String[][]
 &nbsp;
 #####  9.6 教育水平 --文件位置-package test.java.InterfaceTest.TextDNN; --文件名-EducationLevelTestTest
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --这是一个 用于文本的词汇比重计算教育程度的德塔图灵分词个人著作权中的权重内核模块计算 测试main函数demo的test版本
 ######     --输入-String
 ######     --输出-double 类 Object[]
 &nbsp;
 #####  9.7 英文翻译 --文件位置-package test.java.InterfaceTest.TextDNN; --文件名-DemoTSLTTest
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --这是一个 用于中英文翻译测试探索,  测试main函数demo的test版本
 ######     --输入-String
 ######     --输出-List<Verbal>
 &nbsp;
 #####  9.8 文学修养 --文件位置-package test.java.InterfaceTest.TextDNN;
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件名-LiterarinessLevelTestTest
 ######     --这是一个 用于文本的词汇比重计算文学分析程度的德塔图灵分词个人著作权中的权重内核模块计算 测试main函数demo的test版本
 ######     --输入-String
 ######     --输出-double 类 Object[]
 &nbsp;
 #####  9.9 情绪执行成功率 --文件位置-package test.java.InterfaceTest.TextDNN;
+######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件名-SuccessICATestTest
 ######     --这是一个 情绪执行成功率, 用于执行力 决策力测试 测试main函数demo的test版本
 ######     --输入-String
 ######     --输出-double 类 Object[][]
 &nbsp;
 #####  9.10 写作习惯 --文件位置-package test.java.InterfaceTest.TextDNN;
+######      --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######      --文件名-InitBehaviorICAKernelTest
 ######      --这是一个 用于文本的词汇比重计算文章作者的写作习惯的德塔图灵分词个人著作权中的权重内核模块计算
 ######      --输入-String
 ######      --输出-List<String>
 &nbsp;
 #####  9.11 词意联想 --文件位置-package test.java.InterfaceTest.TextDNN;
+######      --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######      --文件名-LenovoInitTest
 ######      --这是一个 用于文本的词汇意义来计算文章的内容属性的德塔图灵分词个人著作权中的权重内核模块, 如动机 倾向, 决策力等。
 ######      --输入-String
@@ -519,21 +589,25 @@
 ######  --在web等各类的账号密码登陆中, 可以用token肽计算化密码提示符号, 这样密码错误, 得到的提示反馈dna解码后有助于使用者记忆密码。
 &nbsp;
 #####   10.1 文本加密 --字符串类和文件数据加密。 --DNA十六元基编码真实应用
+######       --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######       --文件位置-package test.java.InterfaceTest.DNASession;
 ######       --输入-String
 ######       --输出-String, PDE_RNA_FullFormular
 &nbsp;
 #####   10.2 session加密 --互联网token http头描述区 --DNA十六元基编码真实应用
+######       --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######       --文件位置-package test.java.InterfaceTest.DNASession;
 ######       --输入-String
 ######       --输出-String, PDE_RNA_FullFormular
 &nbsp;
 #####   10.3 token加密 --非对称访问类请求头加密。--DNA十六元基编码真实应用
+######       --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######       --文件位置-package test.java.InterfaceTest.DNASession;
 ######       --输入-String
 ######       --输出-String, PDE_RNA_FullFormular
 &nbsp;
 #####   10.4 非对称加密 --适用各类非对称握手协议。--DNA十六元基编码真实应用
+######       --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######       --文件位置-package test.java.InterfaceTest.DNASession;--这个例子很综合很大, 稍后拆解细化测试即可,
 ######       --输入-String
 ######       --输出-String, PDE_RNA_FullFormular
@@ -543,11 +617,14 @@
 #### <font color=red>11 web接口类 逻辑接口商业测试</font>
 ####    --适用于服务器部署, 如我的戴尔+vivo部署的 德塔官网就是 VPCS部署的老版本。以后会开源, 就几十kb源码。跑了7年了。
 #####   --适用于微型设备部署网络服务, 如手机等便携移动网络服务场景。
+#####   --refer mvc 和 rest，作者2009年就接触了。坚持了十一年优化应用，2020才有了十六元编码最早溯源。
 &nbsp;
 #####   11.1  VPCS前端服务器 --工程中--文件位置-package ME.VPC.M.X;
+######        --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######        --AppInit_X_PageLoad 启动方式 --new BootVPCSFrontEnd(app).start();
 &nbsp;
 #####   11.2  VPCS后端服务器 --工程中--文件位置-package ME.VPC.M.X;
+######        --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######        --AppInit_X_PageLoad 启动方式 --new BootVPCSBackEnd(app, NE).start();
 &nbsp;
 #####   11.3  VPCS缓存服务器 --稍后
@@ -559,6 +636,7 @@
 #####  11.5  面向GRPC的 VPCS系统 略,
 &nbsp;
 #####  11.6  德塔当前官网 HVPCS系统 的前端门户-真实应用-已经部署7年的源码给大家展示下
+######       --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######       --文件夹 package DetaSrc.org.deta.boot.server;
 ######       --函数名 BootVPCS -main
 &nbsp;
@@ -566,6 +644,7 @@
 &nbsp;
 &nbsp;
 #### <font color=red>12 DNA元基催化与肽计算_第五修订版 --中英文语法测试</font>
+######  --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######  --文件位置-package src/main/resources/static/waps/ 下 html文字分章节文件
 ######  --适用教学，讲解，出版，刊物更进等。
 ######  --含有完整中英文对照注释。
@@ -576,32 +655,38 @@
 ######  --文件位置-package test.java.InterfaceTest.convolution;
 ######  --路德大学计算机视觉课后作业。适用于工业, 农业, 服务业各类矩阵数据, 漫画, 图片, 机械, 视觉数据分析。
 &nbsp;
-######  13.1 Sobel索贝尔梯度计算边缘和立体填充 --授课RenHart,  教材computerVision绿皮书,  编码作者罗瑶光。
+######  13.1 Sobel索贝尔梯度计算边缘和立体填充
+######       --授课RenHart,  教材computerVision绿皮书,  编码作者罗瑶光。
 ######       --文件名-SobelTest
 ######       --输入-int[][]
 ######       --输出-int[][]
 &nbsp;
-######  13.2 Emboss因博士浮雕分层计算 --授课RenHart, 教材computerVision绿皮书,  编码作者罗瑶光。
+######  13.2 Emboss因博士浮雕分层计算
+######       --授课RenHart,  教材computerVision绿皮书,  编码作者罗瑶光。
 ######       --文件名-EmbossTest
 ######       --输入-int[][]
 ######       --输出-int[][]
 &nbsp;
-######  13.3 Guassian高斯模糊滤波计算 --授课RenHart, 教材computerVision绿皮书,  编码作者罗瑶光。
+######  13.3 Guassian高斯模糊滤波计算
+######       --授课RenHart,  教材computerVision绿皮书,  编码作者罗瑶光。
 ######       --文件名-GuassianTest
 ######       --输入-int[][]
 ######       --输出-int[][]
 &nbsp;
-######  13.4 Strech尺度拉扯颜色鲜艳度计算 --授课RenHart, 教材computerVision绿皮书,  编码作者罗瑶光。
+######  13.4 Strech尺度拉扯颜色鲜艳度计算
+######       --授课RenHart,  教材computerVision绿皮书,  编码作者罗瑶光。
 ######       --文件名-StrechTest
 ######       --输入-int[][]
 ######       --输出-int[][]
 &nbsp;
-######  13.5 Closing像素腐蚀融聚图片修复保真类计算 --授课RenHart, 教材computerVision绿皮书,  编码作者罗瑶光。
+######  13.5 Closing像素腐蚀融聚图片修复保真类计算
+######       --授课RenHart,  教材computerVision绿皮书,  编码作者罗瑶光。
 ######       --文件名-ClosingTest
 ######       --输入-int[][]
 ######       --输出-int[][]
 &nbsp;
-######  13.6 其他太过简单。略 --授课RenHart,  教材computerVision绿皮书,  编码作者罗瑶光。
+######  13.6 其他太过简单。略
+######       --授课RenHart,  教材computerVision绿皮书,  编码作者罗瑶光。
 ######       --输入-int[][]
 ######       --输出-int[][]
 &nbsp;
