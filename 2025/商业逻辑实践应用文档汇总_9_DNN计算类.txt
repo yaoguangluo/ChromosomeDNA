@@ -43,65 +43,80 @@
 # --章节正文--商业功能细分文件分类--
 &nbsp;
 #### <font color=red>9 DNN计算类 逻辑接口商业测试</font>
-###### --用于决策类计算和深度思考领域如公安, 教育, 哲学, 法院, 艺术等领域, 确定计算权重的文本类思想提纯的操作。
+###### --用于决策类计算和深度思考领域如公安, 教育, 哲学, 法院, 艺术等领域,
+###### --确定计算权重的文本类思想提纯的操作。
 &nbsp;
-#####  9.1 ANN --文件位置-package test.java.InterfaceTest.TextDNN; --文件名-ANNTestTest
+#####  9.1 ANN
+######     --文件位置-package test.java.InterfaceTest.TextDNN;
+######     --文件名-ANNTestTest
 ######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
-######     --这是一个 用于文本的pos频率词汇比重ANN计算文本价值的德塔图灵分词个人著作权中的权重内核的核心模块计算
+######     --这是一个 用于文本的pos频率词汇比重ANN计算文本价值的权重内核的核心模块计算
 ######     --输入-String
 ######     --输出-String[][]
 &nbsp;
 #####  9.2 CNN --文件位置-package test.java.InterfaceTest.TextDNN; --基础
-#####  9.3 DNN --文件位置-package test.java.InterfaceTest.tinShell; --文件名-DNNTestTest
+#####  9.3 DNN
+######     --文件位置-package test.java.InterfaceTest.tinShell;
+######     --文件名-DNNTestTest
 ######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
-######     --这是一个 用于文本的深度词汇比重计算文本重心的德塔图灵分词个人著作权中的权重内核的核心模块计算
+######     --这是一个 用于文本的深度词汇比重计算文本重心的权重内核的核心模块计算
 ######     --输入-String
 ######     --输出-String[][]
 &nbsp;
 #####  9.4 推荐 --文件位置-package test.java.InterfaceTest.TextDNN; --太多略
-#####  9.5 RNN --文件位置-package test.java.InterfaceTest.TextDNN; --文件名-RNN_IDETestTest
+#####  9.5 RNN
+######     --文件位置-package test.java.InterfaceTest.TextDNN;
+######     --文件名-RNN_IDETestTest
 ######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
-######     --这是一个 德塔罗氏深度计算个人著作权中的RNN距离中心权重内核模块计算 测试main函数demo的test版本
+######     --这是一个 德塔罗氏深度计算个人著作权中的RNN距离中心权重内核模块计算 test版本
 ######     --输入-String
 ######     --输出-String[][]
 &nbsp;
-#####  9.6 教育水平 --文件位置-package test.java.InterfaceTest.TextDNN; --文件名-EducationLevelTestTest
+#####  9.6 教育水平
+######     --文件位置-package test.java.InterfaceTest.TextDNN;
+######     --文件名-EducationLevelTestTest
 ######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
-######     --这是一个 用于文本的词汇比重计算教育程度的德塔图灵分词个人著作权中的权重内核模块计算 测试main函数demo的test版本
+######     --这是一个 用于文本的词汇比重计算教育程度的权重内核模块计算 test版本
 ######     --输入-String
 ######     --输出-double 类 Object[]
 &nbsp;
-#####  9.7 英文翻译 --文件位置-package test.java.InterfaceTest.TextDNN; --文件名-DemoTSLTTest
+#####  9.7 英文翻译
+######     --文件位置-package test.java.InterfaceTest.TextDNN;
+######     --文件名-DemoTSLTTest
 ######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --这是一个 用于中英文翻译测试探索,  测试main函数demo的test版本
 ######     --输入-String
 ######     --输出-List<Verbal>
 &nbsp;
-#####  9.8 文学修养 --文件位置-package test.java.InterfaceTest.TextDNN;
+#####  9.8 文学修养
+######     --文件位置-package test.java.InterfaceTest.TextDNN;
 ######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件名-LiterarinessLevelTestTest
-######     --这是一个 用于文本的词汇比重计算文学分析程度的德塔图灵分词个人著作权中的权重内核模块计算 测试main函数demo的test版本
+######     --这是一个 用于文本的词汇比重计算文学分析程度的权重内核模块计算test版本
 ######     --输入-String
 ######     --输出-double 类 Object[]
 &nbsp;
-#####  9.9 情绪执行成功率 --文件位置-package test.java.InterfaceTest.TextDNN;
+#####  9.9 情绪执行成功率
+######     --文件位置-package test.java.InterfaceTest.TextDNN;
 ######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件名-SuccessICATestTest
 ######     --这是一个 情绪执行成功率, 用于执行力 决策力测试 测试main函数demo的test版本
 ######     --输入-String
 ######     --输出-double 类 Object[][]
 &nbsp;
-#####  9.10 写作习惯 --文件位置-package test.java.InterfaceTest.TextDNN;
+#####  9.10 写作习惯
+######      --文件位置-package test.java.InterfaceTest.TextDNN;
 ######      --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######      --文件名-InitBehaviorICAKernelTest
-######      --这是一个 用于文本的词汇比重计算文章作者的写作习惯的德塔图灵分词个人著作权中的权重内核模块计算
+######      --这是一个 用于文本的词汇比重计算文章作者的写作习惯的权重内核模块计算
 ######      --输入-String
 ######      --输出-List<String>
 &nbsp;
-#####  9.11 词意联想 --文件位置-package test.java.InterfaceTest.TextDNN;
+#####  9.11 词意联想
+######      --文件位置-package test.java.InterfaceTest.TextDNN;
 ######      --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######      --文件名-LenovoInitTest
-######      --这是一个 用于文本的词汇意义来计算文章的内容属性的德塔图灵分词个人著作权中的权重内核模块, 如动机 倾向, 决策力等。
+######      --这是一个 用于文本的词汇意义来计算文章的内容属性的权重内核模块, 如动机 倾向, 决策力等。
 ######      --输入-String
 ######      --输出-NE.app_S.emotionSample
 &nbsp;

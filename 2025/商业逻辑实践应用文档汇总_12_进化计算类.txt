@@ -27,7 +27,8 @@
 &nbsp;
 ###### --测试函数文件所在具体位置--工程目录中SRC下面的test/java/InterfaceTest 区。
 ###### 12 进化计算类 逻辑接口商业测试
-######    --UTF8字符集 DNA元基催化与肽计算_第五修订版 --中英文注释 分段对照编辑 版权文字的语法错别字统一更进校正。
+######    --UTF8字符集 DNA元基催化与肽计算_第五修订版
+######    --中英文注释 分段对照编辑 版权文字的语法错别字统一更进校正。
 &nbsp;
 &nbsp;
 # --章节正文--商业功能细分文件分类--
@@ -35,8 +36,59 @@
 #### <font color=red>12 DNA元基催化与肽计算_第五修订版 --中英文语法测试</font>
 ###### --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ###### --文件位置-package src/main/resources/static/waps/ 下 html文字分章节文件
-###### --适用教学，讲解，出版，刊物更进等。
+###### --适用教学，讲解，出版，刊物，会议，描述，新闻，辅助，科普，广告，传媒等更进。
 ###### --含有完整中英文对照注释。
+###### --package src/main/resources/static/waps/wap1
+###### --德塔自然语言图灵系统 中英注释对照
+
+###### --package src/main/resources/static/waps/wap2
+###### --Java数据分析算法引擎系统 中英注释对照
+
+###### --package src/main/resources/static/waps/wap3
+###### --德塔ETL人工智能可视化数据流分析引擎系统 中英注释对照
+
+###### --package src/main/resources/static/waps/wap4
+###### --德塔socket流可编程数据库语言引擎系统 中英注释对照
+
+###### --package src/main/resources/static/waps/wap5
+###### --德塔数据结构变量快速转换 中英注释对照
+
+###### --package src/main/resources/static/waps/wap6
+###### --数据预测引擎系统 中英注释对照
+
+###### --package src/main/resources/static/waps/wap7
+###### --类人DNA与神经元基于催化算子映射编码方式 中英注释对照
+
+###### --package src/main/resources/static/waps/wap8
+###### --肽展公式推导与元基编码进化计算应用发现 中英注释对照
+
+###### --package src/main/resources/static/waps/wap9
+###### --DNA元基解码 中英注释对照
+
+###### --package src/main/resources/static/waps/wap10
+###### --DNA 非卷积视觉技术 中英注释对照
+
+###### --package src/main/resources/static/waps/wap11
+###### --Java数据分析算法引擎系统 中英注释对照
+
+###### --package src/main/resources/static/waps/wap12
+###### --DNA 语料数据库加密技术 中英注释对照
+
+###### --package src/main/resources/static/waps/wap13
+###### --DNA_数术推导与 RNA_X_THF_DD 元基芯片与肽逻辑 中英注释对照
+
+###### --package src/main/resources/static/waps/wap14
+###### --DNA 搜索与筛选应用 中英注释对照
+
+###### --package src/main/resources/static/waps/wap15
+###### --元基模拟染色体新陈代谢催化编码 中英注释对照
+
+###### --package src/main/resources/static/waps/wap16
+###### --TinShell 插件_元基花模拟染色体组计算索引系统 中英注释对照
+
+###### --package src/main/resources/static/waps/wap17
+###### --全文引用参考 中英注释对照
+
 &nbsp;
 &nbsp;
 # --Refer--

@@ -34,11 +34,11 @@
 ######    --7.5 ETL 皮肤界面 仿照jdk theme 写 unicorn插件包。
 ######    --7.6 中文UTF8字符 PLETL tinshell 存档一键批处理多节点流实例
 &nbsp;
-&nbsp;
 # --章节正文--商业功能细分文件分类--
 &nbsp;
 #### <font color=red>7 ETL计算类 逻辑接口商业测试</font>
-###### --可商业化探索-- 办公自动化, 操作自动化, 操作系统优化, 等支持序列化生产线的职业, 工业场景, 如工商管理, 工厂办公应用等。
+###### --可商业化探索-- 办公自动化, 操作自动化, 操作系统优化, 等
+###### --支持序列化生产线的职业, 工业场景, 如工商管理, 工厂办公应用等。
 ###### --refer Knime sdk，作者2009年就了解了ETL思维，
 ###### --refer OSGI，作者2009年就了解了插件应用。
 &nbsp;
@@ -73,16 +73,18 @@
 #####  7.5 ETL 皮肤界面 仿照jdk theme 写 unicorn插件包。
 ######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --文件位置-package ME.VPC.M.X; --函数名-AppInit_XCDX
-######     --使用方式-UIManager.put("ScrollBarUI", "OPE.OVQ.MSQ.OVU.PQE.platForm.UnicornScrollBarUI
+######     --使用方式-UIManager.put(K, V);
+######     --UIManager.put("ScrollBarUI", "OPE.OVQ.MSQ.OVU.PQE.platForm.UnicornScrollBarUI
 &nbsp;
 #####  7.6 PLETL tinshell 存档一键批处理多节点流实例
 ######     --算法思想--算法编码-算法设计-算法作者著作权人-罗瑶光
 ######     --关于人类语言命令分段计算执行实例 含 十六元基的token密钥关于物理解码例子。
 ######     --文件位置-package test.java.InterfaceTest.tinShell.bootBatchFilePLETL;
 ######     --函数名-Sample_X_I_MapAddPluginTest
-######     --这是一个-tinshell-批处理测试XSLX文件 一键执行复杂条件的PLETL节点流拆分搜索语句逻辑,  测试main函数demo的test版本,
-######     --适用于人工智能语言拆分逻辑决策树分析。工业会话场景。智能BPM场景, 办公自动化场景, 机器人语言意识中枢优化系统。推理学等领域
-######     --适用于商务会话, 教育, 企业办公, 报表处理, 自动化数据库领域, 批处理领域工业-农业-服务业各类格式化数据计算智能场景。
+######     --这是一个-tinshell-批处理测试XSLX文件 一键执行复杂条件的PLETL节点流拆分搜索语句逻辑,
+######     --测试main函数demo的test版本,适用于人工智能语言拆分逻辑决策树分析。工业会话场景。智能BPM场景,
+######     --办公自动化场景, 机器人语言意识中枢优化系统。推理学等领域--适用于商务会话, 教育, 企业办公,
+######     --报表处理, 自动化数据库领域, 批处理领域工业-农业-服务业各类格式化数据计算智能场景。
 ######     --读取存档函数文件位置--package OSI.OPE.OEI.PVI.SOI.SMQ.load;
 ######     --读取存档函数名--_E
 ######     --执行存档函数文件位置--package OPE.PSQ.OEU.SOI.SMQ.neroCell;

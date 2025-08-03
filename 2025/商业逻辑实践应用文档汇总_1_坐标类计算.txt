@@ -49,7 +49,8 @@
 ######  --可商业化探索-- 无人机路径, 区域类的人口统计, 气场雷达, 分布规律领域, 广度分布式数据搜索领域。
 ######  --可商业化探索-- 游戏类策划, 运动轨迹类跟踪与复位 职业领域, 海洋地理气候变化 团计算领域。
 ######  --可商业化探索-- 点单送外卖超出司机精度距离来判断增发新司机用途。如1.2, 1.3+等例子
-######  --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，路德上课授课老师-卡拉森，源码设计者-罗瑶光
+######  --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，
+######  --路德上课授课老师-卡拉森，源码设计者-罗瑶光
 &nbsp;
 ##### 1.1 observerPCAScale：确定主要有效最短路径的观测数
 ######    --算法思想-算法编码-算法设计-作者著作权人-罗瑶光
@@ -71,7 +72,8 @@
 ######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.3 通过scale 距离来进行 坐标团切裂。
-######    --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，路德上课授课老师-卡拉森，源码设计者-罗瑶光
+######    --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，
+######    --路德上课授课老师-卡拉森，源码设计者-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######    --处理fissile --文件名-Fissile_X_fissilePosition2D
 ######    --DemoCoords2Test._E(inputs);
@@ -97,7 +99,8 @@
 ######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.6 通过scale 距离来进行 坐标团切裂。
-######    --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，路德上课授课老师-卡拉森，源码设计者-罗瑶光
+######    --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，
+######    --路德上课授课老师-卡拉森，源码设计者-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
 ######    --处理fusion 先 fissile 采样 --文件名-Fissile_X_fissilePosition2D
 ######    --DemoCoords5Test._E(inputs);
@@ -105,9 +108,11 @@
 ######    --输出-计算后的坐标集X和Y, double
 &nbsp;
 ##### 1.7 欧基里德距离坐标团重心计算。
-######    --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，路德上课授课老师-卡拉森，源码设计者-罗瑶光
+######    --refer-关于坐标计算中的动态欧基里德轨迹距离算法思想来自-Pang.NingTan绿皮教材，
+######    --路德上课授课老师-卡拉森，源码设计者-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
-######    --处理fusion 先 fissile 采样 然后fusion 1 观测heart 文件名-Euclid_X_findHeartPosition2D
+######    --处理fusion 先 fissile 采样 然后fusion 1 观测heart
+######    --文件名-Euclid_X_findHeartPosition2D
 ######    --DemoCoords6Test._E(inputs);
 ######    --输入-坐标集合X和Y, double,精度参数
 ######    --输出-计算后的坐标集X和Y, double
@@ -115,7 +120,8 @@
 ##### 1.8 通过scale 距离来进行坐标团集合 融聚。
 ######    --算法思想-算法编码-算法设计-作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
-######    --处理fusion 先 fissile 采样 然后fusion 1 观测heart 再 文件名-Fusion_X_fusionPosition2DwithHeart
+######    --处理fusion 先 fissile 采样 然后fusion 1 观测heart 再
+######    --文件名-Fusion_X_fusionPosition2DwithHeart
 ######    --DemoCoords7Test._E(inputs);
 ######    --输入-坐标集合X和Y, double,精度参数
 ######    --输出-计算后的坐标集X和Y, double
@@ -123,7 +129,8 @@
 ##### 1.9 这个函数用于通过重心位移距离来进行坐标分类
 ######    --算法思想-算法编码-算法设计-作者著作权人-罗瑶光
 ######    --文件位置-package test.java.InterfaceTest.coordinatesTracement;
-######    --处理Classification --文件名-Classification_X_addNewPositionWithoutHeart
+######    --处理Classification
+######    --文件名-Classification_X_addNewPositionWithoutHeart
 ######    --DemoCoords8Test._E(inputs);
 ######    --输入-坐标集合X和Y, double,精度参数
 ######    --输出-计算后的坐标集X和Y, double
