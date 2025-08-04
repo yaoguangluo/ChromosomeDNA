@@ -34,7 +34,9 @@ import jnisort.LYGSortESU9D;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -57,13 +59,26 @@ import static org.junit.jupiter.api.Assertions.*;
  * --罗瑶光
  * */
 class DemoEXTest {
+    Map<String, String>[] verbal;
+
     @Test
     void main() {
+        //初始化测试数据
+        double totalVerbals = 0;
+        double totalSegbals = 0;
         String[] ss = new String[52];
         String[] ss1 = new String[52];
-
+        double[] score = new double[52];
+        Map<String, String>[] verbal = new HashMap[52];
+        //初始化待分词数据
+        new LoadVerbalInputMap().exec(verbal, ss, ss1);
+        new LoadVerbalInputMap1().exec(verbal, ss, ss1);
+        new LoadVerbalInputMap2().exec(verbal, ss, ss1);
+        //初始化待比较数据
+        new LoadVerbalOutputMap().exec(verbal, ss, ss1);
+        new LoadVerbalOutputMap1().exec(verbal, ss, ss1);
+        new LoadVerbalOutputMap2().exec(verbal, ss, ss1);
         //ss ss1导入字符--见DemoEXTest_input.txt DemoEXTest_input1.txt DemoEXTest_input2.txt 文件
-
         //初始化-----------------------------------------------------------------
         //环境初始化。以后接口优化做 junit系统化测试 下面的环境配置 可以写在 test before()里面。
         App NE = new App();
@@ -181,7 +196,7 @@ class DemoEXTest {
         //loop测试---------------------------------------------------------
         for (int i = 0; i < ss.length; i++) {
             StringBuilder sb = new StringBuilder(ss[i]);
-            //执行分词
+            //执行分词-输出 list格式 的 sets变量
             TimeCheck t = new TimeCheck();
             t.begin();
             sets = app_S._A.parserMixedString(sb);
@@ -190,17 +205,46 @@ class DemoEXTest {
             //输入
             System.out.println("array->" + i);
             System.out.println("输入->" + ss[i]);
-            //输出
+            //输出和统计观测开始------
             System.out.print("输出->");
             for (int j = 0; j < sets.size(); j++) {
-                if (sets.get(j) != null) {
-                    System.out.print(sets.get(j) + "=");
+                if (sets.get(j) != null//不为null
+                    && !sets.get(j).equals(" ")//不为空
+                    && !sets.get(j).equals("-")//不为测试自身的拆解符
+                ) {
+                    if (verbal[i].containsKey(sets.get(j))) {
+                        score[i] += 1;
+                        totalVerbals++;
+                        totalSegbals++;
+                        System.out.print(sets.get(j) + "=");
+                    } else {
+                        totalVerbals++;
+                        System.out.print(sets.get(j) + "x");
+                    }
                 }
             }
+            String size = verbal[i].get("-size-");
+            double sizeD = Double.valueOf(size);
+            score[i] = score[i]/ sizeD;
             System.out.println();
+            System.out.println("数据保持单字拆解条件下-分词后过滤新兴潮流代词缩写词人名" +
+                "等行业专业名词后对比正确率为->" + (score[i] * 100) + "%");
+            System.out.println("采样数据可自适应修改。注意保持对比格式的严谨～");
             //对比
             System.out.println("理想->" + ss1[i]);
         }
+        System.out.println("共计分词量总数-->" + totalVerbals);
+        System.out.println("共计正确分词数-->" + totalSegbals);
+        double ratio = totalSegbals / totalVerbals;
+        System.out.println("总分词正确比率-->" + +(ratio * 100) + "%");
+        System.out.println("分词环境-总分词正确比率-代表数据保持单字拆解条件下-分词后过滤新兴潮流代词" +
+            "缩写词人名等行业专业名词后的对比正确率");
+        System.out.println("分词环境-总分词正确比率 含有社会10余个专业领域的-web随机短文摘录分词");
+        System.out.println("分词环境-总分词正确比率 含有罗瑶光先生以前的笔记随机长文摘录分词");
+        System.out.println("分词环境-总分词正确比率 含有当前流行的浏览器AI自动生成的随机长文摘录分词");
+        System.out.println("分词环境-总分词正确比率 含有当前流行的浏览器AI自动生成的随机长文摘录分词");
+        System.out.println("分词环境-总分词正确比率 属于全部去标点符号的歧义短文分词比率");
+        System.out.println("分词环境-总分词正确比率 不适用太多单字词的古文，古文建议用分句api，不应该用文词api。");
         //结束
         NE.stop();
     }
